@@ -64,14 +64,19 @@
       <!-- header menu desktop end -->
 
       <!-- header background -->
-      <div class="relative mb-60 2xl:mb-20">
-        <div
+      <div class="relative mb-64 2xl:mb-20">
+        <!-- <div
           class="absolute h-48 w-60 bg-Primery-700 rounded-3xl left-2 top-5 rotate-[4deg]"
-        ></div>
+        ></div> -->
+        <img
+          src="../icons/headerBackMobileIcon.svg"
+          alt=""
+          class="absolute left-[14px] top-[11px] lg:left-[-17rem] lg:-z-10 lg:-top-24 2xl:top-[-6.5rem] 2xl:left-12"
+        />
         <img
           src="../../public/images/airplane-background.jfif"
           alt=""
-          class="absolute rotate-3 w-72 rounded-3xl -left-12 top-4 2xl:h-[54rem] 2xl:-z-10 2xl:rotate-6 2xl:w-[52rem] 2xl:-top-44 2xl:-left-12"
+          class="absolute rotate-[4deg] w-72 h-52 rounded-3xl -left-12 top-4 2xl:h-[54rem] 2xl:-z-10 2xl:rotate-6 2xl:w-[52rem] 2xl:-top-44 2xl:-left-12"
         />
         <img
           src="../../public/images/airplane.png"
@@ -87,7 +92,9 @@
       <!-- selected category  -->
       <section class="mt-4 desktopContainer">
         <div class="2xl:w-2/5">
-          <h1 class="hidden mb-16 text-3xl font-bold lg:block">پروازت رو با سورینت تجربه کن</h1>
+          <h1 class="hidden mb-16 text-3xl font-bold lg:block">
+            پروازت رو با سورینت تجربه کن
+          </h1>
           <div class="flex flex-wrap items-center justify-between gap-y-3">
             <span
               class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
@@ -268,6 +275,7 @@
             class="relative overflow-hidden border border-solid lg:w-[calc(50%-8px)] pb-7 border-zinc-300 rounded-xl"
           >
             <div class="relative h-64">
+              <div class="absolute w-full h-full bg-shadow-gradient"></div>
               <img
                 src="../../public/images/istanbul.png"
                 alt="istanbul"
@@ -309,6 +317,7 @@
             class="relative overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(50%-8px)]"
           >
             <div class="relative h-64">
+              <div class="absolute w-full h-full bg-shadow-gradient"></div>
               <img
                 src="../../public/images/istanbul.png"
                 alt="istanbul"
@@ -350,6 +359,7 @@
             class="relative overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
           >
             <div class="relative h-64">
+              <div class="absolute w-full h-full bg-shadow-gradient"></div>
               <img
                 src="../../public/images/istanbul.png"
                 alt="istanbul"
@@ -391,6 +401,7 @@
             class="relative hidden lg:block lg:w-[calc(33.33%-8px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
           >
             <div class="relative h-64">
+              <div class="absolute w-full h-full bg-shadow-gradient"></div>
               <img
                 src="../../public/images/istanbul.png"
                 alt="istanbul"
@@ -432,6 +443,7 @@
             class="relative hidden lg:block overflow-hidden border border-solid lg:w-[calc(33.33%-8px)] pb-7 border-zinc-300 rounded-xl"
           >
             <div class="relative h-64">
+              <div class="absolute w-full h-full bg-shadow-gradient"></div>
               <img
                 src="../../public/images/istanbul.png"
                 alt="istanbul"
@@ -617,83 +629,98 @@
         >
           <!-- simple of articles -->
           <article
-            class="bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-[url('../public/images/Rome.jpg')] bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
+            class="relative overflow-hidden bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-[url('../public/images/Rome.jpg')] bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
           >
-            <div>
-              <h3 class="mb-2 text-xl font-medium text-white">
-                سفر به روم برای تفریح
-              </h3>
-              <p class="text-sm text-justify text-white">
-                رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰
-                ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این رو، در سفر
-                به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی هزاران ساله،
-                ویرانه‌های وسیع...
-              </p>
-            </div>
-            <div class="flex justify-between mt-2">
-              <span class="flex items-center gap-1 text-white">
-                <img src="../icons/calenderIconWhite.svg" alt="" />
-                1402/12/12
-              </span>
-              <button
-                class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-              >
-                بیشتر بخوانید
-              </button>
+            <div
+              class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+            ></div>
+            <div class="relative z-10">
+              <div>
+                <h3 class="mb-2 text-xl font-medium text-white">
+                  سفر به روم برای تفریح
+                </h3>
+                <p class="text-sm text-justify text-white">
+                  رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰
+                  ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این رو، در
+                  سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی هزاران
+                  ساله، ویرانه‌های وسیع...
+                </p>
+              </div>
+              <div class="flex justify-between mt-2">
+                <span class="flex items-center gap-1 text-white">
+                  <img src="../icons/calenderIconWhite.svg" alt="" />
+                  1402/12/12
+                </span>
+                <button
+                  class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                >
+                  بیشتر بخوانید
+                </button>
+              </div>
             </div>
           </article>
 
           <article
-            class="bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-[url('../public/images/Rome.jpg')] bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
+            class="relative overflow-hidden bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-[url('../public/images/Rome.jpg')] bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
           >
-            <div>
-              <h3 class="mb-2 text-xl font-medium text-white">
-                سفر به روم برای تفریح
-              </h3>
-              <p class="text-sm text-justify text-white">
-                رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰
-                ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این رو، در سفر
-                به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی هزاران ساله،
-                ویرانه‌های وسیع...
-              </p>
-            </div>
-            <div class="flex justify-between mt-2">
-              <span class="flex items-center gap-1 text-white">
-                <img src="../icons/calenderIconWhite.svg" alt="" />
-                1402/12/12
-              </span>
-              <button
-                class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-              >
-                بیشتر بخوانید
-              </button>
+            <div
+              class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+            ></div>
+            <div class="relative z-10">
+              <div>
+                <h3 class="mb-2 text-xl font-medium text-white">
+                  سفر به روم برای تفریح
+                </h3>
+                <p class="text-sm text-justify text-white">
+                  رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰
+                  ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این رو، در
+                  سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی هزاران
+                  ساله، ویرانه‌های وسیع...
+                </p>
+              </div>
+              <div class="flex justify-between mt-2">
+                <span class="flex items-center gap-1 text-white">
+                  <img src="../icons/calenderIconWhite.svg" alt="" />
+                  1402/12/12
+                </span>
+                <button
+                  class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                >
+                  بیشتر بخوانید
+                </button>
+              </div>
             </div>
           </article>
 
           <article
-            class="bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-[url('../public/images/Rome.jpg')] bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
+            class="relative overflow-hidden bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-[url('../public/images/Rome.jpg')] bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
           >
-            <div>
-              <h3 class="mb-2 text-xl font-medium text-white">
-                سفر به روم برای تفریح
-              </h3>
-              <p class="text-sm text-justify text-white">
-                رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰
-                ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این رو، در سفر
-                به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی هزاران ساله،
-                ویرانه‌های وسیع...
-              </p>
-            </div>
-            <div class="flex justify-between mt-2">
-              <span class="flex items-center gap-1 text-white">
-                <img src="../icons/calenderIconWhite.svg" alt="" />
-                1402/12/12
-              </span>
-              <button
-                class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-              >
-                بیشتر بخوانید
-              </button>
+            <div
+              class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+            ></div>
+            <div class="relative z-10">
+              <div>
+                <h3 class="mb-2 text-xl font-medium text-white">
+                  سفر به روم برای تفریح
+                </h3>
+                <p class="text-sm text-justify text-white">
+                  رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰
+                  ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این رو، در
+                  سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی هزاران
+                  ساله، ویرانه‌های وسیع...
+                </p>
+              </div>
+              <div class="flex justify-between mt-2">
+                <span class="flex items-center gap-1 text-white">
+                  <img src="../icons/calenderIconWhite.svg" alt="" />
+                  1402/12/12
+                </span>
+                <button
+                  class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                >
+                  بیشتر بخوانید
+                </button>
+              </div>
             </div>
           </article>
         </div>
@@ -732,7 +759,12 @@
     <!-- main end -->
 
     <!-- footer -->
-    <footer class="px-4 py-4 mt-24 rounded-xl bg-footer-gradient">
+    <footer class="relative px-4 py-4 mt-24 rounded-xl bg-footer-gradient">
+      <img
+        src="../icons/footerBackIcon.svg"
+        alt=""
+        class="absolute -top-3 -right-px -z-10"
+      />
       <div class="flex flex-col items-center justify-center gap-2 mb-6">
         <img src="../icons/headerIcons.svg" alt="" />
         <h2 class="text-sm font-normal text-white">
@@ -872,7 +904,11 @@
             طراحی سایت آژانس مسافرتی و رزرواسیون آنلاین توسط بیسیس فلای
           </h3>
           <div class="flex justify-between mt-3 lg:mt-0">
-            <img src="../../public/images/basisFly.png" alt="" class="h-4 w-17" />
+            <img
+              src="../../public/images/basisFly.png"
+              alt=""
+              class="h-4 w-17"
+            />
             <img src="../../public/images/trust-login.png" alt="" />
           </div>
         </div>

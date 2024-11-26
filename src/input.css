@@ -62,7 +62,8 @@
 
     .desktopContainer{
         max-width: 1280px;
-        margin: 0 auto;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 html{
