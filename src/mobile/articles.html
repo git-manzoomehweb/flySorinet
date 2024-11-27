@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../styles/swiperStyles.css" />
     <title>Document</title>
   </head>
   <body class="px-2">
@@ -353,6 +358,56 @@
         <!-- simple of articles -->
       </section>
       <!-- articles -->
+
+      <!-- swiper -->
+      <section class="mt-16">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="../../public/images/sunExpress.png"
+                alt="sunExpress"
+                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="../../public/images/SalamAir.png"
+                alt="SalamAir"
+                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="../../public/images/turkishAirlines.png"
+                alt="turkishAirlines"
+                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="../../public/images/Qatar.png"
+                alt="Qatar"
+                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="../../public/images/IranAir.png"
+                alt="IranAir"
+                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- footer -->
@@ -513,5 +568,43 @@
       <!-- content of footer end -->
     </footer>
     <!-- footer end -->
+
+    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        speed: 400,
+        centeredSlides: false,
+        spaceBetween: 30,
+        grabCursor: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

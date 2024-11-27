@@ -19,7 +19,7 @@ module.exports = {
       },
       backgroundImage: {
         'footer-gradient': 'linear-gradient(277.8deg, #1D0202 0.86%, #121212 99.53%)',
-        "main-desktop-back": "background: linear-gradient(251.49deg, #FFFFFF 10.95%, #FFEAEA 90.06%)",
+        "main-desktop-back": "linear-gradient(251.49deg, #FFFFFF 10.95%, #FFEAEA 90.06%)",
         "shadow-gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0) 44.98%, #000000 100%)",
         "light-gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0) 63.58%, #FFFFFF 95.87%)",
         "shadow-gradient-full": "linear-gradient(180deg, rgba(0, 0, 0, 0) 20.97%, #000000 100%)"

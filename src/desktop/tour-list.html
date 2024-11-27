@@ -4,37 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../output.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="../styles/swiperStyles.css" />
-    <title>Soorinet</title>
+    <title>Document</title>
   </head>
   <body class="px-2">
     <header>
-      <!-- header menu mobile -->
-      <div class="flex justify-between px-4 py-3 lg:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
-
-        <img src="../icons/headerIcons.svg" alt="" />
-      </div>
-      <!-- header menu mobile end -->
-
-      <!-- header menu desktop -->
       <section class="hidden p-6 lg:desktopContainer lg:block">
         <div class="flex justify-between">
           <nav class="flex items-center">
@@ -66,218 +39,55 @@
           </span>
         </div>
       </section>
-      <!-- header menu desktop end -->
 
       <!-- header background -->
-      <div class="relative mb-64 2xl:mb-20">
+      <div class="relative mb-60 lg:mb-20">
         <!-- <div
-          class="absolute h-48 w-60 bg-Primery-700 rounded-3xl left-2 top-5 rotate-[4deg]"
+          class="absolute h-48 w-60 bg-Primery-700 rounded-3xl left-2 top-5 rotate-[4deg] lg:-z-20 lg:rotate-[5deg] lg:w-[29rem] lg:h-[54rem] lg:-top-36 2xl:w-[49rem] 2xl:h-[52rem]"
         ></div> -->
         <img
-          src="../icons/headerBackMobileIcon.svg"
+          src="../icons/tourListRecDesk.svg"
           alt=""
-          class="absolute left-[14px] top-[11px] lg:left-[-17rem] lg:-z-10 lg:-top-24 2xl:top-[-6.5rem] 2xl:left-12"
+          class="lg:absolute lg:w-[50rem] lg:left-[6.3rem] lg:-z-10 lg:top-[6.5rem] 2xl:-top-16 2xl:w-auto 2xl:h-[29rem] 2xl:left-2"
         />
+
         <img
-          src="../../public/images/airplane-background.jfif"
+          src="../../public/images/strait-bosphorus-suleymaniye-mosque.jpg"
           alt=""
-          class="absolute rotate-[4deg] w-72 h-52 rounded-3xl -left-12 top-4 2xl:h-[54rem] 2xl:-z-10 2xl:rotate-6 2xl:w-[52rem] 2xl:-top-44 2xl:-left-12"
+          class="absolute w-[55rem] rounded-3xl left-0 -top-20 h-[28rem] -z-10 2xl:w-[80rem]"
         />
         <img
           src="../../public/images/airplane.png"
           alt=""
-          class="absolute left-7 -top-20 z-50 w-[28rem] h-[28rem] object-cover 2xl:w-[68rem] 2xl:h-[74rem]"
+          class="absolute left-60 top-0 z-50 w-full h-[28rem] object-cover 2xl:w-[70rem] 2xl:h-auto 2xl:left-[44rem] 2xl:-top-20"
         />
       </div>
-      <!-- header background end  -->
+      <!-- header background end-->
     </header>
 
-    <!-- main start -->
     <main>
-      <!-- selected category  -->
-      <section class="mt-4 desktopContainer">
-        <div class="2xl:w-2/5">
-          <h1 class="hidden mb-16 text-3xl font-bold lg:block">
-            پروازت رو با سورینت تجربه کن
-          </h1>
-          <div class="flex flex-wrap items-center justify-between gap-y-3">
-            <span
-              class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
-            >
-              <img src="../icons/bedIcon.svg" alt="" />
-              هتل
-            </span>
-            <div>
-              <div
-                class="flex flex-col items-center justify-around w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
-              >
-                <img src="../icons/caseIcon.svg" alt="" />
-                <span class="w-max">هتل + پرواز</span>
-              </div>
+      <section class="mt-[30rem]">
+        <div class="mb-6">
+            <div class="text-sm">
+                <a href="">صفحه اصلی
+                    <span>></span>
+                </a>
+                <a href="">تور
+                    <span>></span>
+                </a>
+                <a href="">تور های استانبول
+                    <span>></span>
+                </a>
+                <span class="font-medium">مشاهده تور</span>
             </div>
-            <span
-              class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
-            >
-              <img src="../icons/sunIcon.svg" alt="" />
-              تور
-            </span>
-            <span
-              class="flex flex-col items-center w-20 h-20 p-3 text-sm text-white rounded-full bg-Primery-700"
-            >
-              <img src="../icons/airplaneIcon.svg" alt="" />
-              پرواز
-            </span>
-          </div>
-          <!-- selected category end  -->
-
-          <div class="px-3 py-6">
-            <!-- Route type -->
-            <div class="mb-6">
-              <div class="flex justify-between">
-                <div class="flex items-center gap-1">
-                  <div
-                    class="relative w-5 h-5 border-2 border-solid border-Primery-700 rounded-full after:content-[''] after:w-3 after:h-3 after:bg-Primery-700 after:absolute after:rounded-full after:top-[10%] after:left-[10%]"
-                  ></div>
-                  <span class="text-sm text-Primery-700">یکطرفه</span>
-                </div>
-                <div class="flex items-center gap-1">
-                  <div
-                    class="w-5 h-5 border-2 border-solid rounded-full border-zinc-500"
-                  ></div>
-                  <span class="text-sm">رفت و برگشت</span>
-                </div>
-                <div class="flex items-center gap-1">
-                  <div
-                    class="w-5 h-5 border-2 border-solid rounded-full border-zinc-500"
-                  ></div>
-                  <span class="text-sm">چند مسیره</span>
-                </div>
-              </div>
-            </div>
-            <!-- Route type end -->
-
-            <!-- timing, origin and destination  -->
-            <div class="relative flex flex-col gap-3">
-              <div
-                class="px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
-              >
-                <h3 class="font-medium">مبدا</h3>
-                <span class="font-normal text-zinc-600"
-                  >مبدا خود را انتخاب کنید</span
-                >
-              </div>
-
-              <img
-                src="../icons/changeIcon.svg"
-                alt=""
-                class="absolute top-[13%] left-[5%]"
-              />
-
-              <div
-                class="px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
-              >
-                <h3 class="font-medium">مقصد</h3>
-                <span class="font-normal text-zinc-600"
-                  >مقصد خود را انتخاب کنید</span
-                >
-              </div>
-
-              <div class="flex flex-col gap-3 lg:flex-row">
-                <div
-                  class="flex items-center justify-between px-4 py-3 border border-solid opacity-30 bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-2"
-                >
-                  <div>
-                    <h3 class="font-medium">تاریخ برگشت</h3>
-                    <span class="font-normal text-zinc-600">1403/5/5</span>
-                  </div>
-                  <svg
-                    width="48"
-                    height="48"
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
-                      fill="#18181B"
-                    />
-                  </svg>
-                </div>
-
-                <div
-                  class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-1"
-                >
-                  <div>
-                    <h3 class="font-medium">تاریخ رفت</h3>
-                    <span class="font-normal text-zinc-600">1403/5/5</span>
-                  </div>
-                  <svg
-                    width="48"
-                    height="48"
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
-                      fill="#18181B"
-                    />
-                  </svg>
-                </div>
-              </div>
-
-              <div
-                class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
-              >
-                <div>
-                  <h3 class="font-medium">مسافران/کلاس پرواز</h3>
-                  <span class="font-normal text-zinc-600"
-                    >1 بزرگسال/اکونومی</span
-                  >
-                </div>
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 48 48"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
-                    fill="#18181B"
-                  />
-                </svg>
-              </div>
-            </div>
-            <!-- timing, origin and destination end  -->
-            <button
-              class="w-full px-4 py-2 mt-6 text-white h-14 bg-Primery-700 rounded-xl"
-            >
-              جست و جو
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- تور های لحظه اخری -->
-      <section class="mt-14 desktopContainer">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="font-medium">تور های لحظه آخری</h2>
-          <span class="text-sm text-Primery-700">مشاهده همه</span>
+            <h2 class="mt-4 text-3xl font-bold">تور های استانبول</h2>
         </div>
 
         <div
           class="flex flex-col gap-2 lg:flex-row lg:flex-wrap lg:gap-0 lg:justify-between lg:gap-y-4"
         >
-          <!-- نمونه تور لحظه اخری -->
           <div
-            class="relative overflow-hidden border border-solid lg:w-[calc(50%-8px)] pb-7 border-zinc-300 rounded-xl"
+            class="relative w-[calc(33%-20px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
           >
             <div class="relative h-64">
               <div class="absolute w-full h-full bg-shadow-gradient"></div>
@@ -319,7 +129,7 @@
           </div>
 
           <div
-            class="relative overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(50%-8px)]"
+            class="relative w-[calc(33%-20px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
           >
             <div class="relative h-64">
               <div class="absolute w-full h-full bg-shadow-gradient"></div>
@@ -361,7 +171,7 @@
           </div>
 
           <div
-            class="relative overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
+            class="relative w-[calc(33%-20px)] overflow-hidden border border-solid w- pb-7 border-zinc-300 rounded-xl"
           >
             <div class="relative h-64">
               <div class="absolute w-full h-full bg-shadow-gradient"></div>
@@ -403,7 +213,7 @@
           </div>
 
           <div
-            class="relative hidden lg:block lg:w-[calc(33.33%-8px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
+            class="relative w-[calc(33%-20px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
           >
             <div class="relative h-64">
               <div class="absolute w-full h-full bg-shadow-gradient"></div>
@@ -445,7 +255,7 @@
           </div>
 
           <div
-            class="relative hidden lg:block overflow-hidden border border-solid lg:w-[calc(33.33%-8px)] pb-7 border-zinc-300 rounded-xl"
+            class="relative w-[calc(33%-20px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
           >
             <div class="relative h-64">
               <div class="absolute w-full h-full bg-shadow-gradient"></div>
@@ -485,148 +295,326 @@
               >
             </div>
           </div>
-          <!-- نمونه  -->
+
+          <div
+            class="relative w-[calc(33%-20px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
+          >
+            <div class="relative h-64">
+              <div class="absolute w-full h-full bg-shadow-gradient"></div>
+              <img
+                src="../../public/images/istanbul.png"
+                alt="istanbul"
+                class="object-cover w-full h-full"
+              />
+              <div class="absolute bottom-8 right-4">
+                <h3 class="mb-2 text-xl text-white">تور 7 روزه استانبول</h3>
+                <div class="flex items-center gap-2">
+                  <img src="../icons/clockIcon.svg" alt="" />
+                  <span class="text-sm text-white">7 روز و 7 شب</span>
+                </div>
+              </div>
+            </div>
+            <button
+              class="absolute w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
+            >
+              مشاهده
+            </button>
+            <div class="flex flex-col gap-2 px-4 mt-9">
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/calenderIcon.svg" alt="" />
+                تاریخ رفت : 1403/5/5
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/mapIcon.svg" alt="" />
+                ایرلاین: پگاسوس
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/coinIcon.svg" alt="" />
+                شروع قیمت:
+              </span>
+              <span class="font-medium text-zinc-900"
+                >14/000/000 تومان + 2500 دلار</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="relative w-[calc(33%-20px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
+          >
+            <div class="relative h-64">
+              <div class="absolute w-full h-full bg-shadow-gradient"></div>
+              <img
+                src="../../public/images/istanbul.png"
+                alt="istanbul"
+                class="object-cover w-full h-full"
+              />
+              <div class="absolute bottom-8 right-4">
+                <h3 class="mb-2 text-xl text-white">تور 7 روزه استانبول</h3>
+                <div class="flex items-center gap-2">
+                  <img src="../icons/clockIcon.svg" alt="" />
+                  <span class="text-sm text-white">7 روز و 7 شب</span>
+                </div>
+              </div>
+            </div>
+            <button
+              class="absolute w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
+            >
+              مشاهده
+            </button>
+            <div class="flex flex-col gap-2 px-4 mt-9">
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/calenderIcon.svg" alt="" />
+                تاریخ رفت : 1403/5/5
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/mapIcon.svg" alt="" />
+                ایرلاین: پگاسوس
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/coinIcon.svg" alt="" />
+                شروع قیمت:
+              </span>
+              <span class="font-medium text-zinc-900"
+                >14/000/000 تومان + 2500 دلار</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="relative w-[calc(33%-20px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
+          >
+            <div class="relative h-64">
+              <div class="absolute w-full h-full bg-shadow-gradient"></div>
+              <img
+                src="../../public/images/istanbul.png"
+                alt="istanbul"
+                class="object-cover w-full h-full"
+              />
+              <div class="absolute bottom-8 right-4">
+                <h3 class="mb-2 text-xl text-white">تور 7 روزه استانبول</h3>
+                <div class="flex items-center gap-2">
+                  <img src="../icons/clockIcon.svg" alt="" />
+                  <span class="text-sm text-white">7 روز و 7 شب</span>
+                </div>
+              </div>
+            </div>
+            <button
+              class="absolute w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
+            >
+              مشاهده
+            </button>
+            <div class="flex flex-col gap-2 px-4 mt-9">
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/calenderIcon.svg" alt="" />
+                تاریخ رفت : 1403/5/5
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/mapIcon.svg" alt="" />
+                ایرلاین: پگاسوس
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/coinIcon.svg" alt="" />
+                شروع قیمت:
+              </span>
+              <span class="font-medium text-zinc-900"
+                >14/000/000 تومان + 2500 دلار</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="relative w-[calc(33%-20px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
+          >
+            <div class="relative h-64">
+              <div class="absolute w-full h-full bg-shadow-gradient"></div>
+              <img
+                src="../../public/images/istanbul.png"
+                alt="istanbul"
+                class="object-cover w-full h-full"
+              />
+              <div class="absolute bottom-8 right-4">
+                <h3 class="mb-2 text-xl text-white">تور 7 روزه استانبول</h3>
+                <div class="flex items-center gap-2">
+                  <img src="../icons/clockIcon.svg" alt="" />
+                  <span class="text-sm text-white">7 روز و 7 شب</span>
+                </div>
+              </div>
+            </div>
+            <button
+              class="absolute w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
+            >
+              مشاهده
+            </button>
+            <div class="flex flex-col gap-2 px-4 mt-9">
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/calenderIcon.svg" alt="" />
+                تاریخ رفت : 1403/5/5
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/mapIcon.svg" alt="" />
+                ایرلاین: پگاسوس
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/coinIcon.svg" alt="" />
+                شروع قیمت:
+              </span>
+              <span class="font-medium text-zinc-900"
+                >14/000/000 تومان + 2500 دلار</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="relative w-[calc(33%-20px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
+          >
+            <div class="relative h-64">
+              <div class="absolute w-full h-full bg-shadow-gradient"></div>
+              <img
+                src="../../public/images/istanbul.png"
+                alt="istanbul"
+                class="object-cover w-full h-full"
+              />
+              <div class="absolute bottom-8 right-4">
+                <h3 class="mb-2 text-xl text-white">تور 7 روزه استانبول</h3>
+                <div class="flex items-center gap-2">
+                  <img src="../icons/clockIcon.svg" alt="" />
+                  <span class="text-sm text-white">7 روز و 7 شب</span>
+                </div>
+              </div>
+            </div>
+            <button
+              class="absolute w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
+            >
+              مشاهده
+            </button>
+            <div class="flex flex-col gap-2 px-4 mt-9">
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/calenderIcon.svg" alt="" />
+                تاریخ رفت : 1403/5/5
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/mapIcon.svg" alt="" />
+                ایرلاین: پگاسوس
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/coinIcon.svg" alt="" />
+                شروع قیمت:
+              </span>
+              <span class="font-medium text-zinc-900"
+                >14/000/000 تومان + 2500 دلار</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="relative w-[calc(33%-20px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
+          >
+            <div class="relative h-64">
+              <div class="absolute w-full h-full bg-shadow-gradient"></div>
+              <img
+                src="../../public/images/istanbul.png"
+                alt="istanbul"
+                class="object-cover w-full h-full"
+              />
+              <div class="absolute bottom-8 right-4">
+                <h3 class="mb-2 text-xl text-white">تور 7 روزه استانبول</h3>
+                <div class="flex items-center gap-2">
+                  <img src="../icons/clockIcon.svg" alt="" />
+                  <span class="text-sm text-white">7 روز و 7 شب</span>
+                </div>
+              </div>
+            </div>
+            <button
+              class="absolute w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
+            >
+              مشاهده
+            </button>
+            <div class="flex flex-col gap-2 px-4 mt-9">
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/calenderIcon.svg" alt="" />
+                تاریخ رفت : 1403/5/5
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/mapIcon.svg" alt="" />
+                ایرلاین: پگاسوس
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/coinIcon.svg" alt="" />
+                شروع قیمت:
+              </span>
+              <span class="font-medium text-zinc-900"
+                >14/000/000 تومان + 2500 دلار</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="relative w-[calc(33%-20px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
+          >
+            <div class="relative h-64">
+              <div class="absolute w-full h-full bg-shadow-gradient"></div>
+              <img
+                src="../../public/images/istanbul.png"
+                alt="istanbul"
+                class="object-cover w-full h-full"
+              />
+              <div class="absolute bottom-8 right-4">
+                <h3 class="mb-2 text-xl text-white">تور 7 روزه استانبول</h3>
+                <div class="flex items-center gap-2">
+                  <img src="../icons/clockIcon.svg" alt="" />
+                  <span class="text-sm text-white">7 روز و 7 شب</span>
+                </div>
+              </div>
+            </div>
+            <button
+              class="absolute w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
+            >
+              مشاهده
+            </button>
+            <div class="flex flex-col gap-2 px-4 mt-9">
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/calenderIcon.svg" alt="" />
+                تاریخ رفت : 1403/5/5
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/mapIcon.svg" alt="" />
+                ایرلاین: پگاسوس
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="../icons/coinIcon.svg" alt="" />
+                شروع قیمت:
+              </span>
+              <span class="font-medium text-zinc-900"
+                >14/000/000 تومان + 2500 دلار</span
+              >
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex items-center justify-center gap-2 mt-16">
+            <div class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600">
+                <img src="../icons/chevronRightIcon.svg" alt="">
+            </div>
+            <div class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300">1</div>
+            <div class="flex items-center justify-center w-12 h-12 p-2 text-white rounded-xl bg-Primery-600">1</div>
+            <div class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300">1</div>
+            <div class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600">
+                <img src="../icons/chevronLeftIcon.svg" alt="">
+            </div>
         </div>
       </section>
-      <!-- تور لحظه اخری  -->
-
-      <!-- هتل ها -->
-      <section class="mt-12 desktopContainer">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center justify-between w-36">
-            <h2 class="font-medium">هتل ها</h2>
-            <span class="text-sm text-Primery-700">مشاهده همه</span>
-          </div>
-          <div>
-            <button><img src="../icons/previousIcon.svg" alt="" /></button>
-            <button><img src="../icons/nextIcon.svg" alt="" /></button>
-          </div>
-        </div>
-
-        <div
-          class="flex flex-col gap-2 lg:flex-row lg:justify-between lg:gap-0"
-        >
-          <!-- نمونه هتل ها -->
-          <div
-            class="relative pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
-          >
-            <div class="relative">
-              <img
-                src="../../public/images/sunshine.jpg"
-                alt=""
-                class="object-cover w-full h-64"
-              />
-              <div
-                class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
-              >
-                <img src="../icons/locationIcon.svg" alt="" />
-                <span class="text-sm text-Primery-700">موقعیت</span>
-              </div>
-              <button
-                class="absolute px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
-              >
-                مشاهده
-              </button>
-            </div>
-            <div class="px-4 mt-12">
-              <h3 class="mb-2 text-xl font-medium">هتل Elite World Istanbul</h3>
-              <div class="flex items-start gap-4">
-                <span class="flex items-center gap-1">
-                  <img src="../icons/cafeIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">B.B</span>
-                </span>
-                <span class="w-px h-6 bg-zinc-300"></span>
-                <div class="flex items-center gap-1">
-                  <img src="../icons/starIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">4 ستاره</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="relative pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
-          >
-            <div class="relative">
-              <img
-                src="../../public/images/sunshine.jpg"
-                alt=""
-                class="object-cover w-full h-64"
-              />
-              <div
-                class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
-              >
-                <img src="../icons/locationIcon.svg" alt="" />
-                <span class="text-sm text-Primery-700">موقعیت</span>
-              </div>
-              <button
-                class="absolute px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
-              >
-                مشاهده
-              </button>
-            </div>
-            <div class="px-4 mt-12">
-              <h3 class="mb-2 text-xl font-medium">هتل Elite World Istanbul</h3>
-              <div class="flex items-start gap-4">
-                <span class="flex items-center gap-1">
-                  <img src="../icons/cafeIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">B.B</span>
-                </span>
-                <span class="w-px h-6 bg-zinc-300"></span>
-                <div class="flex items-center gap-1">
-                  <img src="../icons/starIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">4 ستاره</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="relative pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
-          >
-            <div class="relative">
-              <img
-                src="../../public/images/sunshine.jpg"
-                alt=""
-                class="object-cover w-full h-64"
-              />
-              <div
-                class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
-              >
-                <img src="../icons/locationIcon.svg" alt="" />
-                <span class="text-sm text-Primery-700">موقعیت</span>
-              </div>
-              <button
-                class="absolute px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
-              >
-                مشاهده
-              </button>
-            </div>
-            <div class="px-4 mt-12">
-              <h3 class="mb-2 text-xl font-medium">هتل Elite World Istanbul</h3>
-              <div class="flex items-start gap-4">
-                <span class="flex items-center gap-1">
-                  <img src="../icons/cafeIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">B.B</span>
-                </span>
-                <span class="w-px h-6 bg-zinc-300"></span>
-                <div class="flex items-center gap-1">
-                  <img src="../icons/starIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">4 ستاره</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- نمونه هتل ها -->
-        </div>
-      </section>
-      <!-- هتل ها -->
 
       <!-- articles -->
       <section class="mt-28 desktopContainer">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="font-medium">مقاله ها</h2>
-          <span class="text-sm text-Primery-700">مشاهده همه</span>
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center gap-8">
+            <h2 class="text-2xl font-bold">مقاله ها</h2>
+            <span class="text-xl font-medium text-Primery-700">مشاهده همه</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <button><img src="../icons/previousIcon.svg" alt="" /></button>
+            <button><img src="../icons/nextIcon.svg" alt="" /></button>
+          </div>
         </div>
 
         <div
@@ -698,7 +686,7 @@
           </article>
 
           <article
-            class="relative overflow-hidden bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-[url('../public/images/Rome.jpg')] bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
+            class="relative overflow-hiddenbg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-[url('../public/images/Rome.jpg')] bg-cover bg-center bg-no-repeat lg:w-[calc(33.33%-8px)]"
           >
             <div
               class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -733,64 +721,43 @@
       </section>
       <!-- articles -->
 
-      <!-- swiper -->
-      <section class="mt-16">
-        <!-- Slider main container -->
-        <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <img
-                src="../../public/images/sunExpress.png"
-                alt="sunExpress"
-                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
-              />
-            </div>
-
-            <div class="swiper-slide">
-              <img
-                src="../../public/images/SalamAir.png"
-                alt="SalamAir"
-                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
-              />
-            </div>
-
-            <div class="swiper-slide">
-              <img
-                src="../../public/images/turkishAirlines.png"
-                alt="turkishAirlines"
-                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
-              />
-            </div>
-
-            <div class="swiper-slide">
-              <img
-                src="../../public/images/Qatar.png"
-                alt="Qatar"
-                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
-              />
-            </div>
-
-            <div class="swiper-slide">
-              <img
-                src="../../public/images/IranAir.png"
-                alt="IranAir"
-                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
-              />
-            </div>
-          </div>
-        </div>
+      <section
+        class="flex flex-wrap justify-between gap-4 mx-auto mt-10 desktopContainer"
+      >
+        <img
+          src="../../public/images/sunExpress.png"
+          alt="sunExpress"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
+        <img
+          src="../../public/images/SalamAir.png"
+          alt="SalamAir"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
+        <img
+          src="../../public/images/turkishAirlines.png"
+          alt="turkishAirlines"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
+        <img
+          src="../../public/images/Qatar.png"
+          alt="Qatar"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
+        <img
+          src="../../public/images/IranAir.png"
+          alt="IranAir"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
       </section>
     </main>
-    <!-- main end -->
 
     <!-- footer -->
-    <footer class="relative px-4 py-4 mt-24 rounded-xl bg-footer-gradient">
+    <footer class="px-4 py-4 mt-24 lg:relative rounded-xl bg-footer-gradient">
       <img
         src="../icons/footerBackIcon.svg"
         alt=""
-        class="absolute -top-3 -right-px -z-10"
+        class="lg:absolute lg:-top-3 lg:-right-2 lg:-z-10 2xl:-top-6 2xl:-right-3"
       />
       <div class="flex flex-col items-center justify-center gap-2 mb-6">
         <img src="../icons/headerIcons.svg" alt="" />
@@ -943,43 +910,5 @@
       <!-- content of footer end -->
     </footer>
     <!-- footer end -->
-
-    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".swiper", {
-        slidesPerView: 1,
-        speed: 400,
-        centeredSlides: false,
-        spaceBetween: 30,
-        grabCursor: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 50,
-          },
-        },
-      });
-    </script>
   </body>
 </html>

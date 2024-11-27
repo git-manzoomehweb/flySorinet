@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../output.css" />
     <title>Document</title>
   </head>
-  <body class="px-2 bg-zinc-200">
+  <body class="px-2 bg-zinc-50">
     <header>
       <section class="hidden p-6 lg:desktopContainer lg:block">
         <div class="flex justify-between">
@@ -273,9 +273,15 @@
 
       <!-- articles -->
       <section class="mt-[125rem] desktopContainer 2xl:mt-[110rem]">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="font-medium">مقاله ها</h2>
-          <span class="text-sm text-Primery-700">مشاهده همه</span>
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center gap-8">
+            <h2 class="text-2xl font-bold">مقاله ها</h2>
+            <span class="text-xl font-medium text-Primery-700">مشاهده همه</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <button><img src="../icons/previousIcon.svg" alt="" /></button>
+            <button><img src="../icons/nextIcon.svg" alt="" /></button>
+          </div>
         </div>
 
         <div
@@ -381,6 +387,36 @@
         <!-- simple of articles -->
       </section>
       <!-- articles -->
+
+      <section
+        class="flex flex-wrap justify-between gap-4 mx-auto mt-10 desktopContainer"
+      >
+        <img
+          src="../../public/images/sunExpress.png"
+          alt="sunExpress"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
+        <img
+          src="../../public/images/SalamAir.png"
+          alt="SalamAir"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
+        <img
+          src="../../public/images/turkishAirlines.png"
+          alt="turkishAirlines"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
+        <img
+          src="../../public/images/Qatar.png"
+          alt="Qatar"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
+        <img
+          src="../../public/images/IranAir.png"
+          alt="IranAir"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
+      </section>
     </main>
 
     <!-- footer -->

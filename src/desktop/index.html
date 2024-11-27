@@ -155,8 +155,58 @@
             <!-- timing, origin and destination  -->
             <div class="relative flex flex-col gap-3">
               <div
-                class="px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                class="relative px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
               >
+                <!-- submenu  -->
+                <div class="absolute right-0 z-10 w-full bg-white rounded-xl">
+                  <div class="px-3 py-2">
+                    <h3 class="font-medium">مبدا</h3>
+                    <span class="font-normal text-zinc-600"
+                      >مبدا خود را انتخاب کنید</span
+                    >
+                  </div>
+
+                  <div class="flex w-full">
+                    <!-- right content  -->
+                    <div class="w-1/2">
+                      <span
+                        class="block w-full px-6 py-2 font-medium text-center text-Primery-700 bg-zinc-200"
+                        >داخلی</span
+                      >
+                      <div class="border-l border-solid border-zinc-200">
+                        <div
+                          class="flex flex-col w-24 mx-auto text-center divide-y text-zinc-600"
+                        >
+                          <span>تهران</span>
+                          <span>اهواز</span>
+                          <span>مشهد</span>
+                          <span>اصفهان</span>
+                          <span>شیراز</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- right content end -->
+
+                    <!-- left content  -->
+                    <div class="w-1/2">
+                      <span
+                        class="block w-full px-6 py-2 font-medium text-center text-Primery-700 bg-zinc-200"
+                        >خارجی</span
+                      >
+                      <div
+                        class="flex flex-col w-24 mx-auto text-center divide-y text-zinc-600"
+                      >
+                        <span>تهران</span>
+                        <span>اهواز</span>
+                        <span>مشهد</span>
+                        <span>اصفهان</span>
+                        <span>شیراز</span>
+                      </div>
+                    </div>
+                    <!-- left content end -->
+                  </div>
+                </div>
+                <!-- submenu end -->
                 <h3 class="font-medium">مبدا</h3>
                 <span class="font-normal text-zinc-600"
                   >مبدا خود را انتخاب کنید</span
@@ -229,6 +279,58 @@
               <div
                 class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
               >
+                <!-- submenu -->
+                <div
+                  class="absolute right-0 z-10 w-full p-3 bg-white rounded-xl"
+                >
+                  <div
+                    class="flex items-center justify-between pb-2 border-b border-solid border-zinc-200"
+                  >
+                    <div>
+                      <h3 class="font-medium">مسافران/کلاس پرواز</h3>
+                      <span class="font-normal text-zinc-600"
+                        >1 بزرگسال/اکونومی</span
+                      >
+                    </div>
+                    <svg
+                      width="48"
+                      height="48"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                        fill="#18181B"
+                      />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <span class="">کلاس پرواز</span>
+                    <div class="flex items-center">
+                      <div
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/chevronRightIcon.svg" alt="" />
+                      </div>
+
+                      <span
+                        class="border border-solid bg-zinc-50 rounded-xl border-zinc-50"
+                        >اکونومی</span
+                      >
+
+                      <div
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/chevronLeftIcon.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- submenu end -->
                 <div>
                   <h3 class="font-medium">مسافران/کلاس پرواز</h3>
                   <span class="font-normal text-zinc-600"
@@ -262,10 +364,13 @@
       </section>
 
       <!-- تور های لحظه اخری -->
-      <section class="mt-14 desktopContainer">
+      <section class="mt-24 desktopContainer">
+        <div
+          class="absolute bg-main-desktop-back w-[62rem] h-[66rem] top-[58rem] right-0 rounded-tl-[200px] rounded-bl-[200px] -z-10"
+        ></div>
         <div class="flex items-center justify-between mb-4">
-          <h2 class="font-medium">تور های لحظه آخری</h2>
-          <span class="text-sm text-Primery-700">مشاهده همه</span>
+          <h2 class="text-2xl font-bold">تور های لحظه آخری</h2>
+          <span class="text-xl font-medium text-Primery-700">مشاهده همه</span>
         </div>
 
         <div
@@ -273,7 +378,7 @@
         >
           <!-- نمونه تور لحظه اخری -->
           <div
-            class="relative overflow-hidden border border-solid lg:w-[calc(50%-8px)] pb-7 border-zinc-300 rounded-xl"
+            class="relative bg-white overflow-hidden border border-solid lg:w-[calc(50%-8px)] pb-7 border-zinc-300 rounded-xl"
           >
             <div class="relative h-64">
               <div class="absolute w-full h-full bg-shadow-gradient"></div>
@@ -315,7 +420,7 @@
           </div>
 
           <div
-            class="relative overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(50%-8px)]"
+            class="relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(50%-8px)]"
           >
             <div class="relative h-64">
               <div class="absolute w-full h-full bg-shadow-gradient"></div>
@@ -357,7 +462,7 @@
           </div>
 
           <div
-            class="relative overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
+            class="relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
           >
             <div class="relative h-64">
               <div class="absolute w-full h-full bg-shadow-gradient"></div>
@@ -399,7 +504,7 @@
           </div>
 
           <div
-            class="relative hidden lg:block lg:w-[calc(33.33%-8px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
+            class="relative bg-white hidden lg:block lg:w-[calc(33.33%-8px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
           >
             <div class="relative h-64">
               <div class="absolute w-full h-full bg-shadow-gradient"></div>
@@ -441,7 +546,7 @@
           </div>
 
           <div
-            class="relative hidden lg:block overflow-hidden border border-solid lg:w-[calc(33.33%-8px)] pb-7 border-zinc-300 rounded-xl"
+            class="relative bg-white hidden lg:block overflow-hidden border border-solid lg:w-[calc(33.33%-8px)] pb-7 border-zinc-300 rounded-xl"
           >
             <div class="relative h-64">
               <div class="absolute w-full h-full bg-shadow-gradient"></div>
@@ -487,13 +592,16 @@
       <!-- تور لحظه اخری  -->
 
       <!-- هتل ها -->
-      <section class="mt-12 desktopContainer">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center justify-between w-36">
-            <h2 class="font-medium">هتل ها</h2>
-            <span class="text-sm text-Primery-700">مشاهده همه</span>
+      <section class="mt-24 desktopContainer">
+        <div
+          class="absolute bg-main-desktop-back w-[62rem] h-[33rem] top-[125rem] left-0 -scale-100 rounded-bl-[200px] rounded-tl-[200px] -z-10"
+        ></div>
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center gap-8">
+            <h2 class="text-2xl font-bold">هتل ها</h2>
+            <span class="text-xl font-medium text-Primery-700">مشاهده همه</span>
           </div>
-          <div>
+          <div class="flex items-center gap-3">
             <button><img src="../icons/previousIcon.svg" alt="" /></button>
             <button><img src="../icons/nextIcon.svg" alt="" /></button>
           </div>
@@ -504,7 +612,7 @@
         >
           <!-- نمونه هتل ها -->
           <div
-            class="relative pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
+            class="relative bg-white pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
           >
             <div class="relative">
               <div class="absolute w-full h-full bg-light-gradient"></div>
@@ -542,7 +650,7 @@
           </div>
 
           <div
-            class="relative pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
+            class="relative bg-white pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
           >
             <div class="relative">
               <div class="absolute w-full h-full bg-light-gradient"></div>
@@ -580,7 +688,7 @@
           </div>
 
           <div
-            class="relative pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
+            class="relative bg-white pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
           >
             <div class="relative">
               <div class="absolute w-full h-full bg-light-gradient"></div>
@@ -622,10 +730,16 @@
       <!-- هتل ها -->
 
       <!-- articles -->
-      <section class="mt-28 desktopContainer">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="font-medium">مقاله ها</h2>
-          <span class="text-sm text-Primery-700">مشاهده همه</span>
+      <section class="mt-24 desktopContainer">
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center gap-8">
+            <h2 class="text-2xl font-bold">مقاله ها</h2>
+            <span class="text-xl font-medium text-Primery-700">مشاهده همه</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <button><img src="../icons/previousIcon.svg" alt="" /></button>
+            <button><img src="../icons/nextIcon.svg" alt="" /></button>
+          </div>
         </div>
 
         <div
@@ -732,7 +846,9 @@
       </section>
       <!-- articles -->
 
-      <section class="flex flex-wrap justify-center gap-4 mt-6">
+      <section
+        class="flex flex-wrap justify-between gap-4 mx-auto mt-10 desktopContainer"
+      >
         <img
           src="../../public/images/sunExpress.png"
           alt="sunExpress"
