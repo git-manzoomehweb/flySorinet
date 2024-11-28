@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../output.css" />
+    <link rel="icon" href="../icons/favIcon.svg" />
     <title>Document</title>
   </head>
   <body class="px-2">
@@ -40,11 +41,29 @@
         </div>
       </section>
 
+      <!-- header mobile -->
+      <div class="flex justify-between px-4 py-3 lg:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+
+        <img src="../icons/headerIcons.svg" alt="" />
+      </div>
+      <!-- header mobile end -->
+
       <!-- header background -->
       <div class="relative mb-60 lg:mb-20">
-        <!-- <div
-          class="absolute h-48 w-60 bg-Primery-700 rounded-3xl left-2 top-5 rotate-[4deg] lg:-z-20 lg:rotate-[5deg] lg:w-[29rem] lg:h-[54rem] lg:-top-36 2xl:w-[49rem] 2xl:h-[52rem]"
-        ></div> -->
         <img
           src="../icons/tourListRecDesk.svg"
           alt=""
@@ -68,19 +87,22 @@
     <main>
       <section class="mt-[30rem]">
         <div class="mb-6">
-            <div class="text-sm">
-                <a href="">صفحه اصلی
-                    <span>></span>
-                </a>
-                <a href="">تور
-                    <span>></span>
-                </a>
-                <a href="">تور های استانبول
-                    <span>></span>
-                </a>
-                <span class="font-medium">مشاهده تور</span>
-            </div>
-            <h2 class="mt-4 text-3xl font-bold">تور های استانبول</h2>
+          <div class="text-sm">
+            <a href=""
+              >صفحه اصلی
+              <span>></span>
+            </a>
+            <a href=""
+              >تور
+              <span>></span>
+            </a>
+            <a href=""
+              >تور های استانبول
+              <span>></span>
+            </a>
+            <span class="font-medium">مشاهده تور</span>
+          </div>
+          <h2 class="mt-4 text-3xl font-bold">تور های استانبول</h2>
         </div>
 
         <div
@@ -590,17 +612,33 @@
             </div>
           </div>
         </div>
-        
+
         <div class="flex items-center justify-center gap-2 mt-16">
-            <div class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600">
-                <img src="../icons/chevronRightIcon.svg" alt="">
-            </div>
-            <div class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300">1</div>
-            <div class="flex items-center justify-center w-12 h-12 p-2 text-white rounded-xl bg-Primery-600">1</div>
-            <div class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300">1</div>
-            <div class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600">
-                <img src="../icons/chevronLeftIcon.svg" alt="">
-            </div>
+          <button
+            class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+          >
+            <img src="../icons/chevronRightIcon.svg" alt="" />
+          </button>
+          <div
+            class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300"
+          >
+            1
+          </div>
+          <div
+            class="flex items-center justify-center w-12 h-12 p-2 text-white rounded-xl bg-Primery-600"
+          >
+            1
+          </div>
+          <div
+            class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300"
+          >
+            1
+          </div>
+          <button
+            class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+          >
+            <img src="../icons/chevronLeftIcon.svg" alt="" />
+          </button>
         </div>
       </section>
 
@@ -775,7 +813,7 @@
               <h3 class="mb-4 font-medium text-white lg:text-2xl">
                 عضویت در خبرنامه
               </h3>
-              <div class="flex flex-col gap-4">
+              <form class="flex flex-col gap-4">
                 <input
                   type="text"
                   name="username"
@@ -784,7 +822,7 @@
                   class="w-full h-16 px-4 py-3 font-medium outline-none bg-Footer-900 text-zinc-400 rounded-xl"
                 />
                 <input
-                  type="emial"
+                  type="email"
                   name="email"
                   id=""
                   placeholder="ایمیل"
@@ -806,7 +844,7 @@
                 >
                   تایید
                 </button>
-              </div>
+              </form>
 
               <div class="flex items-center justify-between mt-8">
                 <span class="text-white">ما رو اینجا دنبال کنید</span>

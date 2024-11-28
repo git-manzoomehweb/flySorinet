@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../output.css" />
+    <link rel="icon" href="../icons/favIcon.svg" />
     <title>Document</title>
   </head>
   <body class="px-2 bg-zinc-50">
@@ -39,6 +40,27 @@
           </span>
         </div>
       </section>
+
+      <!-- header mobile -->
+      <div class="flex justify-between px-4 py-3 lg:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+
+        <img src="../icons/headerIcons.svg" alt="" />
+      </div>
+      <!-- header mobile end -->
 
       <!-- header background -->
       <div class="flex justify-center mb-16">
@@ -442,7 +464,7 @@
               <h3 class="mb-4 font-medium text-white lg:text-2xl">
                 عضویت در خبرنامه
               </h3>
-              <div class="flex flex-col gap-4">
+              <form class="flex flex-col gap-4">
                 <input
                   type="text"
                   name="username"
@@ -451,7 +473,7 @@
                   class="w-full h-16 px-4 py-3 font-medium outline-none bg-Footer-900 text-zinc-400 rounded-xl"
                 />
                 <input
-                  type="emial"
+                  type="email"
                   name="email"
                   id=""
                   placeholder="ایمیل"
@@ -473,7 +495,7 @@
                 >
                   تایید
                 </button>
-              </div>
+              </form>
 
               <div class="flex items-center justify-between mt-8">
                 <span class="text-white">ما رو اینجا دنبال کنید</span>

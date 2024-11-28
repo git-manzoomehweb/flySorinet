@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../output.css" />
+    <link rel="icon" href="../icons/favIcon.svg" />
     <link
       rel="stylesheet"
       href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css"
@@ -159,8 +160,58 @@
             <!-- timing, origin and destination  -->
             <div class="relative flex flex-col gap-3">
               <div
-                class="px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                class="relative px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
               >
+                <!-- submenu  -->
+                <div class="absolute right-0 z-10 w-full bg-white rounded-xl">
+                  <div class="px-3 py-2">
+                    <h3 class="font-medium">مبدا</h3>
+                    <span class="font-normal text-zinc-600"
+                      >مبدا خود را انتخاب کنید</span
+                    >
+                  </div>
+
+                  <div class="flex w-full">
+                    <!-- right content  -->
+                    <div class="w-1/2">
+                      <span
+                        class="block w-full px-6 py-2 font-medium text-center text-Primery-700 bg-zinc-200"
+                        >داخلی</span
+                      >
+                      <div class="border-l border-solid border-zinc-200">
+                        <div
+                          class="flex flex-col w-24 mx-auto text-center divide-y text-zinc-600"
+                        >
+                          <span>تهران</span>
+                          <span>اهواز</span>
+                          <span>مشهد</span>
+                          <span>اصفهان</span>
+                          <span>شیراز</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- right content end -->
+
+                    <!-- left content  -->
+                    <div class="w-1/2">
+                      <span
+                        class="block w-full px-6 py-2 font-medium text-center text-Primery-700 bg-zinc-200"
+                        >خارجی</span
+                      >
+                      <div
+                        class="flex flex-col w-24 mx-auto text-center divide-y text-zinc-600"
+                      >
+                        <span>استانبول</span>
+                        <span>دبی</span>
+                        <span>عمان</span>
+                        <span>قطر</span>
+                        <span>تفلیس</span>
+                      </div>
+                    </div>
+                    <!-- left content end -->
+                  </div>
+                </div>
+                <!-- submenu end -->
                 <h3 class="font-medium">مبدا</h3>
                 <span class="font-normal text-zinc-600"
                   >مبدا خود را انتخاب کنید</span
@@ -231,8 +282,103 @@
               </div>
 
               <div
-                class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                class="relative flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
               >
+                <!-- submenu -->
+                <div
+                  class="absolute hidden right-0 top-0 z-10 w-full p-3 bg-white rounded-xl"
+                >
+                  <div
+                    class="flex items-center justify-between pb-2 border-b border-solid border-zinc-200"
+                  >
+                    <div>
+                      <h3 class="font-medium">مسافران / کلاس پرواز</h3>
+                      <span class="text-zinc-600">1 بزرگسال / اکونومی</span>
+                    </div>
+                    <svg
+                      width="48"
+                      height="48"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                        fill="#18181B"
+                      />
+                    </svg>
+                  </div>
+                  <!-- items -->
+                  <div class="mt-2 border-b border-solid border-zinc-200 pb-2">
+                    <span class="text-sm">کلاس پرواز</span>
+                    <div class="flex items-center gap-1 mt-2">
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/chevronRightIcon.svg" alt="" />
+                      </button>
+
+                      <span
+                        class="border border-solid bg-zinc-50 font-medium rounded-xl p-3 text-center border-zinc-100 grow"
+                        >اکونومی</span
+                      >
+
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/chevronLeftIcon.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 pb-2">
+                    <span class="text-sm">بزرگسال ( +11 سال)</span>
+                    <div class="flex items-center gap-1 mt-2">
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/plusIcon.svg" alt="" />
+                      </button>
+
+                      <span
+                        class="border border-solid bg-zinc-50 font-medium rounded-xl p-3 text-center border-zinc-100 grow"
+                        >1</span
+                      >
+
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/minusIcon.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 pb-2">
+                    <span class="text-sm">کودک( تا 11 سال)</span>
+                    <div class="flex items-center gap-1 mt-2">
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/plusIcon.svg" alt="" />
+                      </button>
+
+                      <span
+                        class="border border-solid bg-zinc-50 font-medium rounded-xl p-3 text-center border-zinc-100 grow"
+                        >0</span
+                      >
+
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-400"
+                      >
+                        <img src="../icons/minusIcon.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <!-- items end -->
+                </div>
+                <!-- submenu end -->
                 <div>
                   <h3 class="font-medium">مسافران/کلاس پرواز</h3>
                   <span class="font-normal text-zinc-600"
@@ -808,7 +954,7 @@
               <h3 class="mb-4 font-medium text-white lg:text-2xl">
                 عضویت در خبرنامه
               </h3>
-              <div class="flex flex-col gap-4">
+              <form class="flex flex-col gap-4">
                 <input
                   type="text"
                   name="username"
@@ -817,7 +963,7 @@
                   class="w-full h-16 px-4 py-3 font-medium outline-none bg-Footer-900 text-zinc-400 rounded-xl"
                 />
                 <input
-                  type="emial"
+                  type="email"
                   name="email"
                   id=""
                   placeholder="ایمیل"
@@ -839,7 +985,7 @@
                 >
                   تایید
                 </button>
-              </div>
+              </form>
 
               <div class="flex items-center justify-between mt-8">
                 <span class="text-white">ما رو اینجا دنبال کنید</span>

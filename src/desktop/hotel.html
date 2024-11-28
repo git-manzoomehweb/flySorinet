@@ -1,162 +1,198 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <link rel="icon" href="../icons/favIcon.svg" />
     <title>Document</title>
-</head>
-<body class="px-2">
+  </head>
+  <body class="px-2">
     <header>
-        <section class="hidden p-6 lg:desktopContainer lg:block">
-            <div class="flex justify-between">
-              <nav class="flex items-center">
-                <ul class="flex justify-between gap-10">
-                  <li class="flex">
-                    <img src="../icons/headerIcons.svg" alt="" />
-                    <a href=""> صفحه اصلی </a>
-                  </li>
-                  <li>
-                    <a href="" class="flex items-center gap-2">
-                      تور ها
-                      <img src="../icons/chevronDownIcon.svg" alt="" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="flex items-center gap-2">
-                      ویزا
-                      <img src="../icons/chevronDownIcon.svg" alt="" />
-                    </a>
-                  </li>
-                  <li><a href="">مقالات</a></li>
-                  <li><a href="">گردشگری</a></li>
-                  <li><a href="">تماس با ما</a></li>
-                </ul>
-              </nav>
-              <span class="flex items-center gap-2">
-                <img src="../icons/personIcon.svg" alt="" />
-                ورود/ثبت نام
-              </span>
-            </div>
-          </section>
+      <section class="hidden p-6 lg:desktopContainer lg:block">
+        <div class="flex justify-between">
+          <nav class="flex items-center">
+            <ul class="flex justify-between gap-10">
+              <li class="flex">
+                <img src="../icons/headerIcons.svg" alt="" />
+                <a href=""> صفحه اصلی </a>
+              </li>
+              <li>
+                <a href="" class="flex items-center gap-2">
+                  تور ها
+                  <img src="../icons/chevronDownIcon.svg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="" class="flex items-center gap-2">
+                  ویزا
+                  <img src="../icons/chevronDownIcon.svg" alt="" />
+                </a>
+              </li>
+              <li><a href="">مقالات</a></li>
+              <li><a href="">گردشگری</a></li>
+              <li><a href="">تماس با ما</a></li>
+            </ul>
+          </nav>
+          <span class="flex items-center gap-2">
+            <img src="../icons/personIcon.svg" alt="" />
+            ورود/ثبت نام
+          </span>
+        </div>
+      </section>
 
-          <div class="relative mb-60 lg:mb-20">
-            <img src="../icons/headerBackIcon.svg" alt="" class="lg:absolute lg:left-[-17rem] lg:-z-10 lg:-top-24 2xl:-top-28 2xl:left-12">
-            <img
-              src="../../public/images/hotel-image-background.jpg"
-              alt=""
-              class="absolute rotate-3 w-72 rounded-3xl -left-12 object-cover top-4 lg:h-[53rem] lg:-z-10 lg:rotate-[4deg] lg:-left-12 lg:w-[32rem] lg:-top-36 2xl:w-[52rem] 2xl:-top-44"
-            />
-            <img
-              src="../../public/images/hotel-image.png"
-              alt=""
-              class="absolute left-7 -top-20 z-50 w-[28rem] h-[28rem] object-cover lg:-scale-x-100 lg:w-[37rem] lg:-left-1 lg:h-[36rem] lg:top-36 2xl:w-[50rem] 2xl:h-[46rem] 2xl:top-0 2xl:left-44 2xl:rotate-3"
-            />
-          </div>
+      <!-- header mobile -->
+      <div class="flex justify-between px-4 py-3 lg:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+
+        <img src="../icons/headerIcons.svg" alt="" />
+      </div>
+      <!-- header mobile end -->
+
+      <!-- header background -->
+      <div class="relative mb-60 lg:mb-20">
+        <img
+          src="../icons/headerBackIcon.svg"
+          alt=""
+          class="lg:absolute lg:left-[-17rem] lg:-z-10 lg:-top-24 2xl:-top-28 2xl:left-12"
+        />
+        <img
+          src="../../public/images/hotel-image-background.jpg"
+          alt=""
+          class="absolute rotate-3 w-72 rounded-3xl -left-12 object-cover top-4 lg:h-[53rem] lg:-z-10 lg:rotate-[4deg] lg:-left-12 lg:w-[32rem] lg:-top-36 2xl:w-[52rem] 2xl:-top-44"
+        />
+        <img
+          src="../../public/images/hotel-image.png"
+          alt=""
+          class="absolute left-7 -top-20 z-50 w-[28rem] h-[28rem] object-cover lg:-scale-x-100 lg:w-[37rem] lg:-left-1 lg:h-[36rem] lg:top-36 2xl:w-[50rem] 2xl:h-[46rem] 2xl:top-0 2xl:left-44 2xl:rotate-3"
+        />
+      </div>
     </header>
 
     <main>
-        <section class="mt-4 desktopContainer">
-            <div class="lg:w-2/5 2xl:w-2/5">
-              <h1 class="hidden mb-16 text-3xl font-bold lg:block"><span class="text-Primery-700">هتل ات</span> رو با سورینت تجربه کن</h1>
-              <div class="flex flex-wrap items-center justify-between gap-y-3 lg:mb-8">
-                <span
-                  class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+      <section class="mt-4 desktopContainer">
+        <div class="lg:w-2/5 2xl:w-2/5">
+          <h1 class="hidden mb-16 text-3xl font-bold lg:block">
+            <span class="text-Primery-700">هتل ات</span> رو با سورینت تجربه کن
+          </h1>
+          <div
+            class="flex flex-wrap items-center justify-between gap-y-3 lg:mb-8"
+          >
+            <span
+              class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+            >
+              <img src="../icons/bedIcon.svg" alt="" />
+              هتل
+            </span>
+            <div>
+              <div
+                class="flex flex-col items-center justify-around w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+              >
+                <img src="../icons/caseIcon.svg" alt="" />
+                <span class="w-max">هتل + پرواز</span>
+              </div>
+            </div>
+            <span
+              class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+            >
+              <img src="../icons/sunIcon.svg" alt="" />
+              تور
+            </span>
+            <span
+              class="flex flex-col items-center w-20 h-20 p-3 text-sm text-white rounded-full bg-Primery-700"
+            >
+              <img src="../icons/airplaneIcon.svg" alt="" />
+              پرواز
+            </span>
+          </div>
+          <!-- selected category end  -->
+
+          <div>
+            <!-- timing, origin and destination  -->
+            <div class="relative flex flex-col gap-3">
+              <div
+                class="px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+              >
+                <h3 class="font-medium">مقصد</h3>
+                <span class="font-normal text-zinc-600"
+                  >مقصد خود را انتخاب کنید</span
                 >
-                  <img src="../icons/bedIcon.svg" alt="" />
-                  هتل
-                </span>
-                <div>
-                  <div
-                    class="flex flex-col items-center justify-around w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
-                  >
-                    <img src="../icons/caseIcon.svg" alt="" />
-                    <span class="w-max">هتل + پرواز</span>
+              </div>
+
+              <div class="flex flex-col gap-3 lg:flex-row">
+                <div
+                  class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-2"
+                >
+                  <div>
+                    <h3 class="font-medium">تاریخ برگشت</h3>
+                    <span class="font-normal text-zinc-600">1403/5/5</span>
                   </div>
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                      fill="#18181B"
+                    />
+                  </svg>
                 </div>
-                <span
-                  class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+
+                <div
+                  class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-1"
                 >
-                  <img src="../icons/sunIcon.svg" alt="" />
-                  تور
-                </span>
-                <span
-                  class="flex flex-col items-center w-20 h-20 p-3 text-sm text-white rounded-full bg-Primery-700"
-                >
-                  <img src="../icons/airplaneIcon.svg" alt="" />
-                  پرواز
-                </span>
-              </div> 
-              <!-- selected category end  -->
-    
-                <!-- timing, origin and destination  -->
-                <div class="relative flex flex-col gap-3">
-                   
-                  <div
-                    class="px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                  <div>
+                    <h3 class="font-medium">تاریخ رفت</h3>
+                    <span class="font-normal text-zinc-600">1403/5/5</span>
+                  </div>
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <h3 class="font-medium">مقصد</h3>
-                    <span class="font-normal text-zinc-600"
-                      >مقصد خود را انتخاب کنید</span
-                    >
-                  </div>
-    
-                  <div class="flex flex-col gap-3 lg:flex-row">
-                    <div
-                      class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-2"
-                    >
-                      <div>
-                        <h3 class="font-medium">تاریخ برگشت</h3>
-                        <span class="font-normal text-zinc-600">1403/5/5</span>
-                      </div>
-                      <svg
-                        width="48"
-                        height="48"
-                        viewBox="0 0 48 48"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
-                          fill="#18181B"
-                        />
-                      </svg>
-                    </div>
-    
-                    <div
-                      class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-1"
-                    >
-                      <div>
-                        <h3 class="font-medium">تاریخ رفت</h3>
-                        <span class="font-normal text-zinc-600">1403/5/5</span>
-                      </div>
-                      <svg
-                        width="48"
-                        height="48"
-                        viewBox="0 0 48 48"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
-                          fill="#18181B"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-    
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                      fill="#18181B"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="relative flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+              >
+                <!-- submenu -->
+                <div
+                  class="absolute top-0 right-0 z-10 w-full p-3 bg-white rounded-xl"
+                >
                   <div
-                    class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                    class="flex items-center justify-between pb-2 border-b border-solid border-zinc-200"
                   >
                     <div>
                       <h3 class="font-medium">مسافران/اتاق</h3>
-                      <span class="font-normal text-zinc-600"
-                        >1 بزرگسال/1 اتاق</span
-                      >
+                      <span class="text-zinc-600">1 بزرگسال / 1 اتاق</span>
                     </div>
                     <svg
                       width="48"
@@ -173,16 +209,106 @@
                       />
                     </svg>
                   </div>
+                  <!-- items -->
+                  <div class="mt-2 border-b border-solid border-zinc-200 pb-2">
+                    <span class="text-sm">کلاس پرواز</span>
+                    <div class="flex items-center gap-1 mt-2">
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/chevronRightIcon.svg" alt="" />
+                      </button>
+
+                      <span
+                        class="border border-solid bg-zinc-50 font-medium rounded-xl p-3 text-center border-zinc-100 grow"
+                        >1 اتاق</span
+                      >
+
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/chevronLeftIcon.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 pb-2">
+                    <span class="text-sm">بزرگسال ( +11 سال)</span>
+                    <div class="flex items-center gap-1 mt-2">
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/plusIcon.svg" alt="" />
+                      </button>
+
+                      <span
+                        class="border border-solid bg-zinc-50 font-medium rounded-xl p-3 text-center border-zinc-100 grow"
+                        >1</span
+                      >
+
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/minusIcon.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 pb-2">
+                    <span class="text-sm">کودک( تا 11 سال)</span>
+                    <div class="flex items-center gap-1 mt-2">
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/plusIcon.svg" alt="" />
+                      </button>
+
+                      <span
+                        class="border border-solid bg-zinc-50 font-medium rounded-xl p-3 text-center border-zinc-100 grow"
+                        >0</span
+                      >
+
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-400"
+                      >
+                        <img src="../icons/minusIcon.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <!-- items end -->
                 </div>
-                <!-- timing, origin and destination end  -->
-                <button
-                  class="w-full px-4 py-2 mt-6 text-white h-14 bg-Primery-700 rounded-xl"
+                <!-- submenu end -->
+                <div>
+                  <h3 class="font-medium">مسافران/اتاق</h3>
+                  <span class="font-normal text-zinc-600"
+                    >1 بزرگسال/1 اتاق</span
+                  >
+                </div>
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  جست و جو
-                </button>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                    fill="#18181B"
+                  />
+                </svg>
               </div>
             </div>
-          </section>
+            <!-- timing, origin and destination end  -->
+            <button
+              class="w-full px-4 py-2 mt-6 text-white h-14 bg-Primery-700 rounded-xl"
+            >
+              جست و جو
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>

@@ -4,36 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../output.css" />
+    <link rel="icon" href="../icons/favIcon.svg" />
     <title>Document</title>
   </head>
   <body class="px-2">
     <header>
-        <div class="flex justify-between px-4 py-3 lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-    
-            <img src="../icons/headerIcons.svg" alt="" />
-          </div>
+      <!-- header mobile -->
+      <div class="flex justify-between px-4 py-3 lg:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+
+        <img src="../icons/headerIcons.svg" alt="" />
+      </div>
+      <!-- header mobile end -->
+
+      <!-- header desktop -->
+      <section class="hidden p-6 lg:desktopContainer lg:block">
+        <div class="flex justify-between">
+          <nav class="flex items-center">
+            <ul class="flex justify-between gap-10">
+              <li class="flex">
+                <img src="../icons/headerIcons.svg" alt="" />
+                <a href=""> صفحه اصلی </a>
+              </li>
+              <li>
+                <a href="" class="flex items-center gap-2">
+                  تور ها
+                  <img src="../icons/chevronDownIcon.svg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="" class="flex items-center gap-2">
+                  ویزا
+                  <img src="../icons/chevronDownIcon.svg" alt="" />
+                </a>
+              </li>
+              <li><a href="">مقالات</a></li>
+              <li><a href="">گردشگری</a></li>
+              <li><a href="">تماس با ما</a></li>
+            </ul>
+          </nav>
+          <span class="flex items-center gap-2">
+            <img src="../icons/personIcon.svg" alt="" />
+            ورود/ثبت نام
+          </span>
+        </div>
+      </section>
+      <!-- header desktop end -->
     </header>
 
     <main class="mt-52 mb-96">
       <section class="desktopContainer">
-        <div
-          class="relative flex flex-col items-center justify-center"
-        >
-          <img src="../icons/500Icon.svg" alt="" class="w-40"/>
+        <div class="relative flex flex-col items-center justify-center">
+          <img src="../icons/500Icon.svg" alt="" class="w-40" />
           <span class="mt-8 text-sm text-center text-zinc-600"
             >ارتباط با سرور با مشکل مواجه شد لطفا در زمان دیگر امتحان کنید</span
           >
@@ -47,7 +82,11 @@
     </main>
 
     <footer class="relative px-4 py-4 mt-24 rounded-xl bg-footer-gradient">
-      <img src="../icons/footerBackIcon.svg" alt="" class="absolute -top-3 -right-px -z-10">
+      <img
+        src="../icons/footerBackIcon.svg"
+        alt=""
+        class="absolute -top-3 -right-px -z-10"
+      />
       <div class="flex flex-col items-center justify-center gap-2 mb-6">
         <img src="../icons/headerIcons.svg" alt="" />
         <h2 class="text-sm font-normal text-white">
@@ -64,7 +103,7 @@
               <h3 class="mb-4 font-medium text-white lg:text-2xl">
                 عضویت در خبرنامه
               </h3>
-              <div class="flex flex-col gap-4">
+              <form class="flex flex-col gap-4">
                 <input
                   type="text"
                   name="username"
@@ -73,7 +112,7 @@
                   class="w-full h-16 px-4 py-3 font-medium outline-none bg-Footer-900 text-zinc-400 rounded-xl"
                 />
                 <input
-                  type="emial"
+                  type="email"
                   name="email"
                   id=""
                   placeholder="ایمیل"
@@ -95,7 +134,7 @@
                 >
                   تایید
                 </button>
-              </div>
+              </form>
 
               <div class="flex items-center justify-between mt-8">
                 <span class="text-white">ما رو اینجا دنبال کنید</span>

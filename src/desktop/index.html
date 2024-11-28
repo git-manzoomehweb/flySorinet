@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../output.css" />
+    <link rel="icon" href="../icons/favIcon.svg" />
     <title>Soorinet</title>
   </head>
   <body class="px-2">
@@ -38,7 +39,16 @@
                 <img src="../icons/headerIcons.svg" alt="" />
                 <a href=""> صفحه اصلی </a>
               </li>
-              <li>
+              <li class="relative">
+                <!-- submenu -->
+                <div
+                  class="p-4 rounded-xl bg-white absolute flex flex-col gap-2 w-64"
+                >
+                  <a href="">تور استانبول</a>
+                  <a href="">تور استانبول</a>
+                  <a href="">تور استانبول</a>
+                </div>
+                <!-- submenu end -->
                 <a href="" class="flex items-center gap-2">
                   تور ها
                   <img src="../icons/chevronDownIcon.svg" alt="" />
@@ -65,9 +75,6 @@
 
       <!-- header background -->
       <div class="relative mb-60 lg:mb-20">
-        <!-- <div
-          class="absolute h-48 w-60 bg-Primery-700 rounded-3xl left-2 top-5 rotate-[4deg] lg:-z-20 lg:rotate-[5deg] lg:w-[29rem] lg:h-[54rem] lg:-top-36 2xl:w-[49rem] 2xl:h-[52rem]"
-        ></div> -->
         <img
           src="../icons/headerBackIcon.svg"
           alt=""
@@ -196,11 +203,11 @@
                       <div
                         class="flex flex-col w-24 mx-auto text-center divide-y text-zinc-600"
                       >
-                        <span>تهران</span>
-                        <span>اهواز</span>
-                        <span>مشهد</span>
-                        <span>اصفهان</span>
-                        <span>شیراز</span>
+                        <span>استانبول</span>
+                        <span>دبی</span>
+                        <span>عمان</span>
+                        <span>قطر</span>
+                        <span>تفلیس</span>
                       </div>
                     </div>
                     <!-- left content end -->
@@ -277,20 +284,18 @@
               </div>
 
               <div
-                class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                class="relative flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
               >
                 <!-- submenu -->
                 <div
-                  class="absolute right-0 z-10 w-full p-3 bg-white rounded-xl"
+                  class="absolute hidden top-0 right-0 z-10 w-full p-3 bg-white rounded-xl"
                 >
                   <div
                     class="flex items-center justify-between pb-2 border-b border-solid border-zinc-200"
                   >
                     <div>
-                      <h3 class="font-medium">مسافران/کلاس پرواز</h3>
-                      <span class="font-normal text-zinc-600"
-                        >1 بزرگسال/اکونومی</span
-                      >
+                      <h3 class="font-medium">مسافران / کلاس پرواز</h3>
+                      <span class="text-zinc-600">1 بزرگسال / اکونومی</span>
                     </div>
                     <svg
                       width="48"
@@ -307,28 +312,73 @@
                       />
                     </svg>
                   </div>
-
-                  <div>
-                    <span class="">کلاس پرواز</span>
-                    <div class="flex items-center">
-                      <div
+                  <!-- items -->
+                  <div class="mt-2 border-b border-solid border-zinc-200 pb-2">
+                    <span class="text-sm">کلاس پرواز</span>
+                    <div class="flex items-center gap-1 mt-2">
+                      <button
                         class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
                       >
                         <img src="../icons/chevronRightIcon.svg" alt="" />
-                      </div>
+                      </button>
 
                       <span
-                        class="border border-solid bg-zinc-50 rounded-xl border-zinc-50"
+                        class="border border-solid bg-zinc-50 font-medium rounded-xl p-3 text-center border-zinc-100 grow"
                         >اکونومی</span
                       >
 
-                      <div
+                      <button
                         class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
                       >
                         <img src="../icons/chevronLeftIcon.svg" alt="" />
-                      </div>
+                      </button>
                     </div>
                   </div>
+
+                  <div class="mt-2 pb-2">
+                    <span class="text-sm">بزرگسال ( +11 سال)</span>
+                    <div class="flex items-center gap-1 mt-2">
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/plusIcon.svg" alt="" />
+                      </button>
+
+                      <span
+                        class="border border-solid bg-zinc-50 font-medium rounded-xl p-3 text-center border-zinc-100 grow"
+                        >1</span
+                      >
+
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/minusIcon.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 pb-2">
+                    <span class="text-sm">کودک( تا 11 سال)</span>
+                    <div class="flex items-center gap-1 mt-2">
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                      >
+                        <img src="../icons/plusIcon.svg" alt="" />
+                      </button>
+
+                      <span
+                        class="border border-solid bg-zinc-50 font-medium rounded-xl p-3 text-center border-zinc-100 grow"
+                        >0</span
+                      >
+
+                      <button
+                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-400"
+                      >
+                        <img src="../icons/minusIcon.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <!-- items end -->
                 </div>
                 <!-- submenu end -->
                 <div>
@@ -901,7 +951,7 @@
               <h3 class="mb-4 font-medium text-white lg:text-2xl">
                 عضویت در خبرنامه
               </h3>
-              <div class="flex flex-col gap-4">
+              <form class="flex flex-col gap-4">
                 <input
                   type="text"
                   name="username"
@@ -910,7 +960,7 @@
                   class="w-full h-16 px-4 py-3 font-medium outline-none bg-Footer-900 text-zinc-400 rounded-xl"
                 />
                 <input
-                  type="emial"
+                  type="email"
                   name="email"
                   id=""
                   placeholder="ایمیل"
@@ -932,7 +982,7 @@
                 >
                   تایید
                 </button>
-              </div>
+              </form>
 
               <div class="flex items-center justify-between mt-8">
                 <span class="text-white">ما رو اینجا دنبال کنید</span>
