@@ -9,37 +9,57 @@
   </head>
   <body class="px-2 bg-zinc-50">
     <header>
-      <section class="hidden p-6 lg:desktopContainer lg:block">
-        <div class="flex justify-between">
-          <nav class="flex items-center">
-            <ul class="flex justify-between gap-10">
-              <li class="flex">
-                <img src="../icons/headerIcons.svg" alt="" />
-                <a href=""> صفحه اصلی </a>
-              </li>
-              <li>
-                <a href="" class="flex items-center gap-2">
-                  تور ها
-                  <img src="../icons/chevronDownIcon.svg" alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="" class="flex items-center gap-2">
-                  ویزا
-                  <img src="../icons/chevronDownIcon.svg" alt="" />
-                </a>
-              </li>
-              <li><a href="">مقالات</a></li>
-              <li><a href="">گردشگری</a></li>
-              <li><a href="">تماس با ما</a></li>
-            </ul>
-          </nav>
-          <span class="flex items-center gap-2">
-            <img src="../icons/personIcon.svg" alt="" />
-            ورود/ثبت نام
-          </span>
-        </div>
-      </section>
+     <!-- header menu desktop -->
+     <section class="hidden p-6 lg:desktopContainer lg:block">
+      <div class="flex justify-between">
+        <nav class="flex items-center relative">
+          <ul class="flex justify-between gap-10">
+            <li class="flex">
+              <img src="../icons/headerIcons.svg" alt="" />
+              <a href=""> صفحه اصلی </a>
+            </li>
+            <li>
+              <!-- submenu -->
+              <div
+                class="p-4 rounded-xl bg-white absolute flex flex-col gap-2 w-64 shadow-md font-medium top-full"
+              >
+                <a href="">تور استانبول</a>
+                <a href="">تور استانبول</a>
+                <a href="">تور استانبول</a>
+              </div>
+              <!-- submenu end -->
+              <a href="" class="flex items-center gap-2">
+                تور ها
+                <img src="../icons/chevronDownIcon.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <!-- submenu -->
+              <div
+                class="p-4 rounded-xl bg-white absolute flex flex-col gap-2 w-64 shadow-md font-medium top-full"
+              >
+                <a href="">ویزای شینگن</a>
+                <a href="">ویزای اروپا</a>
+                <a href="">ویزای آمریکا</a>
+              </div>
+              <!-- submenu end -->
+              <a href="" class="flex items-center gap-2">
+                ویزا
+                <img src="../icons/chevronDownIcon.svg" alt="" />
+              </a>
+            </li>
+            <li><a href="">مقالات</a></li>
+            <li><a href="">گردشگری</a></li>
+            <li><a href="">تماس با ما</a></li>
+          </ul>
+        </nav>
+        <span class="flex items-center gap-2">
+          <img src="../icons/personIcon.svg" alt="" />
+          ورود/ثبت نام
+        </span>
+      </div>
+    </section>
+    <!-- header menu desktop end -->
 
       <!-- header mobile -->
       <div class="flex justify-between px-4 py-3 lg:hidden">
@@ -66,7 +86,7 @@
       <div class="flex justify-center mb-16">
         <img
           src="../../public/images/maldiv.jpg"
-          alt=""
+          alt="maldiv"
           class="object-cover 2xl:h-[44rem] lg:h-[30rem] object-bottom border-b-8 border-solid border-Primery-600 w-full rounded-3xl"
         />
       </div>
@@ -98,7 +118,7 @@
           </p>
           <img
             src="../../public/images/rome-sunset.jpg"
-            alt=""
+            alt="rome-sunset"
             class="object-cover object-bottom h-[28rem] w-full rounded-3xl"
           />
 
@@ -155,7 +175,7 @@
 
           <img
             src="../../public/images/rome-sunset.jpg"
-            alt=""
+            alt="rome-sunset"
             class="object-cover object-bottom w-full h-[28rem] rounded-3xl"
           />
 
@@ -230,7 +250,7 @@
               <div class="flex items-center gap-4">
                 <img
                   src="../../public/images/dubai.jpg"
-                  alt=""
+                  alt="dubai"
                   class="object-cover w-24 h-24 rounded-xl"
                 />
                 <div class="flex flex-col gap-2">
@@ -245,7 +265,7 @@
               <div class="flex items-center gap-4">
                 <img
                   src="../../public/images/dubai.jpg"
-                  alt=""
+                  alt="dubai"
                   class="object-cover w-24 h-24 rounded-xl"
                 />
                 <div class="flex flex-col gap-2">
@@ -260,7 +280,7 @@
               <div class="flex items-center gap-4">
                 <img
                   src="../../public/images/dubai.jpg"
-                  alt=""
+                  alt="dubai"
                   class="object-cover w-24 h-24 rounded-xl"
                 />
                 <div class="flex flex-col gap-2">
@@ -275,7 +295,7 @@
               <div class="flex items-center gap-4">
                 <img
                   src="../../public/images/dubai.jpg"
-                  alt=""
+                  alt="dubai"
                   class="object-cover w-24 h-24 rounded-xl"
                 />
                 <div class="flex flex-col gap-2">
@@ -589,10 +609,10 @@
           <div class="flex justify-between mt-3 lg:mt-0">
             <img
               src="../../public/images/basisFly.png"
-              alt=""
+              alt="basisFly"
               class="h-4 w-17"
             />
-            <img src="../../public/images/trust-login.png" alt="" />
+            <img src="../../public/images/trust-login.png" alt="trust-login" />
           </div>
         </div>
       </div>

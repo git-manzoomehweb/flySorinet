@@ -8,7 +8,54 @@
     <title>Document</title>
   </head>
   <body class="px-2">
-    <header>
+    <header class="relative">
+      <!-- header subset -->
+      <div class="bg-black bg-opacity-70 fixed w-full h-full z-40">
+        <div class="fixed right-0 bg-white shadow-md z-50 w-9/12 h-full p-4">
+          <nav class="flex items-center h-full">
+            <ul class="flex justify-between flex-col gap-10 h-full">
+              <li class="flex">
+                <a href=""> صفحه اصلی </a>
+              </li>
+              <li>
+                <a href="" class="flex items-center gap-2">
+                  تور ها
+                  <img src="../icons/chevronDownIcon.svg" alt="" />
+                </a>
+                <!-- submenu -->
+                <div
+                  class="p-4 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute shadow-md transition-all duration-500"
+                >
+                  <a href="">تور استانبول</a>
+                  <a href="">تور استانبول</a>
+                  <a href="">تور استانبول</a>
+                </div>
+                <!-- submenu end -->
+              </li>
+              <li>
+                <a href="" class="flex items-center gap-2">
+                  ویزا
+                  <img src="../icons/chevronDownIcon.svg" alt="" />
+                </a>
+                <!-- submenu -->
+                <div
+                  class="p-4 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute shadow-md transition-all duration-500"
+                >
+                  <a href="">ویزای شینگن</a>
+                  <a href="">ویزای اروپا</a>
+                  <a href="">ویزای آمریکا</a>
+                </div>
+                <!-- submenu end -->
+              </li>
+              <li><a href="">مقالات</a></li>
+              <li><a href="">گردشگری</a></li>
+              <li><a href="">تماس با ما</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- header subset end -->
+
       <!-- header mobile -->
       <div class="flex justify-between px-4 py-3 lg:hidden">
         <svg
@@ -67,16 +114,14 @@
 
     <main class="mt-52 mb-96">
       <section class="desktopContainer">
-        <div
-          class="relative flex flex-col items-center justify-center pt-2"
-        >
-          <img src="../icons/outletIcon.svg" alt="" class="w-[70%]"/>
+        <div class="relative flex flex-col items-center justify-center pt-2">
+          <img src="../icons/outletIcon.svg" alt="" class="w-[70%]" />
           <img
             src="../icons/personLaptopIcon.svg"
             alt=""
             class="absolute top-0 w-[10%]"
           />
-          <img src="../icons/404Icon.svg" alt="" class="w-1/2"/>
+          <img src="../icons/404Icon.svg" alt="" class="w-1/2" />
           <span class="mt-8 text-zinc-600">صفحه مورد نظر یافت نشد</span>
           <button
             class="px-4 py-2 mt-6 text-white h-14 bg-Primery-700 rounded-xl"
@@ -88,7 +133,11 @@
     </main>
 
     <footer class="relative px-4 py-4 mt-24 rounded-xl bg-footer-gradient">
-      <img src="../icons/footerBackIcon.svg" alt="" class="absolute -top-3 -right-px -z-10">
+      <img
+        src="../icons/footerBackIcon.svg"
+        alt=""
+        class="absolute -top-3 -right-px -z-10"
+      />
       <div class="flex flex-col items-center justify-center gap-2 mb-6">
         <img src="../icons/headerIcons.svg" alt="" />
         <h2 class="text-sm font-normal text-white">
@@ -230,10 +279,10 @@
           <div class="flex justify-between mt-3 lg:mt-0">
             <img
               src="../../public/images/basisFly.png"
-              alt=""
+              alt="basisFly"
               class="h-4 w-17"
             />
-            <img src="../../public/images/trust-login.png" alt="" />
+            <img src="../../public/images/trust-login.png" alt="trust-login" />
           </div>
         </div>
       </div>

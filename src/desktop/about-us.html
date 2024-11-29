@@ -9,21 +9,40 @@
   </head>
   <body class="bg-zinc-50">
     <header>
+      <!-- header menu desktop -->
       <section class="hidden p-6 lg:desktopContainer lg:block">
         <div class="flex justify-between">
-          <nav class="flex items-center">
+          <nav class="flex items-center relative">
             <ul class="flex justify-between gap-10">
               <li class="flex">
                 <img src="../icons/headerIcons.svg" alt="" />
                 <a href=""> صفحه اصلی </a>
               </li>
               <li>
+                <!-- submenu -->
+                <div
+                  class="p-4 rounded-xl bg-white absolute flex flex-col gap-2 w-64 shadow-md font-medium top-full"
+                >
+                  <a href="">تور استانبول</a>
+                  <a href="">تور استانبول</a>
+                  <a href="">تور استانبول</a>
+                </div>
+                <!-- submenu end -->
                 <a href="" class="flex items-center gap-2">
                   تور ها
                   <img src="../icons/chevronDownIcon.svg" alt="" />
                 </a>
               </li>
               <li>
+                <!-- submenu -->
+                <div
+                  class="p-4 rounded-xl bg-white absolute flex flex-col gap-2 w-64 shadow-md font-medium top-full"
+                >
+                  <a href="">ویزای شینگن</a>
+                  <a href="">ویزای اروپا</a>
+                  <a href="">ویزای آمریکا</a>
+                </div>
+                <!-- submenu end -->
                 <a href="" class="flex items-center gap-2">
                   ویزا
                   <img src="../icons/chevronDownIcon.svg" alt="" />
@@ -40,6 +59,7 @@
           </span>
         </div>
       </section>
+      <!-- header menu desktop end -->
 
       <!-- header mobile -->
       <div class="flex justify-between px-4 py-3 lg:hidden">
@@ -67,7 +87,7 @@
       <div class="relative">
         <img
           src="../../public/images/map-image.png"
-          alt=""
+          alt="map-image"
           class="lg:h-[25rem] lg:w-full object-cover -z-10"
         />
         <img
@@ -353,10 +373,10 @@
           <div class="flex justify-between mt-3 lg:mt-0">
             <img
               src="../../public/images/basisFly.png"
-              alt=""
+              alt="basisFly"
               class="h-4 w-17"
             />
-            <img src="../../public/images/trust-login.png" alt="" />
+            <img src="../../public/images/trust-login.png" alt="trust-login" />
           </div>
         </div>
       </div>

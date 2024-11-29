@@ -9,21 +9,40 @@
   </head>
   <body class="px-2">
     <header>
+      <!-- header menu desktop -->
       <section class="hidden p-6 lg:desktopContainer lg:block">
         <div class="flex justify-between">
-          <nav class="flex items-center">
+          <nav class="flex items-center relative">
             <ul class="flex justify-between gap-10">
               <li class="flex">
                 <img src="../icons/headerIcons.svg" alt="" />
                 <a href=""> صفحه اصلی </a>
               </li>
               <li>
+                <!-- submenu -->
+                <div
+                  class="p-4 rounded-xl bg-white absolute flex flex-col gap-2 w-64 shadow-md font-medium top-full"
+                >
+                  <a href="">تور استانبول</a>
+                  <a href="">تور استانبول</a>
+                  <a href="">تور استانبول</a>
+                </div>
+                <!-- submenu end -->
                 <a href="" class="flex items-center gap-2">
                   تور ها
                   <img src="../icons/chevronDownIcon.svg" alt="" />
                 </a>
               </li>
               <li>
+                <!-- submenu -->
+                <div
+                  class="p-4 rounded-xl bg-white absolute flex flex-col gap-2 w-64 shadow-md font-medium top-full"
+                >
+                  <a href="">ویزای شینگن</a>
+                  <a href="">ویزای اروپا</a>
+                  <a href="">ویزای آمریکا</a>
+                </div>
+                <!-- submenu end -->
                 <a href="" class="flex items-center gap-2">
                   ویزا
                   <img src="../icons/chevronDownIcon.svg" alt="" />
@@ -40,6 +59,7 @@
           </span>
         </div>
       </section>
+      <!-- header menu desktop end -->
 
       <!-- header mobile -->
       <div class="flex justify-between px-4 py-3 lg:hidden">
@@ -61,7 +81,7 @@
         <img src="../icons/headerIcons.svg" alt="" />
       </div>
       <!-- header mobile end -->
-       
+
       <div class="relative mb-60 lg:mb-20">
         <img
           src="../icons/headerBackIcon.svg"
@@ -70,12 +90,12 @@
         />
         <img
           src="../../public/images/tour-image-background.jpg"
-          alt=""
+          alt="tour-image-background"
           class="absolute rotate-3 w-72 rounded-3xl -left-12 object-cover top-4 lg:h-[53rem] lg:-z-10 lg:rotate-[4deg] lg:-left-12 lg:w-[32rem] lg:-top-36 2xl:w-[52rem] 2xl:-top-44"
         />
         <img
           src="../../public/images/tour-image.png"
-          alt=""
+          alt="tour-image"
           class="absolute left-7 -top-20 z-50 w-[28rem] h-[28rem] object-cover lg:w-[36rem] lg:-left-1 lg:rotate-[4deg] lg:h-[32rem] lg:top-48 2xl:w-[50rem] 2xl:h-[46rem] 2xl:-top-12 2xl:left-32"
         />
       </div>

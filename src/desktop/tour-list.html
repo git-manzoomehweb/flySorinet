@@ -9,37 +9,57 @@
   </head>
   <body class="px-2">
     <header>
-      <section class="hidden p-6 lg:desktopContainer lg:block">
-        <div class="flex justify-between">
-          <nav class="flex items-center">
-            <ul class="flex justify-between gap-10">
-              <li class="flex">
-                <img src="../icons/headerIcons.svg" alt="" />
-                <a href=""> صفحه اصلی </a>
-              </li>
-              <li>
-                <a href="" class="flex items-center gap-2">
-                  تور ها
-                  <img src="../icons/chevronDownIcon.svg" alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="" class="flex items-center gap-2">
-                  ویزا
-                  <img src="../icons/chevronDownIcon.svg" alt="" />
-                </a>
-              </li>
-              <li><a href="">مقالات</a></li>
-              <li><a href="">گردشگری</a></li>
-              <li><a href="">تماس با ما</a></li>
-            </ul>
-          </nav>
-          <span class="flex items-center gap-2">
-            <img src="../icons/personIcon.svg" alt="" />
-            ورود/ثبت نام
-          </span>
-        </div>
-      </section>
+     <!-- header menu desktop -->
+     <section class="hidden p-6 lg:desktopContainer lg:block">
+      <div class="flex justify-between">
+        <nav class="flex items-center relative">
+          <ul class="flex justify-between gap-10">
+            <li class="flex">
+              <img src="../icons/headerIcons.svg" alt="" />
+              <a href=""> صفحه اصلی </a>
+            </li>
+            <li>
+              <!-- submenu -->
+              <div
+                class="p-4 rounded-xl bg-white absolute flex flex-col gap-2 w-64 shadow-md font-medium top-full"
+              >
+                <a href="">تور استانبول</a>
+                <a href="">تور استانبول</a>
+                <a href="">تور استانبول</a>
+              </div>
+              <!-- submenu end -->
+              <a href="" class="flex items-center gap-2">
+                تور ها
+                <img src="../icons/chevronDownIcon.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <!-- submenu -->
+              <div
+                class="p-4 rounded-xl bg-white absolute flex flex-col gap-2 w-64 shadow-md font-medium top-full"
+              >
+                <a href="">ویزای شینگن</a>
+                <a href="">ویزای اروپا</a>
+                <a href="">ویزای آمریکا</a>
+              </div>
+              <!-- submenu end -->
+              <a href="" class="flex items-center gap-2">
+                ویزا
+                <img src="../icons/chevronDownIcon.svg" alt="" />
+              </a>
+            </li>
+            <li><a href="">مقالات</a></li>
+            <li><a href="">گردشگری</a></li>
+            <li><a href="">تماس با ما</a></li>
+          </ul>
+        </nav>
+        <span class="flex items-center gap-2">
+          <img src="../icons/personIcon.svg" alt="" />
+          ورود/ثبت نام
+        </span>
+      </div>
+    </section>
+    <!-- header menu desktop end -->
 
       <!-- header mobile -->
       <div class="flex justify-between px-4 py-3 lg:hidden">
@@ -72,12 +92,12 @@
 
         <img
           src="../../public/images/strait-bosphorus-suleymaniye-mosque.jpg"
-          alt=""
+          alt="strait-bosphorus-suleymaniye-mosque"
           class="absolute w-[55rem] rounded-3xl left-0 -top-20 h-[28rem] -z-10 2xl:w-[80rem]"
         />
         <img
           src="../../public/images/airplane.png"
-          alt=""
+          alt="airplane"
           class="absolute left-60 top-0 z-50 w-full h-[28rem] object-cover 2xl:w-[70rem] 2xl:h-auto 2xl:left-[44rem] 2xl:-top-20"
         />
       </div>
@@ -938,10 +958,10 @@
           <div class="flex justify-between mt-3 lg:mt-0">
             <img
               src="../../public/images/basisFly.png"
-              alt=""
+              alt="basisFly"
               class="h-4 w-17"
             />
-            <img src="../../public/images/trust-login.png" alt="" />
+            <img src="../../public/images/trust-login.png" alt="trust-login" />
           </div>
         </div>
       </div>

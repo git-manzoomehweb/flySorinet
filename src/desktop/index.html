@@ -33,16 +33,16 @@
       <!-- header menu desktop -->
       <section class="hidden p-6 lg:desktopContainer lg:block">
         <div class="flex justify-between">
-          <nav class="flex items-center">
+          <nav class="flex items-center relative">
             <ul class="flex justify-between gap-10">
               <li class="flex">
                 <img src="../icons/headerIcons.svg" alt="" />
                 <a href=""> صفحه اصلی </a>
               </li>
-              <li class="relative">
+              <li>
                 <!-- submenu -->
                 <div
-                  class="p-4 rounded-xl bg-white absolute flex flex-col gap-2 w-64"
+                  class="p-4 rounded-xl bg-white absolute flex flex-col gap-2 w-64 shadow-md font-medium top-full"
                 >
                   <a href="">تور استانبول</a>
                   <a href="">تور استانبول</a>
@@ -55,6 +55,15 @@
                 </a>
               </li>
               <li>
+                <!-- submenu -->
+                <div
+                  class="p-4 rounded-xl bg-white absolute flex flex-col gap-2 w-64 shadow-md font-medium top-full"
+                >
+                  <a href="">ویزای شینگن</a>
+                  <a href="">ویزای اروپا</a>
+                  <a href="">ویزای آمریکا</a>
+                </div>
+                <!-- submenu end -->
                 <a href="" class="flex items-center gap-2">
                   ویزا
                   <img src="../icons/chevronDownIcon.svg" alt="" />
@@ -83,12 +92,12 @@
 
         <img
           src="../../public/images/airplane-background.jfif"
-          alt=""
+          alt="airplane-background"
           class="absolute rotate-3 w-72 rounded-3xl -left-12 top-4 lg:h-[53rem] lg:-z-10 lg:rotate-[4deg] lg:-left-12 lg:w-[32rem] lg:-top-36 2xl:w-[52rem] 2xl:-top-44"
         />
         <img
           src="../../public/images/airplane.png"
-          alt=""
+          alt="airplane"
           class="absolute left-7 -top-20 z-50 w-[28rem] h-[28rem] object-cover lg:w-[38rem] lg:h-[38rem] lg:top-20 2xl:w-[68rem] 2xl:h-[70rem] 2xl:-top-32"
         />
       </div>
@@ -139,8 +148,12 @@
               <div class="flex justify-between">
                 <div class="flex items-center gap-1">
                   <div
-                    class="relative w-5 h-5 border-2 border-solid border-Primery-700 rounded-full after:content-[''] after:w-3 after:h-3 after:bg-Primery-700 after:absolute after:rounded-full after:top-[10%] after:left-[10%]"
-                  ></div>
+                    class="relative w-5 h-5 border-2 border-solid border-Primery-700 rounded-full flex items-center justify-center"
+                  >
+                    <div
+                      class="w-3 h-3 top-1/2 bg-Primery-700 rounded-full"
+                    ></div>
+                  </div>
                   <span class="text-sm text-Primery-700">یکطرفه</span>
                 </div>
                 <div class="flex items-center gap-1">
@@ -706,7 +719,7 @@
               <div class="absolute w-full h-full bg-light-gradient"></div>
               <img
                 src="../../public/images/sunshine.jpg"
-                alt=""
+                alt="sunshine"
                 class="object-cover w-full h-64"
               />
               <div
@@ -744,7 +757,7 @@
               <div class="absolute w-full h-full bg-light-gradient"></div>
               <img
                 src="../../public/images/sunshine.jpg"
-                alt=""
+                alt="sunshine"
                 class="object-cover w-full h-64"
               />
               <div
@@ -1076,10 +1089,10 @@
           <div class="flex justify-between mt-3 lg:mt-0">
             <img
               src="../../public/images/basisFly.png"
-              alt=""
+              alt="basisFly"
               class="h-4 w-17"
             />
-            <img src="../../public/images/trust-login.png" alt="" />
+            <img src="../../public/images/trust-login.png" alt="trust-login" />
           </div>
         </div>
       </div>
