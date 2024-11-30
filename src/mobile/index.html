@@ -16,10 +16,10 @@
     <header class="relative">
       <!-- header subset -->
       <div
-        class="fixed z-40 hidden w-full h-full bg-black header-subset bg-opacity-70"
+        class="fixed z-50 hidden w-full h-full bg-black header-subset-overlay bg-opacity-70 overfh"
       >
         <div
-          class="fixed right-0 z-50 w-9/12 h-full p-4 overflow-scroll bg-white shadow-md"
+          class="header-subset translate-x-96 transition duration-200 transform ease-in-out fixed right-0 z-50 w-9/12 h-full p-4 overflow-scroll bg-white shadow-md"
         >
           <nav class="flex items-center w-full h-full">
             <ul class="flex flex-col justify-between w-full h-full gap-10">
@@ -31,14 +31,14 @@
                   class="w-8 cursor-pointer x-icon"
                 />
               </li>
-              <li class="group">
+              <li class="tour-li">
                 <span href="" class="flex items-center gap-2 cursor-pointer">
                   تور ها
                   <img src="../icons/chevronDownIcon.svg" alt="" />
                 </span>
                 <!-- submenu -->
                 <div
-                  class="p-4 invisible opacity-0 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500 group-hover:opacity-100 group-hover:visible"
+                  class="tour-submenu p-4 invisible opacity-0 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500"
                 >
                   <a href="">تور استانبول</a>
                   <a href="">تور استانبول</a>
@@ -46,14 +46,14 @@
                 </div>
                 <!-- submenu end -->
               </li>
-              <li class="group">
+              <li class="visa-li">
                 <span href="" class="flex items-center gap-2 cursor-pointer">
                   ویزا
                   <img src="../icons/chevronDownIcon.svg" alt="" />
                 </span>
                 <!-- submenu -->
                 <div
-                  class="p-4 rounded-xl bg-white invisible opacity-0 flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500 group-hover:opacity-100 group-hover:visible"
+                  class="visa-submenu p-4 rounded-xl bg-white invisible opacity-0 flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500"
                 >
                   <a href="">ویزای شینگن</a>
                   <a href="">ویزای اروپا</a>
@@ -78,7 +78,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="cursor-pointer size-6 bars3"
+          class="cursor-pointer size-6 bars3 relative z-40"
         >
           <path
             stroke-linecap="round"
