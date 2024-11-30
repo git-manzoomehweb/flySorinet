@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,21 +15,30 @@
   <body class="px-2">
     <header class="relative">
       <!-- header subset -->
-      <div class="bg-black bg-opacity-70 fixed w-full h-full z-40">
-        <div class="fixed right-0 bg-white shadow-md z-50 w-9/12 h-full p-4">
-          <nav class="flex items-center h-full">
-            <ul class="flex justify-between flex-col gap-10 h-full">
-              <li class="flex">
+      <div
+        class="fixed z-40 hidden w-full h-full bg-black header-subset bg-opacity-70"
+      >
+        <div
+          class="fixed right-0 z-50 w-9/12 h-full p-4 overflow-scroll bg-white shadow-md"
+        >
+          <nav class="flex items-center w-full h-full">
+            <ul class="flex flex-col justify-between w-full h-full gap-10">
+              <li class="flex items-center justify-between">
                 <a href=""> صفحه اصلی </a>
+                <img
+                  src="../icons/xIcon.svg"
+                  alt=""
+                  class="w-8 cursor-pointer x-icon"
+                />
               </li>
-              <li>
-                <a href="" class="flex items-center gap-2">
+              <li class="group">
+                <span href="" class="flex items-center gap-2 cursor-pointer">
                   تور ها
                   <img src="../icons/chevronDownIcon.svg" alt="" />
-                </a>
+                </span>
                 <!-- submenu -->
                 <div
-                  class="p-4 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute shadow-md transition-all duration-500"
+                  class="p-4 invisible opacity-0 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500 group-hover:opacity-100 group-hover:visible"
                 >
                   <a href="">تور استانبول</a>
                   <a href="">تور استانبول</a>
@@ -37,14 +46,14 @@
                 </div>
                 <!-- submenu end -->
               </li>
-              <li>
-                <a href="" class="flex items-center gap-2">
+              <li class="group">
+                <span href="" class="flex items-center gap-2 cursor-pointer">
                   ویزا
                   <img src="../icons/chevronDownIcon.svg" alt="" />
-                </a>
+                </span>
                 <!-- submenu -->
                 <div
-                  class="p-4 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute shadow-md transition-all duration-500"
+                  class="p-4 rounded-xl bg-white invisible opacity-0 flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500 group-hover:opacity-100 group-hover:visible"
                 >
                   <a href="">ویزای شینگن</a>
                   <a href="">ویزای اروپا</a>
@@ -62,14 +71,14 @@
       <!-- header subset end -->
 
       <!-- header menu mobile -->
-      <div class="flex justify-between px-4 py-3 lg:hidden">
+      <div class="flex items-center justify-between px-4 py-3 lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="size-6"
+          class="cursor-pointer size-6 bars3"
         >
           <path
             stroke-linecap="round"
@@ -78,7 +87,13 @@
           />
         </svg>
 
-        <img src="../icons/headerIcons.svg" alt="" />
+        <div class="flex items-center gap-8">
+          <img src="../icons/headerIcons.svg" alt="" />
+          <span class="flex items-center gap-2">
+            <img src="../icons/personIcon.svg" alt="" class="w-8" />
+            ورود/ثبت نام
+          </span>
+        </div>
       </div>
       <!-- header menu mobile end -->
 
@@ -115,29 +130,6 @@
         </div>
       </section>
       <!-- header menu desktop end -->
-
-      <!-- header background -->
-      <div class="relative mb-64 2xl:mb-20">
-        <!-- <div
-          class="absolute h-48 w-60 bg-Primery-700 rounded-3xl left-2 top-5 rotate-[4deg]"
-        ></div> -->
-        <img
-          src="../icons/headerBackMobileIcon.svg"
-          alt=""
-          class="absolute left-[14px] top-[11px] lg:left-[-17rem] lg:-z-10 lg:-top-24 2xl:top-[-6.5rem] 2xl:left-12"
-        />
-        <img
-          src="../../public/images/airplane-background.jfif"
-          alt="airplane-background"
-          class="absolute rotate-[4deg] w-72 h-52 rounded-3xl -left-12 top-4 2xl:h-[54rem] 2xl:-z-10 2xl:rotate-6 2xl:w-[52rem] 2xl:-top-44 2xl:-left-12"
-        />
-        <img
-          src="../../public/images/airplane.png"
-          alt="airplane"
-          class="absolute left-7 -top-20 z-30 w-[28rem] h-[28rem] object-cover 2xl:w-[68rem] 2xl:h-[74rem]"
-        />
-      </div>
-      <!-- header background end  -->
     </header>
 
     <!-- main start -->
@@ -148,203 +140,481 @@
           <h1 class="hidden mb-16 text-3xl font-bold lg:block">
             پروازت رو با سورینت تجربه کن
           </h1>
-          <div class="flex flex-wrap items-center justify-between gap-y-3">
-            <span
-              class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
-            >
-              <img src="../icons/bedIcon.svg" alt="" />
-              هتل
-            </span>
-            <div>
-              <div
-                class="flex flex-col items-center justify-around w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
-              >
-                <img src="../icons/caseIcon.svg" alt="" />
-                <span class="w-max">هتل + پرواز</span>
-              </div>
-            </div>
-            <span
-              class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
-            >
-              <img src="../icons/sunIcon.svg" alt="" />
-              تور
-            </span>
-            <span
-              class="flex flex-col items-center w-20 h-20 p-3 text-sm text-white rounded-full bg-Primery-700"
-            >
-              <img src="../icons/airplaneIcon.svg" alt="" />
-              پرواز
-            </span>
-          </div>
-          <!-- selected category end  -->
 
-          <div class="px-3 py-6">
-            <!-- Route type -->
-            <div class="mb-6">
-              <div class="flex justify-between">
-                <div class="flex items-center gap-1">
-                  <div
-                    class="relative w-5 h-5 border-2 border-solid border-Primery-700 rounded-full flex items-center justify-center"
+          <!-- hotel -->
+          <div class="hidden">
+            <!-- header background -->
+            <div class="relative mb-72 2xl:mb-20">
+              <img
+                src="../icons/headerBackMobileIcon.svg"
+                alt=""
+                class="absolute left-[14px] top-[-17rem] lg:left-[-17rem] lg:-z-10 lg:-top-24 2xl:top-[-6.5rem] 2xl:left-12"
+              />
+              <img
+                src="../../public/images/hotel-image-background.jpg"
+                alt="hotel-image-background"
+                class="absolute object-cover h-[13.2rem] rotate-3 w-72 rounded-3xl -left-11 top-[-17rem] 2xl:h-[54rem] 2xl:-z-10 2xl:rotate-6 2xl:w-[52rem] 2xl:-top-44 2xl:-left-12"
+              />
+              <img
+                src="../../public/images/hotel-image.png"
+                alt="hotel-image"
+                class="absolute left-12 top-[-17rem] -scale-x-100 z-30 w-64 h-[15rem] object-cover 2xl:w-[68rem] 2xl:h-[74rem]"
+              />
+            </div>
+            <!-- header background end -->
+            <section class="mt-4 desktopContainer">
+              <div class="2xl:w-2/5">
+                <h1 class="hidden mb-16 text-3xl font-bold lg:block">
+                  پروازت رو با سورینت تجربه کن
+                </h1>
+                <div
+                  class="flex flex-wrap items-center justify-between mb-8 gap-y-3"
+                >
+                  <span
+                    class="flex flex-col items-center w-20 h-20 p-3 text-sm text-white rounded-full bg-Primery-700"
                   >
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 31 31"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_359_2017)">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M27.7781 18.4607C27.3894 16.9441 26.1581 15.7679 24.5544 15.3905C24.0481 15.2798 23.4919 15.2798 22.3856 15.2798H9.66811C8.56186 15.2798 8.00686 15.2798 7.48936 15.3929C5.89686 15.7679 4.66434 16.9441 4.27559 18.4607C4.15186 18.9465 4.15186 19.4762 4.15186 20.5298C4.15186 21.0965 4.15186 21.4095 4.22561 21.7084C4.45936 22.6155 5.19934 23.3167 6.14186 23.5345C6.28684 23.5703 6.43434 23.5893 6.60811 23.6V24.875C6.60811 25.3679 7.02809 25.7679 7.54559 25.7679C8.06434 25.7679 8.48309 25.3679 8.48309 24.875V23.6131H23.5719V24.875C23.5719 25.3679 23.9919 25.7679 24.5094 25.7679C25.0269 25.7679 25.4469 25.3679 25.4469 24.875V23.6C25.6181 23.5893 25.7606 23.5726 25.8981 23.5381C26.8556 23.3155 27.5956 22.6143 27.8269 21.706C27.9019 21.4107 27.9019 21.0976 27.9019 20.5298C27.9019 19.4762 27.9019 18.9465 27.7781 18.4607Z"
+                          fill="white"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M7.54541 14.0887H24.5091C24.8541 14.0887 25.1341 13.8221 25.1341 13.4935V9.82682C25.1341 9.0542 25.1341 8.6292 24.9854 8.23158C24.7329 7.56254 24.1829 7.04111 23.4829 6.80301C23.0716 6.66016 22.6491 6.66016 21.8091 6.66016H10.2454C9.40416 6.66016 8.98166 6.66016 8.57416 6.80182C7.87041 7.04111 7.32166 7.56254 7.06541 8.23635C6.92041 8.63039 6.92041 9.0542 6.92041 9.82682V13.4935C6.92041 13.8221 7.20041 14.0887 7.54541 14.0887Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_359_2017">
+                          <rect
+                            width="30"
+                            height="30"
+                            fill="white"
+                            transform="translate(0.5 0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    هتل
+                  </span>
+                  <div>
                     <div
-                      class="w-3 h-3 top-1/2 bg-Primery-700 rounded-full"
-                    ></div>
+                      class="flex flex-col items-center justify-around w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+                    >
+                      <img src="../icons/caseIcon.svg" alt="" />
+                      <span class="w-max">هتل + پرواز</span>
+                    </div>
                   </div>
-                  <span class="text-sm text-Primery-700">یکطرفه</span>
+                  <span
+                    class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+                  >
+                    <img src="../icons/sunIcon.svg" alt="" />
+                    تور
+                  </span>
+                  <span
+                    class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+                  >
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 31 31"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M27.5706 11.2126C27.3269 10.3762 26.7944 9.73663 26.0331 9.36103C24.5631 8.63503 22.8119 9.11263 22.1256 9.35023C20.7681 9.82063 19.4556 10.3738 18.0881 10.9042C16.5594 9.54583 15.0194 8.24743 13.5856 7.04743C12.5594 6.18583 11.5031 5.87143 10.4406 6.11503C9.86563 6.24103 9.32438 6.43903 8.80063 6.63223C8.55563 6.72223 8.30813 6.81223 8.05188 6.89743C7.80688 6.97903 7.60938 7.15303 7.50313 7.37863C7.39688 7.60543 7.39188 7.86223 7.49188 8.09143L10.0781 14.1143C9.18188 14.4755 8.08063 14.9255 7.04438 15.3479L5.50063 15.9755C5.34688 15.6191 5.18063 15.2351 5.11813 15.0887C4.92313 14.6279 4.37438 14.4071 3.89688 14.5955C3.41688 14.7827 3.18688 15.3083 3.38188 15.7679C3.49563 16.0343 3.94438 17.0735 4.06188 17.3411C4.08313 17.3891 4.10438 17.4359 4.12563 17.4827C4.12938 17.4899 4.13188 17.4971 4.13563 17.5043C4.14563 17.5283 4.15688 17.5499 4.16813 17.5727C5.28188 19.8983 7.12813 21.1331 9.36188 21.1331C10.2056 21.1331 11.1056 20.9555 12.0431 20.5955C16.4844 18.8807 20.9381 17.0855 24.8756 15.4991C26.5731 14.8019 28.1419 13.1627 27.5706 11.2126Z"
+                        fill="#57525B"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M24.3031 25.2559H6.69189C6.17439 25.2559 5.75439 25.6591 5.75439 26.1559C5.75439 26.6527 6.17439 27.0559 6.69189 27.0559H24.3031C24.8206 27.0559 25.2406 26.6527 25.2406 26.1559C25.2406 25.6591 24.8206 25.2559 24.3031 25.2559Z"
+                        fill="#57525B"
+                      />
+                    </svg>
+                    پرواز
+                  </span>
                 </div>
-                <div class="flex items-center gap-1">
-                  <div
-                    class="w-5 h-5 border-2 border-solid rounded-full border-zinc-500"
-                  ></div>
-                  <span class="text-sm">رفت و برگشت</span>
-                </div>
-                <div class="flex items-center gap-1">
-                  <div
-                    class="w-5 h-5 border-2 border-solid rounded-full border-zinc-500"
-                  ></div>
-                  <span class="text-sm">چند مسیره</span>
+                <!-- selected category end  -->
+
+                <div>
+                  <!-- timing, origin and destination  -->
+                  <div class="relative flex flex-col gap-3">
+                    <div
+                      class="px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                    >
+                      <h3 class="font-medium">مقصد</h3>
+                      <span class="font-normal text-zinc-600"
+                        >مقصد خود را انتخاب کنید</span
+                      >
+                    </div>
+
+                    <div class="flex flex-col gap-3 lg:flex-row">
+                      <div
+                        class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-2"
+                      >
+                        <div>
+                          <h3 class="font-medium">تاریخ برگشت</h3>
+                          <span class="font-normal text-zinc-600"
+                            >1403/5/5</span
+                          >
+                        </div>
+                        <svg
+                          width="48"
+                          height="48"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                            fill="#18181B"
+                          />
+                        </svg>
+                      </div>
+
+                      <div
+                        class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-1"
+                      >
+                        <div>
+                          <h3 class="font-medium">تاریخ رفت</h3>
+                          <span class="font-normal text-zinc-600"
+                            >1403/5/5</span
+                          >
+                        </div>
+                        <svg
+                          width="48"
+                          height="48"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                            fill="#18181B"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div
+                      class="relative flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                    >
+                      <!-- submenu -->
+                      <div
+                        class="absolute top-0 right-0 z-10 hidden w-full p-3 bg-white rounded-xl"
+                      >
+                        <div
+                          class="flex items-center justify-between pb-2 border-b border-solid border-zinc-200"
+                        >
+                          <div>
+                            <h3 class="font-medium">مسافران/اتاق</h3>
+                            <span class="text-zinc-600"
+                              >1 بزرگسال / 1 اتاق</span
+                            >
+                          </div>
+                          <svg
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                              fill="#18181B"
+                            />
+                          </svg>
+                        </div>
+                        <!-- items -->
+                        <div
+                          class="pb-2 mt-2 border-b border-solid border-zinc-200"
+                        >
+                          <span class="text-sm">کلاس پرواز</span>
+                          <div class="flex items-center gap-1 mt-2">
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/chevronRightIcon.svg" alt="" />
+                            </button>
+
+                            <span
+                              class="p-3 font-medium text-center border border-solid bg-zinc-50 rounded-xl border-zinc-100 grow"
+                              >1 اتاق</span
+                            >
+
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/chevronLeftIcon.svg" alt="" />
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="pb-2 mt-2">
+                          <span class="text-sm">بزرگسال ( +11 سال)</span>
+                          <div class="flex items-center gap-1 mt-2">
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/plusIcon.svg" alt="" />
+                            </button>
+
+                            <span
+                              class="p-3 font-medium text-center border border-solid bg-zinc-50 rounded-xl border-zinc-100 grow"
+                              >1</span
+                            >
+
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/minusIcon.svg" alt="" />
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="pb-2 mt-2">
+                          <span class="text-sm">کودک( تا 11 سال)</span>
+                          <div class="flex items-center gap-1 mt-2">
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/plusIcon.svg" alt="" />
+                            </button>
+
+                            <span
+                              class="p-3 font-medium text-center border border-solid bg-zinc-50 rounded-xl border-zinc-100 grow"
+                              >0</span
+                            >
+
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-400"
+                            >
+                              <img src="../icons/minusIcon.svg" alt="" />
+                            </button>
+                          </div>
+                        </div>
+                        <!-- items end -->
+                      </div>
+                      <!-- submenu end -->
+                      <div>
+                        <h3 class="font-medium">مسافران/اتاق</h3>
+                        <span class="font-normal text-zinc-600"
+                          >1 بزرگسال/1 اتاق</span
+                        >
+                      </div>
+                      <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                          fill="#18181B"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <!-- timing, origin and destination end  -->
+                  <button
+                    class="w-full px-4 py-2 mt-6 text-white h-14 bg-Primery-700 rounded-xl"
+                  >
+                    جست و جو
+                  </button>
                 </div>
               </div>
+            </section>
+          </div>
+          <!-- hotel end  -->
+
+          <!-- fly -->
+          <div>
+            <!-- header background -->
+            <div class="relative mb-64 2xl:mb-20">
+              <img
+                src="../icons/headerBackMobileIcon.svg"
+                alt=""
+                class="absolute left-[14px] top-[-16.2rem] lg:left-[-17rem] lg:-z-10 lg:-top-24 2xl:top-[-6.5rem] 2xl:left-12"
+              />
+              <img
+                src="../../public/images/airplane-background.jfif"
+                alt="airplane-background"
+                class="absolute rotate-[4deg] w-72 h-52 rounded-3xl -left-12 top-[-16rem] 2xl:h-[54rem] 2xl:-z-10 2xl:rotate-6 2xl:w-[52rem] 2xl:-top-44 2xl:-left-12"
+              />
+              <img
+                src="../../public/images/airplane.png"
+                alt="airplane"
+                class="absolute left-7 top-[-21rem] z-30 w-[28rem] h-[28rem] object-cover 2xl:w-[68rem] 2xl:h-[74rem]"
+              />
             </div>
-            <!-- Route type end -->
-
-            <!-- timing, origin and destination  -->
-            <div class="relative flex flex-col gap-3">
-              <div
-                class="relative px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+            <!-- header background end  -->
+            <div class="flex flex-wrap items-center justify-between gap-y-3">
+              <span
+                class="flex flex-col items-center w-20 h-20 p-3 text-sm text-white rounded-full bg-Primery-700"
               >
-                <!-- submenu  -->
-                <div class="absolute right-0 z-10 w-full bg-white rounded-xl">
-                  <div class="px-3 py-2">
-                    <h3 class="font-medium">مبدا</h3>
-                    <span class="font-normal text-zinc-600"
-                      >مبدا خود را انتخاب کنید</span
-                    >
-                  </div>
+                <img src="../icons/airplaneIcon.svg" alt="" />
+                پرواز
+              </span>
+              <span
+                class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+              >
+                <img src="../icons/bedIcon.svg" alt="" />
+                هتل
+              </span>
+              <div>
+                <div
+                  class="flex flex-col items-center justify-around w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+                >
+                  <img src="../icons/caseIcon.svg" alt="" />
+                  <span class="w-max">هتل + پرواز</span>
+                </div>
+              </div>
+              <span
+                class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+              >
+                <img src="../icons/sunIcon.svg" alt="" />
+                تور
+              </span>
+            </div>
+            <!-- selected category end  -->
 
-                  <div class="flex w-full">
-                    <!-- right content  -->
-                    <div class="w-1/2">
-                      <span
-                        class="block w-full px-6 py-2 font-medium text-center text-Primery-700 bg-zinc-200"
-                        >داخلی</span
+            <div class="px-3 py-6">
+              <!-- Route type -->
+              <div class="mb-6">
+                <div class="flex justify-between">
+                  <div class="flex items-center gap-1">
+                    <div
+                      class="relative flex items-center justify-center w-5 h-5 border-2 border-solid rounded-full border-Primery-700"
+                    >
+                      <div
+                        class="w-3 h-3 rounded-full top-1/2 bg-Primery-700"
+                      ></div>
+                    </div>
+                    <span class="text-sm text-Primery-700">یکطرفه</span>
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <div
+                      class="w-5 h-5 border-2 border-solid rounded-full border-zinc-500"
+                    ></div>
+                    <span class="text-sm">رفت و برگشت</span>
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <div
+                      class="w-5 h-5 border-2 border-solid rounded-full border-zinc-500"
+                    ></div>
+                    <span class="text-sm">چند مسیره</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Route type end -->
+
+              <!-- timing, origin and destination  -->
+              <div class="relative flex flex-col gap-3">
+                <div
+                  class="relative px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                >
+                  <!-- submenu  -->
+                  <div
+                    class="absolute right-0 z-10 hidden w-full bg-white rounded-xl"
+                  >
+                    <div class="px-3 py-2">
+                      <h3 class="font-medium">مبدا</h3>
+                      <span class="font-normal text-zinc-600"
+                        >مبدا خود را انتخاب کنید</span
                       >
-                      <div class="border-l border-solid border-zinc-200">
+                    </div>
+
+                    <div class="flex w-full">
+                      <!-- right content  -->
+                      <div class="w-1/2">
+                        <span
+                          class="block w-full px-6 py-2 font-medium text-center text-Primery-700 bg-zinc-200"
+                          >داخلی</span
+                        >
+                        <div class="border-l border-solid border-zinc-200">
+                          <div
+                            class="flex flex-col w-24 mx-auto text-center divide-y text-zinc-600"
+                          >
+                            <span>تهران</span>
+                            <span>اهواز</span>
+                            <span>مشهد</span>
+                            <span>اصفهان</span>
+                            <span>شیراز</span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- right content end -->
+
+                      <!-- left content  -->
+                      <div class="w-1/2">
+                        <span
+                          class="block w-full px-6 py-2 font-medium text-center text-Primery-700 bg-zinc-200"
+                          >خارجی</span
+                        >
                         <div
                           class="flex flex-col w-24 mx-auto text-center divide-y text-zinc-600"
                         >
-                          <span>تهران</span>
-                          <span>اهواز</span>
-                          <span>مشهد</span>
-                          <span>اصفهان</span>
-                          <span>شیراز</span>
+                          <span>استانبول</span>
+                          <span>دبی</span>
+                          <span>عمان</span>
+                          <span>قطر</span>
+                          <span>تفلیس</span>
                         </div>
                       </div>
+                      <!-- left content end -->
                     </div>
-                    <!-- right content end -->
-
-                    <!-- left content  -->
-                    <div class="w-1/2">
-                      <span
-                        class="block w-full px-6 py-2 font-medium text-center text-Primery-700 bg-zinc-200"
-                        >خارجی</span
-                      >
-                      <div
-                        class="flex flex-col w-24 mx-auto text-center divide-y text-zinc-600"
-                      >
-                        <span>استانبول</span>
-                        <span>دبی</span>
-                        <span>عمان</span>
-                        <span>قطر</span>
-                        <span>تفلیس</span>
-                      </div>
-                    </div>
-                    <!-- left content end -->
                   </div>
-                </div>
-                <!-- submenu end -->
-                <h3 class="font-medium">مبدا</h3>
-                <span class="font-normal text-zinc-600"
-                  >مبدا خود را انتخاب کنید</span
-                >
-              </div>
-
-              <img
-                src="../icons/changeIcon.svg"
-                alt=""
-                class="absolute top-[13%] left-[5%]"
-              />
-
-              <div
-                class="px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
-              >
-                <h3 class="font-medium">مقصد</h3>
-                <span class="font-normal text-zinc-600"
-                  >مقصد خود را انتخاب کنید</span
-                >
-              </div>
-
-              <div class="flex flex-col gap-3 lg:flex-row">
-                <div
-                  class="flex items-center justify-between px-4 py-3 border border-solid opacity-30 bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-2"
-                >
-                  <div>
-                    <h3 class="font-medium">تاریخ برگشت</h3>
-                    <span class="font-normal text-zinc-600">1403/5/5</span>
-                  </div>
-                  <svg
-                    width="48"
-                    height="48"
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <!-- submenu end -->
+                  <h3 class="font-medium">مبدا</h3>
+                  <span class="font-normal text-zinc-600"
+                    >مبدا خود را انتخاب کنید</span
                   >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
-                      fill="#18181B"
-                    />
-                  </svg>
                 </div>
 
+                <img
+                  src="../icons/changeIcon.svg"
+                  alt=""
+                  class="absolute top-[13%] left-[5%]"
+                />
+
                 <div
-                  class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-1"
+                  class="px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
                 >
-                  <div>
-                    <h3 class="font-medium">تاریخ رفت</h3>
-                    <span class="font-normal text-zinc-600">1403/5/5</span>
-                  </div>
-                  <svg
-                    width="48"
-                    height="48"
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <h3 class="font-medium">مقصد</h3>
+                  <span class="font-normal text-zinc-600"
+                    >مقصد خود را انتخاب کنید</span
                   >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
-                      fill="#18181B"
-                    />
-                  </svg>
                 </div>
-              </div>
 
-              <div
-                class="relative flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
-              >
-                <!-- submenu -->
-                <div
-                  class="absolute hidden right-0 top-0 z-10 w-full p-3 bg-white rounded-xl"
-                >
+                <div class="flex flex-col gap-3 lg:flex-row">
                   <div
-                    class="flex items-center justify-between pb-2 border-b border-solid border-zinc-200"
+                    class="flex items-center justify-between px-4 py-3 border border-solid opacity-30 bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-2"
                   >
                     <div>
-                      <h3 class="font-medium">مسافران / کلاس پرواز</h3>
-                      <span class="text-zinc-600">1 بزرگسال / اکونومی</span>
+                      <h3 class="font-medium">تاریخ برگشت</h3>
+                      <span class="font-normal text-zinc-600">1403/5/5</span>
                     </div>
                     <svg
                       width="48"
@@ -361,104 +631,858 @@
                       />
                     </svg>
                   </div>
-                  <!-- items -->
-                  <div class="mt-2 border-b border-solid border-zinc-200 pb-2">
-                    <span class="text-sm">کلاس پرواز</span>
-                    <div class="flex items-center gap-1 mt-2">
-                      <button
-                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
-                      >
-                        <img src="../icons/chevronRightIcon.svg" alt="" />
-                      </button>
 
-                      <span
-                        class="border border-solid bg-zinc-50 font-medium rounded-xl p-3 text-center border-zinc-100 grow"
-                        >اکونومی</span
-                      >
-
-                      <button
-                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
-                      >
-                        <img src="../icons/chevronLeftIcon.svg" alt="" />
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="mt-2 pb-2">
-                    <span class="text-sm">بزرگسال ( +11 سال)</span>
-                    <div class="flex items-center gap-1 mt-2">
-                      <button
-                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
-                      >
-                        <img src="../icons/plusIcon.svg" alt="" />
-                      </button>
-
-                      <span
-                        class="border border-solid bg-zinc-50 font-medium rounded-xl p-3 text-center border-zinc-100 grow"
-                        >1</span
-                      >
-
-                      <button
-                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
-                      >
-                        <img src="../icons/minusIcon.svg" alt="" />
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="mt-2 pb-2">
-                    <span class="text-sm">کودک( تا 11 سال)</span>
-                    <div class="flex items-center gap-1 mt-2">
-                      <button
-                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
-                      >
-                        <img src="../icons/plusIcon.svg" alt="" />
-                      </button>
-
-                      <span
-                        class="border border-solid bg-zinc-50 font-medium rounded-xl p-3 text-center border-zinc-100 grow"
-                        >0</span
-                      >
-
-                      <button
-                        class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-400"
-                      >
-                        <img src="../icons/minusIcon.svg" alt="" />
-                      </button>
-                    </div>
-                  </div>
-                  <!-- items end -->
-                </div>
-                <!-- submenu end -->
-                <div>
-                  <h3 class="font-medium">مسافران/کلاس پرواز</h3>
-                  <span class="font-normal text-zinc-600"
-                    >1 بزرگسال/اکونومی</span
+                  <div
+                    class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-1"
                   >
+                    <div>
+                      <h3 class="font-medium">تاریخ رفت</h3>
+                      <span class="font-normal text-zinc-600">1403/5/5</span>
+                    </div>
+                    <svg
+                      width="48"
+                      height="48"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                        fill="#18181B"
+                      />
+                    </svg>
+                  </div>
                 </div>
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 48 48"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+
+                <div
+                  class="relative flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
-                    fill="#18181B"
-                  />
-                </svg>
+                  <!-- submenu -->
+                  <div
+                    class="absolute top-0 right-0 z-10 hidden w-full p-3 bg-white rounded-xl"
+                  >
+                    <div
+                      class="flex items-center justify-between pb-2 border-b border-solid border-zinc-200"
+                    >
+                      <div>
+                        <h3 class="font-medium">مسافران / کلاس پرواز</h3>
+                        <span class="text-zinc-600">1 بزرگسال / اکونومی</span>
+                      </div>
+                      <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                          fill="#18181B"
+                        />
+                      </svg>
+                    </div>
+                    <!-- items -->
+                    <div
+                      class="pb-2 mt-2 border-b border-solid border-zinc-200"
+                    >
+                      <span class="text-sm">کلاس پرواز</span>
+                      <div class="flex items-center gap-1 mt-2">
+                        <button
+                          class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                        >
+                          <img src="../icons/chevronRightIcon.svg" alt="" />
+                        </button>
+
+                        <span
+                          class="p-3 font-medium text-center border border-solid bg-zinc-50 rounded-xl border-zinc-100 grow"
+                          >اکونومی</span
+                        >
+
+                        <button
+                          class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                        >
+                          <img src="../icons/chevronLeftIcon.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="pb-2 mt-2">
+                      <span class="text-sm">بزرگسال ( +11 سال)</span>
+                      <div class="flex items-center gap-1 mt-2">
+                        <button
+                          class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                        >
+                          <img src="../icons/plusIcon.svg" alt="" />
+                        </button>
+
+                        <span
+                          class="p-3 font-medium text-center border border-solid bg-zinc-50 rounded-xl border-zinc-100 grow"
+                          >1</span
+                        >
+
+                        <button
+                          class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                        >
+                          <img src="../icons/minusIcon.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="pb-2 mt-2">
+                      <span class="text-sm">کودک( تا 11 سال)</span>
+                      <div class="flex items-center gap-1 mt-2">
+                        <button
+                          class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                        >
+                          <img src="../icons/plusIcon.svg" alt="" />
+                        </button>
+
+                        <span
+                          class="p-3 font-medium text-center border border-solid bg-zinc-50 rounded-xl border-zinc-100 grow"
+                          >0</span
+                        >
+
+                        <button
+                          class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-400"
+                        >
+                          <img src="../icons/minusIcon.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <!-- items end -->
+                  </div>
+                  <!-- submenu end -->
+                  <div>
+                    <h3 class="font-medium">مسافران/کلاس پرواز</h3>
+                    <span class="font-normal text-zinc-600"
+                      >1 بزرگسال/اکونومی</span
+                    >
+                  </div>
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                      fill="#18181B"
+                    />
+                  </svg>
+                </div>
               </div>
+              <!-- timing, origin and destination end  -->
+              <button
+                class="w-full px-4 py-2 mt-6 text-white h-14 bg-Primery-700 rounded-xl"
+              >
+                جست و جو
+              </button>
             </div>
-            <!-- timing, origin and destination end  -->
-            <button
-              class="w-full px-4 py-2 mt-6 text-white h-14 bg-Primery-700 rounded-xl"
-            >
-              جست و جو
-            </button>
           </div>
+          <!-- fly end -->
+
+          <!-- tour -->
+          <div class="hidden">
+            <!-- header tour background -->
+            <div class="relative mb-72 2xl:mb-20">
+              <img
+                src="../icons/headerBackMobileIcon.svg"
+                alt=""
+                class="absolute left-[14px] top-[-16.3rem] lg:left-[-17rem] lg:-z-10 lg:-top-24 2xl:top-[-6.5rem] 2xl:left-12"
+              />
+              <img
+                src="../../public/images/tour-image-background.jpg"
+                alt="tour-image-background"
+                class="absolute object-cover h-52 rotate-[4deg] w-72 rounded-3xl -left-11 top-[-16rem] 2xl:h-[54rem] 2xl:-z-10 2xl:rotate-6 2xl:w-[52rem] 2xl:-top-44 2xl:-left-12"
+              />
+              <img
+                src="../../public/images/tour-image.png"
+                alt="tour-image"
+                class="absolute left-9 rotate-[4deg] top-[-18rem] z-30 w-64 h-[15rem] object-cover 2xl:w-[68rem] 2xl:h-[74rem]"
+              />
+            </div>
+            <!-- header tour background end -->
+            <section class="mt-4 desktopContainer">
+              <div class="2xl:w-2/5">
+                <h1 class="hidden mb-16 text-3xl font-bold lg:block">
+                  پروازت رو با سورینت تجربه کن
+                </h1>
+                <div
+                  class="flex flex-wrap items-center justify-between mb-8 gap-y-3"
+                >
+                  <span
+                    class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+                  >
+                    <img src="../icons/bedIcon.svg" alt="" />
+                    هتل
+                  </span>
+                  <div>
+                    <div
+                      class="flex flex-col items-center justify-around w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+                    >
+                      <img src="../icons/caseIcon.svg" alt="" />
+                      <span class="w-max">هتل + پرواز</span>
+                    </div>
+                  </div>
+                  <span
+                    class="flex flex-col items-center w-20 h-20 p-3 text-sm text-white rounded-full bg-Primery-700"
+                  >
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 31 31"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.6928 4.92969V6.62547V4.92969ZM26.8174 16.0545H25.1216H26.8174ZM6.26366 16.0545H4.56787H6.26366ZM23.5589 8.18779L22.3598 9.38686L23.5589 8.18779ZM9.02565 9.38745L7.82656 8.18837L9.02565 9.38745Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M15.6928 4.92969V6.62547M26.8174 16.0545H25.1216M6.26366 16.0545H4.56787M23.5589 8.18779L22.3598 9.38686M9.02565 9.38745L7.82656 8.18837"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M20.8779 16.0556C20.8779 13.192 18.5567 10.8696 15.6919 10.8696C12.8271 10.8696 10.5059 13.192 10.5059 16.0556C10.5011 16.2901 10.5111 16.8296 10.5896 17.1109"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16.2708 25.348C11.3821 23.9163 11.1099 25.8219 8.60498 25.8219"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M24.8623 25.3481C24.8623 25.3481 23.2681 26.0143 20.895 26.0699"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M17.3547 18.0985C16.5411 18.0615 15.6323 17.9165 14.6787 17.5842C12.8074 16.9322 11.1082 17.0011 9.96289 17.1931"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4.31885 21.9087C4.31885 21.9087 6.62956 20.2431 10.7324 20.6736"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.2437 21.9802C21.3189 22.6357 23.6533 21.3398 26.5671 20.9805"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    تور
+                  </span>
+                  <span
+                    class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+                  >
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 31 31"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M27.5706 11.2126C27.3269 10.3762 26.7944 9.73663 26.0331 9.36103C24.5631 8.63503 22.8119 9.11263 22.1256 9.35023C20.7681 9.82063 19.4556 10.3738 18.0881 10.9042C16.5594 9.54583 15.0194 8.24743 13.5856 7.04743C12.5594 6.18583 11.5031 5.87143 10.4406 6.11503C9.86563 6.24103 9.32438 6.43903 8.80063 6.63223C8.55563 6.72223 8.30813 6.81223 8.05188 6.89743C7.80688 6.97903 7.60938 7.15303 7.50313 7.37863C7.39688 7.60543 7.39188 7.86223 7.49188 8.09143L10.0781 14.1143C9.18188 14.4755 8.08063 14.9255 7.04438 15.3479L5.50063 15.9755C5.34688 15.6191 5.18063 15.2351 5.11813 15.0887C4.92313 14.6279 4.37438 14.4071 3.89688 14.5955C3.41688 14.7827 3.18688 15.3083 3.38188 15.7679C3.49563 16.0343 3.94438 17.0735 4.06188 17.3411C4.08313 17.3891 4.10438 17.4359 4.12563 17.4827C4.12938 17.4899 4.13188 17.4971 4.13563 17.5043C4.14563 17.5283 4.15688 17.5499 4.16813 17.5727C5.28188 19.8983 7.12813 21.1331 9.36188 21.1331C10.2056 21.1331 11.1056 20.9555 12.0431 20.5955C16.4844 18.8807 20.9381 17.0855 24.8756 15.4991C26.5731 14.8019 28.1419 13.1627 27.5706 11.2126Z"
+                        fill="#57525B"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M24.3031 25.2559H6.69189C6.17439 25.2559 5.75439 25.6591 5.75439 26.1559C5.75439 26.6527 6.17439 27.0559 6.69189 27.0559H24.3031C24.8206 27.0559 25.2406 26.6527 25.2406 26.1559C25.2406 25.6591 24.8206 25.2559 24.3031 25.2559Z"
+                        fill="#57525B"
+                      />
+                    </svg>
+
+                    پرواز
+                  </span>
+                </div>
+                <!-- selected category end  -->
+
+                <div>
+                  <!-- timing, origin and destination  -->
+                  <div class="relative flex flex-col gap-3">
+                    <div
+                      class="px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                    >
+                      <h3 class="font-medium">مقصد</h3>
+                      <span class="font-normal text-zinc-600"
+                        >مقصد خود را انتخاب کنید</span
+                      >
+                    </div>
+
+                    <div class="flex flex-col gap-3 lg:flex-row">
+                      <div
+                        class="flex items-center justify-between px-4 py-3 border border-solid opacity-30 bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-2"
+                      >
+                        <div>
+                          <h3 class="font-medium">تاریخ برگشت</h3>
+                          <span class="font-normal text-zinc-600"
+                            >1403/5/5</span
+                          >
+                        </div>
+                        <svg
+                          width="48"
+                          height="48"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                            fill="#18181B"
+                          />
+                        </svg>
+                      </div>
+
+                      <div
+                        class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-1"
+                      >
+                        <div>
+                          <h3 class="font-medium">تاریخ رفت</h3>
+                          <span class="font-normal text-zinc-600"
+                            >1403/5/5</span
+                          >
+                        </div>
+                        <svg
+                          width="48"
+                          height="48"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                            fill="#18181B"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div
+                      class="relative flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                    >
+                      <!-- submenu -->
+                      <div
+                        class="absolute top-0 right-0 z-10 hidden w-full p-3 bg-white rounded-xl"
+                      >
+                        <div
+                          class="flex items-center justify-between pb-2 border-b border-solid border-zinc-200"
+                        >
+                          <div>
+                            <h3 class="font-medium">مسافران/اتاق</h3>
+                            <span class="text-zinc-600"
+                              >1 بزرگسال / 1 اتاق</span
+                            >
+                          </div>
+                          <svg
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                              fill="#18181B"
+                            />
+                          </svg>
+                        </div>
+                        <!-- items -->
+                        <div
+                          class="pb-2 mt-2 border-b border-solid border-zinc-200"
+                        >
+                          <span class="text-sm">کلاس پرواز</span>
+                          <div class="flex items-center gap-1 mt-2">
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/chevronRightIcon.svg" alt="" />
+                            </button>
+
+                            <span
+                              class="p-3 font-medium text-center border border-solid bg-zinc-50 rounded-xl border-zinc-100 grow"
+                              >1 اتاق</span
+                            >
+
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/chevronLeftIcon.svg" alt="" />
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="pb-2 mt-2">
+                          <span class="text-sm">بزرگسال ( +11 سال)</span>
+                          <div class="flex items-center gap-1 mt-2">
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/plusIcon.svg" alt="" />
+                            </button>
+
+                            <span
+                              class="p-3 font-medium text-center border border-solid bg-zinc-50 rounded-xl border-zinc-100 grow"
+                              >1</span
+                            >
+
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/minusIcon.svg" alt="" />
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="pb-2 mt-2">
+                          <span class="text-sm">کودک( تا 11 سال)</span>
+                          <div class="flex items-center gap-1 mt-2">
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/plusIcon.svg" alt="" />
+                            </button>
+
+                            <span
+                              class="p-3 font-medium text-center border border-solid bg-zinc-50 rounded-xl border-zinc-100 grow"
+                              >0</span
+                            >
+
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-400"
+                            >
+                              <img src="../icons/minusIcon.svg" alt="" />
+                            </button>
+                          </div>
+                        </div>
+                        <!-- items end -->
+                      </div>
+                      <!-- submenu end -->
+                      <div>
+                        <h3 class="font-medium">مسافران/اتاق</h3>
+                        <span class="font-normal text-zinc-600"
+                          >1 بزرگسال/1اتاق</span
+                        >
+                      </div>
+                      <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                          fill="#18181B"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <!-- timing, origin and destination end  -->
+                  <button
+                    class="w-full px-4 py-2 mt-6 text-white h-14 bg-Primery-700 rounded-xl"
+                  >
+                    جست و جو
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- tour end -->
+
+          <!-- hotel-fly -->
+          <div class="hidden">
+            <!-- header background -->
+            <div class="relative mb-72 2xl:mb-20">
+              <img
+                src="../icons/headerBackMobileIcon.svg"
+                alt=""
+                class="absolute left-[14px] top-[-16.3rem] lg:left-[-17rem] lg:-z-10 lg:-top-24 2xl:top-[-6.5rem] 2xl:left-12"
+              />
+              <img
+                src="../../public/images/hotel-fly-background.jpg"
+                alt="hotel-fly-background"
+                class="absolute object-cover h-52 rotate-[4deg] w-72 rounded-3xl -left-11 top-[-16rem] 2xl:h-[54rem] 2xl:-z-10 2xl:rotate-6 2xl:w-[52rem] 2xl:-top-44 2xl:-left-12"
+              />
+              <img
+                src="../../public/images/hotel-fly-image.png"
+                alt="hotel-fly-image"
+                class="absolute left-24 top-[-14rem] -scale-x-100 z-30 w-48 h-48 object-cover 2xl:w-[68rem] 2xl:h-[74rem]"
+              />
+            </div>
+            <!-- header background end -->
+            <section class="mt-4 desktopContainer">
+              <div class="2xl:w-2/5">
+                <h1 class="hidden mb-16 text-3xl font-bold lg:block">
+                  پروازت رو با سورینت تجربه کن
+                </h1>
+                <div
+                  class="flex flex-wrap items-center justify-between mb-8 gap-y-3"
+                >
+                  <span
+                    class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+                  >
+                    <img src="../icons/bedIcon.svg" alt="" />
+                    هتل
+                  </span>
+                  <div>
+                    <div
+                      class="flex flex-col items-center justify-around w-20 p-3 text-sm rounded-full bg-Primery-700"
+                    >
+                      <svg
+                        width="31"
+                        height="31"
+                        viewBox="0 0 31 31"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M20.6963 21.6452C20.6963 22.142 20.2763 22.5452 19.7588 22.5452C19.2413 22.5452 18.8213 22.142 18.8213 21.6452V15.4292C18.8213 14.9324 19.2413 14.5292 19.7588 14.5292C20.2763 14.5292 20.6963 14.9324 20.6963 15.4292V21.6452ZM18.355 10.5812H12.645V7.70121C12.645 7.11921 13.1375 6.64521 13.7438 6.64521H17.255C17.8613 6.64521 18.355 7.11921 18.355 7.70121V10.5812ZM16.4388 21.6452C16.4388 22.142 16.0188 22.5452 15.5013 22.5452C14.9838 22.5452 14.5638 22.142 14.5638 21.6452V15.4292C14.5638 14.9324 14.9838 14.5292 15.5013 14.5292C16.0188 14.5292 16.4388 14.9324 16.4388 15.4292V21.6452ZM12.1887 21.6452C12.1887 22.142 11.7687 22.5452 11.2512 22.5452C10.7337 22.5452 10.3137 22.142 10.3137 21.6452V15.4292C10.3137 14.9324 10.7337 14.5292 11.2512 14.5292C11.7687 14.5292 12.1887 14.9324 12.1887 15.4292V21.6452ZM20.23 10.6184V7.70121C20.23 6.12562 18.895 4.84521 17.255 4.84521H13.7438C12.1037 4.84521 10.77 6.12562 10.77 7.70121V10.6184C7.9 10.8116 6.125 12.6872 6.125 15.6452V21.2612C6.125 24.0668 7.71 25.9076 10.3112 26.2616V27.3452C10.3112 27.842 10.7313 28.2452 11.2488 28.2452C11.7663 28.2452 12.1863 27.842 12.1863 27.3452V26.3372H18.8188V27.3452C18.8188 27.842 19.2388 28.2452 19.7563 28.2452C20.2738 28.2452 20.6938 27.842 20.6938 27.3452V26.2616C23.2913 25.9076 24.8725 24.0704 24.8725 21.272V15.6452C24.8725 12.686 23.0988 10.8104 20.23 10.6184Z"
+                          fill="white"
+                        />
+                      </svg>
+
+                      <span class="text-sm text-white w-max">هتل + پرواز</span>
+                    </div>
+                  </div>
+                  <span
+                    class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+                  >
+                    <img src="../icons/sunIcon.svg" alt="" />
+                    تور
+                  </span>
+                  <span
+                    class="flex flex-col items-center w-20 h-20 p-3 text-sm rounded-full bg-zinc-100"
+                  >
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 31 31"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M27.5706 11.2126C27.3269 10.3762 26.7944 9.73663 26.0331 9.36103C24.5631 8.63503 22.8119 9.11263 22.1256 9.35023C20.7681 9.82063 19.4556 10.3738 18.0881 10.9042C16.5594 9.54583 15.0194 8.24743 13.5856 7.04743C12.5594 6.18583 11.5031 5.87143 10.4406 6.11503C9.86563 6.24103 9.32438 6.43903 8.80063 6.63223C8.55563 6.72223 8.30813 6.81223 8.05188 6.89743C7.80688 6.97903 7.60938 7.15303 7.50313 7.37863C7.39688 7.60543 7.39188 7.86223 7.49188 8.09143L10.0781 14.1143C9.18188 14.4755 8.08063 14.9255 7.04438 15.3479L5.50063 15.9755C5.34688 15.6191 5.18063 15.2351 5.11813 15.0887C4.92313 14.6279 4.37438 14.4071 3.89688 14.5955C3.41688 14.7827 3.18688 15.3083 3.38188 15.7679C3.49563 16.0343 3.94438 17.0735 4.06188 17.3411C4.08313 17.3891 4.10438 17.4359 4.12563 17.4827C4.12938 17.4899 4.13188 17.4971 4.13563 17.5043C4.14563 17.5283 4.15688 17.5499 4.16813 17.5727C5.28188 19.8983 7.12813 21.1331 9.36188 21.1331C10.2056 21.1331 11.1056 20.9555 12.0431 20.5955C16.4844 18.8807 20.9381 17.0855 24.8756 15.4991C26.5731 14.8019 28.1419 13.1627 27.5706 11.2126Z"
+                        fill="#57525B"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M24.3031 25.2559H6.69189C6.17439 25.2559 5.75439 25.6591 5.75439 26.1559C5.75439 26.6527 6.17439 27.0559 6.69189 27.0559H24.3031C24.8206 27.0559 25.2406 26.6527 25.2406 26.1559C25.2406 25.6591 24.8206 25.2559 24.3031 25.2559Z"
+                        fill="#57525B"
+                      />
+                    </svg>
+                    پرواز
+                  </span>
+                </div>
+                <!-- selected category end  -->
+
+                <div>
+                  <!-- timing, origin and destination  -->
+                  <div class="relative flex flex-col gap-3">
+                    <div
+                      class="relative px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                    >
+                      <!-- submenu  -->
+                      <div
+                        class="absolute right-0 z-10 hidden w-full bg-white rounded-xl"
+                      >
+                        <div class="px-3 py-2">
+                          <h3 class="font-medium">مبدا</h3>
+                          <span class="font-normal text-zinc-600"
+                            >مبدا خود را انتخاب کنید</span
+                          >
+                        </div>
+
+                        <div class="flex w-full">
+                          <!-- right content  -->
+                          <div class="w-1/2">
+                            <span
+                              class="block w-full px-6 py-2 font-medium text-center text-Primery-700 bg-zinc-200"
+                              >داخلی</span
+                            >
+                            <div class="border-l border-solid border-zinc-200">
+                              <div
+                                class="flex flex-col w-24 mx-auto text-center divide-y text-zinc-600"
+                              >
+                                <span>تهران</span>
+                                <span>اهواز</span>
+                                <span>مشهد</span>
+                                <span>اصفهان</span>
+                                <span>شیراز</span>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- right content end -->
+
+                          <!-- left content  -->
+                          <div class="w-1/2">
+                            <span
+                              class="block w-full px-6 py-2 font-medium text-center text-Primery-700 bg-zinc-200"
+                              >خارجی</span
+                            >
+                            <div
+                              class="flex flex-col w-24 mx-auto text-center divide-y text-zinc-600"
+                            >
+                              <span>استانبول</span>
+                              <span>دبی</span>
+                              <span>عمان</span>
+                              <span>قطر</span>
+                              <span>تفلیس</span>
+                            </div>
+                          </div>
+                          <!-- left content end -->
+                        </div>
+                      </div>
+                      <!-- submenu end -->
+                      <h3 class="font-medium">مبدا</h3>
+                      <span class="font-normal text-zinc-600"
+                        >مبدا خود را انتخاب کنید</span
+                      >
+                    </div>
+
+                    <img
+                      src="../icons/changeIcon.svg"
+                      alt=""
+                      class="absolute top-[13%] left-[5%] lg:top-14"
+                    />
+
+                    <div
+                      class="px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                    >
+                      <h3 class="font-medium">مقصد</h3>
+                      <span class="font-normal text-zinc-600"
+                        >مقصد خود را انتخاب کنید</span
+                      >
+                    </div>
+
+                    <div class="flex flex-col gap-3 lg:flex-row">
+                      <div
+                        class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-2"
+                      >
+                        <div>
+                          <h3 class="font-medium">تاریخ برگشت</h3>
+                          <span class="font-normal text-zinc-600"
+                            >1403/5/5</span
+                          >
+                        </div>
+                        <svg
+                          width="48"
+                          height="48"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                            fill="#18181B"
+                          />
+                        </svg>
+                      </div>
+
+                      <div
+                        class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-1"
+                      >
+                        <div>
+                          <h3 class="font-medium">تاریخ رفت</h3>
+                          <span class="font-normal text-zinc-600"
+                            >1403/5/5</span
+                          >
+                        </div>
+                        <svg
+                          width="48"
+                          height="48"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                            fill="#18181B"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div
+                      class="relative flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                    >
+                      <!-- submenu -->
+                      <div
+                        class="absolute top-0 right-0 z-10 hidden w-full p-3 bg-white rounded-xl"
+                      >
+                        <div
+                          class="flex items-center justify-between pb-2 border-b border-solid border-zinc-200"
+                        >
+                          <div>
+                            <h3 class="font-medium">مسافران/اتاق</h3>
+                            <span class="text-zinc-600"
+                              >1 بزرگسال / 1 اتاق</span
+                            >
+                          </div>
+                          <svg
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                              fill="#18181B"
+                            />
+                          </svg>
+                        </div>
+                        <!-- items -->
+                        <div
+                          class="pb-2 mt-2 border-b border-solid border-zinc-200"
+                        >
+                          <span class="text-sm">کلاس پرواز</span>
+                          <div class="flex items-center gap-1 mt-2">
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/chevronRightIcon.svg" alt="" />
+                            </button>
+
+                            <span
+                              class="p-3 font-medium text-center border border-solid bg-zinc-50 rounded-xl border-zinc-100 grow"
+                              >1 اتاق</span
+                            >
+
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/chevronLeftIcon.svg" alt="" />
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="pb-2 mt-2">
+                          <span class="text-sm">بزرگسال ( +11 سال)</span>
+                          <div class="flex items-center gap-1 mt-2">
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/plusIcon.svg" alt="" />
+                            </button>
+
+                            <span
+                              class="p-3 font-medium text-center border border-solid bg-zinc-50 rounded-xl border-zinc-100 grow"
+                              >1</span
+                            >
+
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/minusIcon.svg" alt="" />
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="pb-2 mt-2">
+                          <span class="text-sm">کودک( تا 11 سال)</span>
+                          <div class="flex items-center gap-1 mt-2">
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                            >
+                              <img src="../icons/plusIcon.svg" alt="" />
+                            </button>
+
+                            <span
+                              class="p-3 font-medium text-center border border-solid bg-zinc-50 rounded-xl border-zinc-100 grow"
+                              >0</span
+                            >
+
+                            <button
+                              class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-400"
+                            >
+                              <img src="../icons/minusIcon.svg" alt="" />
+                            </button>
+                          </div>
+                        </div>
+                        <!-- items end -->
+                      </div>
+                      <!-- submenu end -->
+                      <div>
+                        <h3 class="font-medium">مسافران/اتاق</h3>
+                        <span class="font-normal text-zinc-600"
+                          >1 بزرگسال/1اتاق</span
+                        >
+                      </div>
+                      <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                          fill="#18181B"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <!-- timing, origin and destination end  -->
+                  <button
+                    class="w-full px-4 py-2 mt-6 text-white h-14 bg-Primery-700 rounded-xl"
+                  >
+                    جست و جو
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- hotel-fly end -->
         </div>
       </section>
 
@@ -1178,5 +2202,6 @@
         },
       });
     </script>
+    <script src="../js/index.js"></script>
   </body>
 </html>
