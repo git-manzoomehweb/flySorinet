@@ -1,0 +1,119 @@
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="tour">
+  <member
+    name="cat"
+    type="tree"
+    request="cat"
+    parentid="210485"
+    order="ord"
+  ></member>
+</basis>
+<!-- header menu desktop -->
+<header>
+  <section class="hidden p-6 lg:desktopContainer lg:block">
+    <div class="flex justify-between">
+      <nav class="relative flex items-center">
+        <ul class="flex justify-between gap-10">
+          <li class="flex">
+            <img src="../icons/headerIcons.svg" alt="" />
+            <a href=""> صفحه اصلی </a>
+          </li>
+          <basis
+            core="tree"
+            datamembername="tour.cat"
+            idcol="catid"
+            parentidcol="parentid"
+            nullvalue="210485"
+          >
+            <layout>
+              <li class="group">
+                <span class="flex items-center gap-2 cursor-pointer group">
+                  تور ها
+                  <img
+                    src="../icons/chevronDownIcon.svg"
+                    alt=""
+                    class="transition-all duration-200 group-hover:rotate-90"
+                  />
+                </span>
+                <!-- submenu -->
+                <ul
+                  class="absolute flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100"
+                >
+                  @child
+                </ul>
+              </li>
+            </layout>
+            <face level="1" filter="link is null">
+              <li class="relative group/leveltwo">
+                <div class="flex justify-between cursor-pointer">
+                  <span>ایرانگردی</span>
+                  <img
+                    src="../icons/chevronDownIcon.svg"
+                    alt=""
+                    class="transition-all duration-200 group-hover/leveltwo:rotate-90"
+                  />
+                </div>
+                <ul
+                  class="absolute top-0 flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-sm opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100"
+                >
+                  @child
+                </ul>
+              </li>
+            </face>
+            <face level="1">
+                <li class="relative group/leveltwo">
+                  <div class="flex justify-between cursor-pointer">
+                    <span>ایرانگردی</span>
+                    <img
+                      src="../icons/chevronDownIcon.svg"
+                      alt=""
+                      class="transition-all duration-200 group-hover/leveltwo:rotate-90"
+                    />
+                  </div>
+                  <ul
+                    class="absolute top-0 flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-sm opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100"
+                  >
+                    @child
+                  </ul>
+                </li>
+              </face>
+            <face level="end" filter="link is null">
+              <li><a href="">اصفهان</a></li>
+            </face>
+            <face level="end">
+                <li><a href="">اصفهان</a></li>
+              </face>
+            <!-- submenu end -->
+          </basis>
+
+          <li class="group">
+            <!-- submenu -->
+            <div
+              class="absolute flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100"
+            >
+              <a href="">ویزای شینگن</a>
+              <a href="">ویزای اروپا</a>
+              <a href="">ویزای آمریکا</a>
+            </div>
+            <!-- submenu end -->
+            <span class="flex items-center gap-2 cursor-pointer group">
+              ویزا
+              <img
+                src="../icons/chevronDownIcon.svg"
+                alt=""
+                class="transition-all duration-200 group-hover:rotate-90"
+              />
+            </span>
+          </li>
+          <li><a href="">مقالات</a></li>
+          <li><a href="">گردشگری</a></li>
+          <li><a href="">تماس با ما</a></li>
+        </ul>
+      </nav>
+      <span class="flex items-center gap-2">
+        <img src="../icons/personIcon.svg" alt="" />
+        ورود/ثبت نام
+      </span>
+    </div>
+  </section>
+  <!-- header menu desktop end -->
+</header>

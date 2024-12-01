@@ -9,15 +9,77 @@
   </head>
   <body class="px-2">
     <header>
+      <!-- header subset -->
+      <div
+        class="fixed z-50 hidden w-full h-full bg-black header-subset-overlay bg-opacity-70 overfh lg:hidden"
+      >
+        <div
+          class="fixed right-0 z-50 w-9/12 h-full p-4 overflow-scroll transition duration-200 ease-in-out transform bg-white shadow-md header-subset translate-x-96"
+        >
+          <nav class="flex items-center w-full h-full">
+            <ul class="flex flex-col justify-between w-full h-full gap-10">
+              <li class="flex items-center justify-between">
+                <a href=""> صفحه اصلی </a>
+                <img
+                  src="../icons/xIcon.svg"
+                  alt=""
+                  class="w-8 cursor-pointer x-icon"
+                />
+              </li>
+              <li class="tour-li">
+                <span href="" class="flex items-center gap-2 cursor-pointer">
+                  تور ها
+                  <img src="../icons/chevronDownIcon.svg" alt="" />
+                </span>
+                <!-- submenu -->
+                <ul
+                  class="tour-submenu p-4 invisible opacity-0 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500"
+                >
+                  <li>
+                    <a href="">ایرانگردی</a>
+                    <ul>
+                      <li>اصفهان</li>
+                      <li>اصفهان</li>
+                      <li>اصفهان</li>
+                    </ul>
+                  </li>
+                  <li><a href="">جهانگردی</a></li>
+                </ul>
+                <!-- submenu end -->
+              </li>
+              <li class="visa-li">
+                <span href="" class="flex items-center gap-2 cursor-pointer">
+                  ویزا
+                  <img src="../icons/chevronDownIcon.svg" alt="" />
+                </span>
+                <!-- submenu -->
+                <div
+                  class="visa-submenu p-4 rounded-xl bg-white invisible opacity-0 flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500"
+                >
+                  <a href="">ویزای شینگن</a>
+                  <a href="">ویزای اروپا</a>
+                  <a href="">ویزای آمریکا</a>
+                </div>
+                <!-- submenu end -->
+              </li>
+              <li><a href="">مقالات</a></li>
+              <li><a href="">گردشگری</a></li>
+              <li><a href="">تماس با ما</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- header subset end -->
+
       <!-- header menu mobile -->
-      <div class="flex justify-between px-4 py-3 lg:hidden">
+      <div class="flex items-center justify-between px-4 py-3 lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="size-6"
+          class="relative z-40 cursor-pointer size-6 bars3"
         >
           <path
             stroke-linecap="round"
@@ -26,7 +88,13 @@
           />
         </svg>
 
-        <img src="../icons/headerIcons.svg" alt="" />
+        <div class="flex items-center gap-8">
+          <img src="../icons/headerIcons.svg" alt="" />
+          <span class="flex items-center gap-2">
+            <img src="../icons/personIcon.svg" alt="" class="w-8" />
+            ورود/ثبت نام
+          </span>
+        </div>
       </div>
       <!-- header menu mobile end -->
 
@@ -39,15 +107,47 @@
                 <img src="../icons/headerIcons.svg" alt="" />
                 <a href=""> صفحه اصلی </a>
               </li>
+
               <li class="group">
                 <!-- submenu -->
-                <div
+                <ul
                   class="absolute flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100"
                 >
-                  <a href="">تور استانبول</a>
-                  <a href="">تور استانبول</a>
-                  <a href="">تور استانبول</a>
-                </div>
+                  <li class="relative group/leveltwo">
+                    <div class="flex justify-between cursor-pointer">
+                      <span>ایرانگردی</span>
+                      <img
+                        src="../icons/chevronDownIcon.svg"
+                        alt=""
+                        class="transition-all duration-200 group-hover/leveltwo:rotate-90"
+                      />
+                    </div>
+                    <ul
+                      class="absolute top-0 flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-sm opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100"
+                    >
+                      <li>اصفهان</li>
+                      <li>اصفهان</li>
+                      <li>اصفهان</li>
+                    </ul>
+                  </li>
+                  <li class="relative group/levelthree">
+                    <div class="flex justify-between cursor-pointer">
+                      <span>جهانگردی</span>
+                      <img
+                        src="../icons/chevronDownIcon.svg"
+                        alt=""
+                        class="transition-all duration-200 group-hover/levelthree:rotate-90"
+                      />
+                    </div>
+                    <ul
+                      class="absolute top-0 flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-sm opacity-0 right-60 rounded-xl group-hover/levelthree:visible group-hover/levelthree:opacity-100"
+                    >
+                      <li>ترکیه</li>
+                      <li>روسیه</li>
+                      <li>ژاپن</li>
+                    </ul>
+                  </li>
+                </ul>
                 <!-- submenu end -->
                 <span class="flex items-center gap-2 cursor-pointer group">
                   تور ها
@@ -98,25 +198,14 @@
         <!-- header background -->
         <div class="relative mb-60 lg:mb-20">
           <img
-            src="../icons/headerBackIcon.svg"
+            src="../../public/images/fly-image.png"
             alt=""
-            class="lg:absolute lg:left-[-17rem] lg:-z-10 lg:-top-40 2xl:left-12"
-          />
-
-          <img
-            src="../../public/images/airplane-background.jfif"
-            alt="airplane-background"
-            class="absolute rotate-3 w-72 rounded-3xl -left-12 top-4 lg:h-[53rem] lg:-z-10 lg:rotate-[4deg] lg:-left-12 lg:w-[32rem] lg:-top-52 2xl:w-[52rem] 2xl:-top-56"
-          />
-          <img
-            src="../../public/images/airplane.png"
-            alt="airplane"
-            class="absolute left-7 -top-20 z-50 w-[28rem] h-[28rem] object-cover lg:w-[38rem] lg:h-[38rem] lg:top-20 2xl:w-[68rem] 2xl:h-[70rem] 2xl:-top-52"
+            class="lg:w-[40rem] lg:h-[57rem] lg:absolute lg:-top-44 lg:-z-10 lg:-left-16 xl:w-[47rem] 2xl:w-auto"
           />
         </div>
         <!-- header background end  -->
-        <section id="search-box" class="mt-4 desktopContainer">
-          <div class="lg:w-2/5 2xl:w-2/5">
+        <section class="mt-4 desktopContainer">
+          <div class="lg:w-[45%] xl:w-[46%] 2xl:w-2/5" id="search-box">
             <h1 class="hidden mb-16 text-3xl font-bold lg:block">
               <span class="text-Primery-700">پرواز</span> رو با سورینت تجربه کن
             </h1>
@@ -188,12 +277,12 @@
 
               <!-- timing, origin and destination  -->
               <form
-                class="form-search relative flex flex-col gap-3"
+                class="relative flex flex-col gap-3 form-search"
                 id=""
                 onsubmit="form_search_isSubmited(this,event)"
               >
                 <div
-                  class="relative px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl cursor-pointer"
+                  class="relative px-4 py-3 border border-solid cursor-pointer bg-zinc-100 border-zinc-200 rounded-xl"
                 >
                   <!-- submenu  -->
                   <div
@@ -250,34 +339,97 @@
                   <h3 class="font-medium">مبدا</h3>
                   <input
                     type="text"
-                    class="font-normal placeholder:text-zinc-600 bg-zinc-100 outline-none"
+                    class="font-normal outline-none cursor-pointer placeholder:text-zinc-600 bg-zinc-100"
                     placeholder="مبدا خود را انتخاب کنید"
                     required
+                    readonly
                   />
                 </div>
 
                 <img
                   src="../icons/changeIcon.svg"
                   alt=""
-                  class="absolute top-[13%] left-[5%] lg:top-14"
+                  class="absolute top-[13%] left-[5%] lg:top-14 z-10"
                 />
 
                 <div
-                  class="px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                  class="relative px-4 py-3 border border-solid cursor-pointer bg-zinc-100 border-zinc-200 rounded-xl"
                 >
-                  <h3 class="font-medium">مقصد</h3>
-                  <span class="font-normal text-zinc-600"
-                    >مقصد خود را انتخاب کنید</span
+                  <!-- submenu  -->
+                  <div
+                    class="absolute right-0 z-10 hidden w-full bg-white rounded-xl"
                   >
+                    <div class="px-3 py-2">
+                      <h3 class="font-medium">مقصد</h3>
+                      <span class="font-normal text-zinc-600"
+                        >مقصد خود را انتخاب کنید</span
+                      >
+                    </div>
+
+                    <div class="flex w-full">
+                      <!-- right content  -->
+                      <div class="w-1/2">
+                        <span
+                          class="block w-full px-6 py-2 font-medium text-center text-Primery-700 bg-zinc-200"
+                          >داخلی</span
+                        >
+                        <div class="border-l border-solid border-zinc-200">
+                          <div
+                            class="flex flex-col w-24 mx-auto text-center divide-y text-zinc-600"
+                          >
+                            <span>تهران</span>
+                            <span>اهواز</span>
+                            <span>مشهد</span>
+                            <span>اصفهان</span>
+                            <span>شیراز</span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- right content end -->
+
+                      <!-- left content  -->
+                      <div class="w-1/2">
+                        <span
+                          class="block w-full px-6 py-2 font-medium text-center text-Primery-700 bg-zinc-200"
+                          >خارجی</span
+                        >
+                        <div
+                          class="flex flex-col w-24 mx-auto text-center divide-y text-zinc-600"
+                        >
+                          <span>استانبول</span>
+                          <span>دبی</span>
+                          <span>عمان</span>
+                          <span>قطر</span>
+                          <span>تفلیس</span>
+                        </div>
+                      </div>
+                      <!-- left content end -->
+                    </div>
+                  </div>
+                  <!-- submenu end -->
+                  <h3 class="font-medium">مقصد</h3>
+                  <input
+                    type="text"
+                    class="font-normal outline-none cursor-pointer placeholder:text-zinc-600 bg-zinc-100"
+                    placeholder="مقصد خود را انتخاب کنید"
+                    required
+                    readonly
+                  />
                 </div>
 
                 <div class="flex flex-col gap-3 lg:flex-row">
                   <div
                     class="flex items-center justify-between px-4 py-3 border border-solid opacity-30 bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-2"
                   >
-                    <div>
+                    <div class="">
                       <h3 class="font-medium">تاریخ برگشت</h3>
-                      <span class="font-normal text-zinc-600">1403/5/5</span>
+                      <input
+                        type="text"
+                        class="font-normal outline-none placeholder:text-zinc-600 bg-zinc-100 lg:w-[65%]"
+                        placeholder="1403/5/5"
+                        required
+                        disabled
+                      />
                     </div>
                     <svg
                       width="48"
@@ -285,6 +437,7 @@
                       viewBox="0 0 48 48"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      class="lg:shrink-0"
                     >
                       <path
                         fill-rule="evenodd"
@@ -296,11 +449,17 @@
                   </div>
 
                   <div
-                    class="flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-1"
+                    class="flex items-center justify-between px-4 py-3 border border-solid cursor-pointer bg-zinc-100 border-zinc-200 rounded-xl lg:w-1/2 lg:order-1"
                   >
                     <div>
                       <h3 class="font-medium">تاریخ رفت</h3>
-                      <span class="font-normal text-zinc-600">1403/5/5</span>
+                      <input
+                        type="text"
+                        class="font-normal outline-none cursor-pointer lg:w-[65%] placeholder:text-zinc-600 bg-zinc-100"
+                        placeholder="1403/5/5"
+                        required
+                        readonly
+                      />
                     </div>
                     <svg
                       width="48"
@@ -308,6 +467,7 @@
                       viewBox="0 0 48 48"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      class="lg:shrink-0"
                     >
                       <path
                         fill-rule="evenodd"
@@ -320,7 +480,7 @@
                 </div>
 
                 <div
-                  class="relative flex items-center justify-between px-4 py-3 border border-solid bg-zinc-100 border-zinc-200 rounded-xl"
+                  class="relative flex items-center justify-between px-4 py-3 border border-solid cursor-pointer bg-zinc-100 border-zinc-200 rounded-xl"
                 >
                   <!-- submenu -->
                   <div
@@ -473,6 +633,7 @@
             class="absolute left-7 -top-20 z-50 w-[28rem] h-[28rem] object-cover lg:-scale-x-100 lg:w-[37rem] lg:-left-1 lg:h-[36rem] lg:top-0 2xl:w-[50rem] 2xl:h-[46rem] 2xl:-top-40 2xl:left-44 2xl:rotate-3"
           />
         </div>
+        <!-- header background end -->
         <section class="mt-4 desktopContainer">
           <div class="lg:w-2/5 2xl:w-2/5">
             <h1 class="hidden mb-16 text-3xl font-bold lg:block">
@@ -1957,11 +2118,16 @@
     <!-- main end -->
 
     <!-- footer -->
-    <footer class="px-4 py-4 mt-24 lg:relative rounded-xl bg-footer-gradient">
+    <footer class="relative px-4 py-4 mt-24 rounded-xl bg-footer-gradient">
       <img
         src="../icons/footerBackIcon.svg"
         alt=""
-        class="lg:absolute lg:-top-3 lg:-right-2 lg:-z-10 2xl:-top-6 2xl:-right-3"
+        class="hidden lg:absolute lg:-top-3 lg:-right-2 lg:-z-10 2xl:-top-6 2xl:-right-3 lg:block"
+      />
+      <img
+        src="../icons/footerBackIcon.svg"
+        alt=""
+        class="absolute -top-3 -right-px -z-10 lg:hidden"
       />
       <div class="flex flex-col items-center justify-center gap-2 mb-6">
         <img src="../icons/headerIcons.svg" alt="" />
@@ -2114,5 +2280,6 @@
       <!-- content of footer end -->
     </footer>
     <!-- footer end -->
+    <script src="../js/index.js"></script>
   </body>
 </html>
