@@ -7,6 +7,15 @@
     order="ord"
   ></member>
 </basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="visa">
+  <member
+    name="cat"
+    type="tree"
+    request="cat"
+    parentid="212044"
+    order="ord"
+  ></member>
+</basis>
 <!-- header menu desktop -->
 <header>
   <section class="hidden p-6 lg:desktopContainer lg:block">
@@ -60,50 +69,64 @@
               </li>
             </face>
             <face level="1">
-                <li class="relative group/leveltwo">
-                  <div class="flex justify-between cursor-pointer">
-                    <span>ایرانگردی</span>
-                    <img
-                      src="../icons/chevronDownIcon.svg"
-                      alt=""
-                      class="transition-all duration-200 group-hover/leveltwo:rotate-90"
-                    />
-                  </div>
-                  <ul
-                    class="absolute top-0 flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-sm opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100"
-                  >
-                    @child
-                  </ul>
-                </li>
-              </face>
+              <li class="relative group/leveltwo">
+                <div class="flex justify-between cursor-pointer">
+                  <span>@title</span>
+                  <img
+                    src="../icons/chevronDownIcon.svg"
+                    alt=""
+                    class="transition-all duration-200 group-hover/leveltwo:rotate-90"
+                  />
+                </div>
+                <ul
+                  class="absolute top-0 flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-sm opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100"
+                >
+                  @child
+                </ul>
+              </li>
+            </face>
             <face level="end" filter="link is null">
-              <li><a href="">اصفهان</a></li>
+              <li><a href="">@title</a></li>
             </face>
             <face level="end">
-                <li><a href="">اصفهان</a></li>
-              </face>
+              <li><a href="">@title</a></li>
+            </face>
             <!-- submenu end -->
           </basis>
 
-          <li class="group">
-            <!-- submenu -->
-            <div
-              class="absolute flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100"
-            >
-              <a href="">ویزای شینگن</a>
-              <a href="">ویزای اروپا</a>
-              <a href="">ویزای آمریکا</a>
-            </div>
-            <!-- submenu end -->
-            <span class="flex items-center gap-2 cursor-pointer group">
-              ویزا
-              <img
-                src="../icons/chevronDownIcon.svg"
-                alt=""
-                class="transition-all duration-200 group-hover:rotate-90"
-              />
-            </span>
-          </li>
+          <basis
+            core="tree"
+            datamembername="visa.cat"
+            idcol="catid"
+            parentidcol="parentid"
+            nullvalue="212044"
+          >
+            <layout>
+              <li class="group">
+                <span class="flex items-center gap-2 cursor-pointer group">
+                  ویزا
+                  <img
+                    src="../icons/chevronDownIcon.svg"
+                    alt=""
+                    class="transition-all duration-200 group-hover:rotate-90"
+                  />
+                </span>
+                <!-- submenu -->
+                <ul
+                  class="absolute flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100"
+                >
+                  @child
+                </ul>
+                <!-- submenu end -->
+              </li>
+            </layout>
+            <face level="end" filter="link is null">
+              <li><a href="">@title</a></li>
+            </face>
+            <face level="end">
+              <li><a href="">@title</a></li>
+            </face>
+          </basis>
           <li><a href="">مقالات</a></li>
           <li><a href="">گردشگری</a></li>
           <li><a href="">تماس با ما</a></li>
