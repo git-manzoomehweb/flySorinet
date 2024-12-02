@@ -560,94 +560,6 @@ video {
   display: none;
 }
 
-@font-face {
-  font-family: "DanaFaNum";
-
-  src: url(./fonts/DanaFaNum-Thin.woff) format("woff"),
-    url(./fonts/DanaFaNum-Thin.woff2) format("woff2");
-
-  font-style: normal;
-
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: "DanaFaNum";
-
-  src: url(./fonts/DanaFaNum-Light.woff) format("woff"),
-    url(./fonts/DanaFaNum-Light.woff2) format("woff2");
-
-  font-style: normal;
-
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "DanaFaNum";
-
-  src: url(./fonts/DanaFaNum-Regular.woff) format("woff"),
-    url(./fonts/DanaFaNum-Regular.woff2) format("woff2");
-
-  font-style: normal;
-
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "DanaFaNum";
-
-  src: url(./fonts/DanaFaNum-Medium.woff) format("woff"),
-    url(./fonts/DanaFaNum-Medium.woff2) format("woff2");
-
-  font-style: normal;
-
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "DanaFaNum";
-
-  src: url(./fonts/DanaFaNum-DemiBold.woff) format("woff"),
-    url(./fonts/DanaFaNum-DemiBold.woff2) format("woff2");
-
-  font-style: normal;
-
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "DanaFaNum";
-
-  src: url(./fonts/DanaFaNum-Bold.woff) format("woff"),
-    url(./fonts/DanaFaNum-Black.woff2) format("woff2");
-
-  font-style: normal;
-
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "DanaFaNum";
-
-  src: url(./fonts/DanaFaNum-ExtraBold.woff) format("woff"),
-    url(./fonts/DanaFaNum-ExtraBold.woff2) format("woff2");
-
-  font-style: normal;
-
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: "DanaFaNum";
-
-  src: url(./fonts/DanaFaNum-Black.woff) format("woff"),
-    url(./fonts/DanaFaNum-Black.woff2) format("woff2");
-
-  font-style: normal;
-
-  font-weight: 900;
-}
-
 .desktopContainer {
   max-width: 1280px;
   margin-right: auto;
@@ -687,7 +599,15 @@ video {
     max-width: 1536px;
   }
 }
-
+.top-\[-4\.5rem\] {
+  top: -4.5rem;
+}
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
 .invisible {
   visibility: hidden;
 }
