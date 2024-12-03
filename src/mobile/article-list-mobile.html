@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../styles/swiperStyles.css" />
+    <link rel="icon" href="../icons/favIcon.svg" />
+    <title>Document</title>
+  </head>
+  <body class="px-2">
+    <header class="relative">
+      <!-- header subset -->
+      <div
+        class="fixed z-50 hidden w-full h-full bg-black header-subset-overlay bg-opacity-70 overfh"
+      >
+        <div
+          class="header-subset translate-x-96 transition duration-200 transform ease-in-out fixed right-0 z-50 w-9/12 h-full p-4 overflow-scroll bg-white shadow-md"
+        >
+          <nav class="flex items-center w-full h-full">
+            <ul class="flex flex-col justify-between w-full h-full gap-10">
+              <li class="flex items-center justify-between">
+                <a href=""> صفحه اصلی </a>
+                <img
+                  src="../icons/xIcon.svg"
+                  alt=""
+                  class="w-8 cursor-pointer x-icon"
+                />
+              </li>
+              <li class="tour-li">
+                <span href="" class="flex items-center gap-2 cursor-pointer">
+                  تور ها
+                  <img src="../icons/chevronDownIcon.svg" alt="" />
+                </span>
+                <!-- submenu -->
+                <div
+                  class="tour-submenu p-4 invisible opacity-0 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500"
+                >
+                  <a href="">تور استانبول</a>
+                  <a href="">تور استانبول</a>
+                  <a href="">تور استانبول</a>
+                </div>
+                <!-- submenu end -->
+              </li>
+              <li class="visa-li">
+                <span href="" class="flex items-center gap-2 cursor-pointer">
+                  ویزا
+                  <img src="../icons/chevronDownIcon.svg" alt="" />
+                </span>
+                <!-- submenu -->
+                <div
+                  class="visa-submenu p-4 rounded-xl bg-white invisible opacity-0 flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500"
+                >
+                  <a href="">ویزای شینگن</a>
+                  <a href="">ویزای اروپا</a>
+                  <a href="">ویزای آمریکا</a>
+                </div>
+                <!-- submenu end -->
+              </li>
+              <li><a href="">مقالات</a></li>
+              <li><a href="">گردشگری</a></li>
+              <li><a href="">تماس با ما</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- header subset end -->
+
+      <!-- header menu mobile -->
+      <div class="flex items-center justify-between px-4 py-3 lg:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="cursor-pointer size-6 bars3 relative z-40"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+
+        <div class="flex items-center gap-8">
+          <img src="../icons/headerIcons.svg" alt="" />
+          <span class="flex items-center gap-2">
+            <img src="../icons/personIcon.svg" alt="" class="w-8" />
+            ورود/ثبت نام
+          </span>
+        </div>
+      </div>
+      <!-- header menu mobile end -->
+
+      <!-- header menu desktop -->
+      <section class="hidden p-6 lg:desktopContainer lg:block">
+        <div class="flex justify-between">
+          <nav class="flex items-center">
+            <ul class="flex justify-between gap-10">
+              <li class="flex">
+                <img src="../icons/headerIcons.svg" alt="" />
+                <a href=""> صفحه اصلی </a>
+              </li>
+              <li>
+                <a href="" class="flex items-center gap-2">
+                  تور ها
+                  <img src="../icons/chevronDownIcon.svg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="" class="flex items-center gap-2">
+                  ویزا
+                  <img src="../icons/chevronDownIcon.svg" alt="" />
+                </a>
+              </li>
+              <li><a href="">مقالات</a></li>
+              <li><a href="">گردشگری</a></li>
+              <li><a href="">تماس با ما</a></li>
+            </ul>
+          </nav>
+          <span class="flex items-center gap-2">
+            <img src="../icons/personIcon.svg" alt="" />
+            ورود/ثبت نام
+          </span>
+        </div>
+      </section>
+      <!-- header menu desktop end -->
+    </header>
+
+    <main class="relative">
+      <!-- header background -->
+      <div class="relative">
+        <img
+          src="../icons/tourListRec.svg"
+          alt=""
+          class="absolute left-[6px] top-4 lg:left-[-17rem] lg:-z-10 lg:-top-24 2xl:top-[-6.5rem] 2xl:left-12"
+        />
+        <img src="../../public/images/article-list-background.jpg" alt="" />
+        <div class="absolute bottom-0 w-full h-full bg-shadow-gradient"></div>
+        <div class="relative z-10 text-center">
+          <h2 class="mb-4 text-lg font-medium text-white">تور های استانبول</h2>
+          <div class="text-sm text-white">
+            <a href=""
+              >صفحه اصلی
+              <span>></span>
+            </a>
+            <a href=""
+              >تور
+              <span>></span>
+            </a>
+            <a href=""
+              >تور های استانبول
+              <span>></span>
+            </a>
+            <span class="font-medium">مشاهده تور</span>
+          </div>
+        </div>
+      </div>
+      <!-- header background end -->
+
+      <div
+        class="px-4 pt-4 pb-8 bg-white rounded-xl w-[calc(100%-40px)] desktopContainer"
+      >
+        <div class="flex">
+          <!-- left content of main -->
+          <section
+            class="px-4 pb-8 w-[70%] order-2 grid grid-cols-2 grid-rows-2 gap-3"
+          >
+            <article
+              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+            >
+              <img
+                src="../../public/images/Rome.jpg"
+                alt=""
+                class="absolute w-full h-full bottom-0 right-0 object-cover"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">
+                    سفر به روم برای تفریح
+                  </h3>
+                  <p class="text-sm text-justify text-white">
+                    رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ
+                    ۲۸۰۰ ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این
+                    رو، در سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی
+                    هزاران ساله، ویرانه‌های وسیع...
+                  </p>
+                </div>
+                <div class="flex justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img src="../icons/calenderIconWhite.svg" alt="" />
+                    1402/12/12
+                  </span>
+                  <button
+                    class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+            >
+              <img
+                src="../../public/images/Rome.jpg"
+                alt=""
+                class="absolute w-full h-full bottom-0 right-0 object-cover"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">
+                    سفر به روم برای تفریح
+                  </h3>
+                  <p class="text-sm text-justify text-white">
+                    رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ
+                    ۲۸۰۰ ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این
+                    رو، در سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی
+                    هزاران ساله، ویرانه‌های وسیع...
+                  </p>
+                </div>
+                <div class="flex justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img src="../icons/calenderIconWhite.svg" alt="" />
+                    1402/12/12
+                  </span>
+                  <button
+                    class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+            >
+              <img
+                src="../../public/images/Rome.jpg"
+                alt=""
+                class="absolute w-full h-full bottom-0 right-0 object-cover"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">
+                    سفر به روم برای تفریح
+                  </h3>
+                  <p class="text-sm text-justify text-white">
+                    رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ
+                    ۲۸۰۰ ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این
+                    رو، در سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی
+                    هزاران ساله، ویرانه‌های وسیع...
+                  </p>
+                </div>
+                <div class="flex justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img src="../icons/calenderIconWhite.svg" alt="" />
+                    1402/12/12
+                  </span>
+                  <button
+                    class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+            >
+              <img
+                src="../../public/images/Rome.jpg"
+                alt=""
+                class="absolute w-full h-full bottom-0 right-0 object-cover"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">
+                    سفر به روم برای تفریح
+                  </h3>
+                  <p class="text-sm text-justify text-white">
+                    رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ
+                    ۲۸۰۰ ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این
+                    رو، در سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی
+                    هزاران ساله، ویرانه‌های وسیع...
+                  </p>
+                </div>
+                <div class="flex justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img src="../icons/calenderIconWhite.svg" alt="" />
+                    1402/12/12
+                  </span>
+                  <button
+                    class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+            >
+              <img
+                src="../../public/images/Rome.jpg"
+                alt=""
+                class="absolute w-full h-full bottom-0 right-0 object-cover"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">
+                    سفر به روم برای تفریح
+                  </h3>
+                  <p class="text-sm text-justify text-white">
+                    رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ
+                    ۲۸۰۰ ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این
+                    رو، در سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی
+                    هزاران ساله، ویرانه‌های وسیع...
+                  </p>
+                </div>
+                <div class="flex justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img src="../icons/calenderIconWhite.svg" alt="" />
+                    1402/12/12
+                  </span>
+                  <button
+                    class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+            >
+              <img
+                src="../../public/images/Rome.jpg"
+                alt=""
+                class="absolute w-full h-full bottom-0 right-0 object-cover"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">
+                    سفر به روم برای تفریح
+                  </h3>
+                  <p class="text-sm text-justify text-white">
+                    رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ
+                    ۲۸۰۰ ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این
+                    رو، در سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی
+                    هزاران ساله، ویرانه‌های وسیع...
+                  </p>
+                </div>
+                <div class="flex justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img src="../icons/calenderIconWhite.svg" alt="" />
+                    1402/12/12
+                  </span>
+                  <button
+                    class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+            >
+              <img
+                src="../../public/images/Rome.jpg"
+                alt=""
+                class="absolute w-full h-full bottom-0 right-0 object-cover"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">
+                    سفر به روم برای تفریح
+                  </h3>
+                  <p class="text-sm text-justify text-white">
+                    رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ
+                    ۲۸۰۰ ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این
+                    رو، در سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی
+                    هزاران ساله، ویرانه‌های وسیع...
+                  </p>
+                </div>
+                <div class="flex justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img src="../icons/calenderIconWhite.svg" alt="" />
+                    1402/12/12
+                  </span>
+                  <button
+                    class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+            >
+              <img
+                src="../../public/images/Rome.jpg"
+                alt=""
+                class="absolute w-full h-full bottom-0 right-0 object-cover"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">
+                    سفر به روم برای تفریح
+                  </h3>
+                  <p class="text-sm text-justify text-white">
+                    رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ
+                    ۲۸۰۰ ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این
+                    رو، در سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی
+                    هزاران ساله، ویرانه‌های وسیع...
+                  </p>
+                </div>
+                <div class="flex justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img src="../icons/calenderIconWhite.svg" alt="" />
+                    1402/12/12
+                  </span>
+                  <button
+                    class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </button>
+                </div>
+              </div>
+            </article>
+          </section>
+          <!-- left content on main end -->
+
+          <!-- right content of main -->
+          <section
+            class="w-[30%] border border-solid border-Primery-100 rounded-xl p-4 overflow-hidden h-fit"
+          >
+            <div
+              class="relative flex justify-between px-3 py-4 bg-zinc-100 rounded-lg"
+            >
+              <input
+                type="text"
+                name=""
+                id=""
+                class="bg-zinc-100 placeholder:text-zinc-900 outline-none"
+                placeholder="جستجو"
+              />
+              <img src="../icons/searchIcon.svg" alt="" />
+            </div>
+            <div class="flex flex-col gap-1 mt-4">
+              <h2 class="font-medium">شهر/کشور</h2>
+              <div class="flex flex-col gap-1">
+                <span class="flex items-center gap-2">
+                  <input type="radio" name="radio" id="" class="size-4" />
+                  استانبول
+                </span>
+                <span class="flex items-center gap-2">
+                  <input type="radio" name="radio" id="" class="size-4" />
+                  تفلیس
+                </span>
+                <span class="flex items-center gap-2">
+                  <input type="radio" name="radio" id="" class="size-4" />
+                  دبی
+                </span>
+                <span class="flex items-center gap-2">
+                  <input type="radio" name="radio" id="" class="size-4" />
+                  مالزی
+                </span>
+                <span class="flex items-center gap-2">
+                  <input type="radio" name="radio" id="" class="size-4" />
+                  تایلند
+                </span>
+                <span class="flex items-center gap-2">
+                  <input type="radio" name="radio" id="" class="size-4" />
+                  ایتالیا
+                </span>
+                <span class="flex items-center gap-2">
+                  <input type="radio" name="radio" id="" class="size-4" />
+                  عمان
+                </span>
+              </div>
+            </div>
+
+            <div class="border-y border-solid border-Primery-100 py-4 mt-4">
+              <h2 class="font-bold text-Primery-700">آخرین مطالب</h2>
+            </div>
+
+            <div class="px-4 pt-4 pb-8">
+              <div class="flex flex-col gap-4">
+                <!-- news -->
+                <div class="flex items-center gap-4">
+                  <img
+                    src="../../public/images/tourist-caring.jpg"
+                    alt="dubai"
+                    class="object-cover w-24 h-24 rounded-xl"
+                  />
+                  <div class="flex flex-col gap-2">
+                    <h3 class="text-sm font-medium">
+                      تفریحات استانبول ویژه کودکان
+                    </h3>
+                    <span class="text-sm"
+                      >اگر به دنبال تجربه بهترین تفریحات استانبول هستید، این شهر
+                      دارای
+                    </span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <img
+                    src="../../public/images/tourist-caring.jpg"
+                    alt="dubai"
+                    class="object-cover w-24 h-24 rounded-xl"
+                  />
+                  <div class="flex flex-col gap-2">
+                    <h3 class="text-sm font-medium">
+                      تفریحات استانبول ویژه کودکان
+                    </h3>
+                    <span class="text-sm"
+                      >اگر به دنبال تجربه بهترین تفریحات استانبول هستید، این شهر
+                      دارای
+                    </span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <img
+                    src="../../public/images/tourist-caring.jpg"
+                    alt="dubai"
+                    class="object-cover w-24 h-24 rounded-xl"
+                  />
+                  <div class="flex flex-col gap-2">
+                    <h3 class="text-sm font-medium">
+                      تفریحات استانبول ویژه کودکان
+                    </h3>
+                    <span class="text-sm"
+                      >اگر به دنبال تجربه بهترین تفریحات استانبول هستید، این شهر
+                      دارای
+                    </span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <img
+                    src="../../public/images/tourist-caring.jpg"
+                    alt="dubai"
+                    class="object-cover w-24 h-24 rounded-xl"
+                  />
+                  <div class="flex flex-col gap-2">
+                    <h3 class="text-sm font-medium">
+                      تفریحات استانبول ویژه کودکان
+                    </h3>
+                    <span class="text-sm"
+                      >اگر به دنبال تجربه بهترین تفریحات استانبول هستید، این شهر
+                      دارای
+                    </span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <img
+                    src="../../public/images/tourist-caring.jpg"
+                    alt="dubai"
+                    class="object-cover w-24 h-24 rounded-xl"
+                  />
+                  <div class="flex flex-col gap-2">
+                    <h3 class="text-sm font-medium">
+                      تفریحات استانبول ویژه کودکان
+                    </h3>
+                    <span class="text-sm"
+                      >اگر به دنبال تجربه بهترین تفریحات استانبول هستید، این شهر
+                      دارای</span
+                    >
+                  </div>
+                </div>
+                <!-- news end -->
+              </div>
+            </div>
+          </section>
+          <!-- right content of main end -->
+        </div>
+        <div class="flex items-center justify-center gap-2 mt-16">
+          <button
+            class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+          >
+            <img src="../icons/chevronRightIcon.svg" alt="" />
+          </button>
+          <div
+            class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300"
+          >
+            1
+          </div>
+          <div
+            class="flex items-center justify-center w-12 h-12 p-2 text-white rounded-xl bg-Primery-600"
+          >
+            1
+          </div>
+          <div
+            class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300"
+          >
+            1
+          </div>
+          <button
+            class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+          >
+            <img src="../icons/chevronLeftIcon.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="relative px-4 py-4 mt-24 rounded-xl bg-footer-gradient">
+      <img
+        src="../icons/footerBackIcon.svg"
+        alt=""
+        class="absolute -top-3 -right-px -z-10"
+      />
+      <div class="flex flex-col items-center justify-center gap-2 mb-6">
+        <img src="../icons/headerIcons.svg" alt="" />
+        <h2 class="text-sm font-normal text-white">
+          شرکت خدمات مسافرت هوایی سورینت پرواز
+        </h2>
+      </div>
+
+      <!-- content of footer -->
+      <div class="desktopContainer">
+        <div class="lg:flex lg:justify-between">
+          <div class="mb-6 lg:flex lg:w-1/2 lg:flex-row-reverse lg:order-2">
+            <!-- membrship -->
+            <section class="lg:w-[70%]">
+              <h3 class="mb-4 font-medium text-white lg:text-2xl">
+                عضویت در خبرنامه
+              </h3>
+              <form class="flex flex-col gap-4">
+                <input
+                  type="text"
+                  name="username"
+                  id=""
+                  placeholder="نام و نام خانوادگی"
+                  class="w-full h-16 px-4 py-3 font-medium outline-none bg-Footer-900 text-zinc-400 rounded-xl"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  id=""
+                  placeholder="ایمیل"
+                  class="w-full h-16 px-4 py-3 font-medium outline-none bg-Footer-900 text-zinc-400 rounded-xl"
+                />
+                <div class="flex">
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="کد امنیتی"
+                    class="w-full h-16 px-4 py-3 font-medium outline-none bg-Footer-900 text-zinc-400 rounded-xl"
+                  />
+                  <img src="../../public/images/capcha.jpg" alt="capcha" />
+                  <img src="../icons/refreshIcon.svg" alt="" />
+                </div>
+                <button
+                  class="w-full px-4 py-2 text-white h-14 bg-Primery-700 rounded-xl"
+                >
+                  تایید
+                </button>
+              </form>
+
+              <div class="flex items-center justify-between mt-8">
+                <span class="text-white">ما رو اینجا دنبال کنید</span>
+                <div class="flex gap-2">
+                  <img src="../icons/telegramIcon.svg" alt="" />
+                  <img src="../icons/instagramIcon.svg" alt="" />
+                </div>
+              </div>
+            </section>
+            <!-- membership -->
+
+            <!-- category -->
+            <section class="lg:w-1/4">
+              <div class="flex flex-col gap-2 mb-4 text-white">
+                <h2 class="text-2xl font-bold text-Primery-600">دسته بندی</h2>
+                <a href="">پرواز</a>
+                <a href="">هتل</a>
+                <a href="">تورها</a>
+                <a href="">ویزا</a>
+              </div>
+
+              <div class="flex flex-col gap-2 text-white">
+                <h2 class="text-2xl font-bold text-Primery-600">میانبر</h2>
+                <a href="">مقالات</a>
+                <a href="">بیمه مسافرتی</a>
+                <a href="">اقامت ها</a>
+                <a href="">سفر</a>
+              </div>
+            </section>
+            <!-- category -->
+          </div>
+
+          <!-- about us -->
+          <section class="order-1 lg:w-1/2">
+            <div>
+              <h2 class="mb-4 text-white lg:text-2xl">درباره ی ما</h2>
+              <p class="text-sm text-justify text-white">
+                شرکت خدمات مسافرت هوایی،گردشگری و زیارتی سورینت پرواز بعنوان یکی
+                از بخشهای " هلدینگ توسعه سورینت قشم " در کنار سایر بخشهای این
+                هلدینگ از جمله هواپیمایی قشم ، گروه هتلهای سورینت مریم و صدف کیش
+                ، صنایع غذایی فراز نمونه قشم و ... از سال 1392 فعالیت خود را با
+                مجوزهای " بند الف" از سازمان هواپیمایی کشوری ، " بند ب" از وزارت
+                میراث فرهنگی ،صنایع دستی و گردشگری ، " بند پ" از سازمان حج و
+                زیارت و " فروش قطار " از راه آهن جمهوری اسلامی ایران آغاز نموده
+                است . شرگت سوری نت پرواز با تمرکز بر ارائه خدمات به روز واختصاصی
+                به متقاضیان جهت تسهیل ف تسریع و افزایش کیفیت تمامی خدمات مسافرتی
+                و کسب رضایت مشتریان خو...
+              </p>
+            </div>
+
+            <!-- address -->
+            <div class="flex flex-col gap-2 mt-3">
+              <span class="flex items-center gap-2 text-sm text-white">
+                <img src="../icons/addressIcon.svg" alt="" />
+                تهران، میدان آزادی، بزرگراه شهید لشگری، خیابان ریاحی، پلاک ٩
+              </span>
+              <span class="flex items-center gap-2 text-sm text-white">
+                <img src="../icons/phoneIcon.svg" alt="" />
+                تلفن تماس و پشتیبانی :02147640
+              </span>
+            </div>
+            <!-- address -->
+
+            <div class="flex justify-between mt-3 lg:justify-normal lg:gap-4">
+              <span
+                class="flex items-center w-16 h-16 p-1 overflow-hidden bg-white rounded-xl"
+              >
+                <img src="../../public/images/eNamad.jpg" alt="eNamad" />
+              </span>
+              <span class="flex items-center w-16 h-16 p-1 bg-white rounded-xl">
+                <img src="../../public/images/lata.jpg" alt="lata" />
+              </span>
+              <span class="flex items-center w-16 h-16 p-1 bg-white rounded-xl">
+                <img src="../../public/images/pax.png" alt="pax" />
+              </span>
+              <span class="flex items-center w-16 h-16 p-1 bg-white rounded-xl">
+                <img
+                  src="../../public/images/airplaneComponey.jpg"
+                  alt="airplaneComponey"
+                />
+              </span>
+            </div>
+          </section>
+          <!-- about us end -->
+        </div>
+
+        <div class="mt-6 lg:flex lg:items-center lg:justify-center lg:gap-8">
+          <h3 class="text-sm font-medium text-center text-white">
+            طراحی سایت آژانس مسافرتی و رزرواسیون آنلاین توسط بیسیس فلای
+          </h3>
+          <div class="flex justify-between mt-3 lg:mt-0">
+            <img
+              src="../../public/images/basisFly.png"
+              alt="basisFly"
+              class="h-4 w-17"
+            />
+            <img src="../../public/images/trust-login.png" alt="trust-login" />
+          </div>
+        </div>
+      </div>
+      <!-- content of footer end -->
+    </footer>
+    <!-- footer end -->
+    <script src="../js/index.js"></script>
+    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        speed: 400,
+        centeredSlides: false,
+        spaceBetween: 30,
+        grabCursor: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
