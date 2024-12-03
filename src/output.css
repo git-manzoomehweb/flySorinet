@@ -730,6 +730,10 @@ video {
   top: -1rem;
 }
 
+.-top-\[35rem\] {
+  top: -35rem;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -1953,8 +1957,8 @@ body{
     left: -17rem;
   }
 
-  .lg\:left-\[6\.3rem\] {
-    left: 6.3rem;
+  .lg\:left-\[6rem\] {
+    left: 6rem;
   }
 
   .lg\:top-0 {
@@ -1985,12 +1989,16 @@ body{
     top: -16rem;
   }
 
-  .lg\:top-\[26rem\] {
-    top: 26rem;
+  .lg\:top-\[-23\.5rem\] {
+    top: -23.5rem;
   }
 
-  .lg\:top-\[6\.5rem\] {
-    top: 6.5rem;
+  .lg\:top-\[-28rem\] {
+    top: -28rem;
+  }
+
+  .lg\:top-\[26rem\] {
+    top: 26rem;
   }
 
   .lg\:-z-10 {
@@ -2288,10 +2296,6 @@ body{
     top: -3rem;
   }
 
-  .\32xl\:-top-16 {
-    top: -4rem;
-  }
-
   .\32xl\:-top-20 {
     top: -5rem;
   }
@@ -2356,6 +2360,14 @@ body{
     top: -15.5rem;
   }
 
+  .\32xl\:top-\[-28rem\] {
+    top: -28rem;
+  }
+
+  .\32xl\:top-\[-30rem\] {
+    top: -30rem;
+  }
+
   .\32xl\:top-\[-6\.5rem\] {
     top: -6.5rem;
   }
@@ -2376,8 +2388,8 @@ body{
     margin-top: 110rem;
   }
 
-  .\32xl\:h-\[29rem\] {
-    height: 29rem;
+  .\32xl\:h-\[24rem\] {
+    height: 24rem;
   }
 
   .\32xl\:h-\[44rem\] {
@@ -2394,10 +2406,6 @@ body{
 
   .\32xl\:h-\[74rem\] {
     height: 74rem;
-  }
-
-  .\32xl\:h-auto {
-    height: auto;
   }
 
   .\32xl\:w-2\/5 {

@@ -1,0 +1,590 @@
+<basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+  <member type="list" name="list" request="taglist" preview=""></member>
+</basis>
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="18"
+  name="db"
+  usedforid="[##cms.query.catid##]"
+>
+  <member name="scalar" type="scalar" typeid="150" />
+</basis>
+
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="20"
+  name="db"
+  catid="[##cms.query.catid##]"
+>
+  <member
+    name="navigation"
+    type="tree"
+    request="navcatid"
+    parentid="[##cms.query.catid##]"
+  />
+</basis>
+
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="20"
+  name="db"
+  catid="[##cms.query.catid##]"
+>
+  <member
+    name="tour-list"
+    type="list"
+    link="tour.bc"
+    propertyid="8077,8181,10000504,8076"
+    perpage="9"
+    pageno="[##cms.query.pagenum|(1)##]"
+    size="412*295"
+    order="ord"
+  />
+  <member
+    name="paging"
+    type="list"
+    request="paging"
+    count="3"
+    parentname="tour-list"
+  />
+</basis>
+
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="1"
+  name="db"
+  catid="[##cms.query.cid##]"
+>
+  <member
+    name="article-list"
+    type="list"
+    link="article.bc"
+    propertyid=""
+    perpage="3"
+    size="412*295"
+    order="ord"
+  />
+</basis>
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover"
+    />
+    <title>
+      [##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]
+    </title>
+    <meta
+      name="description"
+      content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]"
+    />
+    <basis
+      core="dbsource"
+      source="hosting"
+      name="tag"
+      urlid="[##cms.seo.urlid##]"
+    >
+      <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+      <face filter="key = 'canonical'">
+        <link rel="canonical" href="@value" />
+      </face>
+      <face>
+        <meta property="@key" content="@value" />
+      </face>
+    </basis>
+    <basis core="call" file="pwa.inc" />
+    <basis core="call" file="style.inc" />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="px-2">
+    <!-- header -->
+    <basis core="call" file="header.inc" />
+    <!-- header end     -->
+
+    <main class="relative">
+      <!-- header background -->
+      <div class="relative mb-60 lg:mb-20">
+        <img
+          src="[##cms.cms.cdn##]/images/tourListRecDesk.svg"
+          alt=""
+          class="lg:absolute lg:w-[50rem] lg:left-[6rem] lg:-z-10 lg:top-[-23.5rem] 2xl:top-[-35rem] 2xl:w-auto 2xl:h-[29rem] 2xl:left-2"
+        />
+
+        <img
+          src="[##cms.cms.cdn##]/images/strait-bosphorus-suleymaniye-mosque.jpg"
+          alt="strait-bosphorus-suleymaniye-mosque"
+          class="absolute w-[55rem] rounded-3xl left-0 -top-[35rem] h-[28rem] -z-10 2xl:w-[80rem]"
+        />
+        <img
+          src="[##cms.cms.cdn##]/images/airplane.png"
+          alt="airplane"
+          class="absolute left-60 lg:top-[-28rem] z-10 w-full h-[28rem] object-cover 2xl:w-[70rem] 2xl:left-[44rem] 2xl:top-[-30rem]"
+        />
+      </div>
+      <!-- header background end-->
+      <section class="mt-[30rem] desktopContainer">
+        <div class="mb-6">
+          <ul
+            itemscope
+            itemtype="https://schema.org/BreadcrumbList"
+            class="flex items-center gap-1"
+          >
+            <li
+              class="inline-block text-sm font-normal text-zinc-500"
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <a
+                class="text-zinc-500 hover:text-primary-900"
+                itemprop="item"
+                href="/"
+                aria-label="home"
+                ><span itemprop="name">صفحه اصلی</span>
+                <meta itemprop="position" content="1" />
+              </a>
+            </li>
+            <span class="text-zinc-500"> &gt; </span>
+            <basis core="print" datamembername="db.navigation">
+              <face filter="RowNumber=max(RowNumber) and parentcatid<>210441">
+                <li
+                  class="inline-block text-sm font-normal text-zinc-900"
+                  itemprop="itemListElement"
+                  itemscope
+                  itemtype="https://schema.org/ListItem"
+                >
+                  <span itemprop="name" class="font-bold">@title</span
+                  ><meta itemprop="position" content="@rownumber" />
+                </li>
+              </face>
+              <face filter="link is null and parentcatid<>210441">
+                <li
+                  class="flex gap-1 text-sm font-normal text-zinc-500"
+                  itemprop="itemListElement"
+                  itemscope
+                  itemtype="https://schema.org/ListItem"
+                >
+                  <a
+                    class="text-zinc-500 hover:text-primary-900"
+                    itemprop="item"
+                    href="/tour-list.bc?catid=@parentcatid"
+                    aria-label="@title"
+                    ><span itemprop="name">@title</span
+                    ><meta itemprop="position" content="@rownumber"
+                  /></a>
+                  <span class="text-zinc-500"> &gt; </span>
+                </li>
+              </face>
+              <face filter="parentcatid<>210441">
+                <li
+                  class="flex gap-1 text-sm font-normal text-zinc-900"
+                  itemprop="itemListElement"
+                  itemscope
+                  itemtype="https://schema.org/ListItem"
+                >
+                  <a
+                    class="text-zinc-900 hover:text-primary-900"
+                    itemprop="item"
+                    href="@link"
+                    aria-label="@title"
+                    ><span class="text-zinc-900" itemprop="name">@title</span
+                    ><meta itemprop="position" content="@rownumber"
+                  /></a>
+                  <span class="text-zinc-500"> &gt; </span>
+                </li>
+              </face>
+            </basis>
+          </ul>
+        </div>
+
+        <!-- tour-list -->
+        <basis core="list" datamembername="db.tour-list">
+          <layout>
+            <div
+              class="flex flex-col gap-2 lg:flex-row lg:flex-wrap lg:gap-3 lg:gap-y-4"
+            >
+              @child
+            </div>
+          </layout>
+
+          <face filter="link is null">
+            <div
+              class="relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
+            >
+              <div class="relative h-64">
+                <div class="absolute w-full h-full bg-shadow-gradient"></div>
+                <img
+                  src="@prp_10000504"
+                  alt="@prp_10000504"
+                  class="object-cover w-full h-full"
+                />
+                <div class="absolute bottom-8 right-4">
+                  <h3 class="mb-2 text-xl text-white">@title</h3>
+                  <div class="flex items-center gap-2">
+                    <img src="[##cms.cms.cdn##]/images/clockIcon.svg" alt="" />
+                    <span class="text-sm text-white">@prp_8076</span>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="/tour.bc?catid=@catid"
+                class="absolute flex items-center justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
+              >
+                مشاهده
+              </a>
+              <div class="flex flex-col gap-2 px-4 mt-9">
+                <span class="flex items-center text-sm text-zinc-900">
+                  <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="" />
+                  تاریخ رفت : @prp_8077
+                </span>
+                <span class="flex items-center text-sm text-zinc-900">
+                  <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="" />
+                  ایرلاین: @prp_10000504
+                </span>
+                <span class="flex items-center text-sm text-zinc-900">
+                  <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="" />
+                  شروع قیمت:
+                </span>
+                <span class="font-medium text-zinc-900">@prp_8181</span>
+              </div>
+            </div>
+          </face>
+          <face>
+            <div
+              class="relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
+            >
+              <div class="relative h-64">
+                <div class="absolute w-full h-full bg-shadow-gradient"></div>
+                <img
+                  src="@prp_10000504"
+                  alt="@prp_10000504"
+                  class="object-cover w-full h-full"
+                />
+                <div class="absolute bottom-8 right-4">
+                  <h3 class="mb-2 text-xl text-white">@title</h3>
+                  <div class="flex items-center gap-2">
+                    <img src="[##cms.cms.cdn##]/images/clockIcon.svg" alt="" />
+                    <span class="text-sm text-white">@prp_8076</span>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="@link"
+                class="absolute flex items-center justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
+              >
+                مشاهده
+              </a>
+              <div class="flex flex-col gap-2 px-4 mt-9">
+                <span class="flex items-center text-sm text-zinc-900">
+                  <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="" />
+                  تاریخ رفت : @prp_8077
+                </span>
+                <span class="flex items-center text-sm text-zinc-900">
+                  <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="" />
+                  ایرلاین: @prp_10000504
+                </span>
+                <span class="flex items-center text-sm text-zinc-900">
+                  <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="" />
+                  شروع قیمت:
+                </span>
+                <span class="font-medium text-zinc-900">@prp_8181</span>
+              </div>
+            </div>
+          </face>
+        </basis>
+        <!-- tour list end -->
+
+        <div id="paging" class="flex items-center justify-center gap-2 mt-16">
+          <ul class="cd-pagination no-space dir-ltr" id="wibpaging">
+            <basis core="print" datamembername="db.paging">
+              <face filter="(@sta='pre')">
+                <li
+                  class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                >
+                  <a
+                    class="text-zinc-900"
+                    href="/[##cms.cms.link_page##]&pagenum=@page"
+                    aria-label="angle-left"
+                    ><svg
+                      width="11"
+                      height="17"
+                      class="inline-block align-middle"
+                      viewBox="0 0 11 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z"
+                        fill="#18181B"
+                      /></svg
+                  ></a>
+                </li>
+              </face>
+            </basis>
+            <basis core="print" datamembername="db.paging">
+              <face filter="(@page=[##cms.query.pagenum|(1)##])">
+                <li
+                  class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300"
+                >
+                  <a
+                    class="text-zinc-900"
+                    class="current font-color-1"
+                    href="/[##cms.cms.link_page##]&pagenum=@page"
+                    >@page</a
+                  >
+                </li>
+              </face>
+
+              <face
+                filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no')"
+              >
+                <li
+                  class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300"
+                >
+                  <a
+                    class="text-zinc-900"
+                    href="/[##cms.cms.link_page##]&pagenum=@page"
+                    >@page</a
+                  >
+                </li>
+              </face>
+            </basis>
+            <basis core="print" datamembername="db.paging">
+              <face filter="(@sta='nex')">
+                <li
+                  class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
+                >
+                  <a
+                    class="text-zinc-900"
+                    href="/[##cms.cms.link_page##]&pagenum=@page"
+                    aria-label="angle-right"
+                    ><svg
+                      width="11"
+                      height="17"
+                      class="inline-block align-middle"
+                      viewBox="0 0 11 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z"
+                        fill="#18181B"
+                      /></svg
+                  ></a>
+                </li>
+              </face>
+            </basis>
+          </ul>
+        </div>
+      </section>
+
+      <!-- articles -->
+      <basis core="list" datamembername="db.article-list">
+        <layout>
+          <section class="mt-24 desktopContainer">
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center gap-8">
+                <h2 class="text-2xl font-bold">مقاله ها</h2>
+                <a
+                  href="/article-list.bc?catid=210488"
+                  class="text-xl font-medium text-Primery-700"
+                  >مشاهده همه</a
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <button>
+                  <img src="[##cms.cms.cdn##]/images/previousIcon.svg" alt="" />
+                </button>
+                <button>
+                  <img src="[##cms.cms.cdn##]/images/nextIcon.svg" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="swiper articles-swiper">
+              <div
+                class="flex flex-col gap-2 swiper-wrapper lg:flex-row lg:gap-0 lg:justify-between"
+              >
+                <!-- simple of articles -->
+                @child
+                <!-- simple of articles -->
+              </div>
+            </div>
+          </section>
+        </layout>
+        <face filter="link in null">
+          <div class="swiper-slide">
+            <article
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
+            >
+                <img
+                  src="@00412X00295prp"
+                  alt=""
+                  class="absolute bottom-0 right-0 object-cover w-full h-full"
+                />
+                <div
+                  class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+                ></div>
+                <div class="relative z-10">
+                  <div>
+                    <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
+                    <p class="text-sm text-justify text-white line-clamp-3">
+                      @prp_7244
+                    </p>
+                  </div>
+                  <div class="flex items-center justify-between mt-2">
+                    <span class="flex items-center gap-1 text-white">
+                      <img
+                        src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
+                        alt=""
+                      />
+                      @cdate
+                    </span>
+                    <a 
+                    href="/article.bc?id=@id"
+                      class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                    >
+                      بیشتر بخوانید
+                    </a>
+                  </div>
+                </div>
+            </article>
+          </div>
+        </face>
+        <face>
+          <div class="swiper-slide">
+            <article
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
+            >
+                <img
+                  src="@00412X00295prp"
+                  alt=""
+                  class="absolute bottom-0 right-0 object-cover w-full h-full"
+                />
+                <div
+                  class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+                ></div>
+                <div class="relative z-10">
+                  <div>
+                    <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
+                    <p class="text-sm text-justify text-white line-clamp-3">
+                      @prp_7244
+                    </p>
+                  </div>
+                  <div class="flex items-center justify-between mt-2">
+                    <span class="flex items-center gap-1 text-white">
+                      <img
+                        src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
+                        alt=""
+                      />
+                      @cdate
+                    </span>
+                    <a
+                    href="@link"
+                      class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                    >
+                      بیشتر بخوانید
+                    </a>
+                  </div>
+                </div>
+            </article>
+          </div>
+        </face>
+      </basis>
+      <!-- articles end -->
+
+      <section
+        class="flex flex-wrap justify-between gap-4 mx-auto mt-10 desktopContainer"
+      >
+        <img
+          src="[##cms.cms.cdn##]/images/sunExpress.png"
+          alt="sunExpress"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
+        <img
+          src="[##cms.cms.cdn##]/images/SalamAir.png"
+          alt="SalamAir"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
+        <img
+          src="[##cms.cms.cdn##]/images/turkishAirlines.png"
+          alt="turkishAirlines"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
+        <img
+          src="[##cms.cms.cdn##]/images/Qatar.png"
+          alt="Qatar"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
+        <img
+          src="[##cms.cms.cdn##]/images/IranAir.png"
+          alt="IranAir"
+          class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+        />
+      </section>
+    </main>
+
+    <!-- footer -->
+    <basis core="call" file="footer.inc" />
+    <!-- footer end -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var articlesSwiper = new Swiper(".articles-swiper", {
+        slidesPerView: 1,
+        speed: 400,
+        centeredSlides: false,
+        spaceBetween: 30,
+        grabCursor: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

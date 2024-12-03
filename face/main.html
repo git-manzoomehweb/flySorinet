@@ -7,7 +7,7 @@
   catid="212050"
 >
   <member
-    name="tourlist"
+    name="tour-list"
     type="list"
     link="tour.bc"
     order="ord"
@@ -1628,7 +1628,7 @@
       <!-- tour end -->
 
       <!-- تور های لحظه اخری -->
-      <basis core="print" datamembername="db.tourlist">
+      <basis core="list" datamembername="db.tour-list">
         <layout>
           <section class="mt-24 desktopContainer">
             <div
@@ -1654,7 +1654,7 @@
         </layout>
         <face filter="link is null">
           <a
-            href="/tour.bc?id=@id"
+            href="/tour.bc?catid=@catid"
             class="relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
           >
             <div class="relative h-64">
@@ -1740,7 +1740,7 @@
       <!-- تور لحظه اخری  -->
 
       <!-- هتل ها -->
-      <basis core="print" datamembername="db.hotel">
+      <basis core="list" datamembername="db.hotel">
         <layout>
           <section class="mt-24 desktopContainer">
             <div
@@ -1765,7 +1765,7 @@
               </div>
             </div>
 
-            <div class="!overflow-y-visible swiper hotels-swiper">
+            <div class="swiper hotels-swiper">
               <div
                 class="flex flex-col gap-2 swiper-wrapper lg:flex-row lg:justify-between lg:gap-0"
               >
@@ -1773,9 +1773,7 @@
                 @child
                 <!-- نمونه هتل ها -->
               </div>
-              <div
-                class="absolute left-0 flex flex-row-reverse w-10 top-[-4.5rem]"
-              >
+              <div class="absolute top-0 left-0 flex flex-row-reverse w-10">
                 <div class="swiper-button-next-custom">
                   <img src="[##cms.cms.cdn##]/images/previousIcon.svg" alt="" />
                 </div>
@@ -1787,10 +1785,10 @@
           </section>
         </layout>
         <face>
-          <div class="swiper-slide">
+          <div class="relative pb-6 overflow-hidden bg-white border border-solid swiper-slide border-zinc-300 rounded-xl">
             <a
               href="@link"
-              class="relative pb-6 overflow-hidden bg-white border border-solid border-zinc-300 rounded-xl"
+              class=""
             >
               <div class="relative">
                 <div class="absolute w-full h-full bg-light-gradient"></div>
@@ -1799,8 +1797,7 @@
                   alt="sunshine"
                   class="object-cover w-full h-64"
                 />
-                <a
-                  href="@prp_3087406"
+                <span
                   class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
                 >
                   <img
@@ -1808,7 +1805,7 @@
                     alt="location"
                   />
                   <span class="text-sm text-Primery-700">موقعیت</span>
-                </a>
+                </span>
                 <span
                   class="absolute flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
                 >
@@ -1833,10 +1830,10 @@
           </div>
         </face>
         <face filter="link is null">
-          <div class="swiper-slide">
+          <div class="relative pb-6 overflow-hidden bg-white border border-solid swiper-slide border-zinc-300 rounded-xl">
             <a
               href="/hotel.bc?id=@id"
-              class="relative pb-6 overflow-hidden bg-white border border-solid border-zinc-300 rounded-xl"
+              class=""
             >
               <div class="relative">
                 <div class="absolute w-full h-full bg-light-gradient"></div>
@@ -1845,13 +1842,12 @@
                   alt="sunshine"
                   class="object-cover w-full h-64"
                 />
-                <a
-                  href="@prp_3087406"
+                <span
                   class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
                 >
                   <img src="[##cms.cms.cdn##]/images/locationIcon.svg" alt="" />
                   <span class="text-sm text-Primery-700">موقعیت</span>
-                </a>
+                </span>
                 <span
                   class="absolute flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
                 >
@@ -1880,7 +1876,7 @@
       <!-- هتل ها -->
 
       <!-- articles -->
-      <basis core="print" datamembername="db.articles">
+      <basis core="list" datamembername="db.articles">
         <layout>
           <section class="mt-24 desktopContainer">
             <div class="flex items-center justify-between mb-6">
@@ -1902,7 +1898,7 @@
               </div>
             </div>
 
-            <div class="swiper articles-swiper">
+            <div class="swiper articles-swiper !overflow-visible">
               <div
                 class="flex flex-col gap-2 swiper-wrapper lg:flex-row lg:gap-0 lg:justify-between"
               >
@@ -1994,7 +1990,7 @@
           </div>
         </face>
       </basis>
-      <!-- articles -->
+      <!-- articles end -->
 
       <section
         class="flex flex-wrap justify-between gap-4 mx-auto mt-10 desktopContainer"

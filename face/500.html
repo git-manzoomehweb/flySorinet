@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover"
+    />
+    <title>
+      [##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]
+    </title>
+    <meta
+      name="description"
+      content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]"
+    />
+    <basis
+      core="dbsource"
+      source="hosting"
+      name="tag"
+      urlid="[##cms.seo.urlid##]"
+    >
+      <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+      <face filter="key = 'canonical'">
+        <link rel="canonical" href="@value" />
+      </face>
+      <face>
+        <meta property="@key" content="@value" />
+      </face>
+    </basis>
+    <basis core="call" file="pwa.inc" />
+    <basis core="call" file="style.inc" />
+  </head>
+  <body class="px-8">
+    <!-- header  -->
+    <basis core="call" file="header.inc" />
+    <!-- header end -->
+
+    <main class="lg:mt-52 lg:mb-96">
+      <section class="desktopContainer">
+        <div
+          class="lg:flex lg:justify-center lg:flex-col lg:items-center lg:relative lg:pt-12"
+        >
+          <img src="../icons/500Icon.svg" alt="" />
+          <span class="lg:text-zinc-600 lg:mt-8"
+            >ارتباط با سرور با مشکل مواجه شد لطفا در زمان دیگر امتحان کنید</span
+          >
+          <button
+            class="lg:text-white lg:py-2 lg:mt-6 lg:px-4 lg:h-14 lg:bg-Primery-700 lg:rounded-xl"
+          >
+            بازگشت به صفحه اصلی
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <basis core="call" file="footer.inc" />
+    <!-- footer end -->
+  </body>
+</html>

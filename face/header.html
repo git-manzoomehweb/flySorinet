@@ -47,7 +47,7 @@
                 </span>
                 <!-- submenu -->
                 <ul
-                  class="absolute flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100"
+                  class="absolute z-50 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100"
                 >
                   @child
                 </ul>
@@ -56,7 +56,7 @@
             <face level="1" filter="link is null">
               <li class="relative group/leveltwo">
                 <div class="flex justify-between cursor-pointer">
-                  <span>ایرانگردی</span>
+                  <a href="/tour-list.bc?catid=@catid">@title</a>
                   <img
                     src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
                     alt=""
@@ -64,7 +64,7 @@
                   />
                 </div>
                 <ul
-                  class="absolute top-0 flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100"
+                  class="absolute top-0 z-50 flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100"
                 >
                   @child
                 </ul>
@@ -73,7 +73,7 @@
             <face level="1">
               <li class="relative group/leveltwo">
                 <div class="flex justify-between cursor-pointer">
-                  <span>@title</span>
+                  <a href="@link">@title</a>
                   <img
                     src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
                     alt=""
@@ -88,10 +88,10 @@
               </li>
             </face>
             <face level="end" filter="link is null">
-              <li><a href="">@title</a></li>
+              <li><a href="/tour-list.bc?catid=@catid">@title</a></li>
             </face>
             <face level="end">
-              <li><a href="">@title</a></li>
+              <li><a href="@link">@title</a></li>
             </face>
             <!-- submenu end -->
           </basis>
@@ -123,15 +123,15 @@
               </li>
             </layout>
             <face level="end" filter="link is null">
-              <li><a href="">@title</a></li>
+              <li><a href="/visa-list.bc?catid=@catid">@title</a></li>
             </face>
             <face level="end">
-              <li><a href="">@title</a></li>
+              <li><a href="@linkk">@title</a></li>
             </face>
           </basis>
           <li><a href="/Tourism-magazine">مقالات</a></li>
-          <li><a href="">گردشگری</a></li>
-          <li><a href="">تماس با ما</a></li>
+          <li><a href="/articles-list.bc?id=212221">گردشگری</a></li>
+          <li><a href="/contact.bc">تماس با ما</a></li>
         </ul>
       </nav>
       <span class="flex items-center gap-2">
