@@ -688,6 +688,13 @@ video {
   }
 }
 
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -1013,9 +1020,7 @@ video {
   margin-top: 1rem;
 }
 
-.mt-52 {
-  margin-top: 13rem;
-}
+.mt-52{margin-top:13rem}
 
 .mt-6 {
   margin-top: 1.5rem;
@@ -1053,8 +1058,17 @@ video {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
+}
+
+.size-4 {
+  width: 1rem;
+  height: 1rem;
 }
 
 .size-6 {
@@ -1152,6 +1166,11 @@ video {
 
 .h-\[66rem\] {
   height: 66rem;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .h-full {
@@ -1337,6 +1356,14 @@ video {
   cursor: pointer;
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1427,6 +1454,10 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -1447,6 +1478,11 @@ video {
   border-width: 2px;
 }
 
+.border-y {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1465,6 +1501,11 @@ video {
 
 .border-dashed {
   border-style: dashed;
+}
+
+.border-Primery-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 202 207 / var(--tw-border-opacity, 1));
 }
 
 .border-Primery-600 {
@@ -1779,6 +1820,11 @@ video {
   color: rgb(216 17 31 / var(--tw-text-opacity, 1));
 }
 
+.text-blue-700 {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity, 1));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -1894,6 +1940,16 @@ body {
 .placeholder\:text-zinc-600::placeholder {
   --tw-text-opacity: 1;
   color: rgb(82 82 91 / var(--tw-text-opacity, 1));
+}
+
+.placeholder\:text-zinc-900::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(24 24 27 / var(--tw-text-opacity, 1));
+}
+
+.placeholder\:text-zinc-900::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(24 24 27 / var(--tw-text-opacity, 1));
 }
 
 .group\/levelthree:hover .group-hover\/levelthree\:visible {
@@ -2383,16 +2439,16 @@ body {
     left: 3rem;
   }
 
-  .\32xl\:left-2 {
-    left: 0.5rem;
-  }
-
   .\32xl\:left-32 {
     left: 8rem;
   }
 
   .\32xl\:left-44 {
     left: 11rem;
+  }
+
+  .\32xl\:left-\[14\.5rem\] {
+    left: 14.5rem;
   }
 
   .\32xl\:left-\[44rem\] {
@@ -2411,12 +2467,12 @@ body {
     top: -15.5rem;
   }
 
-  .\32xl\:top-\[-34rem\] {
-    top: -34rem;
+  .\32xl\:top-\[-29rem\] {
+    top: -29rem;
   }
 
-  .\32xl\:top-\[-35rem\] {
-    top: -35rem;
+  .\32xl\:top-\[-30rem\] {
+    top: -30rem;
   }
 
   .\32xl\:top-\[-6\.5rem\] {
@@ -2427,12 +2483,12 @@ body {
     top: 34rem;
   }
 
-  .\32xl\:top-\[-28rem\] {
-    top: -28rem;
+  .\32xl\:top-\[-32rem\] {
+    top: -32rem;
   }
 
-  .\32xl\:top-\[-30rem\] {
-    top: -30rem;
+  .\32xl\:left-\[7\.5rem\] {
+    left: 7.5rem;
   }
 
   .\32xl\:-z-10 {
@@ -2447,8 +2503,8 @@ body {
     margin-top: 110rem;
   }
 
-  .\32xl\:h-\[29rem\] {
-    height: 29rem;
+  .\32xl\:h-\[24rem\] {
+    height: 24rem;
   }
 
   .\32xl\:h-\[44rem\] {
@@ -2465,14 +2521,6 @@ body {
 
   .\32xl\:h-\[74rem\] {
     height: 74rem;
-  }
-
-  .\32xl\:h-auto {
-    height: auto;
-  }
-
-  .\32xl\:h-\[24rem\] {
-    height: 24rem;
   }
 
   .\32xl\:w-2\/5 {

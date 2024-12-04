@@ -12,7 +12,7 @@
       <!-- header menu desktop -->
       <section class="hidden p-6 lg:desktopContainer lg:block">
         <div class="flex justify-between">
-          <nav class="flex items-center relative">
+          <nav class="relative flex items-center">
             <ul class="flex justify-between gap-10">
               <li class="flex">
                 <img src="../icons/headerIcons.svg" alt="" />
@@ -21,7 +21,7 @@
               <li>
                 <!-- submenu -->
                 <div
-                  class="p-4 rounded-xl bg-white absolute flex flex-col gap-2 w-64 shadow-md font-medium top-full"
+                  class="absolute flex flex-col w-64 gap-2 p-4 font-medium bg-white shadow-md rounded-xl top-full"
                 >
                   <a href="">تور استانبول</a>
                   <a href="">تور استانبول</a>
@@ -36,7 +36,7 @@
               <li>
                 <!-- submenu -->
                 <div
-                  class="p-4 rounded-xl bg-white absolute flex flex-col gap-2 w-64 shadow-md font-medium top-full"
+                  class="absolute flex flex-col w-64 gap-2 p-4 font-medium bg-white shadow-md rounded-xl top-full"
                 >
                   <a href="">ویزای شینگن</a>
                   <a href="">ویزای اروپا</a>
@@ -85,14 +85,14 @@
 
     <main class="relative">
       <!-- header background -->
-      <div class="flex justify-center mb-16 items-center">
+      <div class="flex items-center justify-center mb-16">
         <img
           src="../../public/images/article-list-background.jpg"
           alt="article-list-background"
           class="object-cover 2xl:h-[44rem] lg:h-[30rem] object-bottom border-b-8 border-solid border-Primery-600 w-full rounded-3xl"
         />
         <div class="absolute text-white">
-          <h1 class="font-bold text-2xl">مقاله های گردشگری</h1>
+          <h1 class="text-2xl font-bold">مقاله های گردشگری</h1>
           <ul class="flex">
             <li><a href="">صفحه اصلی</a></li>
             <span>></span>
@@ -111,12 +111,49 @@
             class="px-4 pb-8 w-[70%] order-2 grid grid-cols-2 grid-rows-2 gap-3"
           >
             <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
               <img
                 src="../../public/images/Rome.jpg"
                 alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">
+                    سفر به روم برای تفریح
+                  </h3>
+                  <p class="text-sm text-justify text-white line-clamp-3">
+                    رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ
+                    ۲۸۰۰ ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این
+                    رو، در سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی
+                    هزاران ساله، ویرانه‌های وسیع...
+                  </p>
+                </div>
+                <div class="flex justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img src="../icons/calenderIconWhite.svg" alt="" />
+                    1402/12/12
+                  </span>
+                  <button
+                    class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
+            >
+              <img
+                src="../../public/images/Rome.jpg"
+                alt=""
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -148,12 +185,12 @@
             </article>
 
             <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
               <img
                 src="../../public/images/Rome.jpg"
                 alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -185,12 +222,12 @@
             </article>
 
             <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
               <img
                 src="../../public/images/Rome.jpg"
                 alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -222,12 +259,12 @@
             </article>
 
             <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
               <img
                 src="../../public/images/Rome.jpg"
                 alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -259,12 +296,12 @@
             </article>
 
             <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
               <img
                 src="../../public/images/Rome.jpg"
                 alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -296,12 +333,12 @@
             </article>
 
             <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
               <img
                 src="../../public/images/Rome.jpg"
                 alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -333,49 +370,12 @@
             </article>
 
             <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
               <img
                 src="../../public/images/Rome.jpg"
                 alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
-              />
-              <div
-                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-              ></div>
-              <div class="relative z-10">
-                <div>
-                  <h3 class="mb-2 text-xl font-medium text-white">
-                    سفر به روم برای تفریح
-                  </h3>
-                  <p class="text-sm text-justify text-white">
-                    رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ
-                    ۲۸۰۰ ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این
-                    رو، در سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی
-                    هزاران ساله، ویرانه‌های وسیع...
-                  </p>
-                </div>
-                <div class="flex justify-between mt-2">
-                  <span class="flex items-center gap-1 text-white">
-                    <img src="../icons/calenderIconWhite.svg" alt="" />
-                    1402/12/12
-                  </span>
-                  <button
-                    class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-                  >
-                    بیشتر بخوانید
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
-            >
-              <img
-                src="../../public/images/Rome.jpg"
-                alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -413,13 +413,13 @@
             class="w-[30%] border border-solid border-Primery-100 rounded-xl p-4 overflow-hidden h-fit"
           >
             <div
-              class="relative flex justify-between px-3 py-4 bg-zinc-100 rounded-lg"
+              class="relative flex justify-between px-3 py-4 rounded-lg bg-zinc-100"
             >
               <input
                 type="text"
                 name=""
                 id=""
-                class="bg-zinc-100 placeholder:text-zinc-900 outline-none"
+                class="outline-none bg-zinc-100 placeholder:text-zinc-900"
                 placeholder="جستجو"
               />
               <img src="../icons/searchIcon.svg" alt="" />
@@ -458,7 +458,7 @@
               </div>
             </div>
 
-            <div class="border-y border-solid border-Primery-100 py-4 mt-4">
+            <div class="py-4 mt-4 border-solid border-y border-Primery-100">
               <h2 class="font-bold text-Primery-700">آخرین مطالب</h2>
             </div>
 

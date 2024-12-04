@@ -19,7 +19,7 @@
         class="fixed z-50 hidden w-full h-full bg-black header-subset-overlay bg-opacity-70 overfh"
       >
         <div
-          class="header-subset translate-x-96 transition duration-200 transform ease-in-out fixed right-0 z-50 w-9/12 h-full p-4 overflow-scroll bg-white shadow-md"
+          class="fixed right-0 z-50 w-9/12 h-full p-4 overflow-scroll transition duration-200 ease-in-out transform bg-white shadow-md header-subset translate-x-96"
         >
           <nav class="flex items-center w-full h-full">
             <ul class="flex flex-col justify-between w-full h-full gap-10">
@@ -78,7 +78,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="cursor-pointer size-6 bars3 relative z-40"
+          class="relative z-40 cursor-pointer size-6 bars3"
         >
           <path
             stroke-linecap="round"
@@ -134,50 +134,46 @@
 
     <main class="relative">
       <!-- header background -->
-      <div class="relative">
-        <img
+
+      <div class="flex items-center justify-center mb-16 ">
+        <div class="relative">
+          <img
           src="../icons/tourListRec.svg"
           alt=""
-          class="absolute left-[6px] top-4 lg:left-[-17rem] lg:-z-10 lg:-top-24 2xl:top-[-6.5rem] 2xl:left-12"
+          class="absolute left-[6px] -z-10 top-12"
         />
-        <img src="../../public/images/article-list-background.jpg" alt="" />
-        <div class="absolute bottom-0 w-full h-full bg-shadow-gradient"></div>
-        <div class="relative z-10 text-center">
-          <h2 class="mb-4 text-lg font-medium text-white">تور های استانبول</h2>
-          <div class="text-sm text-white">
-            <a href=""
-              >صفحه اصلی
-              <span>></span>
-            </a>
-            <a href=""
-              >تور
-              <span>></span>
-            </a>
-            <a href=""
-              >تور های استانبول
-              <span>></span>
-            </a>
-            <span class="font-medium">مشاهده تور</span>
-          </div>
+          <img
+            src="../../public/images/article-list-background.jpg"
+            alt="article-list-background"
+            class="object-cover 2xl:h-[44rem] lg:h-[30rem] object-bottom w-full rounded-3xl"
+          />
+        </div>
+        <div class="absolute text-white">
+          <h1 class="text-2xl font-medium">مقاله های گردشگری</h1>
+          <ul class="flex">
+            <li><a href="" class="text-sm">صفحه اصلی</a></li>
+            <span>></span>
+            <li><span class="text-sm">لیست مقاله ها</span></li>
+          </ul>
         </div>
       </div>
       <!-- header background end -->
 
       <div
-        class="px-4 pt-4 pb-8 bg-white rounded-xl w-[calc(100%-40px)] desktopContainer"
+        class="pt-4 pb-8 bg-white rounded-xl desktopContainer"
       >
-        <div class="flex">
+        <div class="flex flex-col">
           <!-- left content of main -->
           <section
-            class="px-4 pb-8 w-[70%] order-2 grid grid-cols-2 grid-rows-2 gap-3"
+            class="grid order-2 gap-3 px-4 pb-8 mt-4"
           >
             <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
               <img
                 src="../../public/images/Rome.jpg"
                 alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -195,7 +191,7 @@
                   </p>
                 </div>
                 <div class="flex justify-between mt-2">
-                  <span class="flex items-center gap-1 text-white">
+                  <span class="flex items-center gap-1 text-sm text-white">
                     <img src="../icons/calenderIconWhite.svg" alt="" />
                     1402/12/12
                   </span>
@@ -209,12 +205,12 @@
             </article>
 
             <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
               <img
                 src="../../public/images/Rome.jpg"
                 alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -232,7 +228,7 @@
                   </p>
                 </div>
                 <div class="flex justify-between mt-2">
-                  <span class="flex items-center gap-1 text-white">
+                  <span class="flex items-center gap-1 text-sm text-white">
                     <img src="../icons/calenderIconWhite.svg" alt="" />
                     1402/12/12
                   </span>
@@ -246,12 +242,12 @@
             </article>
 
             <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
               <img
                 src="../../public/images/Rome.jpg"
                 alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -269,7 +265,7 @@
                   </p>
                 </div>
                 <div class="flex justify-between mt-2">
-                  <span class="flex items-center gap-1 text-white">
+                  <span class="flex items-center gap-1 text-sm text-white">
                     <img src="../icons/calenderIconWhite.svg" alt="" />
                     1402/12/12
                   </span>
@@ -283,12 +279,12 @@
             </article>
 
             <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
               <img
                 src="../../public/images/Rome.jpg"
                 alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -306,7 +302,7 @@
                   </p>
                 </div>
                 <div class="flex justify-between mt-2">
-                  <span class="flex items-center gap-1 text-white">
+                  <span class="flex items-center gap-1 text-sm text-white">
                     <img src="../icons/calenderIconWhite.svg" alt="" />
                     1402/12/12
                   </span>
@@ -320,12 +316,12 @@
             </article>
 
             <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
               <img
                 src="../../public/images/Rome.jpg"
                 alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -343,7 +339,7 @@
                   </p>
                 </div>
                 <div class="flex justify-between mt-2">
-                  <span class="flex items-center gap-1 text-white">
+                  <span class="flex items-center gap-1 text-sm text-white">
                     <img src="../icons/calenderIconWhite.svg" alt="" />
                     1402/12/12
                   </span>
@@ -357,12 +353,12 @@
             </article>
 
             <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
               <img
                 src="../../public/images/Rome.jpg"
                 alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -380,81 +376,7 @@
                   </p>
                 </div>
                 <div class="flex justify-between mt-2">
-                  <span class="flex items-center gap-1 text-white">
-                    <img src="../icons/calenderIconWhite.svg" alt="" />
-                    1402/12/12
-                  </span>
-                  <button
-                    class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-                  >
-                    بیشتر بخوانید
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
-            >
-              <img
-                src="../../public/images/Rome.jpg"
-                alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
-              />
-              <div
-                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-              ></div>
-              <div class="relative z-10">
-                <div>
-                  <h3 class="mb-2 text-xl font-medium text-white">
-                    سفر به روم برای تفریح
-                  </h3>
-                  <p class="text-sm text-justify text-white">
-                    رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ
-                    ۲۸۰۰ ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این
-                    رو، در سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی
-                    هزاران ساله، ویرانه‌های وسیع...
-                  </p>
-                </div>
-                <div class="flex justify-between mt-2">
-                  <span class="flex items-center gap-1 text-white">
-                    <img src="../icons/calenderIconWhite.svg" alt="" />
-                    1402/12/12
-                  </span>
-                  <button
-                    class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-                  >
-                    بیشتر بخوانید
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat"
-            >
-              <img
-                src="../../public/images/Rome.jpg"
-                alt=""
-                class="absolute w-full h-full bottom-0 right-0 object-cover"
-              />
-              <div
-                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-              ></div>
-              <div class="relative z-10">
-                <div>
-                  <h3 class="mb-2 text-xl font-medium text-white">
-                    سفر به روم برای تفریح
-                  </h3>
-                  <p class="text-sm text-justify text-white">
-                    رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ
-                    ۲۸۰۰ ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این
-                    رو، در سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی
-                    هزاران ساله، ویرانه‌های وسیع...
-                  </p>
-                </div>
-                <div class="flex justify-between mt-2">
-                  <span class="flex items-center gap-1 text-white">
+                  <span class="flex items-center gap-1 text-sm text-white">
                     <img src="../icons/calenderIconWhite.svg" alt="" />
                     1402/12/12
                   </span>
@@ -471,24 +393,24 @@
 
           <!-- right content of main -->
           <section
-            class="w-[30%] border border-solid border-Primery-100 rounded-xl p-4 overflow-hidden h-fit"
+            class="p-4 overflow-hidden border border-solid border-Primery-100 rounded-xl h-fit"
           >
-            <div
-              class="relative flex justify-between px-3 py-4 bg-zinc-100 rounded-lg"
+            <form
+              class="relative flex justify-between px-3 py-4 rounded-lg bg-zinc-100"
             >
               <input
                 type="text"
                 name=""
                 id=""
-                class="bg-zinc-100 placeholder:text-zinc-900 outline-none"
+                class="outline-none bg-zinc-100 placeholder:text-zinc-900"
                 placeholder="جستجو"
               />
-              <img src="../icons/searchIcon.svg" alt="" />
-            </div>
+              <a href=""><img src="../icons/searchIcon.svg" alt="" /></a>
+            </form>
             <div class="flex flex-col gap-1 mt-4">
               <h2 class="font-medium">شهر/کشور</h2>
               <div class="flex flex-col gap-1">
-                <span class="flex items-center gap-2">
+                <span class="flex gap-2">
                   <input type="radio" name="radio" id="" class="size-4" />
                   استانبول
                 </span>
@@ -519,14 +441,15 @@
               </div>
             </div>
 
-            <div class="border-y border-solid border-Primery-100 py-4 mt-4">
+            <div class="py-4 mt-4 border-solid border-y border-Primery-100">
               <h2 class="font-bold text-Primery-700">آخرین مطالب</h2>
             </div>
 
-            <div class="px-4 pt-4 pb-8">
+            <div class="px-4 pt-4 pb-4">
               <div class="flex flex-col gap-4">
                 <!-- news -->
-                <div class="flex items-center gap-4">
+
+                <div class="flex gap-4">
                   <img
                     src="../../public/images/tourist-caring.jpg"
                     alt="dubai"
@@ -543,58 +466,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center gap-4">
-                  <img
-                    src="../../public/images/tourist-caring.jpg"
-                    alt="dubai"
-                    class="object-cover w-24 h-24 rounded-xl"
-                  />
-                  <div class="flex flex-col gap-2">
-                    <h3 class="text-sm font-medium">
-                      تفریحات استانبول ویژه کودکان
-                    </h3>
-                    <span class="text-sm"
-                      >اگر به دنبال تجربه بهترین تفریحات استانبول هستید، این شهر
-                      دارای
-                    </span>
-                  </div>
-                </div>
-
-                <div class="flex items-center gap-4">
-                  <img
-                    src="../../public/images/tourist-caring.jpg"
-                    alt="dubai"
-                    class="object-cover w-24 h-24 rounded-xl"
-                  />
-                  <div class="flex flex-col gap-2">
-                    <h3 class="text-sm font-medium">
-                      تفریحات استانبول ویژه کودکان
-                    </h3>
-                    <span class="text-sm"
-                      >اگر به دنبال تجربه بهترین تفریحات استانبول هستید، این شهر
-                      دارای
-                    </span>
-                  </div>
-                </div>
-
-                <div class="flex items-center gap-4">
-                  <img
-                    src="../../public/images/tourist-caring.jpg"
-                    alt="dubai"
-                    class="object-cover w-24 h-24 rounded-xl"
-                  />
-                  <div class="flex flex-col gap-2">
-                    <h3 class="text-sm font-medium">
-                      تفریحات استانبول ویژه کودکان
-                    </h3>
-                    <span class="text-sm"
-                      >اگر به دنبال تجربه بهترین تفریحات استانبول هستید، این شهر
-                      دارای
-                    </span>
-                  </div>
-                </div>
-
-                <div class="flex items-center gap-4">
+                <div class="flex gap-4">
                   <img
                     src="../../public/images/tourist-caring.jpg"
                     alt="dubai"
@@ -611,6 +483,10 @@
                   </div>
                 </div>
                 <!-- news end -->
+
+                <div class="flex justify-center mt-4">
+                  <a href="" class="text-sm text-blue-700">مشاهده بیشتر</a>
+                </div>
               </div>
             </div>
           </section>

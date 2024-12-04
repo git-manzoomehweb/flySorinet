@@ -41,16 +41,16 @@
     type="list"
     link="tour.bc"
     propertyid="8077,8181,10000504,8076"
-    perpage="9"
+    perpage="6"
     pageno="[##cms.query.pagenum|(1)##]"
-    size="412*295"
+    size="412x259"
     order="ord"
   />
   <member
     name="paging"
     type="list"
     request="paging"
-    count="3"
+    count="1"
     parentname="tour-list"
   />
 </basis>
@@ -67,9 +67,9 @@
     name="article-list"
     type="list"
     link="article.bc"
-    propertyid=""
+    propertyid="7244"
     perpage="3"
-    size="412*295"
+    size="412x259"
     order="ord"
   />
 </basis>
@@ -124,7 +124,7 @@
         <img
           src="[##cms.cms.cdn##]/images/tourListRecDesk.svg"
           alt=""
-          class="lg:absolute lg:w-[50rem] lg:left-[6rem] lg:-z-10 lg:top-[-23.5rem] 2xl:top-[-35rem] 2xl:w-auto 2xl:h-[29rem] 2xl:left-2"
+          class="lg:absolute lg:w-[50rem] lg:left-[6rem] lg:-z-10 lg:top-[-23.5rem] 2xl:top-[-32rem] 2xl:w-auto 2xl:h-[29rem] 2xl:left-[7.5rem]"
         />
 
         <img
@@ -231,7 +231,7 @@
               <div class="relative h-64">
                 <div class="absolute w-full h-full bg-shadow-gradient"></div>
                 <img
-                  src="@prp_10000504"
+                  src="@00412X00259prp"
                   alt="@prp_10000504"
                   class="object-cover w-full h-full"
                 />
@@ -273,7 +273,7 @@
               <div class="relative h-64">
                 <div class="absolute w-full h-full bg-shadow-gradient"></div>
                 <img
-                  src="@prp_10000504"
+                  src="@00412X00259prp"
                   alt="@prp_10000504"
                   class="object-cover w-full h-full"
                 />
@@ -312,7 +312,7 @@
         <!-- tour list end -->
 
         <div id="paging" class="flex items-center justify-center gap-2 mt-16">
-          <ul class="cd-pagination no-space dir-ltr" id="wibpaging">
+          <ul class="flex gap-3 cd-pagination no-space dir-lt2" id="wibpaging">
             <basis core="print" datamembername="db.paging">
               <face filter="(@sta='pre')">
                 <li
@@ -323,23 +323,23 @@
                     href="/[##cms.cms.link_page##]&pagenum=@page"
                     aria-label="angle-left"
                     ><svg
-                      width="11"
-                      height="17"
-                      class="inline-block align-middle"
-                      viewBox="0 0 11 17"
-                      fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
                     >
                       <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
-                        d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z"
-                        fill="#18181B"
+                        d="M16.5725 12C16.5725 12.2926 16.4605 12.5851 16.2377 12.808L9.38076 19.6649C8.93392 20.1117 8.21166 20.1117 7.76482 19.6649C7.31798 19.218 7.31798 18.4958 7.76482 18.0489L13.8137 12L7.76482 5.9511C7.31798 5.5042 7.31798 4.782 7.76482 4.3351C8.21166 3.8883 8.93392 3.8883 9.38076 4.3351L16.2377 11.192C16.4605 11.4149 16.5725 11.7074 16.5725 12Z"
+                        fill="white"
                       /></svg
                   ></a>
                 </li>
               </face>
             </basis>
+
             <basis core="print" datamembername="db.paging">
               <face filter="(@page=[##cms.query.pagenum|(1)##])">
                 <li
@@ -368,6 +368,7 @@
                 </li>
               </face>
             </basis>
+
             <basis core="print" datamembername="db.paging">
               <face filter="(@sta='nex')">
                 <li
@@ -377,21 +378,9 @@
                     class="text-zinc-900"
                     href="/[##cms.cms.link_page##]&pagenum=@page"
                     aria-label="angle-right"
-                    ><svg
-                      width="11"
-                      height="17"
-                      class="inline-block align-middle"
-                      viewBox="0 0 11 17"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z"
-                        fill="#18181B"
-                      /></svg
-                  ></a>
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.4275 12C7.4275 11.7074 7.5395 11.4149 7.7623 11.192L14.6192 4.33513C15.0661 3.88829 15.7883 3.88829 16.2352 4.33513C16.682 4.78197 16.682 5.50423 16.2352 5.95107L10.1863 12L16.2352 18.0489C16.682 18.4958 16.682 19.218 16.2352 19.6649C15.7883 20.1117 15.0661 20.1117 14.6192 19.6649L7.7623 12.808C7.5395 12.5851 7.4275 12.2926 7.4275 12Z" fill="white"/>
+                      </svg></a>
                 </li>
               </face>
             </basis>
@@ -438,37 +427,37 @@
             <article
               class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
-                <img
-                  src="@00412X00295prp"
-                  alt=""
-                  class="absolute bottom-0 right-0 object-cover w-full h-full"
-                />
-                <div
-                  class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-                ></div>
-                <div class="relative z-10">
-                  <div>
-                    <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
-                    <p class="text-sm text-justify text-white line-clamp-3">
-                      @prp_7244
-                    </p>
-                  </div>
-                  <div class="flex items-center justify-between mt-2">
-                    <span class="flex items-center gap-1 text-white">
-                      <img
-                        src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
-                        alt=""
-                      />
-                      @cdate
-                    </span>
-                    <a 
-                    href="/article.bc?id=@id"
-                      class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-                    >
-                      بیشتر بخوانید
-                    </a>
-                  </div>
+              <img
+                src="@00412X00259prp"
+                alt="@title"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
+                  <p class="text-sm text-justify text-white line-clamp-3">
+                    @prp_7244
+                  </p>
                 </div>
+                <div class="flex items-center justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img
+                      src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
+                      alt=""
+                    />
+                    @cdate
+                  </span>
+                  <a
+                    href="/article.bc?id=@id"
+                    class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </a>
+                </div>
+              </div>
             </article>
           </div>
         </face>
@@ -477,37 +466,37 @@
             <article
               class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
-                <img
-                  src="@00412X00295prp"
-                  alt=""
-                  class="absolute bottom-0 right-0 object-cover w-full h-full"
-                />
-                <div
-                  class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-                ></div>
-                <div class="relative z-10">
-                  <div>
-                    <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
-                    <p class="text-sm text-justify text-white line-clamp-3">
-                      @prp_7244
-                    </p>
-                  </div>
-                  <div class="flex items-center justify-between mt-2">
-                    <span class="flex items-center gap-1 text-white">
-                      <img
-                        src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
-                        alt=""
-                      />
-                      @cdate
-                    </span>
-                    <a
-                    href="@link"
-                      class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-                    >
-                      بیشتر بخوانید
-                    </a>
-                  </div>
+              <img
+                src="@00412X00259prp"
+                alt="@title"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
+                  <p class="text-sm text-justify text-white line-clamp-3">
+                    @prp_7244
+                  </p>
                 </div>
+                <div class="flex items-center justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img
+                      src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
+                      alt=""
+                    />
+                    @cdate
+                  </span>
+                  <a
+                    href="@link"
+                    class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </a>
+                </div>
+              </div>
             </article>
           </div>
         </face>
