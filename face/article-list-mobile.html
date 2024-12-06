@@ -41,7 +41,7 @@
     type="list"
     link="article.bc"
     propertyid="7244"
-    perpage="5"
+    perpage="2"
     size="90x90"
     order="ord"
   />
@@ -60,7 +60,7 @@
     type="list"
     link="article.bc"
     propertyid="7244"
-    perpage="8"
+    perpage="6"
     pageno="[##cms.query.pagenum|(1)##]"
     size="412x259"
     order="ord"
@@ -113,21 +113,33 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
   </head>
-  <body class="px-2 bg-zinc-50">
+  <body class="px-2">
     <!-- header -->
-    <basis core="call" file="header.inc" />
+    <basis
+      core="call"
+      file="header.inc"
+      pageindex="[##cms.cms.pageindex##]"
+    ></basis>
     <!-- header end -->
 
     <main class="relative">
       <!-- header background -->
+
       <div class="flex items-center justify-center mb-16">
-        <img
-          src="[##cms.cms.cdn##]/images/article-list-background.jpg"
-          alt="article-list-background"
-          class="object-cover 2xl:h-[44rem] lg:h-[30rem] object-bottom border-b-8 border-solid border-Primery-600 w-full rounded-3xl"
-        />
-        <div class="absolute mb-6">
-          <h1 class="text-2xl font-medium text-white mb-4">مقاله های گردشگری</h1>
+        <div class="relative">
+          <img
+            src="[##cms.cms.cdn##]/images/tourListRec.svg"
+            alt=""
+            class="absolute left-[6px] -z-10 top-12"
+          />
+          <img
+            src="[##cms.cms.cdn##]/images/article-list-background.jpg"
+            alt="article-list-background"
+            class="object-cover 2xl:h-[44rem] lg:h-[30rem] object-bottom w-full rounded-3xl"
+          />
+        </div>
+        <div class="absolute">
+          <h1 class="text-xl font-medium text-white">مقاله های گردشگری</h1>
           <ul
             itemscope
             itemtype="https://schema.org/BreadcrumbList"
@@ -203,16 +215,12 @@
       </div>
       <!-- header background end -->
 
-      <div
-        class="px-4 pt-4 pb-8 bg-white rounded-xl w-[calc(100%-40px)] desktopContainer"
-      >
-        <div class="flex">
+      <div class="pt-4 pb-8 bg-white rounded-xl desktopContainer">
+        <div class="flex flex-col">
           <!-- left content of main -->
           <basis core="list" datamembername="db.article-list">
             <layout>
-              <section
-                class="px-4 pb-8 w-[70%] order-2 grid grid-cols-2 grid-rows-2 gap-3"
-              >
+              <section class="grid order-2 gap-3 px-4 pb-8 mt-4">
                 @child
               </section>
             </layout>
@@ -285,14 +293,13 @@
               </article>
             </face>
           </basis>
-
           <!-- left content on main end -->
 
           <!-- right content of main -->
           <section
-            class="w-[30%] border border-solid border-Primery-100 rounded-xl p-4 overflow-hidden h-fit"
+            class="p-4 overflow-hidden border border-solid border-Primery-100 rounded-xl h-fit"
           >
-            <div
+            <form
               class="relative flex justify-between px-3 py-4 rounded-lg bg-zinc-100"
             >
               <input
@@ -302,12 +309,12 @@
                 class="outline-none bg-zinc-100 placeholder:text-zinc-900"
                 placeholder="جستجو"
               />
-              <img src="[##cms.cms.cdn##]/images/searchIcon.svg" alt="" />
-            </div>
+              <a href=""><img src="[##cms.cms.cdn##]/images/searchIcon.svg" alt="" /></a>
+            </form>
             <div class="flex flex-col gap-1 mt-4">
               <h2 class="font-medium">شهر/کشور</h2>
               <div class="flex flex-col gap-1">
-                <span class="flex items-center gap-2">
+                <span class="flex gap-2">
                   <input type="radio" name="radio" id="" class="size-4" />
                   استانبول
                 </span>
@@ -342,46 +349,43 @@
               <h2 class="font-bold text-Primery-700">آخرین مطالب</h2>
             </div>
 
-              <div class="pt-4 pb-8">
-                <basis core="list" datamembername="db.news-list">
-                  <layout>
-                    <div class="flex flex-col gap-4">
-                      <!-- news -->
-                      @child
-                      <!-- news end -->
+            <div class="px-4 pt-4 pb-4">
+              <basis core="list" datamembername="db.news-list">
+                <layout>
+                  <div class="flex flex-col gap-4">
+                    <!-- news -->
+                    @child
+                    <!-- news end -->
+                  </div>
+                </layout>
+                <face filter="link is null">
+                  <a href="/article.bc?id=@id" class="flex items-center gap-4">
+                    <img
+                      src="@00090X00090prp"
+                      alt="@title"
+                      class="object-cover w-24 h-24 rounded-xl"
+                    />
+                    <div class="flex flex-col gap-2">
+                      <h2 class="text-sm font-medium">@title</h2>
+                      <span class="text-sm line-clamp-2">@prp_7244</span>
                     </div>
-                  </layout>
-                  <face filter="link is null">
-                    <a
-                      href="/article.bc?id=@id"
-                      class="flex items-center gap-4"
-                    >
-                      <img
-                        src="@00090X00090prp"
-                        alt="@title"
-                        class="object-cover w-24 h-24 rounded-xl"
-                      />
-                      <div class="flex flex-col gap-2">
-                        <h2 class="text-sm">@title</h2>
-                        <span class="text-sm line-clamp-2">@prp_7244</span>
-                      </div>
-                    </a>
-                  </face>
-                  <face>
-                    <a href="@link" class="flex items-center gap-4">
-                      <img
-                        src="@00090X00090prp"
-                        alt="dubai"
-                        class="object-cover w-24 h-24 rounded-xl"
-                      />
-                      <div class="flex flex-col gap-2">
-                        <h2 class="text-sm">@title</h2>
-                        <span class="text-sm line-clamp-2">@prp_7244</span>
-                      </div>
-                    </a>
-                  </face>
-                </basis>
-              </div>
+                  </a>
+                </face>
+                <face>
+                  <a href="@link" class="flex items-center gap-4">
+                    <img
+                      src="@00090X00090prp"
+                      alt="dubai"
+                      class="object-cover w-24 h-24 rounded-xl"
+                    />
+                    <div class="flex flex-col gap-2">
+                      <h2 class="text-sm font-medium">@title</h2>
+                      <span class="text-sm line-clamp-2">@prp_7244</span>
+                    </div>
+                  </a>
+                </face>
+              </basis>
+            </div>
           </section>
           <!-- right content of main end -->
         </div>
@@ -472,7 +476,50 @@
     </main>
 
     <!-- footer -->
-    <basis core="call" file="footer.inc" />
+    <basis
+      core="call"
+      file="footer.inc"
+      pageindex="[##cms.cms.pageindex##]"
+    ></basis>
     <!-- footer end -->
+
+    <script src="../js/index.js"></script>
+    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        speed: 400,
+        centeredSlides: false,
+        spaceBetween: 30,
+        grabCursor: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

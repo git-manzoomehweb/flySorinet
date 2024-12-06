@@ -1,161 +1,135 @@
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="20"
+  name="db"
+  catid="212050"
+>
+  <member
+    name="tour-list"
+    type="list"
+    link="tour.bc"
+    order="ord"
+    size="412x295"
+    perpage="6"
+    propertyid="8076,8181,10000504,8077"
+  />
+</basis>
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="1"
+  name="db"
+  catid="212047"
+>
+  <member
+    name="hotel"
+    type="list"
+    link="hotel.bc"
+    order="ord"
+    size="412x295"
+    propertyid="3087406,3087407"
+  />
+</basis>
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="1"
+  name="db"
+  catid="210488"
+>
+  <member
+    name="articles"
+    type="list"
+    link="articles.bc"
+    order="ord"
+    size="412x295"
+    propertyid="7244"
+  />
+</basis>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../output.css" />
-    <link rel="icon" href="../icons/favIcon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover"
+    />
+    <!-- Title & Description -->
+    <title>سورینت پرواز</title>
+    <meta name="description" content="سورینت پرواز" />
+    <!-- canonical for Homepage -->
+    <link
+      rel="canonical"
+      href="[##cms.request.:scheme##]://[##cms.request.full-url##]"
+    />
+    <!-- fill items with Agancy Info -->
+    <meta name="og:locale" content="fa_IR" />
+    <meta property="og:title" content="آژانس گردشگری سورینت پرواز" />
+    <meta
+      property="og:url"
+      content="[##cms.request.:scheme##]://[##cms.request.full-url##]"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="سورینت پرواز" />
+    <meta property="og:image" content="[##cms.cms.cdn##]/images/logo.png" />
+    <meta property="og:image:alt" content="لوگو شرکت سورینت پرواز" />
+    <meta
+      property="og:description"
+      content=".شرکت سورینت پرواز با تمرکز بر ارائه خدمات به روز و اختصاصی به متقاضیان جهت تسهیل و تسریع و افزایش کیفیت تمامی خدمات مسافرتی و کسب رضایت مشتریان خود به صورت تمام وقت با همراهی نیروهای مجرب و متخصص در سریع ترین زمان ممکن خدمات درخواستی را ارائه می نماید"
+    />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content=" " />
+    <meta name="twitter:creator" content="sorinet Group" />
+    <meta name="twitter:image" content="[##cms.cms.cdn##]/images/logo.png" />
+    <meta name="twitter:title" content=" " />
+    <meta name="twitter:description" content=" " />
+    <meta property="seo:robots" content="index, follow" />
+    <!-- samandehi-enamad optional -->
+    <meta name="enamad" content="" />
+    <meta name="samandehi" content="" />
+    <!-- pwa metatags -->
+    <basis core="call" file="pwa.inc" />
+    <!-- define -->
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="image address"
+      fetchpriority="high"
+    />
+    <!-- swiper -->
     <link
       rel="stylesheet"
       href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="../styles/swiperStyles.css" />
-    <title>Soorinet</title>
+
+    <!-- common styles for all page -->
+    <basis core="call" file="style.inc" />
+    <script
+      src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js"
+      type="text/javascript"
+    ></script>
   </head>
   <body class="px-2">
-    <header class="relative">
-      <!-- header subset  -->
-      <div class="fixed z-50 hidden w-full h-full bg-black mobile-menu-overlay bg-opacity-70 overfh lg:hidden">
-        <div class="fixed right-0 z-50 w-9/12 h-full p-4 overflow-scroll transition duration-200 ease-in-out transform bg-white shadow-md mobile-menu translate-x-96">
-          <nav class="flex items-center w-full h-full">
-            <ul class="flex flex-col justify-between w-full h-full gap-10">
-              <!-- منوی اصلی -->
-              <li class="flex items-center justify-between">
-                <a href=""> صفحه اصلی </a>
-                <img src="../icons/xIcon.svg" alt="" class="w-8 cursor-pointer close-menu" />
-              </li>
-      
-              <!-- منوی تور -->
-              <li class="menu-item">
-                <div class="flex items-center justify-between cursor-pointer menu-trigger">
-                  <span class="flex items-center gap-2">
-                    تور ها
-                    <img src="../icons/chevronDownIcon.svg" alt="" class="chevron transition duration-200 ease-in-out"/>
-                  </span>
-                </div>
-                <ul class="submenu p-4 invisible opacity-0 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500">
-                  <!-- زیرمنوی ایرانگردی -->
-                  <li class="submenu-item overflow-hidden">
-                    <div class="flex items-center justify-between cursor-pointer submenu-trigger">
-                      <span>ایرانگردی</span>
-                      <img src="../icons/chevronDownIcon.svg" alt="" class="chevron transition duration-200 ease-in-out"/>
-                    </div>
-                    <ul class="nested-menu max-h-0 transition-all duration-300 ease-in-out pr-4 mt-2">
-                      <li>اصفهان</li>
-                      <li>شیراز</li>
-                      <li>تبریز</li>
-                    </ul>
-                  </li>
-                  <!-- زیرمنوی جهانگردی -->
-                  <li class="submenu-item overflow-hidden">
-                    <div class="flex items-center justify-between cursor-pointer submenu-trigger">
-                      <span>جهانگردی</span>
-                      <img src="../icons/chevronDownIcon.svg" alt="" class="chevron transition duration-200 ease-in-out"/>
-                    </div>
-                    <ul class="nested-menu max-h-0 transition-all duration-300 ease-in-out pr-4 mt-2">
-                      <li>استانبول</li>
-                      <li>دبی</li>
-                      <li>آنتالیا</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-      
-              <!-- منوی ویزا -->
-              <li class="menu-item">
-                <div class="flex items-center justify-between cursor-pointer menu-trigger">
-                  <span class="flex items-center gap-2">
-                    ویزا
-                    <img src="../icons/chevronDownIcon.svg" alt="" class="chevron transition duration-200 ease-in-out"/>
-                  </span>
-                </div>
-                <div class="submenu p-4 rounded-xl bg-white invisible opacity-0 flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500">
-                  <a href="">ویزای شینگن</a>
-                  <a href="">ویزای اروپا</a>
-                  <a href="">ویزای آمریکا</a>
-                </div>
-              </li>
-      
-              <li><a href="">مقالات</a></li>
-              <li><a href="">گردشگری</a></li>
-              <li><a href="">تماس با ما</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <!-- header subset end -->
-
-      <!-- header menu mobile -->
-      <div class="flex items-center justify-between px-4 py-3 lg:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="cursor-pointer size-6 bars3 relative z-40"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
-
-        <div class="flex items-center gap-8">
-          <img src="../icons/headerIcons.svg" alt="" />
-          <span class="flex items-center gap-2">
-            <img src="../icons/personIcon.svg" alt="" class="w-8" />
-            ورود/ثبت نام
-          </span>
-        </div>
-      </div>
-      <!-- header menu mobile end -->
-
-      <!-- header menu desktop -->
-      <section class="hidden p-6 lg:desktopContainer lg:block">
-        <div class="flex justify-between">
-          <nav class="flex items-center">
-            <ul class="flex justify-between gap-10">
-              <li class="flex">
-                <img src="../icons/headerIcons.svg" alt="" />
-                <a href=""> صفحه اصلی </a>
-              </li>
-              <li>
-                <a href="" class="flex items-center gap-2">
-                  تور ها
-                  <img src="../icons/chevronDownIcon.svg" alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="" class="flex items-center gap-2">
-                  ویزا
-                  <img src="../icons/chevronDownIcon.svg" alt="" />
-                </a>
-              </li>
-              <li><a href="">مقالات</a></li>
-              <li><a href="">گردشگری</a></li>
-              <li><a href="">تماس با ما</a></li>
-            </ul>
-          </nav>
-          <span class="flex items-center gap-2">
-            <img src="../icons/personIcon.svg" alt="" />
-            ورود/ثبت نام
-          </span>
-        </div>
-      </section>
-      <!-- header menu desktop end -->
-    </header>
+    <!-- header -->
+    <basis
+      core="call"
+      file="header.inc"
+      pageindex="[##cms.cms.pageindex##]"
+    ></basis>
+    <!-- header end -->
 
     <!-- main start -->
     <main>
       <!-- selected category  -->
       <section class="mt-4 desktopContainer">
-        <div class="2xl:w-2/5">
-          <h1 class="hidden mb-16 text-3xl font-bold lg:block">
-            پروازت رو با سورینت تجربه کن
-          </h1>
-
+        <div>
           <!-- hotel -->
           <div class="hidden">
             <!-- header background -->
@@ -1508,353 +1482,215 @@
           <span class="text-sm text-Primery-700">مشاهده همه</span>
         </div>
 
-        <div
-          class="flex flex-col gap-2 lg:flex-row lg:flex-wrap lg:gap-0 lg:justify-between lg:gap-y-4"
-        >
-          <!-- نمونه تور لحظه اخری -->
-          <div
-            class="relative overflow-hidden border border-solid lg:w-[calc(50%-8px)] pb-7 border-zinc-300 rounded-xl"
-          >
-            <div class="relative h-64">
-              <div class="absolute w-full h-full bg-shadow-gradient"></div>
-              <img
-                src="../../public/images/istanbul.png"
-                alt="istanbul"
-                class="object-cover w-full h-full"
-              />
-              <div class="absolute bottom-8 right-4">
-                <h3 class="mb-2 text-xl text-white">تور 7 روزه استانبول</h3>
-                <div class="flex items-center gap-2">
-                  <img src="../icons/clockIcon.svg" alt="" />
-                  <span class="text-sm text-white">7 روز و 7 شب</span>
+        <basis basis core="list" datamembername="db.tour-list">
+          <layout>
+            <div
+              class="flex flex-col gap-2 lg:flex-row lg:flex-wrap lg:gap-0 lg:justify-between lg:gap-y-4"
+            >
+              <!-- نمونه تور لحظه اخری -->
+              @child
+              <!-- نمونه  -->
+            </div>
+          </layout>
+          <face filter="link is null">
+            <div
+              class="relative hidden lg:block overflow-hidden border border-solid lg:w-[calc(33.33%-8px)] pb-7 border-zinc-300 rounded-xl"
+            >
+              <div class="relative h-64">
+                <div class="absolute w-full h-full bg-shadow-gradient"></div>
+                <img
+                  src="[##cms.cms.cdn##]/images/istanbul.png"
+                  alt="istanbul"
+                  class="object-cover w-full h-full"
+                />
+                <div class="absolute bottom-8 right-4">
+                  <h3 class="mb-2 text-xl text-white">@title</h3>
+                  <div class="flex items-center gap-2">
+                    <img src="[##cms.cms.cdn##]/images/clockIcon.svg" alt="" />
+                    <span class="text-sm text-white">@prp_8076</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <button
-              class="absolute w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
-            >
-              مشاهده
-            </button>
-            <div class="flex flex-col gap-2 px-4 mt-9">
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/calenderIcon.svg" alt="" />
-                تاریخ رفت : 1403/5/5
-              </span>
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/mapIcon.svg" alt="" />
-                ایرلاین: پگاسوس
-              </span>
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/coinIcon.svg" alt="" />
-                شروع قیمت:
-              </span>
-              <span class="font-medium text-zinc-900"
-                >14/000/000 تومان + 2500 دلار</span
+              <a
+                href="/tour.bc?id=@id"
+                class="absolute flex items-center justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
               >
+                مشاهده
+              </a>
+              <div class="flex flex-col gap-2 px-4 mt-9">
+                <span class="flex items-center text-sm text-zinc-900">
+                  <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="" />
+                  تاریخ رفت : @prp_8077
+                </span>
+                <span class="flex items-center text-sm text-zinc-900">
+                  <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="" />
+                  ایرلاین: @prp_10000504
+                </span>
+                <span class="flex items-center text-sm text-zinc-900">
+                  <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="" />
+                  شروع قیمت:
+                </span>
+                <span class="font-medium text-zinc-900">@prp_8181</span>
+              </div>
             </div>
-          </div>
+          </face>
 
-          <div
-            class="relative overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(50%-8px)]"
-          >
-            <div class="relative h-64">
-              <div class="absolute w-full h-full bg-shadow-gradient"></div>
-              <img
-                src="../../public/images/istanbul.png"
-                alt="istanbul"
-                class="object-cover w-full h-full"
-              />
-              <div class="absolute bottom-8 right-4">
-                <h3 class="mb-2 text-xl text-white">تور 7 روزه استانبول</h3>
-                <div class="flex items-center gap-2">
-                  <img src="../icons/clockIcon.svg" alt="" />
-                  <span class="text-sm text-white">7 روز و 7 شب</span>
+          <face>
+            <div
+              class="relative hidden lg:block overflow-hidden border border-solid lg:w-[calc(33.33%-8px)] pb-7 border-zinc-300 rounded-xl"
+            >
+              <div class="relative h-64">
+                <div class="absolute w-full h-full bg-shadow-gradient"></div>
+                <img
+                  src="[##cms.cms.cdn##]/images/istanbul.png"
+                  alt="istanbul"
+                  class="object-cover w-full h-full"
+                />
+                <div class="absolute bottom-8 right-4">
+                  <h3 class="mb-2 text-xl text-white">@title</h3>
+                  <div class="flex items-center gap-2">
+                    <img src="[##cms.cms.cdn##]/images/clockIcon.svg" alt="" />
+                    <span class="text-sm text-white">@prp_8076</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <button
-              class="absolute w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
-            >
-              مشاهده
-            </button>
-            <div class="flex flex-col gap-2 px-4 mt-9">
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/calenderIcon.svg" alt="" />
-                تاریخ رفت : 1403/5/5
-              </span>
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/mapIcon.svg" alt="" />
-                ایرلاین: پگاسوس
-              </span>
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/coinIcon.svg" alt="" />
-                شروع قیمت:
-              </span>
-              <span class="font-medium text-zinc-900"
-                >14/000/000 تومان + 2500 دلار</span
+              <a
+                href="@link"
+                class="absolute flex items-center justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
               >
-            </div>
-          </div>
-
-          <div
-            class="relative overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
-          >
-            <div class="relative h-64">
-              <div class="absolute w-full h-full bg-shadow-gradient"></div>
-              <img
-                src="../../public/images/istanbul.png"
-                alt="istanbul"
-                class="object-cover w-full h-full"
-              />
-              <div class="absolute bottom-8 right-4">
-                <h3 class="mb-2 text-xl text-white">تور 7 روزه استانبول</h3>
-                <div class="flex items-center gap-2">
-                  <img src="../icons/clockIcon.svg" alt="" />
-                  <span class="text-sm text-white">7 روز و 7 شب</span>
-                </div>
+                مشاهده
+              </a>
+              <div class="flex flex-col gap-2 px-4 mt-9">
+                <span class="flex items-center text-sm text-zinc-900">
+                  <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="" />
+                  تاریخ رفت : @prp_8077
+                </span>
+                <span class="flex items-center text-sm text-zinc-900">
+                  <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="" />
+                  ایرلاین: @prp_10000504
+                </span>
+                <span class="flex items-center text-sm text-zinc-900">
+                  <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="" />
+                  شروع قیمت:
+                </span>
+                <span class="font-medium text-zinc-900">@prp_8181</span>
               </div>
             </div>
-            <button
-              class="absolute w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
-            >
-              مشاهده
-            </button>
-            <div class="flex flex-col gap-2 px-4 mt-9">
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/calenderIcon.svg" alt="" />
-                تاریخ رفت : 1403/5/5
-              </span>
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/mapIcon.svg" alt="" />
-                ایرلاین: پگاسوس
-              </span>
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/coinIcon.svg" alt="" />
-                شروع قیمت:
-              </span>
-              <span class="font-medium text-zinc-900"
-                >14/000/000 تومان + 2500 دلار</span
-              >
-            </div>
-          </div>
-
-          <div
-            class="relative hidden lg:block lg:w-[calc(33.33%-8px)] overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
-          >
-            <div class="relative h-64">
-              <div class="absolute w-full h-full bg-shadow-gradient"></div>
-              <img
-                src="../../public/images/istanbul.png"
-                alt="istanbul"
-                class="object-cover w-full h-full"
-              />
-              <div class="absolute bottom-8 right-4">
-                <h3 class="mb-2 text-xl text-white">تور 7 روزه استانبول</h3>
-                <div class="flex items-center gap-2">
-                  <img src="../icons/clockIcon.svg" alt="" />
-                  <span class="text-sm text-white">7 روز و 7 شب</span>
-                </div>
-              </div>
-            </div>
-            <button
-              class="absolute w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
-            >
-              مشاهده
-            </button>
-            <div class="flex flex-col gap-2 px-4 mt-9">
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/calenderIcon.svg" alt="" />
-                تاریخ رفت : 1403/5/5
-              </span>
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/mapIcon.svg" alt="" />
-                ایرلاین: پگاسوس
-              </span>
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/coinIcon.svg" alt="" />
-                شروع قیمت:
-              </span>
-              <span class="font-medium text-zinc-900"
-                >14/000/000 تومان + 2500 دلار</span
-              >
-            </div>
-          </div>
-
-          <div
-            class="relative hidden lg:block overflow-hidden border border-solid lg:w-[calc(33.33%-8px)] pb-7 border-zinc-300 rounded-xl"
-          >
-            <div class="relative h-64">
-              <div class="absolute w-full h-full bg-shadow-gradient"></div>
-              <img
-                src="../../public/images/istanbul.png"
-                alt="istanbul"
-                class="object-cover w-full h-full"
-              />
-              <div class="absolute bottom-8 right-4">
-                <h3 class="mb-2 text-xl text-white">تور 7 روزه استانبول</h3>
-                <div class="flex items-center gap-2">
-                  <img src="../icons/clockIcon.svg" alt="" />
-                  <span class="text-sm text-white">7 روز و 7 شب</span>
-                </div>
-              </div>
-            </div>
-            <button
-              class="absolute w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
-            >
-              مشاهده
-            </button>
-            <div class="flex flex-col gap-2 px-4 mt-9">
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/calenderIcon.svg" alt="" />
-                تاریخ رفت : 1403/5/5
-              </span>
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/mapIcon.svg" alt="" />
-                ایرلاین: پگاسوس
-              </span>
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="../icons/coinIcon.svg" alt="" />
-                شروع قیمت:
-              </span>
-              <span class="font-medium text-zinc-900"
-                >14/000/000 تومان + 2500 دلار</span
-              >
-            </div>
-          </div>
-          <!-- نمونه  -->
-        </div>
+          </face>
+        </basis>
       </section>
       <!-- تور لحظه اخری  -->
 
       <!-- هتل ها -->
       <section class="mt-12 desktopContainer">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center justify-between w-36">
-            <h2 class="font-medium">هتل ها</h2>
-            <span class="text-sm text-Primery-700">مشاهده همه</span>
-          </div>
-          <div>
-            <button><img src="../icons/previousIcon.svg" alt="" /></button>
-            <button><img src="../icons/nextIcon.svg" alt="" /></button>
-          </div>
-        </div>
-
-        <div
-          class="flex flex-col gap-2 lg:flex-row lg:justify-between lg:gap-0"
-        >
-          <!-- نمونه هتل ها -->
-          <div
-            class="relative pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
-          >
-            <div class="relative">
-              <img
-                src="../../public/images/sunshine.jpg"
-                alt="sunshine"
-                class="object-cover w-full h-64"
-              />
-              <div
-                class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
-              >
-                <img src="../icons/locationIcon.svg" alt="" />
-                <span class="text-sm text-Primery-700">موقعیت</span>
+        <basis>
+          <layout>
+            <div class="swiper hotels-swiper pt-20">
+              <div class="flex flex-col gap-2 swiper-wrapper">
+                <!-- نمونه هتل ها -->
+                @child
+                <!-- نمونه هتل ها -->
               </div>
-              <button
-                class="absolute px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
-              >
-                مشاهده
-              </button>
             </div>
-            <div class="px-4 mt-12">
-              <h3 class="mb-2 text-xl font-medium">هتل Elite World Istanbul</h3>
-              <div class="flex items-start gap-4">
-                <span class="flex items-center gap-1">
-                  <img src="../icons/cafeIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">B.B</span>
-                </span>
-                <span class="w-px h-6 bg-zinc-300"></span>
-                <div class="flex items-center gap-1">
-                  <img src="../icons/starIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">4 ستاره</span>
+
+            <div class="absolute top-0 left-0 flex justify-between w-full">
+              <div class="flex items-center gap-8">
+                <h2 class="text-2xl font-bold">هتل ها</h2>
+                <a
+                  href="/hotel-list.bc?catid=212047"
+                  class="text-xl font-medium text-Primery-700"
+                  >مشاهده همه</a
+                >
+              </div>
+              <div class="flex">
+                <div class="swiper-button-next-custom">
+                  <img src="[##cms.cms.cdn##]/images/previousIcon.svg" alt="" />
+                </div>
+                <div class="swiper-button-prev-custom">
+                  <img src="[##cms.cms.cdn##]/images/nextIcon.svg" alt="" />
                 </div>
               </div>
             </div>
-          </div>
-
-          <div
-            class="relative pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
-          >
-            <div class="relative">
-              <img
-                src="../../public/images/sunshine.jpg"
-                alt="sunshine"
-                class="object-cover w-full h-64"
-              />
-              <div
-                class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
-              >
-                <img src="../icons/locationIcon.svg" alt="" />
-                <span class="text-sm text-Primery-700">موقعیت</span>
+          </layout>
+          <face filter="link is null">
+            <div
+              class="relative swiper-slide pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
+            >
+              <div class="relative">
+                <img
+                  src="@00412X00295prp"
+                  alt="@title"
+                  class="object-cover w-full h-64"
+                />
+                <div
+                  class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
+                >
+                  <img src="[##cms.cms.cdn##]/images/locationIcon.svg" alt="" />
+                  <span class="text-sm text-Primery-700">موقعیت</span>
+                </div>
+                <a
+                  href="/hotel.bc?id=@id"
+                  class="absolute flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
+                >
+                  مشاهده
+                </a>
               </div>
-              <button
-                class="absolute px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
-              >
-                مشاهده
-              </button>
-            </div>
-            <div class="px-4 mt-12">
-              <h3 class="mb-2 text-xl font-medium">هتل Elite World Istanbul</h3>
-              <div class="flex items-start gap-4">
-                <span class="flex items-center gap-1">
-                  <img src="../icons/cafeIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">B.B</span>
-                </span>
-                <span class="w-px h-6 bg-zinc-300"></span>
-                <div class="flex items-center gap-1">
-                  <img src="../icons/starIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">4 ستاره</span>
+              <div class="px-4 mt-12">
+                <h3 class="mb-2 text-xl font-medium">@title</h3>
+                <div class="flex items-start gap-4">
+                  <span class="flex items-center gap-1">
+                    <img src="[##cms.cms.cdn##]/images/cafeIcon.svg" alt="" />
+                    <span class="pt-1 text-sm">B.B</span>
+                  </span>
+                  <span class="w-px h-6 bg-zinc-300"></span>
+                  <div class="flex items-center gap-1">
+                    <img src="./_images/@prp_3087407star.png" alt="star" />
+                    <span class="pt-1 text-sm">@prp_3087407 ستاره</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div
-            class="relative pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
-          >
-            <div class="relative">
-              <img
-                src="../../public/images/sunshine.jpg"
-                alt="sunshine"
-                class="object-cover w-full h-64"
-              />
-              <div
-                class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
-              >
-                <img src="../icons/locationIcon.svg" alt="" />
-                <span class="text-sm text-Primery-700">موقعیت</span>
+          </face>
+          <face>
+            <div
+              class="relative swiper-slide pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
+            >
+              <div class="relative">
+                <img
+                  src="@00412X00295prp"
+                  alt="@title"
+                  class="object-cover w-full h-64"
+                />
+                <div
+                  class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
+                >
+                  <img src="[##cms.cms.cdn##]/images/locationIcon.svg" alt="" />
+                  <span class="text-sm text-Primery-700">موقعیت</span>
+                </div>
+                <a
+                  href="@link"
+                  class="absolute flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
+                >
+                  مشاهده
+                </a>
               </div>
-              <button
-                class="absolute px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
-              >
-                مشاهده
-              </button>
-            </div>
-            <div class="px-4 mt-12">
-              <h3 class="mb-2 text-xl font-medium">هتل Elite World Istanbul</h3>
-              <div class="flex items-start gap-4">
-                <span class="flex items-center gap-1">
-                  <img src="../icons/cafeIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">B.B</span>
-                </span>
-                <span class="w-px h-6 bg-zinc-300"></span>
-                <div class="flex items-center gap-1">
-                  <img src="../icons/starIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">4 ستاره</span>
+              <div class="px-4 mt-12">
+                <h3 class="mb-2 text-xl font-medium">@title</h3>
+                <div class="flex items-start gap-4">
+                  <span class="flex items-center gap-1">
+                    <img src="[##cms.cms.cdn##]/images/cafeIcon.svg" alt="" />
+                    <span class="pt-1 text-sm">B.B</span>
+                  </span>
+                  <span class="w-px h-6 bg-zinc-300"></span>
+                  <div class="flex items-center gap-1">
+                    <img src="./_images/@prp_3087407star.png" alt="star" />
+                    <span class="pt-1 text-sm">@prp_3087407 ستاره</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- نمونه هتل ها -->
-        </div>
+          </face>
+        </basis>
       </section>
       <!-- هتل ها -->
 
@@ -1862,110 +1698,96 @@
       <section class="mt-28 desktopContainer">
         <div class="flex items-center justify-between mb-4">
           <h2 class="font-medium">مقاله ها</h2>
-          <span class="text-sm text-Primery-700">مشاهده همه</span>
+          <a href="/hotel-list.bc?catid=210488" class="text-sm text-Primery-700"
+            >مشاهده همه</a
+          >
         </div>
 
-        <div
-          class="flex flex-col gap-2 lg:flex-row lg:gap-0 lg:justify-between"
-        >
-          <!-- simple of articles -->
-          <article
-            class="relative overflow-hidden bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-[url('../public/images/Rome.jpg')] bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
-          >
+        <basis core="list" datamembername="db.articles">
+          <layout>
             <div
-              class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-            ></div>
-            <div class="relative z-10">
-              <div>
-                <h3 class="mb-2 text-xl font-medium text-white">
-                  سفر به روم برای تفریح
-                </h3>
-                <p class="text-sm text-justify text-white">
-                  رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰
-                  ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این رو، در
-                  سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی هزاران
-                  ساله، ویرانه‌های وسیع...
-                </p>
-              </div>
-              <div class="flex justify-between mt-2">
-                <span class="flex items-center gap-1 text-white">
-                  <img src="../icons/calenderIconWhite.svg" alt="" />
-                  1402/12/12
-                </span>
-                <button
-                  class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-                >
-                  بیشتر بخوانید
-                </button>
-              </div>
+              class="flex flex-col gap-2 lg:flex-row lg:gap-0 lg:justify-between"
+            >
+              <!-- simple of articles -->
+              @child
+              <!-- simple of articles -->
             </div>
-          </article>
-
-          <article
-            class="relative overflow-hidden bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-[url('../public/images/Rome.jpg')] bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
-          >
-            <div
-              class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-            ></div>
-            <div class="relative z-10">
-              <div>
-                <h3 class="mb-2 text-xl font-medium text-white">
-                  سفر به روم برای تفریح
-                </h3>
-                <p class="text-sm text-justify text-white">
-                  رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰
-                  ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این رو، در
-                  سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی هزاران
-                  ساله، ویرانه‌های وسیع...
-                </p>
+          </layout>
+          <face filter="link is null">
+            <article
+              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4"
+            >
+              <img
+                src="@00412X00295prp"
+                alt="@title"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
+                  <div class="text-sm text-justify text-white line-clamp-3">
+                    @prp_7244
+                  </div>
+                </div>
+                <div class="flex justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img
+                      src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
+                      alt=""
+                    />
+                    @cdate
+                  </span>
+                  <a
+                    href="/article.bc?id=@id"
+                    class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </a>
+                </div>
               </div>
-              <div class="flex justify-between mt-2">
-                <span class="flex items-center gap-1 text-white">
-                  <img src="../icons/calenderIconWhite.svg" alt="" />
-                  1402/12/12
-                </span>
-                <button
-                  class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-                >
-                  بیشتر بخوانید
-                </button>
+            </article>
+          </face>
+          <face>
+            <article
+              class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4"
+            >
+              <img
+                src="@00412X00295prp"
+                alt="@title"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
+                  <div class="text-sm text-justify text-white line-clamp-3">
+                    @prp_7244
+                  </div>
+                </div>
+                <div class="flex justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img
+                      src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
+                      alt=""
+                    />
+                    @cdate
+                  </span>
+                  <a
+                    href="@link"
+                    class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </a>
+                </div>
               </div>
-            </div>
-          </article>
-
-          <article
-            class="relative overflow-hidden bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-[url('../public/images/Rome.jpg')] bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
-          >
-            <div
-              class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-            ></div>
-            <div class="relative z-10">
-              <div>
-                <h3 class="mb-2 text-xl font-medium text-white">
-                  سفر به روم برای تفریح
-                </h3>
-                <p class="text-sm text-justify text-white">
-                  رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰
-                  ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این رو، در
-                  سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی هزاران
-                  ساله، ویرانه‌های وسیع...
-                </p>
-              </div>
-              <div class="flex justify-between mt-2">
-                <span class="flex items-center gap-1 text-white">
-                  <img src="../icons/calenderIconWhite.svg" alt="" />
-                  1402/12/12
-                </span>
-                <button
-                  class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-                >
-                  بیشتر بخوانید
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
-        <!-- simple of articles -->
+            </article>
+          </face>
+        </basis>
       </section>
       <!-- articles -->
 
@@ -1978,7 +1800,7 @@
             <!-- Slides -->
             <div class="swiper-slide">
               <img
-                src="../../public/images/sunExpress.png"
+                src="[##cms.cms.cdn##]/images/sunExpress.png"
                 alt="sunExpress"
                 class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
               />
@@ -1986,7 +1808,7 @@
 
             <div class="swiper-slide">
               <img
-                src="../../public/images/SalamAir.png"
+                src="[##cms.cms.cdn##]/images/SalamAir.png"
                 alt="SalamAir"
                 class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
               />
@@ -1994,7 +1816,7 @@
 
             <div class="swiper-slide">
               <img
-                src="../../public/images/turkishAirlines.png"
+                src="[##cms.cms.cdn##]/images/turkishAirlines.png"
                 alt="turkishAirlines"
                 class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
               />
@@ -2002,7 +1824,7 @@
 
             <div class="swiper-slide">
               <img
-                src="../../public/images/Qatar.png"
+                src="[##cms.cms.cdn##]/images/Qatar.png"
                 alt="Qatar"
                 class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
               />
@@ -2010,7 +1832,7 @@
 
             <div class="swiper-slide">
               <img
-                src="../../public/images/IranAir.png"
+                src="[##cms.cms.cdn##]/images/IranAir.png"
                 alt="IranAir"
                 class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
               />
@@ -2022,162 +1844,11 @@
     <!-- main end -->
 
     <!-- footer -->
-    <footer class="relative px-4 py-4 mt-24 rounded-xl bg-footer-gradient">
-      <img
-        src="../icons/footerBackIcon.svg"
-        alt=""
-        class="absolute -top-3 -right-px -z-10"
-      />
-      <div class="flex flex-col items-center justify-center gap-2 mb-6">
-        <img src="../icons/headerIcons.svg" alt="" />
-        <h2 class="text-sm font-normal text-white">
-          شرکت خدمات مسافرت هوایی سورینت پرواز
-        </h2>
-      </div>
-
-      <!-- content of footer -->
-      <div class="desktopContainer">
-        <div class="lg:flex lg:justify-between">
-          <div class="mb-6 lg:flex lg:w-1/2 lg:flex-row-reverse lg:order-2">
-            <!-- membrship -->
-            <section class="lg:w-[70%]">
-              <h3 class="mb-4 font-medium text-white lg:text-2xl">
-                عضویت در خبرنامه
-              </h3>
-              <form class="flex flex-col gap-4">
-                <input
-                  type="text"
-                  name="username"
-                  id=""
-                  placeholder="نام و نام خانوادگی"
-                  class="w-full h-16 px-4 py-3 font-medium outline-none bg-Footer-900 text-zinc-400 rounded-xl"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  id=""
-                  placeholder="ایمیل"
-                  class="w-full h-16 px-4 py-3 font-medium outline-none bg-Footer-900 text-zinc-400 rounded-xl"
-                />
-                <div class="flex">
-                  <input
-                    type="text"
-                    name=""
-                    id=""
-                    placeholder="کد امنیتی"
-                    class="w-full h-16 px-4 py-3 font-medium outline-none bg-Footer-900 text-zinc-400 rounded-xl"
-                  />
-                  <img src="../../public/images/capcha.jpg" alt="capcha" />
-                  <img src="../icons/refreshIcon.svg" alt="" />
-                </div>
-                <button
-                  class="w-full px-4 py-2 text-white h-14 bg-Primery-700 rounded-xl"
-                >
-                  تایید
-                </button>
-              </form>
-
-              <div class="flex items-center justify-between mt-8">
-                <span class="text-white">ما رو اینجا دنبال کنید</span>
-                <div class="flex gap-2">
-                  <img src="../icons/telegramIcon.svg" alt="" />
-                  <img src="../icons/instagramIcon.svg" alt="" />
-                </div>
-              </div>
-            </section>
-            <!-- membership -->
-
-            <!-- category -->
-            <section class="lg:w-1/4">
-              <div class="flex flex-col gap-2 mb-4 text-white">
-                <h2 class="text-2xl font-bold text-Primery-600">دسته بندی</h2>
-                <a href="">پرواز</a>
-                <a href="">هتل</a>
-                <a href="">تورها</a>
-                <a href="">ویزا</a>
-              </div>
-
-              <div class="flex flex-col gap-2 text-white">
-                <h2 class="text-2xl font-bold text-Primery-600">میانبر</h2>
-                <a href="">مقالات</a>
-                <a href="">بیمه مسافرتی</a>
-                <a href="">اقامت ها</a>
-                <a href="">سفر</a>
-              </div>
-            </section>
-            <!-- category -->
-          </div>
-
-          <!-- about us -->
-          <section class="order-1 lg:w-1/2">
-            <div>
-              <h2 class="mb-4 text-white lg:text-2xl">درباره ی ما</h2>
-              <p class="text-sm text-justify text-white">
-                شرکت خدمات مسافرت هوایی،گردشگری و زیارتی سورینت پرواز بعنوان یکی
-                از بخشهای " هلدینگ توسعه سورینت قشم " در کنار سایر بخشهای این
-                هلدینگ از جمله هواپیمایی قشم ، گروه هتلهای سورینت مریم و صدف کیش
-                ، صنایع غذایی فراز نمونه قشم و ... از سال 1392 فعالیت خود را با
-                مجوزهای " بند الف" از سازمان هواپیمایی کشوری ، " بند ب" از وزارت
-                میراث فرهنگی ،صنایع دستی و گردشگری ، " بند پ" از سازمان حج و
-                زیارت و " فروش قطار " از راه آهن جمهوری اسلامی ایران آغاز نموده
-                است . شرگت سوری نت پرواز با تمرکز بر ارائه خدمات به روز واختصاصی
-                به متقاضیان جهت تسهیل ف تسریع و افزایش کیفیت تمامی خدمات مسافرتی
-                و کسب رضایت مشتریان خو...
-              </p>
-            </div>
-
-            <!-- address -->
-            <div class="flex flex-col gap-2 mt-3">
-              <span class="flex items-center gap-2 text-sm text-white">
-                <img src="../icons/addressIcon.svg" alt="" />
-                تهران، میدان آزادی، بزرگراه شهید لشگری، خیابان ریاحی، پلاک ٩
-              </span>
-              <span class="flex items-center gap-2 text-sm text-white">
-                <img src="../icons/phoneIcon.svg" alt="" />
-                تلفن تماس و پشتیبانی :02147640
-              </span>
-            </div>
-            <!-- address -->
-
-            <div class="flex justify-between mt-3 lg:justify-normal lg:gap-4">
-              <span
-                class="flex items-center w-16 h-16 p-1 overflow-hidden bg-white rounded-xl"
-              >
-                <img src="../../public/images/eNamad.jpg" alt="eNamad" />
-              </span>
-              <span class="flex items-center w-16 h-16 p-1 bg-white rounded-xl">
-                <img src="../../public/images/lata.jpg" alt="lata" />
-              </span>
-              <span class="flex items-center w-16 h-16 p-1 bg-white rounded-xl">
-                <img src="../../public/images/pax.png" alt="pax" />
-              </span>
-              <span class="flex items-center w-16 h-16 p-1 bg-white rounded-xl">
-                <img
-                  src="../../public/images/airplaneComponey.jpg"
-                  alt="airplaneComponey"
-                />
-              </span>
-            </div>
-          </section>
-          <!-- about us end -->
-        </div>
-
-        <div class="mt-6 lg:flex lg:items-center lg:justify-center lg:gap-8">
-          <h3 class="text-sm font-medium text-center text-white">
-            طراحی سایت آژانس مسافرتی و رزرواسیون آنلاین توسط بیسیس فلای
-          </h3>
-          <div class="flex justify-between mt-3 lg:mt-0">
-            <img
-              src="../../public/images/basisFly.png"
-              alt="basisFly"
-              class="h-4 w-17"
-            />
-            <img src="../../public/images/trust-login.png" alt="trust-login" />
-          </div>
-        </div>
-      </div>
-      <!-- content of footer end -->
-    </footer>
+    <basis
+      core="call"
+      file="footer.inc"
+      pageindex="[##cms.cms.pageindex##]"
+    ></basis>
     <!-- footer end -->
 
     <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
@@ -2216,7 +1887,41 @@
           },
         },
       });
+      var hotelsSwiper = new Swiper(".hotels-swiper", {
+        slidesPerView: 1,
+        speed: 400,
+        centeredSlides: false,
+        spaceBetween: 30,
+        grabCursor: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next-custom",
+          prevEl: ".swiper-button-prev-custom",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+      });
     </script>
-    <script src="../js/index.js"></script>
+    <basis core="call" file="script.inc" />
   </body>
 </html>

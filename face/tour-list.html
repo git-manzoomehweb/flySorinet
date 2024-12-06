@@ -68,7 +68,7 @@
     type="list"
     link="article.bc"
     propertyid="7244"
-    perpage="3"
+    perpage="9"
     size="412x259"
     order="ord"
   />
@@ -108,10 +108,8 @@
     <basis core="call" file="pwa.inc" />
     <basis core="call" file="style.inc" />
     <!-- swiper -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css">
+
   </head>
   <body class="px-2">
     <!-- header -->
@@ -334,8 +332,7 @@
                         clip-rule="evenodd"
                         d="M16.5725 12C16.5725 12.2926 16.4605 12.5851 16.2377 12.808L9.38076 19.6649C8.93392 20.1117 8.21166 20.1117 7.76482 19.6649C7.31798 19.218 7.31798 18.4958 7.76482 18.0489L13.8137 12L7.76482 5.9511C7.31798 5.5042 7.31798 4.782 7.76482 4.3351C8.21166 3.8883 8.93392 3.8883 9.38076 4.3351L16.2377 11.192C16.4605 11.4149 16.5725 11.7074 16.5725 12Z"
                         fill="white"
-                      /></svg
-                  ></a>
+                      /></svg></a>
                 </li>
               </face>
             </basis>
@@ -346,8 +343,7 @@
                   class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300"
                 >
                   <a
-                    class="text-zinc-900"
-                    class="current font-color-1"
+                    class="current font-color-1 text-zinc-900"
                     href="/[##cms.cms.link_page##]&pagenum=@page"
                     >@page</a
                   >
@@ -378,9 +374,19 @@
                     class="text-zinc-900"
                     href="/[##cms.cms.link_page##]&pagenum=@page"
                     aria-label="angle-right"
-                    ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.4275 12C7.4275 11.7074 7.5395 11.4149 7.7623 11.192L14.6192 4.33513C15.0661 3.88829 15.7883 3.88829 16.2352 4.33513C16.682 4.78197 16.682 5.50423 16.2352 5.95107L10.1863 12L16.2352 18.0489C16.682 18.4958 16.682 19.218 16.2352 19.6649C15.7883 20.1117 15.0661 20.1117 14.6192 19.6649L7.7623 12.808C7.5395 12.5851 7.4275 12.2926 7.4275 12Z" fill="white"/>
-                      </svg></a>
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.4275 12C7.4275 11.7074 7.5395 11.4149 7.7623 11.192L14.6192 4.33513C15.0661 3.88829 15.7883 3.88829 16.2352 4.33513C16.682 4.78197 16.682 5.50423 16.2352 5.95107L10.1863 12L16.2352 18.0489C16.682 18.4958 16.682 19.218 16.2352 19.6649C15.7883 20.1117 15.0661 20.1117 14.6192 19.6649L7.7623 12.808C7.5395 12.5851 7.4275 12.2926 7.4275 12Z"
+                        fill="white"
+                      /></svg></a>
                 </li>
               </face>
             </basis>
@@ -392,32 +398,35 @@
       <basis core="list" datamembername="db.article-list">
         <layout>
           <section class="mt-24 desktopContainer">
-            <div class="flex items-center justify-between mb-6">
-              <div class="flex items-center gap-8">
-                <h2 class="text-2xl font-bold">مقاله ها</h2>
-                <a
-                  href="/article-list.bc?catid=210488"
-                  class="text-xl font-medium text-Primery-700"
-                  >مشاهده همه</a
-                >
-              </div>
-              <div class="flex items-center gap-3">
-                <button>
-                  <img src="[##cms.cms.cdn##]/images/previousIcon.svg" alt="" />
-                </button>
-                <button>
-                  <img src="[##cms.cms.cdn##]/images/nextIcon.svg" alt="" />
-                </button>
-              </div>
-            </div>
-
-            <div class="swiper articles-swiper">
+            <div class="swiper articles-swiper pt-20">
               <div
                 class="flex flex-col gap-2 swiper-wrapper lg:flex-row lg:gap-0 lg:justify-between"
               >
                 <!-- simple of articles -->
                 @child
                 <!-- simple of articles -->
+              </div>
+
+              <div class="absolute top-0 left-0 flex justify-between w-full">
+                <div class="flex items-center gap-8">
+                  <h2 class="text-2xl font-bold">مقاله ها</h2>
+                  <a
+                    href="/hotel-list.bc?catid=212047"
+                    class="text-xl font-medium text-Primery-700"
+                    >مشاهده همه</a
+                  >
+                </div>
+                <div class="flex">
+                  <div class="swiper-button-next-custom">
+                    <img
+                      src="[##cms.cms.cdn##]/images/previousIcon.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-button-prev-custom">
+                    <img src="[##cms.cms.cdn##]/images/nextIcon.svg" alt="" />
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -538,7 +547,7 @@
     <basis core="call" file="footer.inc" />
     <!-- footer end -->
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
     <script>
       var articlesSwiper = new Swiper(".articles-swiper", {
         slidesPerView: 1,
@@ -556,8 +565,8 @@
           clickable: true,
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next-custom",
+          prevEl: ".swiper-button-prev-custom",
         },
         breakpoints: {
           640: {

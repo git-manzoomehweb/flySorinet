@@ -1,10 +1,31 @@
-<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]" >
-    <member request="json-ld" type="scalar" name="json"  />
+<basis
+  core="dbsource"
+  source="basiscore"
+  name="db"
+  lid="1"
+  mid="1"
+  usedforid="[##cms.query.id##]"
+>
+  <member request="json-ld" type="scalar" name="json" />
 </basis>
-<basis core="dbsource" source="basiscore" name="db" mid="1" lid="1" usedforid="[##cms.query.id##]">
-    <member name="view" type="view" />
-    <member name="related-article" type="list" blgid="222" link="article.bc" propertyid="7244,7248,7249,7227,77320"
-        perpage="3" typeid="159" />
+<basis
+  core="dbsource"
+  source="basiscore"
+  name="db"
+  mid="1"
+  lid="1"
+  usedforid="[##cms.query.id##]"
+>
+  <member name="view" type="view" propertyid="7249" />
+  <member
+    name="related-article"
+    type="list"
+    blgid="222"
+    link="article.bc"
+    propertyid="7244,7248,7227,77320"
+    perpage="9"
+    typeid="159"
+  />
 </basis>
 
 <basis
@@ -26,362 +47,292 @@
   />
 </basis>
 
-  
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover"
-        />
-        <title>
-          [##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]
-        </title>
-        <meta
-          name="description"
-          content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]"
-        />
-        <basis
-          core="dbsource"
-          source="hosting"
-          name="tag"
-          urlid="[##cms.seo.urlid##]"
-        >
-          <member type="list" name="list" request="taglist" preview=""></member>
-        </basis>
-        <basis core="print" datamembername="tag.list">
-          <face filter="key = 'canonical'">
-            <link rel="canonical" href="@value" />
-          </face>
-          <face>
-            <meta property="@key" content="@value" />
-          </face>
-        </basis>
-        <basis core="call" file="pwa.inc" />
-        <basis core="call" file="style.inc" />
-        <!-- swiper -->
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/swiper/swiper-bundle.min.css"
-        />
-      </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover"
+    />
+    <title>
+      [##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]
+    </title>
+    <meta
+      name="description"
+      content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]"
+    />
+    <basis
+      core="dbsource"
+      source="hosting"
+      name="tag"
+      urlid="[##cms.seo.urlid##]"
+    >
+      <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+      <face filter="key = 'canonical'">
+        <link rel="canonical" href="@value" />
+      </face>
+      <face>
+        <meta property="@key" content="@value" />
+      </face>
+    </basis>
+    <basis core="call" file="pwa.inc" />
+    <basis core="call" file="style.inc" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css">
+  </head>
   <body class="px-2 bg-zinc-50">
     <!-- header -->
     <basis core="call" file="header.inc" />
     <!-- header end -->
 
     <main>
-      <basis>
-        <face filter="TypeID in(159)"><img
-          src="[##cms.cms.cdn##]/@text"
-          alt="article-list-background"
-          class="object-cover 2xl:h-[44rem] lg:h-[30rem] object-bottom border-b-8 border-solid border-Primery-600 w-full rounded-3xl"
+      <basis core="print" datamembername="db.view">
+        <face filter="TypeID in(159)"
+          ><img
+            src="[##cms.cms.cdn##]/@text"
+            alt="article-list-background"
+            class="object-cover object-bottom border-b-8 border-solid border-Primery-600 w-full rounded-3xl"
         /></face>
       </basis>
-      
-      <div
-        class="px-4 pt-4 pb-8 bg-white rounded-xl absolute flex 2xl:top-[34rem] lg:top-[26rem] w-[calc(100%-40px)] desktopContainer left-0 right-0 mx-auto"
-      >
-      
 
-           <!-- left content of main -->
+      <div
+        class="px-4 pt-4 pb-8 bg-white rounded-xl relative z-10 lg:-mt-60 flex w-[calc(100%-40px)] desktopContainer"
+      >
+        <!-- left content of main -->
         <section class="px-4 pt-4 pb-8 w-[70%] order-2">
           <basis core="print" datamembername="db.view">
             <layout>
-              <div>
-                @child
-              </div>
+              <div class="flex items-center justify-between">@child</div>
             </layout>
             <face filter="TypeID in(150)">
-              <h2 id="@value_id" class="text-xl font-medium">@text</h2>
+              <h2 id="@valueID" class="text-xl font-medium">@text</h2>
             </face>
             <face filter="prpID in(7249)">
               <span class="text-sm">@prp_7249</span>
             </face>
-            </basis>
+          </basis>
 
-
-
-            
-            <basis core="print" datamembername="db.view">
-              <layout>
-                @child
-                </layout>
-                <face filter="TypeID in(129)">
-                  <div class="mt-6 mb-6 text-sm text-justify">
-                  @largetext
-                  </div>
-                </face>
-                <face filter="TypeID in(250)">
-                  <h2 id="@value_id" class="mt-10 mb-4 text-xl font-medium">@text </h2>
-                  <div class="mb-6 text-sm text-justify">@largetext</div>
-                </face>
-
-                </basis>
-
-
+          <basis core="print" datamembername="db.view">
+            <layout> @child </layout>
+            <face filter="TypeID in(129)">
+              <div class="mt-6 mb-6 text-sm text-justify">@largetext</div>
+            </face>
+            <face filter="TypeID in(250)">
+              <h2 id="@valueID" class="mt-10 mb-4 text-xl font-medium">
+                @text
+              </h2>
+              <div class="mb-6 text-sm text-justify">@largetext</div>
+            </face>
+          </basis>
         </section>
         <!-- left content on main end -->
-        
 
         <!-- right content of main -->
         <div class="w-[30%]">
-          <div class="flex flex-col gap-4 p-3 bg-zinc-100 rounded-xl">
-            <span class="flex items-center gap-2">
-              <img src="../icons/starFillIcon.svg" alt="" />
-              پارک های آبی دبی
-            </span>
-            <span class="flex items-center gap-2">
-              <img src="../icons/starFillIcon.svg" alt="" />
-              تفریحات سافاری دبی
-            </span>
-            <span class="flex items-center gap-2">
-              <img src="../icons/starFillIcon.svg" alt="" />
-              شهربازی های دبی
-            </span>
-            <span class="flex items-center gap-2">
-              <img src="../icons/starFillIcon.svg" alt="" />
-              موزه‌ها و اماکن تاریخی
-            </span>
-            <span class="flex items-center gap-2">
-              <img src="../icons/starFillIcon.svg" alt="" />
-              برج‌ها معروف دبی
-            </span>
-            <span class="flex items-center gap-2">
-              <img src="../icons/starFillIcon.svg" alt="" />
-              پارک‌های آبی دبی
-            </span>
-            <span class="flex items-center gap-2">
-              <img src="../icons/starFillIcon.svg" alt="" />
-              شهربازی های دبی
-            </span>
-            <span class="flex items-center gap-2">
-              <img src="../icons/starFillIcon.svg" alt="" />
-              پارک‌های آبی دبی
-            </span>
-            <span class="flex items-center gap-2">
-              <img src="../icons/starFillIcon.svg" alt="" />
-              شهربازی های دبی
-            </span>
-            <span class="flex items-center gap-2">
-              <img src="../icons/starFillIcon.svg" alt="" />
-              پارک‌های آبی دبی
-            </span>
-          </div>
+          <basis core="view" datamembername="db.view">
+            <layout>
+              <div class="flex flex-col gap-4 p-3 bg-zinc-100 rounded-xl">
+                @child
+              </div>
+            </layout>
+            <face filter="TypeID in(150 , 250)">
+              <a href="#@valueID" class="flex items-center gap-2">
+                <img src="[##cms.cms.cdn##]/images/starFillIcon.svg" alt="" />
+                @text
+              </a>
+            </face>
+          </basis>
 
           <section class="px-4 pt-4 pb-8">
             <h2 class="mb-4 font-medium">اخبار روز</h2>
-            <div class="flex flex-col gap-4">
-              <!-- news -->
-              <div class="flex items-center gap-4">
-                <img
-                  src="../../public/images/dubai.jpg"
-                  alt="dubai"
-                  class="object-cover w-24 h-24 rounded-xl"
-                />
-                <div class="flex flex-col gap-2">
-                  <span class="text-sm">دبی بهترین مسقط سفر برای ایرانیان</span>
-                  <span class="text-sm"
-                    >دبی بزرگ‌‌ترین شهر امارات متحده عربی، لقبی دارد که
-                    بسیار</span
-                  >
+            <basis core="list" datamembername="db.news-list">
+              <layout>
+                <div class="flex flex-col gap-4">
+                  <!-- news -->
+                  @child
+                  <!-- news end -->
                 </div>
-              </div>
-
-              <div class="flex items-center gap-4">
-                <img
-                  src="../../public/images/dubai.jpg"
-                  alt="dubai"
-                  class="object-cover w-24 h-24 rounded-xl"
-                />
-                <div class="flex flex-col gap-2">
-                  <span class="text-sm">دبی بهترین مسقط سفر برای ایرانیان</span>
-                  <span class="text-sm"
-                    >دبی بزرگ‌‌ترین شهر امارات متحده عربی، لقبی دارد که
-                    بسیار</span
-                  >
-                </div>
-              </div>
-
-              <div class="flex items-center gap-4">
-                <img
-                  src="../../public/images/dubai.jpg"
-                  alt="dubai"
-                  class="object-cover w-24 h-24 rounded-xl"
-                />
-                <div class="flex flex-col gap-2">
-                  <span class="text-sm">دبی بهترین مسقط سفر برای ایرانیان</span>
-                  <span class="text-sm"
-                    >دبی بزرگ‌‌ترین شهر امارات متحده عربی، لقبی دارد که
-                    بسیار</span
-                  >
-                </div>
-              </div>
-
-              <div class="flex items-center gap-4">
-                <img
-                  src="../../public/images/dubai.jpg"
-                  alt="dubai"
-                  class="object-cover w-24 h-24 rounded-xl"
-                />
-                <div class="flex flex-col gap-2">
-                  <span class="text-sm">دبی بهترین مسقط سفر برای ایرانیان</span>
-                  <span class="text-sm"
-                    >دبی بزرگ‌‌ترین شهر امارات متحده عربی، لقبی دارد که
-                    بسیار</span
-                  >
-                </div>
-              </div>
-              <!-- news end -->
-            </div>
+              </layout>
+              <face filter="link is null">
+                <a href="/article.bc?id=@id" class="flex items-center gap-4">
+                  <img
+                    src="@00090X00090prp"
+                    alt="@title"
+                    class="object-cover w-24 h-24 rounded-xl"
+                  />
+                  <div class="flex flex-col gap-2">
+                    <h2 class="text-sm">@title</h2>
+                    <span class="text-sm line-clamp-2">@prp_7244</span>
+                  </div>
+                </a>
+              </face>
+              <face>
+                <a href="@link" class="flex items-center gap-4">
+                  <img
+                    src="@00090X00090prp"
+                    alt="dubai"
+                    class="object-cover w-24 h-24 rounded-xl"
+                  />
+                  <div class="flex flex-col gap-2">
+                    <h2 class="text-sm">@title</h2>
+                    <span class="text-sm line-clamp-2">@prp_7244</span>
+                  </div>
+                </a>
+              </face>
+            </basis>
           </section>
         </div>
         <!-- right content of main end -->
       </div>
 
       <!-- articles -->
-      <section class="mt-[125rem] desktopContainer 2xl:mt-[110rem]">
-        <div class="flex items-center justify-between mb-6">
-          <div class="flex items-center gap-8">
-            <h2 class="text-2xl font-bold">مقاله ها</h2>
-            <span class="text-xl font-medium text-Primery-700">مشاهده همه</span>
+      <basis core="list" datamembername="db.related-article">
+        <layout>
+          <section class="mt-20 desktopContainer">
+
+            <div class="swiper articles-swiper pt-20">
+              <div
+                class="flex flex-col gap-2 swiper-wrapper lg:flex-row lg:gap-0 lg:justify-between"
+              >
+                <!-- simple of articles -->
+                @child
+                <!-- simple of articles -->
+              </div>
+
+              <div class="absolute top-0 left-0 flex justify-between w-full">
+                <div class="flex items-center gap-8">
+                  <h2 class="text-2xl font-bold">مقاله ها</h2>
+                  <a
+                    href="/hotel-list.bc?catid=212047"
+                    class="text-xl font-medium text-Primery-700"
+                    >مشاهده همه</a
+                  >
+                </div>
+                <div class="flex">
+                  <div class="swiper-button-next-custom">
+                    <img
+                      src="[##cms.cms.cdn##]/images/previousIcon.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-button-prev-custom">
+                    <img src="[##cms.cms.cdn##]/images/nextIcon.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+        </layout>
+        <face filter="link in null">
+          <div class="swiper-slide">
+            <article
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
+            >
+              <img
+                src="@type_159"
+                alt="@title"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
+                  <p class="text-sm text-justify text-white line-clamp-3">
+                    @prp_7244
+                  </p>
+                </div>
+                <div class="flex items-center justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img
+                      src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
+                      alt=""
+                    />
+                    @cdate
+                  </span>
+                  <a
+                    href="/article.bc?id=@id"
+                    class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
-          <div class="flex items-center gap-3">
-            <button><img src="../icons/previousIcon.svg" alt="" /></button>
-            <button><img src="../icons/nextIcon.svg" alt="" /></button>
+        </face>
+        <face>
+          <div class="swiper-slide">
+            <article
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
+            >
+              <img
+                src="@type_159"
+                alt="@title"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
+                  <p class="text-sm text-justify text-white line-clamp-3">
+                    @prp_7244
+                  </p>
+                </div>
+                <div class="flex items-center justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img
+                      src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
+                      alt=""
+                    />
+                    @cdate
+                  </span>
+                  <a
+                    href="@link"
+                    class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
-        </div>
-
-        <div
-          class="flex flex-col gap-2 lg:flex-row lg:gap-0 lg:justify-between"
-        >
-          <!-- simple of articles -->
-          <article
-            class="relative overflow-hidden bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-[url('../public/images/Rome.jpg')] bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
-          >
-            <div
-              class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-            ></div>
-            <div class="relative z-10">
-              <div>
-                <h3 class="mb-2 text-xl font-medium text-white">
-                  سفر به روم برای تفریح
-                </h3>
-                <p class="text-sm text-justify text-white">
-                  رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰
-                  ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این رو، در
-                  سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی هزاران
-                  ساله، ویرانه‌های وسیع...
-                </p>
-              </div>
-              <div class="flex justify-between mt-2">
-                <span class="flex items-center gap-1 text-white">
-                  <img src="../icons/calenderIconWhite.svg" alt="" />
-                  1402/12/12
-                </span>
-                <button
-                  class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-                >
-                  بیشتر بخوانید
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="relative overflow-hidden bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-[url('../public/images/Rome.jpg')] bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
-          >
-            <div
-              class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-            ></div>
-            <div class="relative z-10">
-              <div>
-                <h3 class="mb-2 text-xl font-medium text-white">
-                  سفر به روم برای تفریح
-                </h3>
-                <p class="text-sm text-justify text-white">
-                  رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰
-                  ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این رو، در
-                  سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی هزاران
-                  ساله، ویرانه‌های وسیع...
-                </p>
-              </div>
-              <div class="flex justify-between mt-2">
-                <span class="flex items-center gap-1 text-white">
-                  <img src="../icons/calenderIconWhite.svg" alt="" />
-                  1402/12/12
-                </span>
-                <button
-                  class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-                >
-                  بیشتر بخوانید
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="relative overflow-hidden bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-[url('../public/images/Rome.jpg')] bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
-          >
-            <div
-              class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-            ></div>
-            <div class="relative z-10">
-              <div>
-                <h3 class="mb-2 text-xl font-medium text-white">
-                  سفر به روم برای تفریح
-                </h3>
-                <p class="text-sm text-justify text-white">
-                  رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰
-                  ساله خود تاثیر بسیار عمیقی بر جهان گذاشته است. از این رو، در
-                  سفر به رم شاهد کاخ‌های حیرت‌ انگیز، کلیساهای قدیمی هزاران
-                  ساله، ویرانه‌های وسیع...
-                </p>
-              </div>
-              <div class="flex justify-between mt-2">
-                <span class="flex items-center gap-1 text-white">
-                  <img src="../icons/calenderIconWhite.svg" alt="" />
-                  1402/12/12
-                </span>
-                <button
-                  class="px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-                >
-                  بیشتر بخوانید
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
-        <!-- simple of articles -->
-      </section>
-      <!-- articles -->
+        </face>
+      </basis>
+      <!-- articles end -->
 
       <section
         class="flex flex-wrap justify-between gap-4 mx-auto mt-10 desktopContainer"
       >
         <img
-          src="../../public/images/sunExpress.png"
+          src="[##cms.cms.cdn##]/images/sunExpress.png"
           alt="sunExpress"
           class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
         />
         <img
-          src="../../public/images/SalamAir.png"
+          src="[##cms.cms.cdn##]/images/SalamAir.png"
           alt="SalamAir"
           class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
         />
         <img
-          src="../../public/images/turkishAirlines.png"
+          src="[##cms.cms.cdn##]/images/turkishAirlines.png"
           alt="turkishAirlines"
           class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
         />
         <img
-          src="../../public/images/Qatar.png"
+          src="[##cms.cms.cdn##]/images/Qatar.png"
           alt="Qatar"
           class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
         />
         <img
-          src="../../public/images/IranAir.png"
+          src="[##cms.cms.cdn##]/images/IranAir.png"
           alt="IranAir"
           class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
         />
@@ -391,5 +342,43 @@
     <!-- footer -->
     <basis core="call" file="footer.inc" />
     <!-- footer end -->
+
+    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
+    <script>
+      var articlesSwiper = new Swiper(".articles-swiper", {
+        slidesPerView: 1,
+        speed: 400,
+        centeredSlides: false,
+        spaceBetween: 30,
+        grabCursor: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next-custom",
+          prevEl: ".swiper-button-prev-custom",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

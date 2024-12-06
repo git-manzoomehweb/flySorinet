@@ -9,59 +9,68 @@
   </head>
   <body class="px-2">
     <header>
-      <!-- header subset -->
-      <div
-        class="fixed z-50 hidden w-full h-full bg-black header-subset-overlay bg-opacity-70 overfh lg:hidden"
-      >
-        <div
-          class="fixed right-0 z-50 w-9/12 h-full p-4 overflow-scroll transition duration-200 ease-in-out transform bg-white shadow-md header-subset translate-x-96"
-        >
+      <!-- header subset  -->
+      <div class="fixed z-50 hidden w-full h-full bg-black mobile-menu-overlay bg-opacity-70 overfh lg:hidden">
+        <div class="fixed right-0 z-50 w-9/12 h-full p-4 overflow-scroll transition duration-200 ease-in-out transform bg-white shadow-md mobile-menu translate-x-96">
           <nav class="flex items-center w-full h-full">
             <ul class="flex flex-col justify-between w-full h-full gap-10">
+              <!-- منوی اصلی -->
               <li class="flex items-center justify-between">
                 <a href=""> صفحه اصلی </a>
-                <img
-                  src="../icons/xIcon.svg"
-                  alt=""
-                  class="w-8 cursor-pointer x-icon"
-                />
+                <img src="../icons/xIcon.svg" alt="" class="w-8 cursor-pointer close-menu" />
               </li>
-              <li class="tour-li">
-                <span href="" class="flex items-center gap-2 cursor-pointer">
-                  تور ها
-                  <img src="../icons/chevronDownIcon.svg" alt="" />
-                </span>
-                <!-- submenu -->
-                <ul
-                  class="tour-submenu p-4 invisible opacity-0 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500"
-                >
-                  <li>
-                    <a href="">ایرانگردی</a>
-                    <ul>
+      
+              <!-- منوی تور -->
+              <li class="menu-item">
+                <div class="flex items-center justify-between cursor-pointer menu-trigger">
+                  <span class="flex items-center gap-2">
+                    تور ها
+                    <img src="../icons/chevronDownIcon.svg" alt="" class="chevron transition duration-200 ease-in-out"/>
+                  </span>
+                </div>
+                <ul class="submenu p-4 invisible opacity-0 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500">
+                  <!-- زیرمنوی ایرانگردی -->
+                  <li class="submenu-item overflow-hidden">
+                    <div class="flex items-center justify-between cursor-pointer submenu-trigger">
+                      <span>ایرانگردی</span>
+                      <img src="../icons/chevronDownIcon.svg" alt="" class="chevron transition duration-200 ease-in-out"/>
+                    </div>
+                    <ul class="nested-menu max-h-0 transition-all duration-300 ease-in-out pr-4 mt-2">
                       <li>اصفهان</li>
-                      <li>اصفهان</li>
-                      <li>اصفهان</li>
+                      <li>شیراز</li>
+                      <li>تبریز</li>
                     </ul>
                   </li>
-                  <li><a href="">جهانگردی</a></li>
+                  <!-- زیرمنوی جهانگردی -->
+                  <li class="submenu-item overflow-hidden">
+                    <div class="flex items-center justify-between cursor-pointer submenu-trigger">
+                      <span>جهانگردی</span>
+                      <img src="../icons/chevronDownIcon.svg" alt="" class="chevron transition duration-200 ease-in-out"/>
+                    </div>
+                    <ul class="nested-menu max-h-0 transition-all duration-300 ease-in-out pr-4 mt-2">
+                      <li>استانبول</li>
+                      <li>دبی</li>
+                      <li>آنتالیا</li>
+                    </ul>
+                  </li>
                 </ul>
-                <!-- submenu end -->
               </li>
-              <li class="visa-li">
-                <span href="" class="flex items-center gap-2 cursor-pointer">
-                  ویزا
-                  <img src="../icons/chevronDownIcon.svg" alt="" />
-                </span>
-                <!-- submenu -->
-                <div
-                  class="visa-submenu p-4 rounded-xl bg-white invisible opacity-0 flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500"
-                >
+      
+              <!-- منوی ویزا -->
+              <li class="menu-item">
+                <div class="flex items-center justify-between cursor-pointer menu-trigger">
+                  <span class="flex items-center gap-2">
+                    ویزا
+                    <img src="../icons/chevronDownIcon.svg" alt="" class="chevron transition duration-200 ease-in-out"/>
+                  </span>
+                </div>
+                <div class="submenu p-4 rounded-xl bg-white invisible opacity-0 flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500">
                   <a href="">ویزای شینگن</a>
                   <a href="">ویزای اروپا</a>
                   <a href="">ویزای آمریکا</a>
                 </div>
-                <!-- submenu end -->
               </li>
+      
               <li><a href="">مقالات</a></li>
               <li><a href="">گردشگری</a></li>
               <li><a href="">تماس با ما</a></li>
@@ -1846,124 +1855,132 @@
           </div>
         </div>
 
-        <div
-          class="flex flex-col gap-2 lg:flex-row lg:justify-between lg:gap-0"
-        >
-          <!-- نمونه هتل ها -->
+        <div class="pt-20">
           <div
-            class="relative bg-white pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
+            class="flex flex-col gap-2 lg:flex-row lg:justify-between lg:gap-0"
           >
-            <div class="relative">
-              <div class="absolute w-full h-full bg-light-gradient"></div>
-              <img
-                src="../../public/images/sunshine.jpg"
-                alt=""
-                class="object-cover w-full h-64"
-              />
-              <div
-                class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
-              >
-                <img src="../icons/locationIcon.svg" alt="" />
-                <span class="text-sm text-Primery-700">موقعیت</span>
+            <!-- نمونه هتل ها -->
+            <div
+              class="relative bg-white pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
+            >
+              <div class="relative">
+                <div class="absolute w-full h-full bg-light-gradient"></div>
+                <img
+                  src="../../public/images/sunshine.jpg"
+                  alt=""
+                  class="object-cover w-full h-64"
+                />
+                <div
+                  class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
+                >
+                  <img src="../icons/locationIcon.svg" alt="" />
+                  <span class="text-sm text-Primery-700">موقعیت</span>
+                </div>
+                <button
+                  class="absolute px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
+                >
+                  مشاهده
+                </button>
               </div>
-              <button
-                class="absolute px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
-              >
-                مشاهده
-              </button>
-            </div>
-            <div class="px-4 mt-12">
-              <h3 class="mb-2 text-xl font-medium">هتل Elite World Istanbul</h3>
-              <div class="flex items-start gap-4">
-                <span class="flex items-center gap-1">
-                  <img src="../icons/cafeIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">B.B</span>
-                </span>
-                <span class="w-px h-6 bg-zinc-300"></span>
-                <div class="flex items-center gap-1">
-                  <img src="../icons/starIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">4 ستاره</span>
+              <div class="px-4 mt-12">
+                <h3 class="mb-2 text-xl font-medium">
+                  هتل Elite World Istanbul
+                </h3>
+                <div class="flex items-start gap-4">
+                  <span class="flex items-center gap-1">
+                    <img src="../icons/cafeIcon.svg" alt="" />
+                    <span class="pt-1 text-sm">B.B</span>
+                  </span>
+                  <span class="w-px h-6 bg-zinc-300"></span>
+                  <div class="flex items-center gap-1">
+                    <img src="../icons/starIcon.svg" alt="" />
+                    <span class="pt-1 text-sm">4 ستاره</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div
-            class="relative bg-white pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
-          >
-            <div class="relative">
-              <div class="absolute w-full h-full bg-light-gradient"></div>
-              <img
-                src="../../public/images/sunshine.jpg"
-                alt="sunshine"
-                class="object-cover w-full h-64"
-              />
-              <div
-                class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
-              >
-                <img src="../icons/locationIcon.svg" alt="" />
-                <span class="text-sm text-Primery-700">موقعیت</span>
+            <div
+              class="relative bg-white pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
+            >
+              <div class="relative">
+                <div class="absolute w-full h-full bg-light-gradient"></div>
+                <img
+                  src="../../public/images/sunshine.jpg"
+                  alt="sunshine"
+                  class="object-cover w-full h-64"
+                />
+                <div
+                  class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
+                >
+                  <img src="../icons/locationIcon.svg" alt="" />
+                  <span class="text-sm text-Primery-700">موقعیت</span>
+                </div>
+                <button
+                  class="absolute px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
+                >
+                  مشاهده
+                </button>
               </div>
-              <button
-                class="absolute px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
-              >
-                مشاهده
-              </button>
-            </div>
-            <div class="px-4 mt-12">
-              <h3 class="mb-2 text-xl font-medium">هتل Elite World Istanbul</h3>
-              <div class="flex items-start gap-4">
-                <span class="flex items-center gap-1">
-                  <img src="../icons/cafeIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">B.B</span>
-                </span>
-                <span class="w-px h-6 bg-zinc-300"></span>
-                <div class="flex items-center gap-1">
-                  <img src="../icons/starIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">4 ستاره</span>
+              <div class="px-4 mt-12">
+                <h3 class="mb-2 text-xl font-medium">
+                  هتل Elite World Istanbul
+                </h3>
+                <div class="flex items-start gap-4">
+                  <span class="flex items-center gap-1">
+                    <img src="../icons/cafeIcon.svg" alt="" />
+                    <span class="pt-1 text-sm">B.B</span>
+                  </span>
+                  <span class="w-px h-6 bg-zinc-300"></span>
+                  <div class="flex items-center gap-1">
+                    <img src="../icons/starIcon.svg" alt="" />
+                    <span class="pt-1 text-sm">4 ستاره</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div
-            class="relative bg-white pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
-          >
-            <div class="relative">
-              <div class="absolute w-full h-full bg-light-gradient"></div>
-              <img
-                src="../../public/images/sunshine.jpg"
-                alt="sunshine"
-                class="object-cover w-full h-64"
-              />
-              <div
-                class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
-              >
-                <img src="../icons/locationIcon.svg" alt="" />
-                <span class="text-sm text-Primery-700">موقعیت</span>
+            <div
+              class="relative bg-white pb-6 overflow-hidden border border-solid border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
+            >
+              <div class="relative">
+                <div class="absolute w-full h-full bg-light-gradient"></div>
+                <img
+                  src="../../public/images/sunshine.jpg"
+                  alt="sunshine"
+                  class="object-cover w-full h-64"
+                />
+                <div
+                  class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
+                >
+                  <img src="../icons/locationIcon.svg" alt="" />
+                  <span class="text-sm text-Primery-700">موقعیت</span>
+                </div>
+                <button
+                  class="absolute px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
+                >
+                  مشاهده
+                </button>
               </div>
-              <button
-                class="absolute px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
-              >
-                مشاهده
-              </button>
-            </div>
-            <div class="px-4 mt-12">
-              <h3 class="mb-2 text-xl font-medium">هتل Elite World Istanbul</h3>
-              <div class="flex items-start gap-4">
-                <span class="flex items-center gap-1">
-                  <img src="../icons/cafeIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">B.B</span>
-                </span>
-                <span class="w-px h-6 bg-zinc-300"></span>
-                <div class="flex items-center gap-1">
-                  <img src="../icons/starIcon.svg" alt="" />
-                  <span class="pt-1 text-sm">4 ستاره</span>
+              <div class="px-4 mt-12">
+                <h3 class="mb-2 text-xl font-medium">
+                  هتل Elite World Istanbul
+                </h3>
+                <div class="flex items-start gap-4">
+                  <span class="flex items-center gap-1">
+                    <img src="../icons/cafeIcon.svg" alt="" />
+                    <span class="pt-1 text-sm">B.B</span>
+                  </span>
+                  <span class="w-px h-6 bg-zinc-300"></span>
+                  <div class="flex items-center gap-1">
+                    <img src="../icons/starIcon.svg" alt="" />
+                    <span class="pt-1 text-sm">4 ستاره</span>
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- نمونه هتل ها -->
           </div>
-          <!-- نمونه هتل ها -->
         </div>
       </section>
       <!-- هتل ها -->
@@ -1988,7 +2005,11 @@
           <article
             class="relative overflow-hidden bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
           >
-          <img src="../../public/images/Rome.jpg" alt="" class="absolute w-full h-full bottom-0 right-0 object-cover">
+            <img
+              src="../../public/images/Rome.jpg"
+              alt=""
+              class="absolute w-full h-full bottom-0 right-0 object-cover"
+            />
             <div
               class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
             ></div>
@@ -2021,7 +2042,11 @@
           <article
             class="relative overflow-hidden bg-center flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-no-repeat lg:w-[calc(33.33%-8px)]"
           >
-          <img src="../../public/images/Rome.jpg" alt="" class="absolute w-full h-full bottom-0 right-0 object-cover">
+            <img
+              src="../../public/images/Rome.jpg"
+              alt=""
+              class="absolute w-full h-full bottom-0 right-0 object-cover"
+            />
             <div
               class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
             ></div>
@@ -2054,7 +2079,11 @@
           <article
             class="relative overflow-hidden flex flex-col justify-end pb-8 h-96 rounded-xl px-4 bg-cover bg-center bg-no-repeat lg:w-[calc(33.33%-8px)]"
           >
-          <img src="../../public/images/Rome.jpg" alt="" class="absolute w-full h-full bottom-0 right-0 object-cover">
+            <img
+              src="../../public/images/Rome.jpg"
+              alt=""
+              class="absolute w-full h-full bottom-0 right-0 object-cover"
+            />
             <div
               class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
             ></div>

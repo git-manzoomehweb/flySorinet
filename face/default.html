@@ -107,8 +107,9 @@
     <!-- swiper -->
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css"
     />
+
     <!-- common styles for all page -->
     <basis core="call" file="style.inc" />
     <script
@@ -1653,8 +1654,7 @@
           </section>
         </layout>
         <face filter="link is null">
-          <a
-            href="/tour.bc?catid=@catid"
+          <div
             class="relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
           >
             <div class="relative h-64">
@@ -1668,15 +1668,16 @@
                 <h3 class="mb-2 text-xl text-white">@title</h3>
                 <div class="flex items-center gap-2">
                   <img src="[##cms.cms.cdn##]/images/clockIcon.svg" alt="" />
-                  <span class="text-sm text-white">7 روز و 7 شب</span>
+                  <span class="text-sm text-white">@prp_8076</span>
                 </div>
               </div>
             </div>
-            <span
+            <a
+              href="/tour.bc?id=@id"
               class="absolute flex items-center justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
             >
               مشاهده
-            </span>
+            </a>
             <div class="flex flex-col gap-2 px-4 mt-9">
               <span class="flex items-center text-sm text-zinc-900">
                 <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="" />
@@ -1692,11 +1693,10 @@
               </span>
               <span class="font-medium text-zinc-900">@prp_8181</span>
             </div>
-          </a>
+          </div>
         </face>
-        <face filter="">
-          <a
-            href="@link"
+        <face>
+          <div
             class="relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]"
           >
             <div class="relative h-64">
@@ -1710,15 +1710,16 @@
                 <h3 class="mb-2 text-xl text-white">@title</h3>
                 <div class="flex items-center gap-2">
                   <img src="[##cms.cms.cdn##]/images/clockIcon.svg" alt="" />
-                  <span class="text-sm text-white">7 روز و 7 شب</span>
+                  <span class="text-sm text-white">@prp_8076</span>
                 </div>
               </div>
             </div>
-            <span
+            <a
+              href="@link"
               class="absolute flex items-center justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
             >
               مشاهده
-            </span>
+            </a>
             <div class="flex flex-col gap-2 px-4 mt-9">
               <span class="flex items-center text-sm text-zinc-900">
                 <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="" />
@@ -1734,7 +1735,7 @@
               </span>
               <span class="font-medium text-zinc-900">@prp_8181</span>
             </div>
-          </a>
+          </div>
         </face>
       </basis>
       <!-- تور لحظه اخری  -->
@@ -1742,30 +1743,12 @@
       <!-- هتل ها -->
       <basis core="list" datamembername="db.hotel">
         <layout>
-          <section class="mt-24 desktopContainer">
+          <section class="desktopContainer mt-24">
             <div
               class="absolute bg-main-desktop-back w-[62rem] h-[33rem] top-[125rem] left-0 -scale-100 rounded-bl-[200px] rounded-tl-[200px] -z-10"
             ></div>
-            <div class="flex items-center justify-between mb-6">
-              <div class="flex items-center gap-8">
-                <h2 class="text-2xl font-bold">هتل ها</h2>
-                <a
-                  href="/hotel-list.bc?catid=212047"
-                  class="text-xl font-medium text-Primery-700"
-                  >مشاهده همه</a
-                >
-              </div>
-              <div class="flex items-center gap-3">
-                <button>
-                  <img src="[##cms.cms.cdn##]/images/previousIcon.svg" alt="" />
-                </button>
-                <button>
-                  <img src="[##cms.cms.cdn##]/images/nextIcon.svg" alt="" />
-                </button>
-              </div>
-            </div>
 
-            <div class="swiper hotels-swiper">
+            <div class="swiper hotels-swiper pt-20">
               <div
                 class="flex flex-col gap-2 swiper-wrapper lg:flex-row lg:justify-between lg:gap-0"
               >
@@ -1773,102 +1756,112 @@
                 @child
                 <!-- نمونه هتل ها -->
               </div>
-              <div class="absolute top-0 left-0 flex flex-row-reverse w-10">
-                <div class="swiper-button-next-custom">
-                  <img src="[##cms.cms.cdn##]/images/previousIcon.svg" alt="" />
+
+              <div class="absolute top-0 left-0 flex justify-between w-full">
+                <div class="flex items-center gap-8">
+                  <h2 class="text-2xl font-bold">هتل ها</h2>
+                  <a
+                    href="/hotel-list.bc?catid=212047"
+                    class="text-xl font-medium text-Primery-700"
+                    >مشاهده همه</a
+                  >
                 </div>
-                <div class="swiper-button-prev-custom">
-                  <img src="[##cms.cms.cdn##]/images/nextIcon.svg" alt="" />
+                <div class="flex">
+                  <div class="swiper-button-next-custom">
+                    <img
+                      src="[##cms.cms.cdn##]/images/previousIcon.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-button-prev-custom">
+                    <img src="[##cms.cms.cdn##]/images/nextIcon.svg" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
           </section>
         </layout>
         <face>
-          <div class="relative pb-6 overflow-hidden bg-white border border-solid swiper-slide border-zinc-300 rounded-xl">
-            <a
-              href="@link"
-              class=""
-            >
-              <div class="relative">
-                <div class="absolute w-full h-full bg-light-gradient"></div>
+          <div
+            class="relative pb-6 overflow-hidden bg-white border border-solid swiper-slide border-zinc-300 rounded-xl"
+          >
+            <div class="relative">
+              <div class="absolute w-full h-full bg-light-gradient"></div>
+              <img
+                src="@00412X00295prp"
+                alt="@title"
+                class="object-cover w-full h-64"
+              />
+              <span
+                class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
+              >
                 <img
-                  src="@00412X00295prp"
-                  alt="sunshine"
-                  class="object-cover w-full h-64"
+                  src="[##cms.cms.cdn##]/images/locationIcon.svg"
+                  alt="location"
                 />
-                <span
-                  class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
-                >
-                  <img
-                    src="[##cms.cms.cdn##]/images/locationIcon.svg"
-                    alt="location"
-                  />
-                  <span class="text-sm text-Primery-700">موقعیت</span>
+                <span class="text-sm text-Primery-700">موقعیت</span>
+              </span>
+              <a
+                href="@link"
+                class="absolute flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
+              >
+                مشاهده
+              </a>
+            </div>
+            <div class="px-4 mt-12">
+              <h3 class="mb-2 text-xl font-medium">@title</h3>
+              <div class="flex items-start gap-4">
+                <span class="flex items-center gap-1">
+                  <img src="[##cms.cms.cdn##]/images/cafeIcon.svg" alt="" />
+                  <span class="pt-1 text-sm">B.B</span>
                 </span>
-                <span
-                  class="absolute flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
-                >
-                  مشاهده
-                </span>
-              </div>
-              <div class="px-4 mt-12">
-                <h3 class="mb-2 text-xl font-medium">@title</h3>
-                <div class="flex items-start gap-4">
-                  <span class="flex items-center gap-1">
-                    <img src="[##cms.cms.cdn##]/images/cafeIcon.svg" alt="" />
-                    <span class="pt-1 text-sm">B.B</span>
-                  </span>
-                  <span class="w-px h-6 bg-zinc-300"></span>
-                  <div class="flex items-center gap-1">
-                    <img src="./_images/@prp_3087407star.png" alt="star" />
-                    <span class="pt-1 text-sm">@prp_3087407 ستاره</span>
-                  </div>
+                <span class="w-px h-6 bg-zinc-300"></span>
+                <div class="flex items-center gap-1">
+                  <img src="./_images/@prp_3087407star.png" alt="star" />
+                  <span class="pt-1 text-sm">@prp_3087407 ستاره</span>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         </face>
         <face filter="link is null">
-          <div class="relative pb-6 overflow-hidden bg-white border border-solid swiper-slide border-zinc-300 rounded-xl">
-            <a
-              href="/hotel.bc?id=@id"
-              class=""
-            >
-              <div class="relative">
-                <div class="absolute w-full h-full bg-light-gradient"></div>
-                <img
-                  src="[##cms.cms.cdn##]/images/sunshine.jpg"
-                  alt="sunshine"
-                  class="object-cover w-full h-64"
-                />
-                <span
-                  class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
-                >
-                  <img src="[##cms.cms.cdn##]/images/locationIcon.svg" alt="" />
-                  <span class="text-sm text-Primery-700">موقعیت</span>
+          <div
+            class="relative pb-6 overflow-hidden bg-white border border-solid swiper-slide border-zinc-300 rounded-xl"
+          >
+            <div class="relative">
+              <div class="absolute w-full h-full bg-light-gradient"></div>
+              <img
+                src="[##cms.cms.cdn##]/images/sunshine.jpg"
+                alt="sunshine"
+                class="object-cover w-full h-64"
+              />
+              <span
+                class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
+              >
+                <img src="[##cms.cms.cdn##]/images/locationIcon.svg" alt="" />
+                <span class="text-sm text-Primery-700">موقعیت</span>
+              </span>
+              <a
+                href="/hotel.bc?id=@id"
+                class="absolute flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
+              >
+                مشاهده
+              </a>
+            </div>
+            <div class="px-4 mt-12">
+              <h3 class="mb-2 text-xl font-medium">@title</h3>
+              <div class="flex items-start gap-4">
+                <span class="flex items-center gap-1">
+                  <img src="[##cms.cms.cdn##]/images/cafeIcon.svg" alt="" />
+                  <span class="pt-1 text-sm">B.B</span>
                 </span>
-                <span
-                  class="absolute flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
-                >
-                  مشاهده
-                </span>
-              </div>
-              <div class="px-4 mt-12">
-                <h3 class="mb-2 text-xl font-medium">@title</h3>
-                <div class="flex items-start gap-4">
-                  <span class="flex items-center gap-1">
-                    <img src="[##cms.cms.cdn##]/images/cafeIcon.svg" alt="" />
-                    <span class="pt-1 text-sm">B.B</span>
-                  </span>
-                  <span class="w-px h-6 bg-zinc-300"></span>
-                  <div class="flex items-center gap-1">
-                    <img src="./_images/@prp_3087407star.png" alt="star" />
-                    <span class="pt-1 text-sm">@prp_3087407 ستاره</span>
-                  </div>
+                <span class="w-px h-6 bg-zinc-300"></span>
+                <div class="flex items-center gap-1">
+                  <img src="./_images/@prp_3087407star.png" alt="star" />
+                  <span class="pt-1 text-sm">@prp_3087407 ستاره</span>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         </face>
       </basis>
@@ -1879,32 +1872,35 @@
       <basis core="list" datamembername="db.articles">
         <layout>
           <section class="mt-24 desktopContainer">
-            <div class="flex items-center justify-between mb-6">
-              <div class="flex items-center gap-8">
-                <h2 class="text-2xl font-bold">مقاله ها</h2>
-                <a
-                  href="/articles-list.bc?catid=210488"
-                  class="text-xl font-medium text-Primery-700"
-                  >مشاهده همه</a
-                >
-              </div>
-              <div class="flex items-center gap-3">
-                <button>
-                  <img src="[##cms.cms.cdn##]/images/previousIcon.svg" alt="" />
-                </button>
-                <button>
-                  <img src="[##cms.cms.cdn##]/images/nextIcon.svg" alt="" />
-                </button>
-              </div>
-            </div>
-
-            <div class="swiper articles-swiper !overflow-visible">
+            <div class="swiper articles-swiper pt-20">
               <div
                 class="flex flex-col gap-2 swiper-wrapper lg:flex-row lg:gap-0 lg:justify-between"
               >
                 <!-- simple of articles -->
                 @child
                 <!-- simple of articles -->
+              </div>
+
+              <div class="absolute top-0 left-0 flex justify-between w-full">
+                <div class="flex items-center gap-8">
+                  <h2 class="text-2xl font-bold">مقاله ها</h2>
+                  <a
+                    href="/article-list.bc?catid=210488"
+                    class="text-xl font-medium text-Primery-700"
+                    >مشاهده همه</a
+                  >
+                </div>
+                <div class="flex">
+                  <div class="swiper-button-next-custom">
+                    <img
+                      src="[##cms.cms.cdn##]/images/previousIcon.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-button-prev-custom">
+                    <img src="[##cms.cms.cdn##]/images/nextIcon.svg" alt="" />
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -1914,38 +1910,37 @@
             <article
               class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
-              <a href="/articles.bc?id=@id">
-                <img
-                  src="@00412X00295prp"
-                  alt=""
-                  class="absolute bottom-0 right-0 object-cover w-full h-full"
-                />
-                <div
-                  class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-                ></div>
-                <div class="relative z-10">
-                  <div>
-                    <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
-                    <p class="text-sm text-justify text-white line-clamp-3">
-                      @prp_7244
-                    </p>
-                  </div>
-                  <div class="flex items-center justify-between mt-2">
-                    <span class="flex items-center gap-1 text-white">
-                      <img
-                        src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
-                        alt=""
-                      />
-                      @cdate
-                    </span>
-                    <span
-                      class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-                    >
-                      بیشتر بخوانید
-                    </span>
+              <img
+                src="@00412X00295prp"
+                alt=""
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
+                  <div class="text-sm text-justify text-white line-clamp-3">
+                    @prp_7244
                   </div>
                 </div>
-              </a>
+                <div class="flex items-center justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img
+                      src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
+                      alt=""
+                    />
+                    @cdate
+                  </span>
+                  <a
+                    href="/article.bc?id=@id"
+                    class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </a>
+                </div>
+              </div>
             </article>
           </div>
         </face>
@@ -1954,38 +1949,37 @@
             <article
               class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
             >
-              <a href="@link">
-                <img
-                  src="@00412X00295prp"
-                  alt=""
-                  class="absolute bottom-0 right-0 object-cover w-full h-full"
-                />
-                <div
-                  class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-                ></div>
-                <div class="relative z-10">
-                  <div>
-                    <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
-                    <p class="text-sm text-justify text-white line-clamp-3">
-                      @prp_7244
-                    </p>
-                  </div>
-                  <div class="flex items-center justify-between mt-2">
-                    <span class="flex items-center gap-1 text-white">
-                      <img
-                        src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
-                        alt=""
-                      />
-                      @cdate
-                    </span>
-                    <span
-                      class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-                    >
-                      بیشتر بخوانید
-                    </span>
-                  </div>
+              <img
+                src="@00412X00295prp"
+                alt=""
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
+                  <p class="text-sm text-justify text-white line-clamp-3">
+                    @prp_7244
+                  </p>
                 </div>
-              </a>
+                <div class="flex items-center justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img
+                      src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
+                      alt=""
+                    />
+                    @cdate
+                  </span>
+                  <a
+                    href="@link"
+                    class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </a>
+                </div>
+              </div>
             </article>
           </div>
         </face>
@@ -2028,7 +2022,7 @@
     <basis core="call" file="footer.inc" />
     <!-- footer end -->
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
     <script>
       var articlesSwiper = new Swiper(".articles-swiper", {
         slidesPerView: 1,
@@ -2046,8 +2040,8 @@
           clickable: true,
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next-custom",
+          prevEl: ".swiper-button-prev-custom",
         },
         breakpoints: {
           640: {

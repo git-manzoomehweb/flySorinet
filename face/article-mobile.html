@@ -1,0 +1,384 @@
+<basis
+  core="dbsource"
+  source="basiscore"
+  name="db"
+  lid="1"
+  mid="1"
+  usedforid="[##cms.query.id##]"
+>
+  <member request="json-ld" type="scalar" name="json" />
+</basis>
+<basis
+  core="dbsource"
+  source="basiscore"
+  name="db"
+  mid="1"
+  lid="1"
+  usedforid="[##cms.query.id##]"
+>
+  <member name="view" type="view" propertyid="7249" />
+  <member
+    name="related-article"
+    type="list"
+    blgid="222"
+    link="article.bc"
+    propertyid="7244,7248,7227,77320"
+    perpage="9"
+    typeid="159"
+  />
+</basis>
+
+<basis
+  core="dbsource"
+  source="basiscore"
+  lid="1"
+  mid="1"
+  name="db"
+  catid="[##cms.query.nid##]"
+>
+  <member
+    name="news-list"
+    type="list"
+    link="article.bc"
+    propertyid="7244"
+    perpage="2"
+    size="90x90"
+    order="ord"
+  />
+</basis>
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover"
+    />
+    <title>
+      [##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]
+    </title>
+    <meta
+      name="description"
+      content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]"
+    />
+    <basis
+      core="dbsource"
+      source="hosting"
+      name="tag"
+      urlid="[##cms.seo.urlid##]"
+    >
+      <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+      <face filter="key = 'canonical'">
+        <link rel="canonical" href="@value" />
+      </face>
+      <face>
+        <meta property="@key" content="@value" />
+      </face>
+    </basis>
+    <basis core="call" file="pwa.inc" />
+    <basis core="call" file="style.inc" />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="px-2">
+    <!-- header -->
+    <basis
+      core="call"
+      file="header.inc"
+      pageindex="[##cms.cms.pageindex##]"
+    ></basis>
+    <!-- header end -->
+
+    <main>
+      <basis core="print" datamembername="db.view">
+        <face filter="TypeID in(159)"
+          ><img
+            src="[##cms.cms.cdn##]/@text"
+            alt="article-list-background"
+            class="object-cover object-bottom border-b-8 border-solid border-Primery-600 w-full rounded-3xl"
+        /></face>
+      </basis>
+      <section class="px-4 pt-4 pb-8">
+        <basis core="print" datamembername="db.view">
+          <layout>
+            <div class="flex items-center justify-between">@child</div>
+          </layout>
+          <face filter="TypeID in(150)">
+            <h2 id="@valueID" class="text-xl font-medium">@text</h2>
+          </face>
+          <face filter="prpID in(7249)">
+            <span class="text-sm">@prp_7249</span>
+          </face>
+        </basis>
+
+        <basis core="print" datamembername="db.view">
+          <layout> @child </layout>
+          <face filter="TypeID in(129)">
+            <div class="mt-6 mb-6 text-sm text-justify">@largetext</div>
+          </face>
+          <face filter="TypeID in(250)">
+            <h2 id="@valueID" class="mt-10 mb-4 text-xl font-medium">@text</h2>
+            <div class="mb-6 text-sm text-justify">@largetext</div>
+          </face>
+        </basis>
+
+        <basis core="view" datamembername="db.view">
+          <layout>
+            <div class="flex flex-col gap-4 p-3 bg-zinc-100 rounded-xl">
+              @child
+            </div>
+          </layout>
+          <face filter="TypeID in(150 , 250)">
+            <a href="#@valueID" class="flex items-center gap-2">
+              <img src="[##cms.cms.cdn##]/images/starFillIcon.svg" alt="" />
+              @text
+            </a>
+          </face>
+        </basis>
+      </section>
+
+      <section class="px-4 pt-4 pb-8">
+        <h2 class="mb-4 font-medium">اخبار روز</h2>
+        <basis core="list" datamembername="db.news-list">
+          <layout>
+            <div class="flex flex-col gap-4">
+              <!-- news -->
+              @child
+              <!-- news end -->
+            </div>
+          </layout>
+          <face filter="link is null">
+            <a href="/article.bc?id=@id" class="flex items-center gap-4">
+              <img
+                src="@00090X00090prp"
+                alt="@title"
+                class="object-cover w-24 h-24 rounded-xl"
+              />
+              <div class="flex flex-col gap-2">
+                <h2 class="text-sm">@title</h2>
+                <span class="text-sm line-clamp-2">@prp_7244</span>
+              </div>
+            </a>
+          </face>
+          <face>
+            <a href="@link" class="flex items-center gap-4">
+              <img
+                src="@00090X00090prp"
+                alt="dubai"
+                class="object-cover w-24 h-24 rounded-xl"
+              />
+              <div class="flex flex-col gap-2">
+                <h2 class="text-sm">@title</h2>
+                <span class="text-sm line-clamp-2">@prp_7244</span>
+              </div>
+            </a>
+          </face>
+        </basis>
+      </section>
+
+      <!-- articles -->
+      <section class="mt-4 desktopContainer">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="font-medium">مقاله ها</h2>
+          <span class="text-sm text-Primery-700">مشاهده همه</span>
+        </div>
+
+        <basis core="list" datamembername="db.related-article">
+          <layout>
+            <section class="mt-20 desktopContainer">
+              <div
+                class="flex flex-col gap-2 lg:flex-row lg:gap-0 lg:justify-between"
+              >
+                <!-- simple of articles -->
+                @child
+                <!-- simple of articles -->
+              </div>
+            </section>
+          </layout>
+          <face filter="link in null">
+            <article
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
+            >
+              <img
+                src="@type_159"
+                alt="@title"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
+                  <p class="text-sm text-justify text-white line-clamp-3">
+                    @prp_7244
+                  </p>
+                </div>
+                <div class="flex items-center justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img
+                      src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
+                      alt=""
+                    />
+                    @cdate
+                  </span>
+                  <a
+                    href="/article.bc?id=@id"
+                    class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </a>
+                </div>
+              </div>
+            </article>
+          </face>
+          <face>
+            <article
+              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
+            >
+              <img
+                src="@type_159"
+                alt="@title"
+                class="absolute bottom-0 right-0 object-cover w-full h-full"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
+              ></div>
+              <div class="relative z-10">
+                <div>
+                  <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
+                  <div class="text-sm text-justify text-white line-clamp-3">
+                    @prp_7244
+                  </div>
+                </div>
+                <div class="flex items-center justify-between mt-2">
+                  <span class="flex items-center gap-1 text-white">
+                    <img
+                      src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
+                      alt=""
+                    />
+                    @cdate
+                  </span>
+                  <a
+                    href="@link"
+                    class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                  >
+                    بیشتر بخوانید
+                  </a>
+                </div>
+              </div>
+            </article>
+          </face>
+        </basis>
+      </section>
+      <!-- articles -->
+
+      <!-- swiper -->
+      <section class="mt-16">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="[##cms.cms.cdn##]/images/sunExpress.png"
+                alt="sunExpress"
+                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="[##cms.cms.cdn##]/images/SalamAir.png"
+                alt="SalamAir"
+                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="[##cms.cms.cdn##]/images/turkishAirlines.png"
+                alt="turkishAirlines"
+                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="[##cms.cms.cdn##]/images/Qatar.png"
+                alt="Qatar"
+                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="[##cms.cms.cdn##]/images/IranAir.png"
+                alt="IranAir"
+                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <basis
+      core="call"
+      file="footer.inc"
+      pageindex="[##cms.cms.pageindex##]"
+    ></basis>
+    <!-- footer end -->
+
+    <basis
+      core="call"
+      file="script.inc"
+      pageindex="[##cms.cms.pageindex##]"
+    ></basis>
+    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        speed: 400,
+        centeredSlides: false,
+        spaceBetween: 30,
+        grabCursor: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
