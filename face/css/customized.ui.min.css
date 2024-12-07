@@ -1062,3 +1062,22 @@ video {
 
   src: url('../_fonts/DanaFaNum-Bold') format('truetype');
 }
+
+footer [data-bc-schema-direction="rtl"] [data-bc-title-container] {
+  display: none !important;
+}
+
+footer [data-bc-schema-direction="rtl"] [data-bc-title-container] [data-bc-question-title] {
+  display: none !important;
+}
+
+footer [data-bc-answer-container] input[type="text"] {
+  background-color: #1E1919 !important;
+  width: 100% !important;
+  height: 64px !important;
+  padding: 16px 12px !important;
+  font-weight: 500 !important;
+  outline: none !important;
+  border-radius: 12px !important;
+  color: #a1a1aa !important;
+}

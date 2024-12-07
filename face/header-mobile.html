@@ -1,210 +1,22 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="tour">
-  <member
-    name="cat"
-    type="tree"
-    request="cat"
-    parentid="210485"
-    order="ord"
-  ></member>
+  <member name="cat" type="tree" request="cat" parentid="210485" order="ord"></member>
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="visa">
-  <member
-    name="cat"
-    type="tree"
-    request="cat"
-    parentid="212044"
-    order="ord"
-  ></member>
+  <member name="cat" type="tree" request="cat" parentid="212044" order="ord"></member>
 </basis>
 <header>
   <!-- header subset  -->
-  <div
-    class="fixed z-50 hidden w-full h-full bg-black mobile-menu-overlay bg-opacity-70 overfh lg:hidden"
-  >
-    <div
-      class="fixed right-0 z-50 w-9/12 h-full p-4 overflow-scroll transition duration-200 ease-in-out transform bg-white shadow-md mobile-menu translate-x-96"
-    >
-      <nav class="flex items-center w-full h-full">
-        <ul class="flex flex-col justify-between w-full h-full gap-10">
-          <!-- منوی اصلی -->
-          <li class="flex items-center justify-between">
-            <a href=""> صفحه اصلی </a>
-            <img
-              src="[##cms.cms.cdn##]/images/xIcon.svg"
-              alt=""
-              class="w-8 cursor-pointer close-menu"
-            />
-          </li>
-
-          <basis
-          core="tree"
-          datamembername="tour.cat"
-          idcol="catid"
-          parentidcol="parentid"
-          nullvalue="210485"
-        >
-          <layout>
-            <li class="group">
-              <span class="flex items-center gap-2 cursor-pointer group">
-                تور ها
-                <img
-                  src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
-                  alt=""
-                  class="transition-all duration-200 group-hover:rotate-90"
-                />
-              </span>
-              <!-- submenu -->
-              <ul
-                class="absolute z-50 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100"
-              >
-                @child
-              </ul>
-            </li>
-          </layout>
-          <face level="1" filter="link is null">
-            <li class="relative group/leveltwo">
-              <div class="flex justify-between cursor-pointer">
-                <a href="/tour-list.bc?catid=@catid">@title</a>
-                <img
-                  src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
-                  alt=""
-                  class="transition-all duration-200 group-hover/leveltwo:rotate-90"
-                />
-              </div>
-              <ul
-                class="absolute top-0 z-50 flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100"
-              >
-                @child
-              </ul>
-            </li>
-          </face>
-          <face level="1">
-            <li class="relative group/leveltwo">
-              <div class="flex justify-between cursor-pointer">
-                <a href="@link">@title</a>
-                <img
-                  src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
-                  alt=""
-                  class="transition-all duration-200 group-hover/leveltwo:rotate-90"
-                />
-              </div>
-              <ul
-                class="absolute top-0 flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-sm opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100"
-              >
-                @child
-              </ul>
-            </li>
-          </face>
-          <face level="end" filter="link is null">
-            <li><a href="/tour-list.bc?catid=@catid">@title</a></li>
-          </face>
-          <face level="end">
-            <li><a href="@link">@title</a></li>
-          </face>
-          <!-- submenu end -->
-        </basis>
-          <!-- منوی تور -->
-          <li class="menu-item">
-            <div
-              class="flex items-center justify-between cursor-pointer menu-trigger"
-            >
-              <span class="flex items-center gap-2">
-                تور ها
-                <img
-                  src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
-                  alt=""
-                  class="chevron transition duration-200 ease-in-out"
-                />
-              </span>
-            </div>
-            <ul
-              class="submenu p-4 invisible opacity-0 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500"
-            >
-              <!-- زیرمنوی ایرانگردی -->
-              <li class="submenu-item overflow-hidden">
-                <div
-                  class="flex items-center justify-between cursor-pointer submenu-trigger"
-                >
-                  <span>ایرانگردی</span>
-                  <img
-                    src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
-                    alt=""
-                    class="chevron transition duration-200 ease-in-out"
-                  />
-                </div>
-                <ul
-                  class="nested-menu max-h-0 transition-all duration-300 ease-in-out pr-4 mt-2"
-                >
-                  <li>اصفهان</li>
-                  <li>شیراز</li>
-                  <li>تبریز</li>
-                </ul>
-              </li>
-              <!-- زیرمنوی جهانگردی -->
-              <li class="submenu-item overflow-hidden">
-                <div
-                  class="flex items-center justify-between cursor-pointer submenu-trigger"
-                >
-                  <span>جهانگردی</span>
-                  <img
-                    src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
-                    alt=""
-                    class="chevron transition duration-200 ease-in-out"
-                  />
-                </div>
-                <ul
-                  class="nested-menu max-h-0 transition-all duration-300 ease-in-out pr-4 mt-2"
-                >
-                  <li>استانبول</li>
-                  <li>دبی</li>
-                  <li>آنتالیا</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-
-          <!-- منوی ویزا -->
-          <li class="menu-item">
-            <div
-              class="flex items-center justify-between cursor-pointer menu-trigger"
-            >
-              <span class="flex items-center gap-2">
-                ویزا
-                <img
-                  src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
-                  alt=""
-                  class="chevron transition duration-200 ease-in-out"
-                />
-              </span>
-            </div>
-            <div
-              class="submenu p-4 rounded-xl bg-white invisible opacity-0 flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500"
-            >
-              <a href="">ویزای شینگن</a>
-              <a href="">ویزای اروپا</a>
-              <a href="">ویزای آمریکا</a>
-            </div>
-          </li>
-
-          <li><a href="">مقالات</a></li>
-          <li><a href="">گردشگری</a></li>
-          <li><a href="">تماس با ما</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <!-- header subset end -->
-
   <div class="fixed z-50 hidden w-full h-full bg-black mobile-menu-overlay bg-opacity-70 overfh lg:hidden">
-    <div class="fixed right-0 z-50 w-9/12 h-full p-4 overflow-scroll transition duration-200 ease-in-out transform bg-white shadow-md mobile-menu translate-x-96">
+    <div
+      class="fixed right-0 z-50 w-9/12 h-full p-4 overflow-scroll transition duration-200 ease-in-out transform bg-white shadow-md mobile-menu translate-x-96">
       <nav class="flex items-center w-full h-full">
         <ul class="flex flex-col justify-between w-full h-full gap-10">
           <!-- منوی اصلی -->
           <li class="flex items-center justify-between">
             <a href=""> صفحه اصلی </a>
-            <img src="../icons/xIcon.svg" alt="" class="w-8 cursor-pointer close-menu" />
+            <img src="[##cms.cms.cdn##]/images/xIcon.svg" alt="" class="w-8 cursor-pointer close-menu" />
           </li>
-  
+
           <basis core="tree" datamembername="tour.cat" idcol="catid" parentidcol="parentid" nullvalue="210485">
             <layout>
               <!-- منوی تور -->
@@ -212,95 +24,103 @@
                 <div class="flex items-center justify-between cursor-pointer menu-trigger">
                   <span class="flex items-center gap-2">
                     تور ها
-                    <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="" class="chevron transition duration-200 ease-in-out"/>
+                    <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt=""
+                      class="transition duration-200 ease-in-out chevron" />
                   </span>
                 </div>
-                <ul class="submenu p-4 invisible opacity-0 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500">
+                <ul
+                  class="submenu p-4 invisible opacity-0 rounded-xl bg-white flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500">
                   @child
                 </ul>
               </li>
             </layout>
-  
+
             <!-- سطح اول - بدون لینک -->
             <face level="1" filter="link is null">
-              <li class="submenu-item overflow-hidden">
+              <li class="overflow-hidden submenu-item">
                 <div class="flex items-center justify-between cursor-pointer submenu-trigger">
                   <span>@title</span>
-                  <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="" class="chevron transition duration-200 ease-in-out"/>
+                  <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt=""
+                    class="transition duration-200 ease-in-out chevron" />
                 </div>
-                <ul class="nested-menu max-h-0 transition-all duration-300 ease-in-out pr-4 mt-2">
+                <ul class="pr-4 mt-2 transition-all duration-300 ease-in-out nested-menu max-h-0">
                   @child
                 </ul>
               </li>
             </face>
-  
+
             <!-- سطح اول - با لینک -->
             <face level="1">
-              <li class="submenu-item overflow-hidden">
+              <li class="overflow-hidden submenu-item">
                 <div class="flex items-center justify-between cursor-pointer submenu-trigger">
                   <a href="@link">@title</a>
-                  <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="" class="chevron transition duration-200 ease-in-out"/>
+                  <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt=""
+                    class="transition duration-200 ease-in-out chevron" />
                 </div>
-                <ul class="nested-menu max-h-0 transition-all duration-300 ease-in-out pr-4 mt-2">
+                <ul class="pr-4 mt-2 transition-all duration-300 ease-in-out nested-menu max-h-0">
                   @child
                 </ul>
               </li>
             </face>
-  
+
             <!-- سطح آخر - بدون لینک -->
             <face level="end" filter="link is null">
               <li><a href="/tour-list.bc?catid=@catid">@title</a></li>
             </face>
-  
+
             <!-- سطح آخر - با لینک -->
             <face level="end">
               <li><a href="@link">@title</a></li>
             </face>
           </basis>
-  
+
           <!-- منوی ویزا -->
-          <li class="menu-item">
-            <div class="flex items-center justify-between cursor-pointer menu-trigger">
-              <span class="flex items-center gap-2">
-                ویزا
-                <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="" class="chevron transition duration-200 ease-in-out"/>
-              </span>
-            </div>
-            <div class="submenu p-4 rounded-xl bg-white invisible opacity-0 flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500">
-              <a href="">ویزای شینگن</a>
-              <a href="">ویزای اروپا</a>
-              <a href="">ویزای آمریکا</a>
-            </div>
-          </li>
-  
-          <li><a href="">مقالات</a></li>
-          <li><a href="">گردشگری</a></li>
-          <li><a href="">تماس با ما</a></li>
+          <basis core="tree" datamembername="visa.cat" idcol="catid" parentidcol="parentid" nullvalue="212044">
+            <layout>
+              <li class="menu-item">
+                <div class="flex items-center justify-between cursor-pointer menu-trigger">
+                  <span class="flex items-center gap-2">
+                    ویزا
+                    <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt=""
+                      class="transition duration-200 ease-in-out chevron" />
+                  </span>
+                </div>
+                <ul
+                  class="submenu p-4 rounded-xl bg-white invisible opacity-0 flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500">
+                  @child
+                </ul>
+              </li>
+            </layout>
+            <face level="end" filter="link is null">
+              <li><a href="/visa-list.bc?catid=@catid">@title</a></li>
+            </face>
+            <face level="end">
+              <li><a href="@link">@title</a></li>
+            </face>
+          </basis>
+          
+
+          <li><a href="/Tourism-magazine">مقالات</a></li>
+          <li><a href="/articles-list.bc?catid=212221">گردشگری</a></li>
+          <li><a href="/contact.bc">تماس با ما</a></li>
         </ul>
       </nav>
     </div>
   </div>
+  <!-- header subset end -->
+
+
 
   <!-- header menu mobile -->
   <div class="flex items-center justify-between px-4 py-3 lg:hidden">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="relative z-40 cursor-pointer size-6 bars3"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-      />
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      class="relative z-40 cursor-pointer size-6 bars3">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
     </svg>
 
     <div class="flex items-center gap-8">
       <img src="[##cms.cms.cdn##]/images/headerIcons.svg" alt="" />
-      <span class="Login_Information flex items-center gap-2">
+      <span class="flex items-center gap-2 Login_Information">
         <basis core="call" file="authentication/modal"></basis>
       </span>
     </div>

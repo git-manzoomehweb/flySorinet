@@ -1,0 +1,198 @@
+<basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+    <member type="list" name="list" request="taglist" preview=""></member>
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="[##cms.query.catid##]">
+    <member name="scalar" type="scalar" typeid="150" />
+</basis>
+
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+    <member name="navigation" type="tree" request="navcatid" parentid="[##cms.query.catid##]" />
+</basis>
+
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+    <member name="visa-list" type="list" link="visa.bc" propertyid="7244" perpage="9"
+        pageno="[##cms.query.pagenum|(1)##]" order="ord" />
+    <member name="paging" type="list" request="paging" count="3" parentname="visa-list" />
+</basis>
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover" />
+    <title>
+        [##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]
+    </title>
+    <meta name="description" content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]" />
+    <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+        <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+        <face filter="key = 'canonical'">
+            <link rel="canonical" href="@value" />
+        </face>
+        <face>
+            <meta property="@key" content="@value" />
+        </face>
+    </basis>
+    <basis core="call" file="pwa.inc" />
+    <basis core="call" file="style.inc" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css">
+
+</head>
+
+<body class="px-2 bg-zinc-50">
+    <!-- header -->
+    <basis core="call" file="header.inc" />
+    <!-- header end -->
+
+    <main class="relative">
+        <!-- header background -->
+        <div class="flex items-center justify-center mb-16">
+            <img src="[##cms.cms.cdn##]/images/article-list-background.jpg" alt="article-list-background"
+                class="object-cover -z-10 2xl:h-[44rem] lg:h-[30rem] object-bottom border-b-8 border-solid border-Primery-600 w-full rounded-3xl" />
+            <div class="absolute text-white">
+                <h1 class="text-2xl font-bold">ویزا</h1>
+                <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center gap-1">
+                    <li class="inline-block text-2xl font-normal text-white" itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
+                        <a class="text-white hover:text-primary-900" itemprop="item" href="/" aria-label="home"><span
+                                itemprop="name">صفحه اصلی</span>
+                            <meta itemprop="position" content="1" />
+                        </a>
+                    </li>
+                    <span class="text-white"> &gt; </span>
+                    <basis core="print" datamembername="db.navigation">
+                        <face filter="RowNumber=max(RowNumber) and parentcatid<>210442">
+                            <li class="inline-block font-normal text-white" itemprop="itemListElement" itemscope
+                                itemtype="https://schema.org/ListItem">
+                                <span itemprop="name">@title</span>
+                                <meta itemprop="position" content="@rownumber" />
+                            </li>
+                        </face>
+                        <face filter="link is null and parentcatid<>210442">
+                            <li class="flex gap-1 font-normal text-white" itemprop="itemListElement" itemscope
+                                itemtype="https://schema.org/ListItem">
+                                <a class="text-white hover:text-primary-900" itemprop="item"
+                                    href="/article-list.bc?catid=@parentcatid" aria-label="@title"><span
+                                        itemprop="name">@title</span>
+                                    <meta itemprop="position" content="@rownumber" />
+                                </a>
+                                <span class="text-white"> &gt; </span>
+                            </li>
+                        </face>
+                        <face filter="parentcatid<>210442">
+                            <li class="flex gap-1 font-normal text-white" itemprop="itemListElement" itemscope
+                                itemtype="https://schema.org/ListItem">
+                                <a class="text-white hover:text-primary-900" itemprop="item" href="@link"
+                                    aria-label="@title"><span class="text-white" itemprop="name">@title</span>
+                                    <meta itemprop="position" content="@rownumber" />
+                                </a>
+                                <span class="text-white"> &gt; </span>
+                            </li>
+                        </face>
+                    </basis>
+                </ul>
+            </div>
+        </div>
+        <!-- header background end -->
+
+
+        <section class="mt-24 desktopContainer">
+            <basis core="list" datamembername="db.visa-list">
+                <layout>
+                    <div class="grid gap-2">
+                        @child
+                    </div>
+                </layout>
+                <face filter="link is null">
+                    <a href="/visa.bc?id=@id" class="relative overflow-hidden border border-solid h-fit pb-7 border-zinc-300 rounded-xl">
+                        <div class="relative">
+                            <div class="absolute w-full h-full bg-shadow-gradient"></div>
+                            <img src="@image" alt="@title"
+                                class="object-cover w-full h-full" />
+                        </div>
+                        <div class="flex flex-col gap-2 px-4 mt-2">
+                            <h3 class="font-bold">@title</h3>
+                            <span class="flex items-center text-sm text-zinc-900">
+                                <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="" />
+                                @cdate
+                            </span>
+                        </div>
+                    </a>
+                </face>
+                <face>
+                    <a href="@link" class="relative overflow-hidden border border-solid h-fit pb-7 border-zinc-300 rounded-xl">
+                        <div class="relative">
+                            <div class="absolute w-full h-full bg-shadow-gradient"></div>
+                            <img src="@image" alt="@title"
+                                class="object-cover w-full h-full" />
+                        </div>
+                        <div class="flex flex-col gap-2 px-4 mt-2">
+                            <h3 class="font-bold">@title</h3>
+                            <span class="flex items-center text-sm text-zinc-900">
+                                <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="" />
+                                @cdate
+                            </span>
+                        </div>
+                    </a>
+                </face>
+            </basis>
+
+
+            <ul class="flex gap-3 cd-pagination no-space dir-lt2" id="wibpaging">
+                <basis core="print" datamembername="db.paging">
+                    <face filter="(@sta='pre')">
+                        <li class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600">
+                            <a class="text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page"
+                                aria-label="angle-left"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.5725 12C16.5725 12.2926 16.4605 12.5851 16.2377 12.808L9.38076 19.6649C8.93392 20.1117 8.21166 20.1117 7.76482 19.6649C7.31798 19.218 7.31798 18.4958 7.76482 18.0489L13.8137 12L7.76482 5.9511C7.31798 5.5042 7.31798 4.782 7.76482 4.3351C8.21166 3.8883 8.93392 3.8883 9.38076 4.3351L16.2377 11.192C16.4605 11.4149 16.5725 11.7074 16.5725 12Z"
+                                        fill="white" />
+                                </svg></a>
+                        </li>
+                    </face>
+                </basis>
+
+                <basis core="print" datamembername="db.paging">
+                    <face filter="(@page=[##cms.query.pagenum|(1)##])">
+                        <li class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300">
+                            <a class="current font-color-1 text-zinc-900"
+                                href="/[##cms.cms.link_page##]&pagenum=@page">@page</a>
+                        </li>
+                    </face>
+
+                    <face filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no')">
+                        <li class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300">
+                            <a class="text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page">@page</a>
+                        </li>
+                    </face>
+                </basis>
+
+                <basis core="print" datamembername="db.paging">
+                    <face filter="(@sta='nex')">
+                        <li class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600">
+                            <a class="text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page"
+                                aria-label="angle-right"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.4275 12C7.4275 11.7074 7.5395 11.4149 7.7623 11.192L14.6192 4.33513C15.0661 3.88829 15.7883 3.88829 16.2352 4.33513C16.682 4.78197 16.682 5.50423 16.2352 5.95107L10.1863 12L16.2352 18.0489C16.682 18.4958 16.682 19.218 16.2352 19.6649C15.7883 20.1117 15.0661 20.1117 14.6192 19.6649L7.7623 12.808C7.5395 12.5851 7.4275 12.2926 7.4275 12Z"
+                                        fill="white" />
+                                </svg></a>
+                        </li>
+                    </face>
+                </basis>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <basis core="call" file="footer.inc" />
+    <!-- footer end -->
+</body>
+
+</html>

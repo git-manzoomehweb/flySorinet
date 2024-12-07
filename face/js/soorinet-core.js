@@ -75,3 +75,69 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+function uploadDocumentFooter(args) {
+  document.querySelector("#contact-form-resize .Loading_Form").style.display =
+    "block";
+  const captcha = document
+    .querySelector("#contact-form-resize.form-container")
+    .querySelector("#captchaContainer input[name='captcha']").value;
+  const captchaid = document
+    .querySelector("#contact-form-resize.form-container")
+    .querySelector("#captchaContainer input[name='captchaid']").value;
+  const stringJson = JSON.stringify(args.source?.rows[0]);
+  $bc.setSource("cms.uploadFooter", {
+    value: stringJson,
+    captcha: captcha,
+    captchaid: captchaid,
+    run: true,
+  });
+}
+
+function refreshCaptchaFooter(e) {
+  $bc.setSource("captcha.refreshFooter", true);
+}
+
+function captchaRenderedFooter() {
+  document.querySelector("#contact-form-resize .contactUsInput").placeholder =
+    "کد امنیتی";
+}
+
+async function OnProcessedEditObjectFooter(args) {
+  var response = args.response;
+  var json = await response.json();
+  var errorid = json.errorid;
+  if (errorid == "6") {
+    document.querySelector("#contact-form-resize .Loading_Form").style.display =
+      "none";
+    document.querySelector("#contact-form-resize .message-api").innerHTML =
+      "درخواست شما با موفقیت ثبت شد.";
+  } else {
+    refreshCaptchaFooter();
+    setTimeout(() => {
+      document.querySelector(
+        "#contact-form-resize .Loading_Form"
+      ).style.display = "none";
+      document.querySelector("#contact-form-resize .message-api").innerHTML =
+        "خطایی رخ داده, لطفا مجدد اقدام کنید.";
+    }, 2000);
+  }
+}
+
+async function RenderFormFooter() {
+  var inputElementVisa7 = document.querySelector(
+    "#contact-form-resize .contact-fullname-ans input[data-bc-text-input]"
+  );
+  inputElementVisa7.setAttribute("placeholder", "نام و نام خانوادگی");
+
+  var inputElementVisa7 = document.querySelector(
+    "#contact-form-resize .contact-phone-ans input[data-bc-text-input]"
+  );
+  inputElementVisa7.setAttribute("placeholder", "شماره تماس");
+
+  var inputElementVisa7 = document.querySelector(
+    "#contact-form-resize .contact-desc-ans textarea"
+  );
+  inputElementVisa7.setAttribute("placeholder", "پیام");
+}
