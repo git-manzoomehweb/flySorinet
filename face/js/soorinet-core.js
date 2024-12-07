@@ -77,6 +77,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const radioButtons = document.querySelectorAll('input[type="radio"][name="radio"]');
+  const articlesContainer = document.querySelector('.articles-container');
+  
+  radioButtons.forEach(radio => {
+      radio.addEventListener('change', async function() {
+          if (this.checked) {
+              const selectedCatId = this.value;
+              
+              try {
+                  articlesContainer.innerHTML = '<div class="text-center flex justify-center items-center">در حال بارگذاری...</div>';
+                  
+
+                  const response = await fetch(`/article-list-content.bc?catid=${selectedCatId}`);
+                  const data = await response.text();
+                  
+                  articlesContainer.innerHTML = data;
+                  
+              } catch (error) {
+                  console.error('Error:', error);
+                  articlesContainer.innerHTML = '<div class="text-red-500">خطا در بارگذاری مقالات</div>';
+              }
+          }
+      });
+  });
+});
+
+
 function uploadDocumentFooter(args) {
   document.querySelector("#contact-form-resize .Loading_Form").style.display =
     "block";

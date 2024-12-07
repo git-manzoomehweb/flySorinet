@@ -110,7 +110,7 @@
         <!-- left content of main -->
         <basis core="list" datamembername="db.article-list">
           <layout>
-            <section class="px-4 pb-8 w-[70%] order-2 grid grid-cols-2 grid-rows-2 gap-3">
+            <section class="articles-container px-4 pb-8 w-[70%] order-2 grid grid-cols-2 grid-rows-2 gap-3">
               @child
             </section>
           </layout>
@@ -171,9 +171,9 @@
         <!-- right content of main -->
         <section class="w-[30%] border border-solid border-Primery-100 rounded-xl p-4 overflow-hidden h-fit">
           <div class="relative flex justify-between px-3 py-4 rounded-lg bg-zinc-100">
-            <input type="text" name="" id="" class="outline-none bg-zinc-100 placeholder:text-zinc-900"
+            <input type="text" name="search" id="" class="outline-none bg-zinc-100 placeholder:text-zinc-900"
               placeholder="جستجو" />
-            <img src="[##cms.cms.cdn##]/images/searchIcon.svg" alt="" />
+            <img src="[##cms.cms.cdn##]/images/searchIcon.svg" alt="" class="cursor-pointer"/>
           </div>
           <basis core="tree" datamembername="tourism-magazine.cat" idcol="catid" parentidcol="parentid" nullvalue="212276">
             <layout>
