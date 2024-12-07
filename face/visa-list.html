@@ -54,7 +54,7 @@
             <img src="[##cms.cms.cdn##]/images/article-list-background.jpg" alt="article-list-background"
                 class="object-cover -z-10 2xl:h-[44rem] lg:h-[30rem] object-bottom border-b-8 border-solid border-Primery-600 w-full rounded-3xl" />
             <div class="absolute text-white">
-                <h1 class="text-2xl font-bold">ویزا</h1>
+                <h1 class="text-2xl font-bold text-center">ویزا</h1>
                 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center gap-1">
                     <li class="inline-block text-2xl font-normal text-white" itemprop="itemListElement" itemscope
                         itemtype="https://schema.org/ListItem">
@@ -103,7 +103,7 @@
         <section class="mt-24 desktopContainer">
             <basis core="list" datamembername="db.visa-list">
                 <layout>
-                    <div class="grid grid-cols-4 gap-2">
+                    <div class="grid grid-cols-4 gap-2 mb-8">
                         @child
                     </div>
                 </layout>
@@ -142,7 +142,7 @@
             </basis>
 
 
-            <ul class="flex gap-3 cd-pagination no-space dir-lt2" id="wibpaging">
+            <ul class="flex justify-center gap-3 cd-pagination no-space dir-lt2" id="wibpaging">
                 <basis core="print" datamembername="db.paging">
                     <face filter="(@sta='pre')">
                         <li class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600">

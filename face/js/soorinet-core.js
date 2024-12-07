@@ -127,17 +127,13 @@ async function OnProcessedEditObjectFooter(args) {
 
 async function RenderFormFooter() {
   var inputElementVisa7 = document.querySelector(
-    "#contact-form-resize .contact-fullname-ans input[data-bc-text-input]"
+    ".username-footer input[data-bc-text-input]"
   );
   inputElementVisa7.setAttribute("placeholder", "نام و نام خانوادگی");
 
   var inputElementVisa7 = document.querySelector(
-    "#contact-form-resize .contact-phone-ans input[data-bc-text-input]"
+    " .email-footer input[data-bc-text-input]"
   );
-  inputElementVisa7.setAttribute("placeholder", "شماره تماس");
+  inputElementVisa7.setAttribute("placeholder", "ایمیل");
 
-  var inputElementVisa7 = document.querySelector(
-    "#contact-form-resize .contact-desc-ans textarea"
-  );
-  inputElementVisa7.setAttribute("placeholder", "پیام");
 }

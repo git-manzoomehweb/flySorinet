@@ -1071,13 +1071,17 @@ footer [data-bc-schema-direction="rtl"] [data-bc-title-container] [data-bc-quest
   display: none !important;
 }
 
-footer [data-bc-answer-container] input[type="text"] {
+footer  [data-bc-answer-container] input[type="text"] {
   background-color: #1E1919 !important;
-  width: 100% !important;
   height: 64px !important;
   padding: 16px 12px !important;
   font-weight: 500 !important;
   outline: none !important;
   border-radius: 12px !important;
   color: #a1a1aa !important;
+  border: none !important;
+}
+
+footer [data-bc-answer-container]{
+  width: 100% !important;
 }
