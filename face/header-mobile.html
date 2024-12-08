@@ -14,7 +14,7 @@
           <!-- منوی اصلی -->
           <li class="flex items-center justify-between">
             <a href=""> صفحه اصلی </a>
-            <img src="[##cms.cms.cdn##]/images/xIcon.svg" alt="" class="w-8 cursor-pointer close-menu" />
+            <img src="[##cms.cms.cdn##]/images/xIcon.svg" alt="xIcon" class="w-8 cursor-pointer close-menu" loading="lazy"/>
           </li>
 
           <basis core="tree" datamembername="tour.cat" idcol="catid" parentidcol="parentid" nullvalue="210485">
@@ -24,7 +24,7 @@
                 <div class="flex items-center justify-between cursor-pointer menu-trigger">
                   <span class="flex items-center gap-2">
                     تور ها
-                    <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt=""
+                    <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
                       class="transition duration-200 ease-in-out chevron" />
                   </span>
                 </div>
@@ -40,7 +40,7 @@
               <li class="overflow-hidden submenu-item">
                 <div class="flex items-center justify-between cursor-pointer submenu-trigger">
                   <span>@title</span>
-                  <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt=""
+                  <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
                     class="transition duration-200 ease-in-out chevron" />
                 </div>
                 <ul class="pr-4 mt-2 transition-all duration-300 ease-in-out nested-menu max-h-0">
@@ -54,7 +54,7 @@
               <li class="overflow-hidden submenu-item">
                 <div class="flex items-center justify-between cursor-pointer submenu-trigger">
                   <a href="@link">@title</a>
-                  <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt=""
+                  <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
                     class="transition duration-200 ease-in-out chevron" />
                 </div>
                 <ul class="pr-4 mt-2 transition-all duration-300 ease-in-out nested-menu max-h-0">
@@ -81,7 +81,7 @@
                 <div class="flex items-center justify-between cursor-pointer menu-trigger">
                   <span class="flex items-center gap-2">
                     ویزا
-                    <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt=""
+                    <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
                       class="transition duration-200 ease-in-out chevron" />
                   </span>
                 </div>
@@ -101,7 +101,7 @@
           
 
           <li><a href="/Tourism-magazine">مقالات</a></li>
-          <li><a href="/articles-list.bc?catid=212221">گردشگری</a></li>
+          <li><a href="/article-list.bc?catid=212221">گردشگری</a></li>
           <li><a href="/about.bc">تماس با ما</a></li>
         </ul>
       </nav>
@@ -119,7 +119,7 @@
     </svg>
 
     <div class="flex items-center gap-8">
-      <img src="[##cms.cms.cdn##]/images/headerIcons.svg" alt="" />
+      <img src="[##cms.cms.cdn##]/images/headerIcons.svg" alt="headerIcons" loading="lazy"/>
       <span class="flex items-center gap-2 Login_Information">
         <basis core="call" file="authentication/modal"></basis>
       </span>
@@ -127,3 +127,4 @@
   </div>
   <!-- header menu mobile end -->
 </header>
+<basis core="call" file="add_to_home_screen_fa.inc" pageindex="[##cms.cms.pageindex##]"></basis>

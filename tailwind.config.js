@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "Primery": "#BD0006",
         "Primery-900": "#BD0006",
         "Primery-800": "#CB0017",
         "Primery-700": "#D8111F",
@@ -14,6 +15,18 @@ module.exports = {
         "Primery-200": "#F49593",
         "Primery-100": "#FFCACF",
         "Primery-50": "#FFEAED",
+
+        "Secondary": "#BD0006",
+        "Secondary-900": "#BD0006",
+        "Secondary-800": "#CB0017",
+        "Secondary-700": "#D8111F",
+        "Secondary-600": "#EA2124",
+        "Secondary-500": "#F92F24",
+        "Secondary-400": "#F44543",
+        "Secondary-300": "#EB6A69",
+        "Secondary-200": "#F49593",
+        "Secondary-100": "#FFCACF",
+        "Secondary-50": "#FFEAED",
 
         "Footer-900": "#1E1919"
       },

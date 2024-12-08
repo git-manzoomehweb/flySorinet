@@ -101,7 +101,8 @@
           ><img
             src="[##cms.cms.cdn##]/@text"
             alt="article-list-background"
-            class="object-cover object-bottom border-b-8 border-solid border-Primery-600 w-full rounded-3xl"
+            class="object-cover object-bottom w-full border-b-8 border-solid border-Primery-600 rounded-3xl"
+            loading="lazy"
         /></face>
       </basis>
       <section class="px-4 pt-4 pb-8">
@@ -136,7 +137,7 @@
           </layout>
           <face filter="TypeID in(150 , 250)">
             <a href="#@valueID" class="flex items-center gap-2">
-              <img src="[##cms.cms.cdn##]/images/starFillIcon.svg" alt="" />
+              <img src="[##cms.cms.cdn##]/images/starFillIcon.svg" alt="" loading="lazy"/>
               @text
             </a>
           </face>
@@ -159,6 +160,7 @@
                 src="@00090X00090prp"
                 alt="@title"
                 class="object-cover w-24 h-24 rounded-xl"
+                loading="lazy"
               />
               <div class="flex flex-col gap-2">
                 <h2 class="text-sm">@title</h2>
@@ -172,6 +174,7 @@
                 src="@00090X00090prp"
                 alt="dubai"
                 class="object-cover w-24 h-24 rounded-xl"
+                loading="lazy"
               />
               <div class="flex flex-col gap-2">
                 <h2 class="text-sm">@title</h2>
@@ -209,6 +212,7 @@
                 src="@type_159"
                 alt="@title"
                 class="absolute bottom-0 right-0 object-cover w-full h-full"
+                loading="lazy"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -225,6 +229,7 @@
                     <img
                       src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
                       alt=""
+                      loading="lazy"
                     />
                     @cdate
                   </span>
@@ -246,6 +251,7 @@
                 src="@type_159"
                 alt="@title"
                 class="absolute bottom-0 right-0 object-cover w-full h-full"
+                loading="lazy"
               />
               <div
                 class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
@@ -262,6 +268,7 @@
                     <img
                       src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
                       alt=""
+                      loading="lazy"
                     />
                     @cdate
                   </span>
@@ -282,7 +289,7 @@
       <!-- swiper -->
       <section class="mt-16">
         <!-- Slider main container -->
-        <div class="swiper">
+        <div class="slider-article-mobile">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -291,6 +298,7 @@
                 src="[##cms.cms.cdn##]/images/sunExpress.png"
                 alt="sunExpress"
                 class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+                loading="lazy"
               />
             </div>
 
@@ -299,6 +307,7 @@
                 src="[##cms.cms.cdn##]/images/SalamAir.png"
                 alt="SalamAir"
                 class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+                loading="lazy"
               />
             </div>
 
@@ -307,6 +316,7 @@
                 src="[##cms.cms.cdn##]/images/turkishAirlines.png"
                 alt="turkishAirlines"
                 class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+                loading="lazy"
               />
             </div>
 
@@ -315,6 +325,7 @@
                 src="[##cms.cms.cdn##]/images/Qatar.png"
                 alt="Qatar"
                 class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+                loading="lazy"
               />
             </div>
 
@@ -323,6 +334,7 @@
                 src="[##cms.cms.cdn##]/images/IranAir.png"
                 alt="IranAir"
                 class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52"
+                loading="lazy"
               />
             </div>
           </div>
@@ -344,41 +356,5 @@
       pageindex="[##cms.cms.pageindex##]"
     ></basis>
     <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".swiper", {
-        slidesPerView: 1,
-        speed: 400,
-        centeredSlides: false,
-        spaceBetween: 30,
-        grabCursor: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 50,
-          },
-        },
-      });
-    </script>
   </body>
 </html>

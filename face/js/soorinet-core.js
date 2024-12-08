@@ -76,34 +76,46 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const radioButtons = document.querySelectorAll(
+    'input[type="radio"][name="radio"]'
+  );
+  const articlesContainer = document.querySelector(".articles-container");
+  const fetchContentArticle = document.querySelector(".fetch-content-article");
+  const cmsQuery = fetchContentArticle.getAttribute("data-catid");
 
-document.addEventListener('DOMContentLoaded', function() {
-  const radioButtons = document.querySelectorAll('input[type="radio"][name="radio"]');
-  const articlesContainer = document.querySelector('.articles-container');
-  
-  radioButtons.forEach(radio => {
-      radio.addEventListener('change', async function() {
-          if (this.checked) {
-              const selectedCatId = this.value;
-              
-              try {
-                  articlesContainer.innerHTML = '<div class="text-center flex justify-center items-center">در حال بارگذاری...</div>';
-                  
+  async function firstContent() {
+    const firstResponse = await fetch(`/article-load-items.bc?${cmsQuery}`);
+    const firstData = await firstResponse.text();
 
-                  const response = await fetch(`/article-list-content.bc?catid=${selectedCatId}`);
-                  const data = await response.text();
-                  
-                  articlesContainer.innerHTML = data;
-                  
-              } catch (error) {
-                  console.error('Error:', error);
-                  articlesContainer.innerHTML = '<div class="text-red-500">خطا در بارگذاری مقالات</div>';
-              }
-          }
-      });
+    fetchContentArticle.innerHTML = firstData;
+  }
+  firstContent();
+
+  radioButtons.forEach((radio) => {
+    radio.addEventListener("change", async function () {
+      if (this.checked) {
+        const selectedCatId = this.value;
+
+        try {
+          fetchContentArticle.innerHTML =
+            '<div class="text-center flex justify-center items-center">در حال بارگذاری...</div>';
+
+          const response = await fetch(
+            `/article-load-items.bc?catid=${selectedCatId}`
+          );
+          const data = await response.text();
+
+          fetchContentArticle.innerHTML = data;
+        } catch (error) {
+          console.error("Error:", error);
+          articlesContainer.innerHTML =
+            '<div class="text-red-500">خطا در بارگذاری مقالات</div>';
+        }
+      }
+    });
   });
 });
-
 
 function uploadDocumentFooter(args) {
   document.querySelector("#contact-form-resize .Loading_Form").style.display =
@@ -164,4 +176,325 @@ async function RenderFormFooter() {
   );
   inputElementVisa7.setAttribute("placeholder", "ایمیل");
 
+  // about form
+  var inputElementVisa7 = document.querySelector(
+    " .username-about input[data-bc-text-input]"
+  );
+  inputElementVisa7.setAttribute("placeholder", "نام و نام خانوادگی");
+
+  var inputElementVisa7 = document.querySelector(
+    " .phone-about input[data-bc-text-input]"
+  );
+  inputElementVisa7.setAttribute("placeholder", "شماره تلفن");
+
+  var inputElementVisa7 = document.querySelector(
+    " .subject-about input[data-bc-text-input]"
+  );
+  inputElementVisa7.setAttribute("placeholder", "موضوع");
+
+  var inputElementVisa7 = document.querySelector(
+    " .email-about input[data-bc-text-input]"
+  );
+  inputElementVisa7.setAttribute("placeholder", "ایمیل");
+
+  var inputElementVisa7 = document.querySelector(
+    " .text-about textarea[data-bc-text-input]"
+  );
+  inputElementVisa7.setAttribute("placeholder", "متن");
+}
+
+//function loadContentHomaPage(){
+loadSearchEngine("search-engine.bc", "search-box");
+//}
+async function loadSearchEngine(url, sectionload) {
+  try {
+    var xhrobj = new XMLHttpRequest();
+    xhrobj.open("GET", url);
+    xhrobj.send();
+
+    xhrobj.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        var container = document.getElementById(sectionload);
+        container.innerHTML = xhrobj.responseText;
+
+        var scripts = container.getElementsByTagName("script");
+        for (var i = 0; i < scripts.length; i++) {
+          var scriptTag = document.createElement("script");
+          if (scripts[i].src) {
+            scriptTag.src = scripts[i].src;
+            scriptTag.async = false;
+          } else {
+            scriptTag.text = scripts[i].textContent;
+          }
+          document.head
+            .appendChild(scriptTag)
+            .parentNode.removeChild(scriptTag);
+        }
+      }
+    };
+  } catch (error) {
+    // console.error('مشکلی رخ داده است لطفا صبور باشید.', error);
+  }
+}
+
+
+
+//  swiper
+if (document.querySelector(".articles-swiper-default")) {
+  var articlesSwiperDefault = new Swiper(".articles-swiper-default", {
+    slidesPerView: 1,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 30,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-custom",
+      prevEl: ".swiper-button-prev-custom",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  });
+}
+
+if (document.querySelector(".hotels-swiper")) {
+  var hotelsSwiper = new Swiper(".hotels-swiper", {
+    slidesPerView: 1,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 30,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-custom",
+      prevEl: ".swiper-button-prev-custom",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  });
+}
+
+if (document.querySelector(".slider-default-mobile")) {
+  var sliderDefaultMobile = new Swiper(".slider-default-mobile", {
+    slidesPerView: 1,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 30,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    },
+  });
+}
+
+if (document.querySelector(".articles-swiper-tour-list")) {
+  var articlesSwiperTourList = new Swiper(".articles-swiper-tour-list", {
+    slidesPerView: 1,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 30,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-custom",
+      prevEl: ".swiper-button-prev-custom",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  });
+}
+
+if (document.querySelector(".slider-tour-list-mobile")) {
+  var sliderTourListMobile = new Swiper(".slider-tour-list-mobile", {
+    slidesPerView: 1,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 30,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    },
+  });
+}
+
+if(document.querySelector(".articles-swiper-article")){
+  var articlesSwiperArticle = new Swiper(".articles-swiper-article", {
+    slidesPerView: 1,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 30,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-custom",
+      prevEl: ".swiper-button-prev-custom",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  });
+}
+
+if(document.querySelector(".slider-article-mobile")){
+  var sliderArticleMobile = new Swiper(".slider-article-mobile", {
+    slidesPerView: 1,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 30,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    },
+  });
 }

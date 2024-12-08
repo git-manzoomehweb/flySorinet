@@ -803,6 +803,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1036,7 +1041,7 @@ video {
 
   font-weight: 400;
 
-  src: url('../_fonts/DanaFaNum-Regular') format('truetype');
+  src: url('../_fonts/DanaFaNum-Regular.woff') format('truetype');
 }
 
 @font-face {
@@ -1046,9 +1051,9 @@ video {
 
   font-style: normal;
 
-  font-weight: 500;
+  font-weight: normal;
 
-  src: url('../_fonts/DanaFaNum-Medium') format('truetype');
+  src: url('../_fonts/DanaFaNum-Medium.woff') format('truetype');
 }
 
 @font-face {
@@ -1058,12 +1063,59 @@ video {
 
   font-style: normal;
 
-  font-weight: 700;
+  font-weight: normal;
 
-  src: url('../_fonts/DanaFaNum-Bold') format('truetype');
+  src: url('../_fonts/DanaFaNum-Bold.woff') format('truetype');
 }
 
-footer [data-bc-schema-direction="rtl"] [data-bc-title-container] {
+:root{
+  --Primery: "#BD0006";
+  --Primery-900: "#BD0006";
+  --Primery-800: "#CB0017";
+  --Primery-700: "#D8111F";
+  --Primery-600: "#EA2124";
+  --Primery-500: "#F92F24";
+  --Primery-400: "#F44543";
+  --Primery-300: "#EB6A69";
+  --Primery-200: "#F49593";
+  --Primery-100: "#FFCACF";
+  --Primery-50: "#FFEAED";
+
+  --bg-Primery: "#BD0006";
+  --bg-Primery-900: "#BD0006";
+  --bg-Primery-800: "#CB0017";
+  --bg-Primery-700: "#D8111F";
+  --bg-Primery-600: "#EA2124";
+  --bg-Primery-500: "#F92F24";
+  --bg-Primery-400: "#F44543";
+  --bg-Primery-300: "#EB6A69";
+  --bg-Primery-200: "#F49593";
+  --bg-Primery-100: "#FFCACF";
+  --bg-Primery-50: "#FFEAED";
+
+  --bg-Secondary: "#BD0006";
+  --bg-Secondary-900: "#BD0006";
+  --bg-Secondary-800: "#CB0017";
+  --bg-Secondary-700: "#D8111F";
+  --bg-Secondary-600: "#EA2124";
+  --bg-Secondary-500: "#F92F24";
+  --bg-Secondary-400: "#F44543";
+  --bg-Secondary-300: "#EB6A69";
+  --bg-Secondary-200: "#F49593";
+  --bg-Secondary-100: "#FFCACF";
+  --bg-Secondary-50: "#FFEAED";
+
+  --Footer-900: "#1E1919";
+}
+
+/* authentication */
+.bg-primary {background-color: var(--primary);}
+.bg-secondary {background-color: var(--secondary);}
+.main-operationUser-container button, .login-btn,.main-operationUser-container input[type="password"], .main-login-container input[type="password"], .main-login-container input[type="text"]{font-family: "DanaFaNum" !important;}
+
+
+/* ----------------------------form-------------------------- */
+[data-bc-schema-direction="rtl"] [data-bc-title-container] {
   display: none !important;
 }
 
@@ -1071,17 +1123,59 @@ footer [data-bc-schema-direction="rtl"] [data-bc-title-container] [data-bc-quest
   display: none !important;
 }
 
-footer  [data-bc-answer-container] input[type="text"] {
+footer [data-bc-answer-container] input[type="text"] {
   background-color: #1E1919 !important;
   height: 64px !important;
   padding: 16px 12px !important;
   font-weight: 500 !important;
   outline: none !important;
   border-radius: 12px !important;
-  color: #a1a1aa !important;
   border: none !important;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-footer [data-bc-answer-container]{
+footer [data-bc-answer-container] input[type="text"]::placeholder{
+  color: #a1a1aa !important;
+}
+
+[data-bc-answer-container]{
   width: 100% !important;
 }
+
+.form-about [data-bc-answer-title-container] {
+  display: none;
+}
+
+.form-about [data-bc-answer-container] {
+  width: 100% !important;
+}
+
+.form-about [data-bc-schema-direction="rtl"] [data-bc-part-container]{
+  width: 100% !important;
+}
+
+.form-about [data-bc-answer-container] input[type="text"] {
+  padding: 12px 16px !important;
+  border: 1px solid #e4e4e7 !important;
+  background-color: #f4f4f5 !important;
+  border-radius: 12px !important;
+  height: 64px;
+  font-size: 16px;
+}
+
+.form-about [data-bc-answer-container] textarea {
+  padding: 12px 16px !important;
+  border: 1px solid #e4e4e7 !important;
+  background-color: #f4f4f5 !important;
+  border-radius: 12px !important;
+  font-size: 16px;
+}
+.form-about [data-bc-answer-container] textarea::placeholder{
+  color: black;
+}
+.form-about [data-bc-answer-container] input[type="text"]::placeholder{
+  color: black;
+}
+
+
