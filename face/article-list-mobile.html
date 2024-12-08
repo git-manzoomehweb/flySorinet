@@ -41,7 +41,7 @@
     type="list"
     link="article.bc"
     propertyid="7244"
-    perpage="2"
+    perpage="6"
     size="90x90"
     order="ord"
   />
@@ -72,6 +72,10 @@
     count="3"
     parentname="article-list"
   />
+</basis>
+
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="tourism-magazine">
+  <member name="cat" type="tree" request="cat" parentid="212276" order="ord"></member>
 </basis>
 
 <!DOCTYPE html>
@@ -148,7 +152,7 @@
             class="flex items-center gap-1"
           >
             <li
-              class="inline-block text-2xl font-normal text-white"
+              class="inline-block font-normal text-white"
               itemprop="itemListElement"
               itemscope
               itemtype="https://schema.org/ListItem"
@@ -248,7 +252,11 @@
                   </div>
                   <div class="flex justify-between mt-2">
                     <span class="flex items-center gap-1 text-white">
-                      <img src="[##cms.cms.cdn##]/images/calenderIconWhite.svg" alt="" loading="lazy"/>
+                      <img
+                        src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
+                        alt=""
+                        loading="lazy"
+                      />
                       @cdate
                     </span>
                     <a
@@ -283,7 +291,11 @@
                   </div>
                   <div class="flex justify-between mt-2">
                     <span class="flex items-center gap-1 text-white">
-                      <img src="[##cms.cms.cdn##]/images/calenderIconWhite.svg" alt="" loading="lazy"/>
+                      <img
+                        src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
+                        alt=""
+                        loading="lazy"
+                      />
                       @cdate
                     </span>
                     <a
@@ -308,14 +320,25 @@
             >
               <input
                 type="text"
-                name=""
+                name="search"
                 id=""
                 class="outline-none bg-zinc-100 placeholder:text-zinc-900"
                 placeholder="جستجو"
               />
-              <a href=""><img src="[##cms.cms.cdn##]/images/searchIcon.svg" alt="" loading="lazy"/></a>
+              <span
+                ><img
+                  src="[##cms.cms.cdn##]/images/searchIcon.svg"
+                  alt=""
+                  loading="lazy"
+              /></span>
             </form>
-            <basis core="tree" datamembername="tourism-magazine.cat" idcol="catid" parentidcol="parentid" nullvalue="212276">
+            <basis
+              core="tree"
+              datamembername="tourism-magazine.cat"
+              idcol="catid"
+              parentidcol="parentid"
+              nullvalue="212276"
+            >
               <layout>
                 <div class="flex flex-col gap-1 mt-4">
                   <h2 class="font-medium">شهر/کشور</h2>
@@ -325,14 +348,26 @@
                 </div>
               </layout>
               <face level="end" filter="link is null">
-                <li class="flex items-center gap-2">
-                  <input type="radio" name="radio" value="@catid" id="" class="size-4" />
+                <li class="flex items-center gap-2 hover:text-Primery-600">
+                  <input
+                    type="radio"
+                    name="radio"
+                    value="@catid"
+                    id=""
+                    class="size-4"
+                  />
                   @title
                 </li>
               </face>
-               <face level="end">
-                <li class="flex items-center gap-2">
-                  <input type="radio" name="radio" value="@catid" id="" class="size-4" />
+              <face level="end">
+                <li class="flex items-center gap-2 hover:text-Primery-600">
+                  <input
+                    type="radio"
+                    name="radio"
+                    value="@catid"
+                    id=""
+                    class="size-4"
+                  />
                   @title
                 </li>
               </face>
@@ -342,17 +377,17 @@
               <h2 class="font-bold text-Primery-700">آخرین مطالب</h2>
             </div>
 
-            <div class="px-4 pt-4 pb-4">
+            <div class="pt-4 pb-4">
               <basis core="list" datamembername="db.news-list">
                 <layout>
-                  <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-4 news-container max-h-[212px] overflow-hidden transition-all duration-300">
                     <!-- news -->
                     @child
                     <!-- news end -->
                   </div>
                 </layout>
                 <face filter="link is null">
-                  <a href="/article.bc?id=@id" class="flex items-center gap-4">
+                  <a href="/article.bc?id=@id" class="flex items-center hover:scale-105 gap-4">
                     <img
                       src="@00090X00090prp"
                       alt="@title"
@@ -366,10 +401,10 @@
                   </a>
                 </face>
                 <face>
-                  <a href="@link" class="flex items-center gap-4">
+                  <a href="@link" class="flex items-center  hover:scale-105 gap-4">
                     <img
                       src="@00090X00090prp"
-                      alt="dubai"
+                      alt="@title"
                       class="object-cover w-24 h-24 rounded-xl"
                       loading="lazy"
                     />
@@ -380,6 +415,9 @@
                   </a>
                 </face>
               </basis>
+              <div class="flex justify-center mt-6">
+                <span class="text-blue-700 load-more-btn">مشاهده بیشتر</span>
+              </div>
             </div>
           </section>
           <!-- right content of main end -->
@@ -478,43 +516,7 @@
     ></basis>
     <!-- footer end -->
 
-    <script src="../js/index.js"></script>
-    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".swiper", {
-        slidesPerView: 1,
-        speed: 400,
-        centeredSlides: false,
-        spaceBetween: 30,
-        grabCursor: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 50,
-          },
-        },
-      });
-    </script>
+
+
   </body>
 </html>

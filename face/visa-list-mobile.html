@@ -58,7 +58,7 @@
                 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center gap-1">
                     <li class="inline-block text-2xl font-normal text-white" itemprop="itemListElement" itemscope
                         itemtype="https://schema.org/ListItem">
-                        <a class="text-white hover:text-primary-900" itemprop="item" href="/" aria-label="home"><span
+                        <a class="text-white hover:text-Primery-600" itemprop="item" href="/" aria-label="home"><span
                                 itemprop="name">صفحه اصلی</span>
                             <meta itemprop="position" content="1" />
                         </a>
@@ -75,7 +75,7 @@
                         <face filter="link is null and parentcatid<>210442">
                             <li class="flex gap-1 font-normal text-white" itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
-                                <a class="text-white hover:text-primary-900" itemprop="item"
+                                <a class="text-white hover:text-Primery-600" itemprop="item"
                                     href="/article-list.bc?catid=@parentcatid" aria-label="@title"><span
                                         itemprop="name">@title</span>
                                     <meta itemprop="position" content="@rownumber" />
@@ -86,7 +86,7 @@
                         <face filter="parentcatid<>210442">
                             <li class="flex gap-1 font-normal text-white" itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
-                                <a class="text-white hover:text-primary-900" itemprop="item" href="@link"
+                                <a class="text-white hover:text-Primery-600" itemprop="item" href="@link"
                                     aria-label="@title"><span class="text-white" itemprop="name">@title</span>
                                     <meta itemprop="position" content="@rownumber" />
                                 </a>
@@ -108,7 +108,7 @@
                     </div>
                 </layout>
                 <face filter="link is null">
-                    <a href="/visa.bc?id=@id" class="relative overflow-hidden border border-solid h-fit pb-7 border-zinc-300 rounded-xl">
+                    <a href="/visa.bc?id=@id" class="relative hover:scale-105 overflow-hidden border border-solid h-fit pb-7 border-zinc-300 rounded-xl">
                         <div class="relative">
                             <div class="absolute w-full h-full bg-shadow-gradient"></div>
                             <img src="@image" alt="@title" loading="lazy"
@@ -124,7 +124,7 @@
                     </a>
                 </face>
                 <face>
-                    <a href="@link" class="relative overflow-hidden border border-solid h-fit pb-7 border-zinc-300 rounded-xl">
+                    <a href="@link" class="relative overflow-hidden hover:scale-105 border border-solid h-fit pb-7 border-zinc-300 rounded-xl">
                         <div class="relative">
                             <div class="absolute w-full h-full bg-shadow-gradient"></div>
                             <img src="@image" alt="@title" loading="lazy"

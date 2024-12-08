@@ -12,7 +12,7 @@
       <nav class="flex items-center w-full h-full">
         <ul class="flex flex-col justify-between w-full h-full gap-10">
           <!-- منوی اصلی -->
-          <li class="flex items-center justify-between">
+          <li class="flex items-center justify-between hover:text-Primery-600">
             <a href=""> صفحه اصلی </a>
             <img src="[##cms.cms.cdn##]/images/xIcon.svg" alt="xIcon" class="w-8 cursor-pointer close-menu" loading="lazy"/>
           </li>
@@ -20,7 +20,7 @@
           <basis core="tree" datamembername="tour.cat" idcol="catid" parentidcol="parentid" nullvalue="210485">
             <layout>
               <!-- منوی تور -->
-              <li class="menu-item">
+              <li class="menu-item hover:text-Primery-600">
                 <div class="flex items-center justify-between cursor-pointer menu-trigger">
                   <span class="flex items-center gap-2">
                     تور ها
@@ -35,9 +35,8 @@
               </li>
             </layout>
 
-            <!-- سطح اول - بدون لینک -->
             <face level="1" filter="link is null">
-              <li class="overflow-hidden submenu-item">
+              <li class="overflow-hidden submenu-item hover:text-Primery-600">
                 <div class="flex items-center justify-between cursor-pointer submenu-trigger">
                   <span>@title</span>
                   <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
@@ -49,9 +48,8 @@
               </li>
             </face>
 
-            <!-- سطح اول - با لینک -->
             <face level="1">
-              <li class="overflow-hidden submenu-item">
+              <li class="overflow-hidden submenu-item hover:text-Primery-600">
                 <div class="flex items-center justify-between cursor-pointer submenu-trigger">
                   <a href="@link">@title</a>
                   <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
@@ -63,21 +61,19 @@
               </li>
             </face>
 
-            <!-- سطح آخر - بدون لینک -->
             <face level="end" filter="link is null">
-              <li><a href="/tour-list.bc?catid=@catid">@title</a></li>
+              <li class="hover:text-Primery-600"><a href="/tour-list.bc?catid=@catid">@title</a></li>
             </face>
 
-            <!-- سطح آخر - با لینک -->
             <face level="end">
-              <li><a href="@link">@title</a></li>
+              <li class="hover:text-Primery-600"><a href="@link">@title</a></li>
             </face>
           </basis>
 
           <!-- منوی ویزا -->
           <basis core="tree" datamembername="visa.cat" idcol="catid" parentidcol="parentid" nullvalue="212044">
             <layout>
-              <li class="menu-item">
+              <li class="menu-item hover:text-Primery-600">
                 <div class="flex items-center justify-between cursor-pointer menu-trigger">
                   <span class="flex items-center gap-2">
                     ویزا
@@ -86,23 +82,23 @@
                   </span>
                 </div>
                 <ul
-                  class="submenu p-4 rounded-xl bg-white invisible opacity-0 flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500">
+                  class="submenu p-4 z-10 rounded-xl bg-white invisible opacity-0 flex flex-col gap-2 w-[90%] font-medium absolute transition-all duration-500">
                   @child
                 </ul>
               </li>
             </layout>
             <face level="end" filter="link is null">
-              <li><a href="/visa-list.bc?catid=@catid">@title</a></li>
+              <li class="hover:text-Primery-600"><a href="/visa-list.bc?catid=@catid">@title</a></li>
             </face>
             <face level="end">
-              <li><a href="@link">@title</a></li>
+              <li class="hover:text-Primery-600"><a href="@link">@title</a></li>
             </face>
           </basis>
           
 
-          <li><a href="/Tourism-magazine">مقالات</a></li>
-          <li><a href="/article-list.bc?catid=212221">گردشگری</a></li>
-          <li><a href="/about.bc">تماس با ما</a></li>
+          <li class="hover:text-Primery-600"><a href="/Tourism-magazine">مقالات</a></li>
+          <li class="hover:text-Primery-600"><a href="/article-list.bc?catid=212221">گردشگری</a></li>
+          <li class="hover:text-Primery-600"><a href="/about.bc">تماس با ما</a></li>
         </ul>
       </nav>
     </div>

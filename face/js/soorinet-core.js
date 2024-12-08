@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const chevron = trigger.querySelector(".chevron");
 
     trigger?.addEventListener("click", (e) => {
-      e.stopPropagation(); // جلوگیری از بسته شدن منوی والد
+      e.stopPropagation(); 
 
       // بستن سایر زیرمنوها
       submenuItems.forEach((otherItem) => {
@@ -76,46 +76,81 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const radioButtons = document.querySelectorAll(
-    'input[type="radio"][name="radio"]'
-  );
-  const articlesContainer = document.querySelector(".articles-container");
-  const fetchContentArticle = document.querySelector(".fetch-content-article");
-  const cmsQuery = fetchContentArticle.getAttribute("data-catid");
 
-  async function firstContent() {
-    const firstResponse = await fetch(`/article-load-items.bc?${cmsQuery}`);
-    const firstData = await firstResponse.text();
 
-    fetchContentArticle.innerHTML = firstData;
-  }
-  firstContent();
+// کد مشاهده بیشتر/کمتر - برای صفحه article-list-mobile.html
+if (window.location.pathname.includes('article-list-mobile')) {
+  document.addEventListener('DOMContentLoaded', function() {
+      const loadMoreBtn = document.querySelector('.load-more-btn');
+      const newsContainer = document.querySelector('.news-container');
+      let isExpanded = false;
 
-  radioButtons.forEach((radio) => {
-    radio.addEventListener("change", async function () {
-      if (this.checked) {
-        const selectedCatId = this.value;
-
-        try {
-          fetchContentArticle.innerHTML =
-            '<div class="text-center flex justify-center items-center">در حال بارگذاری...</div>';
-
-          const response = await fetch(
-            `/article-load-items.bc?catid=${selectedCatId}`
-          );
-          const data = await response.text();
-
-          fetchContentArticle.innerHTML = data;
-        } catch (error) {
-          console.error("Error:", error);
-          articlesContainer.innerHTML =
-            '<div class="text-red-500">خطا در بارگذاری مقالات</div>';
-        }
-      }
-    });
+      loadMoreBtn?.addEventListener('click', function() {
+          if (!isExpanded) {
+              newsContainer.style.maxHeight = newsContainer.scrollHeight + 'px';
+              loadMoreBtn.textContent = 'مشاهده کمتر';
+          } else {
+              newsContainer.style.maxHeight = '250px';
+              loadMoreBtn.textContent = 'مشاهده بیشتر';
+          }
+          isExpanded = !isExpanded;
+      });
   });
-});
+}
+
+// کد جستجو - برای صفحه article-list.html
+if (window.location.pathname.includes('article-list')) {
+  document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.querySelector('input[name="search"]');
+      const radioItems = Array.from(document.querySelectorAll('input[type="radio"][name="radio"]'))
+          .map(radio => radio.parentElement);
+
+      searchInput?.addEventListener('keyup', function() {
+          const searchTerm = this.value.trim().toLowerCase();
+
+          radioItems.forEach(item => {
+              const text = item.textContent.trim().toLowerCase();
+              item.classList.toggle('hidden', !(searchTerm === '' || text.includes(searchTerm)));
+          });
+      });
+  });
+}
+
+// کد fetch مقالات - برای صفحه article-list.html
+if (window.location.pathname.includes('article-list')) {
+  document.addEventListener("DOMContentLoaded", function () {
+      const radioButtons = document.querySelectorAll('input[type="radio"][name="radio"]');
+      const fetchContentArticle = document.querySelector(".fetch-content-article");
+      
+      if (fetchContentArticle) {
+          const cmsQuery = fetchContentArticle.getAttribute("data-catid");
+
+          async function firstContent() {
+              const firstResponse = await fetch(`/article-load-items.bc?${cmsQuery}`);
+              const firstData = await firstResponse.text();
+              fetchContentArticle.innerHTML = firstData;
+          }
+          firstContent();
+
+          radioButtons.forEach((radio) => {
+              radio.addEventListener("change", async function () {
+                  if (this.checked) {
+                      const selectedCatId = this.value;
+                      try {
+                          fetchContentArticle.innerHTML = '<div class="text-center flex justify-center items-center">در حال بارگذاری...</div>';
+                          const response = await fetch(`/article-load-items.bc?catid=${selectedCatId}`);
+                          const data = await response.text();
+                          fetchContentArticle.innerHTML = data;
+                      } catch (error) {
+                          console.error("Error:", error);
+                          fetchContentArticle.innerHTML = '<div class="text-red-500">خطا در بارگذاری مقالات</div>';
+                      }
+                  }
+              });
+          });
+      }
+  });
+}
 
 function uploadDocumentFooter(args) {
   document.querySelector("#contact-form-resize .Loading_Form").style.display =
