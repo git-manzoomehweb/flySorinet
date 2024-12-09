@@ -10,7 +10,7 @@
 </basis>
 
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
-    <member name="visa-list" type="list" link="visa.bc" propertyid="7244" perpage="9"
+    <member name="visa-list" type="list" link="article.bc" propertyid="7244" perpage="9"
         pageno="[##cms.query.pagenum|(1)##]" order="ord" />
     <member name="paging" type="list" request="paging" count="3" parentname="visa-list" />
 </basis>
@@ -108,7 +108,7 @@
                     </div>
                 </layout>
                 <face filter="link is null">
-                    <a href="/visa.bc?id=@id" class="relative overflow-hidden hover:scale-105 border border-solid h-fit pb-7 border-zinc-300 rounded-xl">
+                    <a href="/article.bc?id=@id" class="relative overflow-hidden border border-solid hover:scale-105 h-fit pb-7 border-zinc-300 rounded-xl">
                         <div class="relative">
                             <div class="absolute w-full h-full bg-shadow-gradient"></div>
                             <img src="@image" alt="@title" loading="lazy"
@@ -117,14 +117,14 @@
                         <div class="flex flex-col gap-2 px-4 mt-2">
                             <h3 class="font-bold">@title</h3>
                             <span class="flex items-center text-sm text-zinc-900">
-                                <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="" loading="lazy" />
+                                <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="calenderIcon" loading="lazy" />
                                 @cdate
                             </span>
                         </div>
                     </a>
                 </face>
                 <face>
-                    <a href="@link" class="relative overflow-hidden hover:scale-105 border border-solid h-fit pb-7 border-zinc-300 rounded-xl">
+                    <a href="@link" class="relative overflow-hidden border border-solid hover:scale-105 h-fit pb-7 border-zinc-300 rounded-xl">
                         <div class="relative">
                             <div class="absolute w-full h-full bg-shadow-gradient"></div>
                             <img src="@image" alt="@title" loading="lazy"
@@ -133,7 +133,7 @@
                         <div class="flex flex-col gap-2 px-4 mt-2">
                             <h3 class="font-bold">@title</h3>
                             <span class="flex items-center text-sm text-zinc-900">
-                                <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="" loading="lazy"/>
+                                <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="calenderIcon" loading="lazy"/>
                                 @cdate
                             </span>
                         </div>

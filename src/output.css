@@ -1531,23 +1531,19 @@ video {
 }
 
 .border-zinc-100 {
-  --tw-border-opacity: 1;
-  border-color: rgb(244 244 245 / var(--tw-border-opacity, 1));
+  border-color: var(--zinc-100);
 }
 
 .border-zinc-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(228 228 231 / var(--tw-border-opacity, 1));
+  border-color: var(--zinc-200);
 }
 
 .border-zinc-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(212 212 216 / var(--tw-border-opacity, 1));
+  border-color: var(--zinc-300);
 }
 
 .border-zinc-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(113 113 122 / var(--tw-border-opacity, 1));
+  border-color: var(--zinc-500);
 }
 
 .bg-Footer-900 {
@@ -1576,28 +1572,23 @@ video {
 }
 
 .bg-zinc-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1));
+  background-color: var(--zinc-100);
 }
 
 .bg-zinc-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(228 228 231 / var(--tw-bg-opacity, 1));
+  background-color: var(--zinc-200);
 }
 
 .bg-zinc-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(212 212 216 / var(--tw-bg-opacity, 1));
+  background-color: var(--zinc-300);
 }
 
 .bg-zinc-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(161 161 170 / var(--tw-bg-opacity, 1));
+  background-color: var(--zinc-400);
 }
 
 .bg-zinc-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1));
+  background-color: var(--zinc-50);
 }
 
 .bg-opacity-70 {
@@ -1612,9 +1603,7 @@ video {
   background-image: url(../../public/images/strait-bosphorus-suleymaniye-mosque.jpg);
 }
 
-.bg-footer-gradient {
-  background-image: linear-gradient(277.8deg, #1D0202 0.86%, #121212 99.53%);
-}
+
 
 .bg-light-gradient {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 63.58%, #FFFFFF 95.87%);
@@ -1839,18 +1828,15 @@ video {
 }
 
 .text-zinc-400 {
-  --tw-text-opacity: 1;
-  color: rgb(161 161 170 / var(--tw-text-opacity, 1));
+  color: var(--zinc-400);
 }
 
 .text-zinc-600 {
-  --tw-text-opacity: 1;
-  color: rgb(82 82 91 / var(--tw-text-opacity, 1));
+  color: var(--zinc-600);
 }
 
 .text-zinc-900 {
-  --tw-text-opacity: 1;
-  color: rgb(24 24 27 / var(--tw-text-opacity, 1));
+  color: var(--zinc-950);
 }
 
 .opacity-0 {
@@ -1936,23 +1922,19 @@ body{
 }
 
 .placeholder\:text-zinc-600::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(82 82 91 / var(--tw-text-opacity, 1));
+  color: var(--zinc-600);
 }
 
 .placeholder\:text-zinc-600::placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(82 82 91 / var(--tw-text-opacity, 1));
+  color: var(--zinc-600);
 }
 
 .placeholder\:text-zinc-900::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(24 24 27 / var(--tw-text-opacity, 1));
+  color: var(--zinc-950);
 }
 
 .placeholder\:text-zinc-900::placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(24 24 27 / var(--tw-text-opacity, 1));
+  color: var(--zinc-950);
 }
 
 .hover\:scale-105:hover {
@@ -2348,8 +2330,7 @@ body{
   }
 
   .lg\:bg-zinc-100 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1));
+    background-color: var(--zinc-100);
   }
 
   .lg\:p-6 {
@@ -2385,8 +2366,7 @@ body{
   }
 
   .lg\:text-zinc-600 {
-    --tw-text-opacity: 1;
-    color: rgb(82 82 91 / var(--tw-text-opacity, 1));
+    color: var(--zinc-600);
   }
 }
 

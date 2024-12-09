@@ -44,7 +44,7 @@
   <member
     name="articles"
     type="list"
-    link="articles.bc"
+    link="article.bc"
     order="ord"
     size="412x295"
     propertyid="7244"
@@ -1843,7 +1843,7 @@
               </span>
               <a
                 href="@link"
-                class="absolute flex items-center hover:scale-105 justify-center px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
+                class="absolute flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
               >
                 مشاهده
               </a>
@@ -1883,7 +1883,7 @@
               </span>
               <a
                 href="/hotel.bc?id=@id"
-                class="absolute flex items-center hover:scale-105 justify-center px-4 py-2 text-lg text-white h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
+                class="absolute flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
               >
                 مشاهده
               </a>
@@ -1977,10 +1977,11 @@
                     @cdate
                   </span>
                   <a
+                    aria-label="@title"
                     href="/article.bc?id=@id"
-                    class="flex items-center hover:scale-105 justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                    class="flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 rounded-xl bg-Primery-700"
                   >
-                    بیشتر بخوانید
+                    مشاهده
                   </a>
                 </div>
               </div>
@@ -2019,9 +2020,10 @@
                   </span>
                   <a
                     href="@link"
-                    class="flex items-center hover:scale-105 justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
+                    aria-label="@title"
+                    class="flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 rounded-xl bg-Primery-700"
                   >
-                    بیشتر بخوانید
+                    مشاهده
                   </a>
                 </div>
               </div>
@@ -2068,10 +2070,10 @@
     </main>
     <!-- main end -->
 
+    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
     <!-- footer -->
     <basis core="call" file="footer.inc" />
     <!-- footer end -->
 
-    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
   </body>
 </html>

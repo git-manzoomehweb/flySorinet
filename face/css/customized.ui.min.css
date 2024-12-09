@@ -1067,46 +1067,73 @@ video {
 
   src: url('../_fonts/DanaFaNum-Bold.woff') format('truetype');
 }
-
-:root{
-  --Primery: "#BD0006";
-  --Primery-900: "#BD0006";
-  --Primery-800: "#CB0017";
-  --Primery-700: "#D8111F";
-  --Primery-600: "#EA2124";
-  --Primery-500: "#F92F24";
-  --Primery-400: "#F44543";
-  --Primery-300: "#EB6A69";
-  --Primery-200: "#F49593";
-  --Primery-100: "#FFCACF";
-  --Primery-50: "#FFEAED";
-
-  --bg-Primery: "#BD0006";
-  --bg-Primery-900: "#BD0006";
-  --bg-Primery-800: "#CB0017";
-  --bg-Primery-700: "#D8111F";
-  --bg-Primery-600: "#EA2124";
-  --bg-Primery-500: "#F92F24";
-  --bg-Primery-400: "#F44543";
-  --bg-Primery-300: "#EB6A69";
-  --bg-Primery-200: "#F49593";
-  --bg-Primery-100: "#FFCACF";
-  --bg-Primery-50: "#FFEAED";
-
-  --bg-Secondary: "#BD0006";
-  --bg-Secondary-900: "#BD0006";
-  --bg-Secondary-800: "#CB0017";
-  --bg-Secondary-700: "#D8111F";
-  --bg-Secondary-600: "#EA2124";
-  --bg-Secondary-500: "#F92F24";
-  --bg-Secondary-400: "#F44543";
-  --bg-Secondary-300: "#EB6A69";
-  --bg-Secondary-200: "#F49593";
-  --bg-Secondary-100: "#FFCACF";
-  --bg-Secondary-50: "#FFEAED";
-
-  --Footer-900: "#1E1919";
+.desktopContainer{
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+@media (min-width: 1024px) {
+  .lg\:desktopContainer{
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+:root{
+  --primary: #BD0006;
+  --primary-900: #BD0006;
+  --primary-800: #CB0017;
+  --primary-700: #D8111F;
+  --primary-600: #EA2124;
+  --primary-500: #F92F24;
+  --primary-400: #F44543;
+  --primary-300: #EB6A69;
+  --primary-200: #F49593;
+  --primary-100: #FFCACF;
+  --primary-50: #FFEAED;
+
+  --bg-primary: #BD0006;
+  --bg-primary-900: #BD0006;
+  --bg-primary-800: #CB0017;
+  --bg-primary-700: #D8111F;
+  --bg-primary-600: #EA2124;
+  --bg-primary-500: #F92F24;
+  --bg-primary-400: #F44543;
+  --bg-primary-300: #EB6A69;
+  --bg-primary-200: #F49593;
+  --bg-primary-100: #FFCACF;
+  --bg-primary-50: #FFEAED;
+
+  --secondary: #BD0006;
+  --secondary-900: #BD0006;
+  --secondary-800: #CB0017;
+  --secondary-700: #D8111F;
+  --secondary-600: #EA2124;
+  --secondary-500: #F92F24;
+  --secondary-400: #F44543;
+  --secondary-300: #EB6A69;
+  --secondary-200: #F49593;
+  --secondary-100: #FFCACF;
+  --secondary-50: #FFEAED;
+
+  --bg-secondary: #BD0006;
+  --bg-secondary-900: #BD0006;
+  --bg-secondary-800: #CB0017;
+  --bg-secondary-700: #D8111F;
+  --bg-secondary-600: #EA2124;
+  --bg-secondary-500: #F92F24;
+  --bg-secondary-400: #F44543;
+  --bg-secondary-300: #EB6A69;
+  --bg-secondary-200: #F49593;
+  --bg-secondary-100: #FFCACF;
+  --bg-secondary-50: #FFEAED;
+
+  --Footer-900: #1E1919;
+}
+
+.bg-primary{background-color:var(--primary);}
+.bg-secondary{background-color:var(--secondary);}
 
 /* authentication */
 .bg-primary {background-color: var(--primary);}
@@ -1125,6 +1152,7 @@ footer [data-bc-schema-direction="rtl"] [data-bc-title-container] [data-bc-quest
 
 footer [data-bc-answer-container] input[type="text"] {
   background-color: #1E1919 !important;
+  color: #a1a1aa !important;
   height: 64px !important;
   padding: 16px 12px !important;
   font-weight: 500 !important;
@@ -1143,6 +1171,21 @@ footer [data-bc-answer-container] input[type="text"]::placeholder{
   width: 100% !important;
 }
 
+
+
+.form-about [data-bc-schema-column]{
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-about [data-bc-question]:nth-child(1),
+.form-about [data-bc-question]:nth-child(2),
+.form-about [data-bc-question]:nth-child(3),
+.form-about [data-bc-question]:nth-child(4){
+  width: 50% !important;
+}
+.form-about [data-bc-question]:nth-child(5){
+  width: 100% !important;
+}
 .form-about [data-bc-answer-title-container] {
   display: none;
 }
@@ -1178,4 +1221,33 @@ footer [data-bc-answer-container] input[type="text"]::placeholder{
   color: black;
 }
 
+.form-about-mobile [data-bc-question]{
+  width: 100%;
+}
 
+.form-about-mobile [data-bc-answer-container] textarea {
+  padding: 12px 16px !important;
+  border: 1px solid #e4e4e7 !important;
+  background-color: #f4f4f5 !important;
+  border-radius: 12px !important;
+  font-size: 16px;
+}
+
+.form-about-mobile [data-bc-answer-container] input[type="text"] {
+  padding: 12px 16px !important;
+  border: 1px solid #e4e4e7 !important;
+  background-color: #f4f4f5 !important;
+  border-radius: 12px !important;
+  height: 64px;
+  font-size: 16px;
+}
+.form-about-mobile [data-bc-answer-container] textarea::placeholder{
+  color: black;
+}
+.form-about-mobile [data-bc-answer-container] input[type="text"]::placeholder{
+  color: black;
+}
+
+.bg-footer-gradient {
+  background-image: linear-gradient(277.8deg, #1D0202 0.86%, #121212 99.53%);
+}

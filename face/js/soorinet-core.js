@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const chevron = trigger.querySelector(".chevron");
 
     trigger?.addEventListener("click", (e) => {
-      e.stopPropagation(); 
+      e.stopPropagation();
 
       // بستن سایر زیرمنوها
       submenuItems.forEach((otherItem) => {
@@ -76,90 +76,173 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 // کد مشاهده بیشتر/کمتر - برای صفحه article-list-mobile.html
-if (window.location.pathname.includes('article-list-mobile')) {
-  document.addEventListener('DOMContentLoaded', function() {
-      const loadMoreBtn = document.querySelector('.load-more-btn');
-      const newsContainer = document.querySelector('.news-container');
-      let isExpanded = false;
+if (window.location.pathname.includes("article-list-mobile")) {
+  document.addEventListener("DOMContentLoaded", function () {
+    const loadMoreBtn = document.querySelector(".load-more-btn");
+    const newsContainer = document.querySelector(".news-container");
+    let isExpanded = false;
 
-      loadMoreBtn?.addEventListener('click', function() {
-          if (!isExpanded) {
-              newsContainer.style.maxHeight = newsContainer.scrollHeight + 'px';
-              loadMoreBtn.textContent = 'مشاهده کمتر';
-          } else {
-              newsContainer.style.maxHeight = '250px';
-              loadMoreBtn.textContent = 'مشاهده بیشتر';
-          }
-          isExpanded = !isExpanded;
-      });
+    loadMoreBtn?.addEventListener("click", function () {
+      if (!isExpanded) {
+        newsContainer.style.maxHeight = newsContainer.scrollHeight + "px";
+        loadMoreBtn.textContent = "مشاهده کمتر";
+      } else {
+        newsContainer.style.maxHeight = "250px";
+        loadMoreBtn.textContent = "مشاهده بیشتر";
+      }
+      isExpanded = !isExpanded;
+    });
   });
 }
 
 // کد جستجو - برای صفحه article-list.html
-if (window.location.pathname.includes('article-list')) {
-  document.addEventListener('DOMContentLoaded', function() {
-      const searchInput = document.querySelector('input[name="search"]');
-      const radioItems = Array.from(document.querySelectorAll('input[type="radio"][name="radio"]'))
-          .map(radio => radio.parentElement);
+if (document.querySelector('input[name="search"]')) {
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.querySelector('input[name="search"]');
+    const radioItems = Array.from(
+      document.querySelectorAll('input[type="radio"][name="radio"]')
+    ).map((radio) => radio.parentElement);
 
-      searchInput?.addEventListener('keyup', function() {
-          const searchTerm = this.value.trim().toLowerCase();
+    searchInput?.addEventListener("keyup", function () {
+      const searchTerm = this.value.trim().toLowerCase();
 
-          radioItems.forEach(item => {
-              const text = item.textContent.trim().toLowerCase();
-              item.classList.toggle('hidden', !(searchTerm === '' || text.includes(searchTerm)));
-          });
+      radioItems.forEach((item) => {
+        const text = item.textContent.trim().toLowerCase();
+        item.classList.toggle(
+          "hidden",
+          !(searchTerm === "" || text.includes(searchTerm))
+        );
       });
+    });
   });
 }
 
 // کد fetch مقالات - برای صفحه article-list.html
-if (window.location.pathname.includes('article-list')) {
+if (window.location.pathname.includes("article-list")) {
   document.addEventListener("DOMContentLoaded", function () {
-      const radioButtons = document.querySelectorAll('input[type="radio"][name="radio"]');
-      const fetchContentArticle = document.querySelector(".fetch-content-article");
-      
-      if (fetchContentArticle) {
-          const cmsQuery = fetchContentArticle.getAttribute("data-catid");
+    const radioButtons = document.querySelectorAll(
+      'input[type="radio"][name="radio"]'
+    );
+    const fetchContentArticle = document.querySelector(
+      ".fetch-content-article"
+    );
 
-          async function firstContent() {
-              const firstResponse = await fetch(`/article-load-items.bc?${cmsQuery}`);
-              const firstData = await firstResponse.text();
-              fetchContentArticle.innerHTML = firstData;
-          }
-          firstContent();
+    if (fetchContentArticle) {
+      const cmsQuery = fetchContentArticle.getAttribute("data-catid");
 
-          radioButtons.forEach((radio) => {
-              radio.addEventListener("change", async function () {
-                  if (this.checked) {
-                      const selectedCatId = this.value;
-                      try {
-                          fetchContentArticle.innerHTML = '<div class="text-center flex justify-center items-center">در حال بارگذاری...</div>';
-                          const response = await fetch(`/article-load-items.bc?catid=${selectedCatId}`);
-                          const data = await response.text();
-                          fetchContentArticle.innerHTML = data;
-                      } catch (error) {
-                          console.error("Error:", error);
-                          fetchContentArticle.innerHTML = '<div class="text-red-500">خطا در بارگذاری مقالات</div>';
-                      }
-                  }
-              });
-          });
+      async function firstContent() {
+        const firstResponse = await fetch(`/article-load-items.bc?${cmsQuery}`);
+        const firstData = await firstResponse.text();
+        fetchContentArticle.innerHTML = firstData;
       }
+      firstContent();
+
+      radioButtons.forEach((radio) => {
+        radio.addEventListener("change", async function () {
+          if (this.checked) {
+            const selectedCatId = this.value;
+            try {
+              fetchContentArticle.innerHTML =
+                '<div class="text-center flex justify-center items-center">در حال بارگذاری...</div>';
+              const response = await fetch(
+                `/article-load-items.bc?catid=${selectedCatId}`
+              );
+              const data = await response.text();
+              fetchContentArticle.innerHTML = data;
+            } catch (error) {
+              console.error("Error:", error);
+              fetchContentArticle.innerHTML =
+                '<div class="text-red-500">خطا در بارگذاری مقالات</div>';
+            }
+          }
+        });
+      });
+    }
   });
 }
+
+function uploadDocumentAbout(args) {
+  document.querySelector("#about-form .Loading_Form").style.display = "block";
+  const captcha = document
+    .querySelector("#about-form")
+    .querySelector("#captchaContainer input[name='captcha']").value;
+  const captchaid = document
+    .querySelector("#about-form")
+    .querySelector("#captchaContainer input[name='captchaid']").value;
+  const stringJson = JSON.stringify(args.source?.rows[0]);
+  $bc.setSource("cms.uploadAbout", {
+    value: stringJson,
+    captcha: captcha,
+    captchaid: captchaid,
+    run: true,
+  });
+  console.log(captcha)
+}
+
+function refreshCaptchaAbout(e) {
+  $bc.setSource("captcha.refreshAbout", true);
+}
+
+
+
+async function OnProcessedEditObjectAbout(args) {
+  var response = args.response;
+  var json = await response.json();
+  var errorid = json.errorid;
+  if (errorid == "6") {
+    document.querySelector("#about-form .Loading_Form").style.display =
+      "none";
+    document.querySelector("#about-form .message-api").innerHTML =
+      "درخواست شما با موفقیت ثبت شد.";
+  } else {
+    refreshCaptchaAbout();
+    setTimeout(() => {
+      document.querySelector("#about-form .Loading_Form").style.display =
+        "none";
+      document.querySelector("#about-form .message-api").innerHTML =
+        "خطایی رخ داده, لطفا مجدد اقدام کنید.";
+    }, 2000);
+  }
+}
+
+async function RenderFormAbout() {
+  // about form
+  var inputElementVisa7 = document.querySelector(
+    " .username-about input[data-bc-text-input]"
+  );
+  inputElementVisa7.setAttribute("placeholder", "نام و نام خانوادگی");
+
+  var inputElementVisa7 = document.querySelector(
+    " .phone-about input[data-bc-text-input]"
+  );
+  inputElementVisa7.setAttribute("placeholder", "شماره تلفن");
+
+  var inputElementVisa7 = document.querySelector(
+    " .subject-about input[data-bc-text-input]"
+  );
+  inputElementVisa7.setAttribute("placeholder", "موضوع");
+
+  var inputElementVisa7 = document.querySelector(
+    " .email-about input[data-bc-text-input]"
+  );
+  inputElementVisa7.setAttribute("placeholder", "ایمیل");
+
+  var inputElementVisa7 = document.querySelector(
+    " .text-about textarea[data-bc-text-input]"
+  );
+  inputElementVisa7.setAttribute("placeholder", "متن");
+}
+
 
 function uploadDocumentFooter(args) {
   document.querySelector("#contact-form-resize .Loading_Form").style.display =
     "block";
   const captcha = document
-    .querySelector("#contact-form-resize.form-container")
+    .querySelector("#contact-form-resize")
     .querySelector("#captchaContainer input[name='captcha']").value;
   const captchaid = document
-    .querySelector("#contact-form-resize.form-container")
+    .querySelector("#contact-form-resize")
     .querySelector("#captchaContainer input[name='captchaid']").value;
   const stringJson = JSON.stringify(args.source?.rows[0]);
   $bc.setSource("cms.uploadFooter", {
@@ -174,10 +257,6 @@ function refreshCaptchaFooter(e) {
   $bc.setSource("captcha.refreshFooter", true);
 }
 
-function captchaRenderedFooter() {
-  document.querySelector("#contact-form-resize .contactUsInput").placeholder =
-    "کد امنیتی";
-}
 
 async function OnProcessedEditObjectFooter(args) {
   var response = args.response;
@@ -211,65 +290,6 @@ async function RenderFormFooter() {
   );
   inputElementVisa7.setAttribute("placeholder", "ایمیل");
 
-  // about form
-  var inputElementVisa7 = document.querySelector(
-    " .username-about input[data-bc-text-input]"
-  );
-  inputElementVisa7.setAttribute("placeholder", "نام و نام خانوادگی");
-
-  var inputElementVisa7 = document.querySelector(
-    " .phone-about input[data-bc-text-input]"
-  );
-  inputElementVisa7.setAttribute("placeholder", "شماره تلفن");
-
-  var inputElementVisa7 = document.querySelector(
-    " .subject-about input[data-bc-text-input]"
-  );
-  inputElementVisa7.setAttribute("placeholder", "موضوع");
-
-  var inputElementVisa7 = document.querySelector(
-    " .email-about input[data-bc-text-input]"
-  );
-  inputElementVisa7.setAttribute("placeholder", "ایمیل");
-
-  var inputElementVisa7 = document.querySelector(
-    " .text-about textarea[data-bc-text-input]"
-  );
-  inputElementVisa7.setAttribute("placeholder", "متن");
-}
-
-//function loadContentHomaPage(){
-loadSearchEngine("search-engine.bc", "search-box");
-//}
-async function loadSearchEngine(url, sectionload) {
-  try {
-    var xhrobj = new XMLHttpRequest();
-    xhrobj.open("GET", url);
-    xhrobj.send();
-
-    xhrobj.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        var container = document.getElementById(sectionload);
-        container.innerHTML = xhrobj.responseText;
-
-        var scripts = container.getElementsByTagName("script");
-        for (var i = 0; i < scripts.length; i++) {
-          var scriptTag = document.createElement("script");
-          if (scripts[i].src) {
-            scriptTag.src = scripts[i].src;
-            scriptTag.async = false;
-          } else {
-            scriptTag.text = scripts[i].textContent;
-          }
-          document.head
-            .appendChild(scriptTag)
-            .parentNode.removeChild(scriptTag);
-        }
-      }
-    };
-  } catch (error) {
-    // console.error('مشکلی رخ داده است لطفا صبور باشید.', error);
-  }
 }
 
 
@@ -460,7 +480,7 @@ if (document.querySelector(".slider-tour-list-mobile")) {
   });
 }
 
-if(document.querySelector(".articles-swiper-article")){
+if (document.querySelector(".articles-swiper-article")) {
   var articlesSwiperArticle = new Swiper(".articles-swiper-article", {
     slidesPerView: 1,
     speed: 400,
@@ -497,7 +517,7 @@ if(document.querySelector(".articles-swiper-article")){
   });
 }
 
-if(document.querySelector(".slider-article-mobile")){
+if (document.querySelector(".slider-article-mobile")) {
   var sliderArticleMobile = new Swiper(".slider-article-mobile", {
     slidesPerView: 1,
     speed: 400,

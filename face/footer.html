@@ -21,7 +21,7 @@
           <h3 class="mb-4 font-medium text-white lg:text-2xl">
             عضویت در خبرنامه
           </h3>
-          <form class="flex flex-col">
+          <div class="flex flex-col" id="contact-form-resize">
 
             <basis core="schema" run="atclient"
               schemaurl="/schema/domainform/E59D9A1D-E489-40B0-A552-57BD798159DF/96749EB4-1A60-4FC1-BF7C-38FF1C0265AD/fa/عضویت-در-خبرنامه"
@@ -32,6 +32,8 @@
               body="object_edit={##cms.uploadFooter.value##}&captcha={##cms.uploadFooter.captcha##}&captchaid={##cms.uploadFooter.captchaid##}"
               content-type="application/x-www-form-urlencoded" triggers='cms.uploadFooter'
               OnProcessed="OnProcessedEditObjectFooter"></basis>
+              <basis core="callback" run="atclient" method="uploadDocumentFooter" triggers="upload.datafooter">
+              </basis>
 
             <div class="captcha-button">
               <div id="captchaContainer"
@@ -42,7 +44,7 @@
                   triggers="captcha.refreshFooter">
                   <member name="code" type="scalar" request="captcha"></member>
                 </basis>
-                <basis datamembername="captcha.code" core="print" run="atclient" OnRendered="captchaRenderedFooter">
+                <basis datamembername="captcha.code" core="print" run="atclient">
                   <face>
                     <script type="text/template"><div class="d-inline-block"><div class="flex">
           
@@ -72,15 +74,25 @@
                 </div>
               </div>
             </div>
-            <div class="text-center message-api"></div>
-          </form>
+            <div class="mt-4 text-center text-white message-api"></div>
+          </div>
 
           <div class="flex items-center justify-between mt-8">
             <span class="text-white">ما رو اینجا دنبال کنید</span>
-            <div class="flex gap-2">
-              <a href=""><img src="[##cms.cms.cdn##]/images/telegramIcon.svg" alt="telegramIcon" loading="lazy"/></a>
-              <a href=""><img src="[##cms.cms.cdn##]/images/instagramIcon.svg" alt="instagramIcon" loading="lazy"/></a>
-            </div>
+            <basis core="print" datamembername="db.info">
+              <layout>
+                <div class="flex gap-2">
+                 @child
+                </div>
+              </layout>
+              <face filter="text in('تلگرام')">
+                <a href="@Answer" aria-label="telegram"><img src="[##cms.cms.cdn##]/images/telegramIcon.svg" alt="telegramIcon" loading="lazy"/></a>
+              </face>
+              <face filter="text in('اینستاگرام')">
+                <a href="@Answer" aria-label="instagram"><img src="[##cms.cms.cdn##]/images/instagramIcon.svg" alt="instagramIcon" loading="lazy"/></a>
+              </face>
+            </basis>
+           
           </div>
         </section>
         <!-- membership -->
@@ -89,18 +101,18 @@
         <section class="lg:w-1/4">
           <div class="flex flex-col gap-2 mb-4 text-white">
             <h2 class="text-2xl font-bold text-Primery-600">دسته بندی</h2>
-            <a href="">پرواز</a>
-            <a href="">هتل</a>
-            <a href="">تورها</a>
-            <a href="">ویزا</a>
+            <a href="#" class="hover:text-primary-600">پرواز</a>
+            <a href="#">هتل</a>
+            <a href="#" rel="nofollow">تورها</a>
+            <a href="#" rel="nofollow">ویزا</a>
           </div>
 
           <div class="flex flex-col gap-2 text-white">
             <h2 class="text-2xl font-bold text-Primery-600">میانبر</h2>
-            <a href="/Tourism-magazine">مقالات</a>
-            <a href="">بیمه مسافرتی</a>
-            <a href="">اقامت ها</a>
-            <a href="">سفر</a>
+            <a href="/Tourism-magazine" rel="nofollow">مقالات</a>
+            <a href="#">بیمه مسافرتی</a>
+            <a href="#">اقامت ها</a>
+            <a href="#">سفر</a>
           </div>
         </section>
         <!-- category -->
@@ -140,18 +152,18 @@
         <!-- address -->
 
         <div class="flex justify-between mt-3 lg:justify-normal lg:gap-4">
-          <span class="flex items-center w-16 h-16 p-1 overflow-hidden bg-white rounded-xl">
+          <a href="" class="flex items-center w-16 h-16 p-1 overflow-hidden bg-white rounded-xl" rel="noopener">
             <img src="[##cms.cms.cdn##]/images/eNamad.jpg" alt="eNamad" loading="lazy" decoding="async"/>
-          </span>
-          <span class="flex items-center w-16 h-16 p-1 bg-white rounded-xl">
+          </a>
+          <a href="" class="flex items-center w-16 h-16 p-1 bg-white rounded-xl" rel="noopener">
             <img src="[##cms.cms.cdn##]/images/lata.jpg" alt="lata" loading="lazy"/>
-          </span>
-          <span class="flex items-center w-16 h-16 p-1 bg-white rounded-xl">
+          </a>
+          <a href="" class="flex items-center w-16 h-16 p-1 bg-white rounded-xl" rel="noopener">
             <img src="[##cms.cms.cdn##]/images/pax.png" alt="pax" loading="lazy"/>
-          </span>
-          <span class="flex items-center w-16 h-16 p-1 bg-white rounded-xl">
+          </a>
+          <a href="" class="flex items-center w-16 h-16 p-1 bg-white rounded-xl" rel="noopener">
             <img src="[##cms.cms.cdn##]/images/airplaneComponey.jpg" alt="airplaneComponey" loading="lazy"/>
-          </span>
+          </a>
         </div>
       </section>
       <!-- about us end -->

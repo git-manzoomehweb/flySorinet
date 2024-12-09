@@ -23,7 +23,7 @@
       <nav class="relative flex items-center">
         <ul class="flex justify-between gap-10">
           <li class="flex hover:text-Primery-600">
-            <a href="/"
+            <a href="/" aria-label="headerIcons"
               ><img src="[##cms.cms.cdn##]/images/headerIcons.svg" alt="headerIcons" loading="lazy"
             /></a>
             <a href="/"> صفحه اصلی </a>
@@ -36,8 +36,8 @@
             nullvalue="210485"
           >
             <layout>
-              <li class="group hover:text-Primery-600">
-                <span class="flex items-center gap-2 cursor-pointer group">
+              <li class="group ">
+                <span class="flex items-center gap-2 cursor-pointer group hover:text-Primery-600">
                   تور ها
                   <img
                     src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
@@ -55,9 +55,9 @@
               </li>
             </layout>
             <face level="1" filter="link is null">
-              <li class="relative group/leveltwo group-hover:text-black">
+              <li class="relative group/leveltwo">
                 <div class="flex justify-between cursor-pointer">
-                  <a href="/tour-list.bc?catid=@catid">@title</a>
+                  <a href="/tour-list.bc?catid=@catid" class="hover:text-Primery-600">@title</a>
                   <img
                     src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
                     alt="chevronDownIcon"
@@ -73,9 +73,9 @@
               </li>
             </face>
             <face level="1">
-              <li class="relative group/leveltwo group-hover:text-black">
+              <li class="relative group/leveltwo">
                 <div class="flex justify-between cursor-pointer">
-                  <a href="@link">@title</a>
+                  <a href="@link" class="hover:text-Primery-600">@title</a>
                   <img
                     src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
                     alt="chevronDownIcon"
@@ -91,10 +91,10 @@
               </li>
             </face>
             <face level="end" filter="link is null">
-              <li class="hover:text-Primery-600"><a href="/tour-list.bc?catid=@catid">@title</a></li>
+              <li ><a href="/tour-list.bc?catid=@catid" class="hover:text-Primery-600">@title</a></li>
             </face>
             <face level="end">
-              <li class="hover:text-Primery-600"><a href="@link">@title</a></li>
+              <li ><a href="@link" class="hover:text-Primery-600">@title</a></li>
             </face>
             <!-- submenu end -->
           </basis>
@@ -107,8 +107,8 @@
             nullvalue="212044"
           >
             <layout>
-              <li class="group hover:text-Primery-600">
-                <span class="flex items-center gap-2 cursor-pointer group">
+              <li class="group">
+                <span class="flex items-center gap-2 cursor-pointer group hover:text-Primery-600">
                   ویزا
                   <img
                     src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
@@ -119,7 +119,7 @@
                 </span>
                 <!-- submenu -->
                 <ul
-                  class="absolute flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100"
+                  class="absolute z-50 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100"
                 >
                   @child
                 </ul>
@@ -127,10 +127,10 @@
               </li>
             </layout>
             <face level="end" filter="link is null">
-              <li class="hover:text-Primery-600"><a href="/visa-list.bc?catid=@catid">@title</a></li>
+              <li><a href="/visa-list.bc?catid=@catid" class="hover:text-Primery-600">@title</a></li>
             </face>
             <face level="end">
-              <li class="hover:text-Primery-600"><a href="@link">@title</a></li>
+              <li ><a href="@link" class="hover:text-Primery-600">@title</a></li>
             </face>
           </basis>
           <li class="hover:text-Primery-600"><a href="/Tourism-magazine">مقالات</a></li>

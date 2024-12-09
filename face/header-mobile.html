@@ -20,9 +20,9 @@
           <basis core="tree" datamembername="tour.cat" idcol="catid" parentidcol="parentid" nullvalue="210485">
             <layout>
               <!-- منوی تور -->
-              <li class="menu-item hover:text-Primery-600">
+              <li class="menu-item ">
                 <div class="flex items-center justify-between cursor-pointer menu-trigger">
-                  <span class="flex items-center gap-2">
+                  <span class="flex items-center gap-2 hover:text-Primery-600">
                     تور ها
                     <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
                       class="transition duration-200 ease-in-out chevron" />
@@ -36,9 +36,9 @@
             </layout>
 
             <face level="1" filter="link is null">
-              <li class="overflow-hidden submenu-item hover:text-Primery-600">
+              <li class="overflow-hidden submenu-item ">
                 <div class="flex items-center justify-between cursor-pointer submenu-trigger">
-                  <span>@title</span>
+                  <span class="hover:text-Primery-600">@title</span>
                   <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
                     class="transition duration-200 ease-in-out chevron" />
                 </div>
@@ -49,9 +49,9 @@
             </face>
 
             <face level="1">
-              <li class="overflow-hidden submenu-item hover:text-Primery-600">
+              <li class="overflow-hidden submenu-item ">
                 <div class="flex items-center justify-between cursor-pointer submenu-trigger">
-                  <a href="@link">@title</a>
+                  <a href="@link" class="hover:text-Primery-600">@title</a>
                   <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
                     class="transition duration-200 ease-in-out chevron" />
                 </div>
@@ -62,20 +62,20 @@
             </face>
 
             <face level="end" filter="link is null">
-              <li class="hover:text-Primery-600"><a href="/tour-list.bc?catid=@catid">@title</a></li>
+              <li ><a href="/tour-list.bc?catid=@catid" class="hover:text-Primery-600">@title</a></li>
             </face>
 
             <face level="end">
-              <li class="hover:text-Primery-600"><a href="@link">@title</a></li>
+              <li ><a href="@link" class="hover:text-Primery-600">@title</a></li>
             </face>
           </basis>
 
           <!-- منوی ویزا -->
           <basis core="tree" datamembername="visa.cat" idcol="catid" parentidcol="parentid" nullvalue="212044">
             <layout>
-              <li class="menu-item hover:text-Primery-600">
+              <li class="menu-item ">
                 <div class="flex items-center justify-between cursor-pointer menu-trigger">
-                  <span class="flex items-center gap-2">
+                  <span class="flex items-center gap-2 hover:text-Primery-600">
                     ویزا
                     <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
                       class="transition duration-200 ease-in-out chevron" />
@@ -88,10 +88,10 @@
               </li>
             </layout>
             <face level="end" filter="link is null">
-              <li class="hover:text-Primery-600"><a href="/visa-list.bc?catid=@catid">@title</a></li>
+              <li><a href="/visa-list.bc?catid=@catid" class="hover:text-Primery-600">@title</a></li>
             </face>
             <face level="end">
-              <li class="hover:text-Primery-600"><a href="@link">@title</a></li>
+              <li ><a href="@link" class="hover:text-Primery-600">@title</a></li>
             </face>
           </basis>
           
@@ -115,7 +115,7 @@
     </svg>
 
     <div class="flex items-center gap-8">
-      <img src="[##cms.cms.cdn##]/images/headerIcons.svg" alt="headerIcons" loading="lazy"/>
+      <a href="/" aria-label="headerIcons"><img src="[##cms.cms.cdn##]/images/headerIcons.svg" alt="headerIcons" loading="lazy"/></a>
       <span class="flex items-center gap-2 Login_Information">
         <basis core="call" file="authentication/modal"></basis>
       </span>
