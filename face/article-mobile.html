@@ -124,7 +124,7 @@
             <div class="mt-6 mb-6 text-sm text-justify">@largetext</div>
           </face>
           <face filter="TypeID in(250)">
-            <h2 id="@valueID" class="mt-10 mb-4 text-xl font-medium">@text</h2>
+            <h1 id="@valueID" class="mt-10 mb-4 text-xl font-medium">@text</h1>
             <div class="mb-6 text-sm text-justify">@largetext</div>
           </face>
         </basis>
@@ -229,6 +229,7 @@
                     <img
                       src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
                       alt="calenderIconWhite"
+                      width="24" height="24"
                       loading="lazy"
                     />
                     @cdate
@@ -268,6 +269,7 @@
                     <img
                       src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
                       alt="calenderIconWhite"
+                      width="24" height="24"
                       loading="lazy"
                     />
                     @cdate
@@ -342,6 +344,10 @@
       </section>
     </main>
 
+    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
+    <script  type="application/ld+json" >
+      [##db.json.Column1##]
+       </script>
     <!-- footer -->
     <basis
       core="call"
@@ -355,6 +361,5 @@
       file="script.inc"
       pageindex="[##cms.cms.pageindex##]"
     ></basis>
-    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
   </body>
 </html>

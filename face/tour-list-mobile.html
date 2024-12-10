@@ -55,16 +55,18 @@
 
     <main>
         <div class="relative">
-            <img src="[##cms.cms.cdn##]/images/tourListRec.svg" alt="" loading="lazy"
+            <img src="[##cms.cms.cdn##]/images/tourListRec.svg" alt="tourListRec" width="303" height="168" loading="lazy"
                 class="absolute left-[6px] top-4 lg:left-[-17rem] lg:-z-10 lg:-top-24 2xl:top-[-6.5rem] 2xl:left-12" />
             <div
                 class="relative flex flex-col items-center justify-end pb-4 overflow-hidden bg-center h-44 rounded-3xl">
-                <img src="[##cms.cms.cdn##]/images/strait-bosphorus-suleymaniye-mosque.jpg" alt="" loading="lazy" class="absolute bottom-0">
+                <img src="[##cms.cms.cdn##]/images/strait-bosphorus-suleymaniye-mosque.jpg" alt="strait-bosphorus-suleymaniye-mosque" loading="lazy" class="absolute bottom-0">
                 <div class="absolute bottom-0 w-full h-full bg-shadow-gradient"></div>
                 <div class="relative z-10 text-center">
-                    <h2 class="mb-4 text-lg font-medium text-white">
-                        تور های استانبول
-                    </h2>
+                    <basis core="print" datamembername="db.scalar">
+                        <face>
+                          <h1 class="mb-4 text-lg font-medium">@column1</h1>
+                        </face>
+                      </basis>
                     <ul
                     itemscope
                     itemtype="https://schema.org/BreadcrumbList"
@@ -158,7 +160,7 @@
                         <div class="absolute bottom-8 right-4">
                             <h3 class="mb-2 text-xl text-white">@title</h3>
                             <div class="flex items-center gap-2">
-                                <img src="[##cms.cms.cdn##]/images/clockIcon.svg" alt="" loading="lazy"/>
+                                <img src="[##cms.cms.cdn##]/images/clockIcon.svg" alt="clockIcon"  width="24" height="24" loading="lazy"/>
                                 <span class="text-sm text-white">@prp_8076</span>
                             </div>
                         </div>
@@ -169,15 +171,15 @@
                     </a>
                     <div class="flex flex-col gap-2 px-4 mt-9">
                         <span class="flex items-center text-sm text-zinc-900">
-                            <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="" loading="lazy"/>
+                            <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="calenderIcon" width="24" height="24" loading="lazy"/>
                             تاریخ رفت : @prp_8077
                         </span>
                         <span class="flex items-center text-sm text-zinc-900">
-                            <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="" loading="lazy"/>
+                            <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="calenderIcon" width="24" height="24" loading="lazy"/>
                             ایرلاین: @prp_10000504
                         </span>
                         <span class="flex items-center text-sm text-zinc-900">
-                            <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="" loading="lazy"/>
+                            <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="calenderIcon" width="24" height="24" loading="lazy"/>
                             شروع قیمت:
                         </span>
                         <span class="font-medium text-zinc-900">@prp_8181</span>
@@ -194,7 +196,7 @@
                         <div class="absolute bottom-8 right-4">
                             <h3 class="mb-2 text-xl text-white">@title</h3>
                             <div class="flex items-center gap-2">
-                                <img src="[##cms.cms.cdn##]/images/clockIcon.svg" alt="" loading="lazy"/>
+                                <img src="[##cms.cms.cdn##]/images/clockIcon.svg" alt="clockIcon" width="24" height="24" loading="lazy"/>
                                 <span class="text-sm text-white">@prp_8076</span>
                             </div>
                         </div>
@@ -205,15 +207,15 @@
                     </a>
                     <div class="flex flex-col gap-2 px-4 mt-9">
                         <span class="flex items-center text-sm text-zinc-900">
-                            <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="" loading="lazy"/>
+                            <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="calenderIcon" width="24" height="24" loading="lazy"/>
                             تاریخ رفت : @prp_8077
                         </span>
                         <span class="flex items-center text-sm text-zinc-900">
-                            <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="" loading="lazy"/>
+                            <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="mapIcon" width="24" height="24" loading="lazy"/>
                             ایرلاین: @prp_10000504
                         </span>
                         <span class="flex items-center text-sm text-zinc-900">
-                            <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="" loading="lazy"/>
+                            <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="coinIcon" width="24" height="24" loading="lazy"/>
                             شروع قیمت:
                         </span>
                         <span class="font-medium text-zinc-900">@prp_8181</span>
@@ -253,11 +255,11 @@
                             </div>
                             <div class="flex justify-between mt-2">
                                 <span class="flex items-center gap-1 text-white">
-                                    <img src="[##cms.cms.cdn##]/images/calenderIconWhite.svg" alt="" loading="lazy"/>
+                                    <img src="[##cms.cms.cdn##]/images/calenderIconWhite.svg" alt="calenderIconWhite" width="24" height="24" loading="lazy"/>
                                     @cdate
                                 </span>
                                 <a href="/article.bc?id=@id"
-                                    class="flex items-center justify-center hover:scale-105 px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700">
+                                    class="flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 rounded-xl bg-Primery-700">
                                     بیشتر بخوانید
                                 </a>
                             </div>
@@ -278,11 +280,11 @@
                             </div>
                             <div class="flex justify-between mt-2">
                                 <span class="flex items-center gap-1 text-white">
-                                    <img src="[##cms.cms.cdn##]/images/calenderIconWhite.svg" alt="" loading="lazy"/>
+                                    <img src="[##cms.cms.cdn##]/images/calenderIconWhite.svg" alt="calenderIconWhite" width="24" height="24" loading="lazy"/>
                                     @cdate
                                 </span>
                                 <a href="@link"
-                                    class="flex items-center justify-center hover:scale-105 px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700">
+                                    class="flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 rounded-xl bg-Primery-700">
                                     بیشتر بخوانید
                                 </a>
                             </div>
@@ -329,11 +331,11 @@
         </section>
     </main>
 
+    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
     <!-- footer -->
     <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"></basis>
     <!-- footer end -->
 
-    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
 </body>
 
 </html>

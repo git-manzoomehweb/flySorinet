@@ -27,7 +27,7 @@
   <member
     name="hotel"
     type="list"
-    link="hotel.bc"
+    link="article.bc"
     order="ord"
     size="412x295"
     propertyid="3087406,3087407"
@@ -106,6 +106,7 @@
     <!-- swiper -->
     <link
       rel="stylesheet"
+      defer
       href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css"
     />
 
@@ -454,7 +455,7 @@
                 class="absolute left-[14px] top-[-16.2rem] lg:left-[-17rem] lg:-z-10 lg:-top-24 2xl:top-[-6.5rem] 2xl:left-12"
               />
               <img
-                src="[##cms.cms.cdn##]/images/cloudscape-with-clouds.png"
+                src="[##cms.cms.cdn##]/images/cloudscape-with-clouds-min.png"
                 alt="airplane-background"
                 loading="lazy"
                 class="absolute rotate-[4deg] w-72 h-[13.4rem] rounded-3xl -left-12 top-[-16rem] 2xl:h-[54rem] 2xl:-z-10 2xl:rotate-6 2xl:w-[52rem] 2xl:-top-44 2xl:-left-12"
@@ -1606,7 +1607,7 @@
       <section class="mt-12 desktopContainer">
         <div class="flex items-center justify-between mb-4">
           <h2 class="font-medium">هتل ها</h2>
-          <a href="/hotel-list.bc?catid=210488" class="text-sm text-Primery-700"
+          <a href="/article-list.bc?catid=210488" class="text-sm text-Primery-700"
             >مشاهده همه</a
           >
         </div>
@@ -1638,7 +1639,7 @@
                   <span class="text-sm text-Primery-700">موقعیت</span>
                 </div>
                 <a
-                  href="/hotel.bc?id=@id"
+                  href="/article.bc?id=@id"
                   class="absolute flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
                 >
                   مشاهده
@@ -1864,6 +1865,7 @@
     </main>
     <!-- main end -->
 
+    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
     <!-- footer -->
     <basis
       core="call"
@@ -1872,7 +1874,6 @@
     ></basis>
     <!-- footer end -->
 
-    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
 
   </body>
 </html>

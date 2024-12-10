@@ -27,7 +27,7 @@
   <member
     name="hotel"
     type="list"
-    link="hotel.bc"
+    link="article.bc"
     order="ord"
     size="412x295"
     propertyid="3087406,3087407"
@@ -152,18 +152,19 @@
         <!-- header background -->
         <div class="relative mb-60 lg:mb-20">
           <img
-            src="[##cms.cms.cdn##]/images/fly-image.png"
-            alt=""
-            loading="lazy"
+            src="[##cms.cms.cdn##]/images/fly-image-min.webp"
+            alt="fly-image-min"
+            width="1141" 
+            height="886"
             class="lg:w-[40rem] lg:h-[57rem] lg:absolute lg:-top-44 lg:-z-10 lg:-left-16 xl:w-[47rem] 2xl:w-auto"
           />
         </div>
         <!-- header background end  -->
         <section class="mt-4 desktopContainer">
           <div class="lg:w-[45%] xl:w-[46%] 2xl:w-2/5">
-            <h1 class="hidden mb-16 text-3xl font-bold lg:block">
-              <span class="text-Primery-700">پرواز</span> رو با سورینت تجربه کن
-            </h1>
+            <div class="hidden mb-16 text-3xl font-bold lg:flex lg:gap-2">
+              <span class="text-Primery-700">پرواز</span> رو با <h1>سورینت</h1> تجربه کن
+            </div>
             <!-- selected category  -->
             <div id="search-nav">
               <ul class="flex flex-wrap items-center justify-between gap-y-3">
@@ -1827,7 +1828,7 @@
                 <div class="flex items-center gap-8">
                   <h2 class="text-2xl font-bold">هتل ها</h2>
                   <a
-                    href="/hotel-list.bc?catid=212047"
+                    href="/article-list.bc?catid=212047"
                     class="text-xl font-medium text-Primery-700"
                     >مشاهده همه</a
                   >
@@ -1913,7 +1914,7 @@
                 <span class="text-sm text-Primery-700">موقعیت</span>
               </span>
               <a
-                href="/hotel.bc?id=@id"
+                href="/article.bc?id=@id"
                 class="absolute flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
               >
                 مشاهده

@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // کد مشاهده بیشتر/کمتر - برای صفحه article-list-mobile.html
-if (window.location.pathname.includes("article-list-mobile")) {
+if (document.querySelector('input[name="search"]')) {
   document.addEventListener("DOMContentLoaded", function () {
     const loadMoreBtn = document.querySelector(".load-more-btn");
     const newsContainer = document.querySelector(".news-container");
@@ -119,7 +119,7 @@ if (document.querySelector('input[name="search"]')) {
 }
 
 // کد fetch مقالات - برای صفحه article-list.html
-if (window.location.pathname.includes("article-list")) {
+if (document.querySelector('input[name="search"]')) {
   document.addEventListener("DOMContentLoaded", function () {
     const radioButtons = document.querySelectorAll(
       'input[type="radio"][name="radio"]'

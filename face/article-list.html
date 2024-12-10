@@ -41,8 +41,7 @@
   </basis>
   <basis core="call" file="pwa.inc" />
   <basis core="call" file="style.inc" />
-  <!-- swiper -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+ 
 </head>
 
 <body class="px-2 bg-zinc-50">
@@ -53,10 +52,14 @@
   <main class="relative">
     <!-- header background -->
     <div class="flex items-center justify-center mb-16">
-      <img src="[##cms.cms.cdn##]/images/article-list-background.jpg" alt="article-list-background" loading="lazy"
+      <img src="[##cms.cms.cdn##]/images/article-list-background-min.jpg" alt="article-list-background" loading="lazy"
         class="object-cover -z-10 2xl:h-[44rem] lg:h-[30rem] object-bottom border-b-8 border-solid border-Primery-600 w-full rounded-3xl" />
       <div class="absolute mb-6">
-        <h1 class="mb-4 text-2xl font-medium text-white">مقاله های گردشگری</h1>
+        <basis core="print" datamembername="db.scalar">
+          <face>
+            <h1 class="mb-4 text-2xl font-medium text-white">@column1</h1>
+          </face>
+        </basis>
         <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center gap-1">
           <li class="inline-block font-normal text-white" itemprop="itemListElement" itemscope
             itemtype="https://schema.org/ListItem">
@@ -110,12 +113,12 @@
         <!-- left content on main end -->
 
         <!-- right content of main -->
-        <aside>
-          <section class="w-[30%] border border-solid border-Primery-100 rounded-xl p-4 overflow-hidden h-fit">
+        <aside class="w-[30%]">
+          <section class="p-4 overflow-hidden border border-solid border-Primery-100 rounded-xl h-fit">
             <div class="relative flex justify-between px-3 py-4 rounded-lg bg-zinc-100">
               <input type="text" name="search" id="" class="outline-none bg-zinc-100 placeholder:text-zinc-900"
                 placeholder="جستجو" />
-              <img src="[##cms.cms.cdn##]/images/searchIcon.svg" alt="searchIcon" class="cursor-pointer" loading="lazy" />
+              <img src="[##cms.cms.cdn##]/images/searchIcon.svg" width="25" height="25" alt="searchIcon" class="cursor-pointer" loading="lazy" />
             </div>
             <basis core="tree" datamembername="tourism-magazine.cat" idcol="catid" parentidcol="parentid"
               nullvalue="212276">
