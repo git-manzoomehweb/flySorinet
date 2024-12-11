@@ -1,78 +1,19 @@
 <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
   <member type="list" name="list" request="taglist" preview=""></member>
 </basis>
-<basis
-  core="dbsource"
-  source="basiscore"
-  lid="1"
-  mid="18"
-  name="db"
-  usedforid="[##cms.query.catid##]"
->
+<basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="[##cms.query.catid##]">
   <member name="scalar" type="scalar" typeid="150" />
 </basis>
 
-<basis
-  core="dbsource"
-  source="basiscore"
-  lid="1"
-  mid="1"
-  name="db"
-  catid="[##cms.query.catid##]"
->
-  <member
-    name="navigation"
-    type="tree"
-    request="navcatid"
-    parentid="[##cms.query.catid##]"
-  />
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+  <member name="navigation" type="tree" request="navcatid" parentid="[##cms.query.catid##]" />
 </basis>
 
-<basis
-  core="dbsource"
-  source="basiscore"
-  lid="1"
-  mid="1"
-  name="db"
-  catid="[##cms.query.nid##]"
->
-  <member
-    name="news-list"
-    type="list"
-    link="article.bc"
-    propertyid="7244"
-    perpage="6"
-    size="90x90"
-    order="ord"
-  />
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.nid##]">
+  <member name="news-list" type="list" link="article.bc" propertyid="7244" perpage="6" size="90x90" order="ord" />
 </basis>
 
-<basis
-  core="dbsource"
-  source="basiscore"
-  lid="1"
-  mid="1"
-  name="db"
-  catid="[##cms.query.catid##]"
->
-  <member
-    name="article-list"
-    type="list"
-    link="article.bc"
-    propertyid="7244"
-    perpage="6"
-    pageno="[##cms.query.pagenum|(1)##]"
-    size="412x259"
-    order="ord"
-  />
-  <member
-    name="paging"
-    type="list"
-    request="paging"
-    count="3"
-    parentname="article-list"
-  />
-</basis>
+
 
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="tourism-magazine">
   <member name="cat" type="tree" request="cat" parentid="212276" order="ord"></member>
@@ -80,449 +21,188 @@
 
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover"
-    />
-    <title>
-      [##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]
-    </title>
-    <meta
-      name="description"
-      content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]"
-    />
-    <basis
-      core="dbsource"
-      source="hosting"
-      name="tag"
-      urlid="[##cms.seo.urlid##]"
-    >
-      <member type="list" name="list" request="taglist" preview=""></member>
-    </basis>
-    <basis core="print" datamembername="tag.list">
-      <face filter="key = 'canonical'">
-        <link rel="canonical" href="@value" />
-      </face>
-      <face>
-        <meta property="@key" content="@value" />
-      </face>
-    </basis>
-    <basis core="call" file="pwa.inc" />
-    <basis core="call" file="style.inc" />
-  
-  </head>
-  <body class="px-2">
-    <!-- header -->
-    <basis
-      core="call"
-      file="header.inc"
-      pageindex="[##cms.cms.pageindex##]"
-    ></basis>
-    <!-- header end -->
 
-    <main class="relative">
-      <!-- header background -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover" />
+  <title>
+    [##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]
+  </title>
+  <meta name="description" content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری سورینت)##]" />
+  <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+    <member type="list" name="list" request="taglist" preview=""></member>
+  </basis>
+  <basis core="print" datamembername="tag.list">
+    <face filter="key = 'canonical'">
+      <link rel="canonical" href="@value" />
+    </face>
+    <face>
+      <meta property="@key" content="@value" />
+    </face>
+  </basis>
+  <basis core="call" file="pwa.inc" />
+  <basis core="call" file="style.inc" />
 
-      <div class="flex items-center justify-center mb-16">
-        <div class="relative">
-          <img
-            src="[##cms.cms.cdn##]/images/tourListRec.svg"
-            alt="tourListRec"
-            width="303" height="168"
-            class="absolute left-[6px] -z-10 top-12"
+</head>
 
-          />
-          <img
-            src="[##cms.cms.cdn##]/images/article-list-background-min.jpg"
-            alt="article-list-background"
-            class="object-cover 2xl:h-[44rem] lg:h-[30rem] object-bottom w-full rounded-3xl"
+<body class="px-2">
+  <!-- header -->
+  <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"></basis>
+  <!-- header end -->
 
-          />
-        </div>
-        <div class="absolute">
-          <basis core="print" datamembername="db.scalar">
-            <face>
-              <h1 class="text-xl font-medium text-white">@column1</h1>
-            </face>
-          </basis>
-          <ul
-            itemscope
-            itemtype="https://schema.org/BreadcrumbList"
-            class="flex items-center gap-1"
-          >
-            <li
-              class="inline-block font-normal text-white"
-              itemprop="itemListElement"
-              itemscope
-              itemtype="https://schema.org/ListItem"
-            >
-              <a
-                class="text-white hover:text-primary-900"
-                itemprop="item"
-                href="/"
-                aria-label="home"
-                ><span itemprop="name">صفحه اصلی</span>
-                <meta itemprop="position" content="1" />
-              </a>
-            </li>
-            <span class="text-white"> &gt; </span>
-            <basis core="print" datamembername="db.navigation">
-              <face filter="RowNumber=max(RowNumber) and parentcatid<>210442">
-                <li
-                  class="inline-block font-normal text-white"
-                  itemprop="itemListElement"
-                  itemscope
-                  itemtype="https://schema.org/ListItem"
-                >
-                  <span itemprop="name">@title</span
-                  ><meta itemprop="position" content="@rownumber" />
-                </li>
-              </face>
-              <face filter="link is null and parentcatid<>210442">
-                <li
-                  class="flex gap-1 font-normal text-white"
-                  itemprop="itemListElement"
-                  itemscope
-                  itemtype="https://schema.org/ListItem"
-                >
-                  <a
-                    class="text-white hover:text-primary-900"
-                    itemprop="item"
-                    href="/article-list.bc?catid=@parentcatid"
-                    aria-label="@title"
-                    ><span itemprop="name">@title</span
-                    ><meta itemprop="position" content="@rownumber"
-                  /></a>
-                  <span class="text-white"> &gt; </span>
-                </li>
-              </face>
-              <face filter="parentcatid<>210442">
-                <li
-                  class="flex gap-1 font-normal text-white"
-                  itemprop="itemListElement"
-                  itemscope
-                  itemtype="https://schema.org/ListItem"
-                >
-                  <a
-                    class="text-white hover:text-primary-900"
-                    itemprop="item"
-                    href="@link"
-                    aria-label="@title"
-                    ><span class="text-white" itemprop="name">@title</span
-                    ><meta itemprop="position" content="@rownumber"
-                  /></a>
-                  <span class="text-white"> &gt; </span>
-                </li>
-              </face>
-            </basis>
-          </ul>
-        </div>
+  <main class="relative">
+    <!-- header background -->
+
+    <div class="flex items-center justify-center mb-16">
+      <div class="relative">
+        <img src="[##cms.cms.cdn##]/images/tourListRec.svg" alt="tourListRec" width="303" height="168"
+          class="absolute left-[6px] -z-10 top-12" />
+        <img src="[##cms.cms.cdn##]/images/article-list-background-min.jpg" alt="article-list-background"
+          class="object-cover 2xl:h-[44rem] lg:h-[30rem] object-bottom w-full rounded-3xl" />
       </div>
-      <!-- header background end -->
-
-      <div class="pt-4 pb-8 bg-white rounded-xl desktopContainer">
-        <div class="flex flex-col">
-          <!-- left content of main -->
-          <basis core="list" datamembername="db.article-list">
-            <layout>
-              <section class="grid order-2 gap-3 px-4 pb-8 mt-4">
-                @child
-              </section>
-            </layout>
-            <face filter="link is null">
-              <article
-                class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
-              >
-                <img
-                  src="@00412X00259prp"
-                  alt="@title"
-                  class="absolute bottom-0 right-0 object-cover w-full h-full"
-                  loading="lazy"
-                />
-                <div
-                  class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-                ></div>
-                <div class="relative z-10">
-                  <div>
-                    <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
-                    <p class="text-sm text-justify text-white line-clamp-3">
-                      @prp_7244
-                    </p>
-                  </div>
-                  <div class="flex justify-between mt-2">
-                    <span class="flex items-center gap-1 text-white">
-                      <img
-                        src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
-                        alt="calenderIconWhite"
-                        width="24" height="24"
-                        loading="lazy"
-                      />
-                      @cdate
-                    </span>
-                    <a
-                      href="/article.bc?id=@id"
-                      class="flex items-center justify-center px-4 py-2 text-white h-14 w-36 rounded-xl bg-Primery-700"
-                    >
-                      بیشتر بخوانید
-                    </a>
-                  </div>
-                </div>
-              </article>
+      <div class="absolute">
+        <basis core="print" datamembername="db.scalar">
+          <face>
+            <h1 class="text-xl font-medium text-white">@column1</h1>
+          </face>
+        </basis>
+        <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center gap-1">
+          <li class="inline-block font-normal text-white" itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+            <a class="text-white hover:text-primary-900" itemprop="item" href="/" aria-label="home"><span
+                itemprop="name">صفحه اصلی</span>
+              <meta itemprop="position" content="1" />
+            </a>
+          </li>
+          <span class="text-white"> &gt; </span>
+          <basis core="print" datamembername="db.navigation">
+            <face filter="RowNumber=max(RowNumber) and parentcatid<>210442">
+              <li class="inline-block font-normal text-white" itemprop="itemListElement" itemscope
+                itemtype="https://schema.org/ListItem">
+                <span itemprop="name">@title</span>
+                <meta itemprop="position" content="@rownumber" />
+              </li>
             </face>
-            <face>
-              <article
-                class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl"
-              >
-                <img
-                  src="@00412X00259prp"
-                  alt="@title"
-                  class="absolute bottom-0 right-0 object-cover w-full h-full"
-                  loading="lazy"
-                />
-                <div
-                  class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-                ></div>
-                <div class="relative z-10">
-                  <div>
-                    <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
-                    <p class="text-sm text-justify text-white line-clamp-3">
-                      @prp_7244
-                    </p>
-                  </div>
-                  <div class="flex justify-between mt-2">
-                    <span class="flex items-center gap-1 text-white">
-                      <img
-                        src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
-                        alt="calenderIconWhite"
-                        width="24" height="24"
-                        loading="lazy"
-                      />
-                      @cdate
-                    </span>
-                    <a
-                      href="@link"
-                      class="flex items-center justify-center px-4 py-2 text-lg text-white h-14 w-36 rounded-xl bg-Primery-700"
-                    >
-                      بیشتر بخوانید
-                    </a>
-                  </div>
-                </div>
-              </article>
+            <face filter="link is null and parentcatid<>210442">
+              <li class="flex gap-1 font-normal text-white" itemprop="itemListElement" itemscope
+                itemtype="https://schema.org/ListItem">
+                <a class="text-white hover:text-primary-900" itemprop="item" href="/article-list.bc?catid=@parentcatid"
+                  aria-label="@title"><span itemprop="name">@title</span>
+                  <meta itemprop="position" content="@rownumber" />
+                </a>
+                <span class="text-white"> &gt; </span>
+              </li>
+            </face>
+            <face filter="parentcatid<>210442">
+              <li class="flex gap-1 font-normal text-white" itemprop="itemListElement" itemscope
+                itemtype="https://schema.org/ListItem">
+                <a class="text-white hover:text-primary-900" itemprop="item" href="@link" aria-label="@title"><span
+                    class="text-white" itemprop="name">@title</span>
+                  <meta itemprop="position" content="@rownumber" />
+                </a>
+                <span class="text-white"> &gt; </span>
+              </li>
             </face>
           </basis>
-          <!-- left content on main end -->
-          
-          <!-- right content of main -->
-          <section
-          class="p-4 overflow-hidden border border-solid border-Primery-100 rounded-xl h-fit"
-          >
-          <form
-          class="relative flex justify-between px-3 py-4 rounded-lg bg-zinc-100"
-            >
-              <input
-                type="text"
-                name="search"
-                id=""
-                class="outline-none bg-zinc-100 placeholder:text-zinc-900"
-                placeholder="جستجو"
-              />
-              <span
-                ><img
-                  src="[##cms.cms.cdn##]/images/searchIcon.svg"
-                  alt="searchIcon"
-                  width="25" height="25"
-                  loading="lazy"
-              /></span>
-            </form>
-            <basis
-              core="tree"
-              datamembername="tourism-magazine.cat"
-              idcol="catid"
-              parentidcol="parentid"
-              nullvalue="212276"
-            >
+        </ul>
+      </div>
+    </div>
+    <!-- header background end -->
+
+    <div class="pt-4 pb-8 bg-white rounded-xl desktopContainer">
+      <div class="flex flex-col">
+
+
+        <!-- right content of main -->
+        <section class="p-4 overflow-hidden border border-solid border-Primery-100 rounded-xl h-fit">
+          <form class="relative flex justify-between px-3 py-4 rounded-lg bg-zinc-100">
+            <input type="text" name="search" id="" class="outline-none bg-zinc-100 placeholder:text-zinc-900"
+              placeholder="جستجو" />
+            <span><img src="[##cms.cms.cdn##]/images/searchIcon.svg" alt="searchIcon" width="25" height="25"
+                loading="lazy" /></span>
+          </form>
+          <basis core="tree" datamembername="tourism-magazine.cat" idcol="catid" parentidcol="parentid"
+            nullvalue="212276">
+            <layout>
+              <div class="flex flex-col gap-1 mt-4">
+                <h2 class="font-medium">شهر/کشور</h2>
+                <ul class="flex flex-col gap-1">
+                  @child
+                </ul>
+              </div>
+            </layout>
+            <face level="end" filter="link is null">
+              <li class="flex items-center gap-2 hover:text-Primery-600">
+                <input type="radio" name="radio" value="@catid" id="" class="size-4" aria-label="radio-btn" />
+                @title
+              </li>
+            </face>
+            <face level="end">
+              <li class="flex items-center gap-2 hover:text-Primery-600">
+                <input type="radio" name="radio" value="@catid" id="" class="size-4" aria-label="radio-btn" />
+                @title
+              </li>
+            </face>
+          </basis>
+
+          <div class="py-4 mt-4 border-solid border-y border-Primery-100">
+            <h2 class="font-bold text-Primery-700">آخرین مطالب</h2>
+          </div>
+
+          <div class="pt-4 pb-4">
+            <basis core="list" datamembername="db.news-list">
               <layout>
-                <div class="flex flex-col gap-1 mt-4">
-                  <h2 class="font-medium">شهر/کشور</h2>
-                  <ul class="flex flex-col gap-1">
-                    @child
-                  </ul>
+                <div
+                  class="flex flex-col gap-4 news-container max-h-[212px] overflow-hidden transition-all duration-300">
+                  <!-- news -->
+                  @child
+                  <!-- news end -->
                 </div>
               </layout>
-              <face level="end" filter="link is null">
-                <li class="flex items-center gap-2 hover:text-Primery-600">
-                  <input
-                    type="radio"
-                    name="radio"
-                    value="@catid"
-                    id=""
-                    class="size-4"
-                    aria-label="radio-btn"
-                  />
-                  @title
-                </li>
-              </face>
-              <face level="end">
-                <li class="flex items-center gap-2 hover:text-Primery-600">
-                  <input
-                    type="radio"
-                    name="radio"
-                    value="@catid"
-                    id=""
-                    class="size-4"
-                    aria-label="radio-btn"
-                  />
-                  @title
-                </li>
-              </face>
-            </basis>
-
-            <div class="py-4 mt-4 border-solid border-y border-Primery-100">
-              <h2 class="font-bold text-Primery-700">آخرین مطالب</h2>
-            </div>
-
-            <div class="pt-4 pb-4">
-              <basis core="list" datamembername="db.news-list">
-                <layout>
-                  <div class="flex flex-col gap-4 news-container max-h-[212px] overflow-hidden transition-all duration-300">
-                    <!-- news -->
-                    @child
-                    <!-- news end -->
+              <face filter="link is null">
+                <a href="/article.bc?id=@id" class="flex items-center gap-4 hover:scale-105">
+                  <img src="@00090X00090prp" alt="@title" class="object-cover w-24 h-24 rounded-xl" loading="lazy" />
+                  <div class="flex flex-col gap-2">
+                    <h2 class="text-sm font-medium">@title</h2>
+                    <span class="text-sm line-clamp-2">@prp_7244</span>
                   </div>
-                </layout>
-                <face filter="link is null">
-                  <a href="/article.bc?id=@id" class="flex items-center gap-4 hover:scale-105">
-                    <img
-                      src="@00090X00090prp"
-                      alt="@title"
-                      class="object-cover w-24 h-24 rounded-xl"
-                      loading="lazy"
-                    />
-                    <div class="flex flex-col gap-2">
-                      <h2 class="text-sm font-medium">@title</h2>
-                      <span class="text-sm line-clamp-2">@prp_7244</span>
-                    </div>
-                  </a>
-                </face>
-                <face>
-                  <a href="@link" class="flex items-center gap-4 hover:scale-105">
-                    <img
-                      src="@00090X00090prp"
-                      alt="@title"
-                      class="object-cover w-24 h-24 rounded-xl"
-                      loading="lazy"
-                    />
-                    <div class="flex flex-col gap-2">
-                      <h2 class="text-sm font-medium">@title</h2>
-                      <span class="text-sm line-clamp-2">@prp_7244</span>
-                    </div>
-                  </a>
-                </face>
-              </basis>
-              <div class="flex justify-center mt-6">
-                <span class="text-blue-700 load-more-btn">مشاهده بیشتر</span>
-              </div>
+                </a>
+              </face>
+              <face>
+                <a href="@link" class="flex items-center gap-4 hover:scale-105">
+                  <img src="@00090X00090prp" alt="@title" class="object-cover w-24 h-24 rounded-xl" loading="lazy" />
+                  <div class="flex flex-col gap-2">
+                    <h2 class="text-sm font-medium">@title</h2>
+                    <span class="text-sm line-clamp-2">@prp_7244</span>
+                  </div>
+                </a>
+              </face>
+            </basis>
+            <div class="flex justify-center mt-6">
+              <span class="text-blue-700 load-more-btn">مشاهده بیشتر</span>
             </div>
-          </section>
-          <!-- right content of main end -->
-        </div>
-        <div class="flex items-center justify-center gap-2 mt-16">
-          <ul class="flex gap-3 cd-pagination no-space dir-lt2" id="wibpaging">
-            <basis core="print" datamembername="db.paging">
-              <face filter="(@sta='pre')">
-                <li
-                  class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
-                >
-                  <a
-                    class="text-zinc-900"
-                    href="/[##cms.cms.link_page##]&pagenum=@page"
-                    aria-label="angle-left"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M16.5725 12C16.5725 12.2926 16.4605 12.5851 16.2377 12.808L9.38076 19.6649C8.93392 20.1117 8.21166 20.1117 7.76482 19.6649C7.31798 19.218 7.31798 18.4958 7.76482 18.0489L13.8137 12L7.76482 5.9511C7.31798 5.5042 7.31798 4.782 7.76482 4.3351C8.21166 3.8883 8.93392 3.8883 9.38076 4.3351L16.2377 11.192C16.4605 11.4149 16.5725 11.7074 16.5725 12Z"
-                        fill="white"
-                      /></svg></a>
-                </li>
-              </face>
-            </basis>
+          </div>
+        </section>
+        <!-- right content of main end -->
 
-            <basis core="print" datamembername="db.paging">
-              <face filter="(@page=[##cms.query.pagenum|(1)##])">
-                <li
-                  class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300"
-                >
-                  <a
-                    class="current font-color-1 text-zinc-900"
-                    href="/[##cms.cms.link_page##]&pagenum=@page"
-                    >@page</a
-                  >
-                </li>
-              </face>
+        <!-- left content of main -->
+          <div class="fetch-content-article" data-catid="[##cms.query.catid##]">
+            
+          </div>
+        <!-- left content on main end -->
 
-              <face
-                filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no')"
-              >
-                <li
-                  class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300"
-                >
-                  <a
-                    class="text-zinc-900"
-                    href="/[##cms.cms.link_page##]&pagenum=@page"
-                    >@page</a
-                  >
-                </li>
-              </face>
-            </basis>
 
-            <basis core="print" datamembername="db.paging">
-              <face filter="(@sta='nex')">
-                <li
-                  class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600"
-                >
-                  <a
-                    class="text-zinc-900"
-                    href="/[##cms.cms.link_page##]&pagenum=@page"
-                    aria-label="angle-right"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M7.4275 12C7.4275 11.7074 7.5395 11.4149 7.7623 11.192L14.6192 4.33513C15.0661 3.88829 15.7883 3.88829 16.2352 4.33513C16.682 4.78197 16.682 5.50423 16.2352 5.95107L10.1863 12L16.2352 18.0489C16.682 18.4958 16.682 19.218 16.2352 19.6649C15.7883 20.1117 15.0661 20.1117 14.6192 19.6649L7.7623 12.808C7.5395 12.5851 7.4275 12.2926 7.4275 12Z"
-                        fill="white"
-                      /></svg></a>
-                </li>
-              </face>
-            </basis>
-          </ul>
-        </div>
       </div>
-    </main>
 
-    <!-- footer -->
-    <basis
-      core="call"
-      file="footer.inc"
-      pageindex="[##cms.cms.pageindex##]"
-    ></basis>
-    <!-- footer end -->
+    </div>
+  </main>
+
+  <!-- footer -->
+  <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"></basis>
+  <!-- footer end -->
 
 
 
-  </body>
+</body>
+
 </html>

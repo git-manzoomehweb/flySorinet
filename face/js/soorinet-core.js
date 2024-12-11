@@ -76,6 +76,43 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// search engine
+
+function loadContentHomePage() {
+  loadSearchEngine("search-engine.bc", "searchbox");
+}
+async function loadSearchEngine(url, sectionload) {
+  try {
+    var xhrobj = new XMLHttpRequest();
+    xhrobj.open("GET", url);
+    xhrobj.send();
+    xhrobj.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        var container = document.getElementById(sectionload);
+        container.innerHTML = xhrobj.responseText;
+
+        var scripts = container.getElementsByTagName("script");
+        for (var i = 0; i < scripts.length; i++) {
+          var scriptTag = document.createElement("script");
+
+          if (scripts[i].src) {
+            scriptTag.src = scripts[i].src;
+            scriptTag.async = false;
+          } else {
+            scriptTag.text = scripts[i].textContent;
+          }
+
+          document.head
+            .appendChild(scriptTag)
+            .parentNode.removeChild(scriptTag);
+        }
+      }
+    };
+  } catch (error) {}
+}
+
+// search engine
+
 // کد مشاهده بیشتر/کمتر - برای صفحه article-list-mobile.html
 if (document.querySelector('input[name="search"]')) {
   document.addEventListener("DOMContentLoaded", function () {
@@ -177,22 +214,19 @@ function uploadDocumentAbout(args) {
     captchaid: captchaid,
     run: true,
   });
-  console.log(captcha)
+  console.log(captcha);
 }
 
 function refreshCaptchaAbout(e) {
   $bc.setSource("captcha.refreshAbout", true);
 }
 
-
-
 async function OnProcessedEditObjectAbout(args) {
   var response = args.response;
   var json = await response.json();
   var errorid = json.errorid;
   if (errorid == "6") {
-    document.querySelector("#about-form .Loading_Form").style.display =
-      "none";
+    document.querySelector("#about-form .Loading_Form").style.display = "none";
     document.querySelector("#about-form .message-api").innerHTML =
       "درخواست شما با موفقیت ثبت شد.";
   } else {
@@ -234,7 +268,6 @@ async function RenderFormAbout() {
   inputElementVisa7.setAttribute("placeholder", "متن");
 }
 
-
 function uploadDocumentFooter(args) {
   document.querySelector("#contact-form-resize .Loading_Form").style.display =
     "block";
@@ -256,7 +289,6 @@ function uploadDocumentFooter(args) {
 function refreshCaptchaFooter(e) {
   $bc.setSource("captcha.refreshFooter", true);
 }
-
 
 async function OnProcessedEditObjectFooter(args) {
   var response = args.response;
@@ -289,10 +321,7 @@ async function RenderFormFooter() {
     " .email-footer input[data-bc-text-input]"
   );
   inputElementVisa7.setAttribute("placeholder", "ایمیل");
-
 }
-
-
 
 //  swiper
 if (document.querySelector(".articles-swiper-default")) {

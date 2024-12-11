@@ -1035,123 +1035,151 @@ video {
 @font-face {
   font-display: swap;
 
-  font-family: 'DanaFaNum';
+  font-family: "DanaFaNum";
 
   font-style: normal;
 
   font-weight: 400;
 
-  src: url('../_fonts/DanaFaNum-Regular.woff') format('truetype');
+  src: url("../_fonts/DanaFaNum-Regular.woff") format("truetype");
 }
 
 @font-face {
   font-display: swap;
 
-  font-family: 'DanaFaNum-Medium';
+  font-family: "DanaFaNum-Medium";
 
   font-style: normal;
 
   font-weight: normal;
 
-  src: url('../_fonts/DanaFaNum-Medium.woff') format('truetype');
+  src: url("../_fonts/DanaFaNum-Medium.woff") format("truetype");
 }
 
 @font-face {
   font-display: swap;
 
-  font-family: 'DanaFaNum-Bold';
+  font-family: "DanaFaNum-Bold";
 
   font-style: normal;
 
   font-weight: normal;
 
-  src: url('../_fonts/DanaFaNum-Bold.woff') format('truetype');
+  src: url("../_fonts/DanaFaNum-Bold.woff") format("truetype");
 }
-.desktopContainer{
+@font-face {
+  font-display: swap;
+  font-family: "fontawesome";
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+  src: url("../_fonts/fontawesome-webfont.eot");
+  src: url("../_fonts/fontawesome-webfont.eot") format("embedded-opentype"),
+    url("../_fonts/fontawesome-webfont.ttf") format("truetype"),
+    url("../_fonts/fontawesome-webfont.woff") format("truetype"),
+    url("../_fonts/fontawesome-webfont.svg") format("svg");
+}
+.desktopContainer {
   max-width: 1280px;
   margin-right: auto;
   margin-left: auto;
 }
 
 @media (min-width: 1024px) {
-  .lg\:desktopContainer{
+  .lg\:desktopContainer {
     max-width: 1280px;
     margin-right: auto;
     margin-left: auto;
   }
 }
-:root{
-  --primary: #BD0006;
-  --primary-900: #BD0006;
-  --primary-800: #CB0017;
-  --primary-700: #D8111F;
-  --primary-600: #EA2124;
-  --primary-500: #F92F24;
-  --primary-400: #F44543;
-  --primary-300: #EB6A69;
-  --primary-200: #F49593;
-  --primary-100: #FFCACF;
-  --primary-50: #FFEAED;
+:root {
+  --primary: #bd0006;
+  --primary-900: #bd0006;
+  --primary-800: #cb0017;
+  --primary-700: #d8111f;
+  --primary-600: #ea2124;
+  --primary-500: #f92f24;
+  --primary-400: #f44543;
+  --primary-300: #eb6a69;
+  --primary-200: #f49593;
+  --primary-100: #ffcacf;
+  --primary-50: #ffeaed;
 
-  --bg-primary: #BD0006;
-  --bg-primary-900: #BD0006;
-  --bg-primary-800: #CB0017;
-  --bg-primary-700: #D8111F;
-  --bg-primary-600: #EA2124;
-  --bg-primary-500: #F92F24;
-  --bg-primary-400: #F44543;
-  --bg-primary-300: #EB6A69;
-  --bg-primary-200: #F49593;
-  --bg-primary-100: #FFCACF;
-  --bg-primary-50: #FFEAED;
+  --bg-primary: #bd0006;
+  --bg-primary-900: #bd0006;
+  --bg-primary-800: #cb0017;
+  --bg-primary-700: #d8111f;
+  --bg-primary-600: #ea2124;
+  --bg-primary-500: #f92f24;
+  --bg-primary-400: #f44543;
+  --bg-primary-300: #eb6a69;
+  --bg-primary-200: #f49593;
+  --bg-primary-100: #ffcacf;
+  --bg-primary-50: #ffeaed;
 
-  --secondary: #BD0006;
-  --secondary-900: #BD0006;
-  --secondary-800: #CB0017;
-  --secondary-700: #D8111F;
-  --secondary-600: #EA2124;
-  --secondary-500: #F92F24;
-  --secondary-400: #F44543;
-  --secondary-300: #EB6A69;
-  --secondary-200: #F49593;
-  --secondary-100: #FFCACF;
-  --secondary-50: #FFEAED;
+  --secondary: #bd0006;
+  --secondary-900: #bd0006;
+  --secondary-800: #cb0017;
+  --secondary-700: #d8111f;
+  --secondary-600: #ea2124;
+  --secondary-500: #f92f24;
+  --secondary-400: #f44543;
+  --secondary-300: #eb6a69;
+  --secondary-200: #f49593;
+  --secondary-100: #ffcacf;
+  --secondary-50: #ffeaed;
 
-  --bg-secondary: #BD0006;
-  --bg-secondary-900: #BD0006;
-  --bg-secondary-800: #CB0017;
-  --bg-secondary-700: #D8111F;
-  --bg-secondary-600: #EA2124;
-  --bg-secondary-500: #F92F24;
-  --bg-secondary-400: #F44543;
-  --bg-secondary-300: #EB6A69;
-  --bg-secondary-200: #F49593;
-  --bg-secondary-100: #FFCACF;
-  --bg-secondary-50: #FFEAED;
+  --bg-secondary: #bd0006;
+  --bg-secondary-900: #bd0006;
+  --bg-secondary-800: #cb0017;
+  --bg-secondary-700: #d8111f;
+  --bg-secondary-600: #ea2124;
+  --bg-secondary-500: #f92f24;
+  --bg-secondary-400: #f44543;
+  --bg-secondary-300: #eb6a69;
+  --bg-secondary-200: #f49593;
+  --bg-secondary-100: #ffcacf;
+  --bg-secondary-50: #ffeaed;
 
-  --Footer-900: #1E1919;
+  --Footer-900: #1e1919;
 }
 
-.bg-primary{background-color:var(--primary);}
-.bg-secondary{background-color:var(--secondary);}
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
 
 /* authentication */
-.bg-primary {background-color: var(--primary);}
-.bg-secondary {background-color: var(--secondary);}
-.main-operationUser-container button, .login-btn,.main-operationUser-container input[type="password"], .main-login-container input[type="password"], .main-login-container input[type="text"]{font-family: "DanaFaNum" !important;}
-
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.main-operationUser-container button,
+.login-btn,
+.main-operationUser-container input[type="password"],
+.main-login-container input[type="password"],
+.main-login-container input[type="text"] {
+  font-family: "DanaFaNum" !important;
+}
 
 /* ----------------------------form-------------------------- */
 [data-bc-schema-direction="rtl"] [data-bc-title-container] {
   display: none !important;
 }
 
-footer [data-bc-schema-direction="rtl"] [data-bc-title-container] [data-bc-question-title] {
+footer
+  [data-bc-schema-direction="rtl"]
+  [data-bc-title-container]
+  [data-bc-question-title] {
   display: none !important;
 }
 
 footer [data-bc-answer-container] input[type="text"] {
-  background-color: #1E1919 !important;
+  background-color: #1e1919 !important;
   color: #a1a1aa !important;
   height: 64px !important;
   padding: 16px 12px !important;
@@ -1163,27 +1191,25 @@ footer [data-bc-answer-container] input[type="text"] {
   font-size: 16px;
 }
 
-footer [data-bc-answer-container] input[type="text"]::placeholder{
+footer [data-bc-answer-container] input[type="text"]::placeholder {
   color: #a1a1aa !important;
 }
 
-[data-bc-answer-container]{
+[data-bc-answer-container] {
   width: 100% !important;
 }
 
-
-
-.form-about [data-bc-schema-column]{
+.form-about [data-bc-schema-column] {
   display: flex;
   flex-wrap: wrap;
 }
 .form-about [data-bc-question]:nth-child(1),
 .form-about [data-bc-question]:nth-child(2),
 .form-about [data-bc-question]:nth-child(3),
-.form-about [data-bc-question]:nth-child(4){
+.form-about [data-bc-question]:nth-child(4) {
   width: 50% !important;
 }
-.form-about [data-bc-question]:nth-child(5){
+.form-about [data-bc-question]:nth-child(5) {
   width: 100% !important;
 }
 .form-about [data-bc-answer-title-container] {
@@ -1194,7 +1220,7 @@ footer [data-bc-answer-container] input[type="text"]::placeholder{
   width: 100% !important;
 }
 
-.form-about [data-bc-schema-direction="rtl"] [data-bc-part-container]{
+.form-about [data-bc-schema-direction="rtl"] [data-bc-part-container] {
   width: 100% !important;
 }
 
@@ -1214,14 +1240,14 @@ footer [data-bc-answer-container] input[type="text"]::placeholder{
   border-radius: 12px !important;
   font-size: 16px;
 }
-.form-about [data-bc-answer-container] textarea::placeholder{
+.form-about [data-bc-answer-container] textarea::placeholder {
   color: black;
 }
-.form-about [data-bc-answer-container] input[type="text"]::placeholder{
+.form-about [data-bc-answer-container] input[type="text"]::placeholder {
   color: black;
 }
 
-.form-about-mobile [data-bc-question]{
+.form-about-mobile [data-bc-question] {
   width: 100%;
 }
 
@@ -1241,13 +1267,13 @@ footer [data-bc-answer-container] input[type="text"]::placeholder{
   height: 64px;
   font-size: 16px;
 }
-.form-about-mobile [data-bc-answer-container] textarea::placeholder{
+.form-about-mobile [data-bc-answer-container] textarea::placeholder {
   color: black;
 }
-.form-about-mobile [data-bc-answer-container] input[type="text"]::placeholder{
+.form-about-mobile [data-bc-answer-container] input[type="text"]::placeholder {
   color: black;
 }
 
 .bg-footer-gradient {
-  background-image: linear-gradient(277.8deg, #1D0202 0.86%, #121212 99.53%);
+  background-image: linear-gradient(277.8deg, #1d0202 0.86%, #121212 99.53%);
 }
