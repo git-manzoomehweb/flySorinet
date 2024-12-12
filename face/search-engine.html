@@ -1,34 +1,81 @@
 <div class="search-box search-box-container">
-  <div
-    class="p-5 mx-auto my-3 bg-white rounded-xl min-h-44 max-w-7xl max-xl:w-full lg:h-auto lg:p-3 drop-shadow-lg">
+   <!-- header background -->
+  
+   <div class="absolute top-0 left-0 right-0 mb-60 lg:mb-20" id="banner-sb">
+    <img src="[##cms.cms.cdn##]/images/flight-background-merge.png" alt="fly-image-min" width="1141" height="886"
+      class="lg:w-[40rem] lg:h-[57rem] lg:absolute lg:-top-44 lg:-z-10 lg:-left-16 xl:w-[47rem] 2xl:w-auto" />
+  </div>
+  <!-- header background end  -->
+  <div class="p-5 mx-auto my-3 bg-white rounded-xl min-h-44 max-w-7xl lg:h-auto lg:p-3 drop-shadow-lg lg:w-[45%] xl:w-[46%] 2xl:w-2/5">
     <nav class="mb-6 search-nav ">
-      <ul
-        class="flex justify-between w-full text-right dir-rtl gap-x-2 h-14 lg:h-full lg:gap-y-2 lg:flex-wrap">
+      <ul class="flex justify-between w-full text-right dir-rtl gap-x-2 h-14 lg:h-full lg:gap-y-2 lg:flex-wrap">
         <li id="Flight" data-id="item-Flight" onclick="check_searchHistory('flight')"
-          class="relative inline-flex items-center justify-center overflow-hidden text-base leading-10 text-center rounded-full cursor-pointer active-module group w-modulesb font-danamedium bg-zinc-100 text-primary-900 h-14 lg:w-20 lg:h-20">
-          <span
-            class="absolute w-0 h-0 transition-all duration-500 ease-out rounded-full bg-secondary-800 group-hover:w-full group-hover:h-56"></span>
+          class="relative inline-flex flex-col items-center justify-center overflow-hidden text-base leading-10 text-center rounded-full cursor-pointer active-module group w-modulesb font-danamedium bg-zinc-100 text-primary-900 h-14 lg:w-20 lg:h-20">
+          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M27.5706 11.2126C27.3269 10.3762 26.7944 9.73663 26.0331 9.36103C24.5631 8.63503 22.8119 9.11263 22.1256 9.35023C20.7681 9.82063 19.4556 10.3738 18.0881 10.9042C16.5594 9.54583 15.0194 8.24743 13.5856 7.04743C12.5594 6.18583 11.5031 5.87143 10.4406 6.11503C9.86563 6.24103 9.32438 6.43903 8.80063 6.63223C8.55563 6.72223 8.30813 6.81223 8.05188 6.89743C7.80688 6.97903 7.60938 7.15303 7.50313 7.37863C7.39688 7.60543 7.39188 7.86223 7.49188 8.09143L10.0781 14.1143C9.18188 14.4755 8.08063 14.9255 7.04438 15.3479L5.50063 15.9755C5.34688 15.6191 5.18063 15.2351 5.11813 15.0887C4.92313 14.6279 4.37438 14.4071 3.89688 14.5955C3.41688 14.7827 3.18688 15.3083 3.38188 15.7679C3.49563 16.0343 3.94438 17.0735 4.06188 17.3411C4.08313 17.3891 4.10438 17.4359 4.12563 17.4827C4.12938 17.4899 4.13188 17.4971 4.13563 17.5043C4.14563 17.5283 4.15688 17.5499 4.16813 17.5727C5.28188 19.8983 7.12813 21.1331 9.36188 21.1331C10.2056 21.1331 11.1056 20.9555 12.0431 20.5955C16.4844 18.8807 20.9381 17.0855 24.8756 15.4991C26.5731 14.8019 28.1419 13.1627 27.5706 11.2126Z"
+              fill="#57525B" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M24.3031 25.2559H6.69189C6.17439 25.2559 5.75439 25.6591 5.75439 26.1559C5.75439 26.6527 6.17439 27.0559 6.69189 27.0559H24.3031C24.8206 27.0559 25.2406 26.6527 25.2406 26.1559C25.2406 25.6591 24.8206 25.2559 24.3031 25.2559Z"
+              fill="#57525B" />
+          </svg>
+
 
           <span class="relative leading-72px">پرواز </span>
         </li>
         <li id="Hotel" data-id="item-Hotel" onclick="check_searchHistory('hotel')"
-          class="relative inline-flex items-center justify-center overflow-hidden text-base leading-10 text-center rounded-full cursor-pointer group w-modulesb font-danamedium bg-zinc-100 text-primary-900 h-14 lg:w-20 lg:h-20">
-          <span
-            class="absolute w-0 h-0 transition-all duration-500 ease-out rounded-full bg-secondary-800 group-hover:w-full group-hover:h-56"></span>
-
+          class="relative inline-flex flex-col items-center justify-center overflow-hidden text-base leading-10 text-center rounded-full cursor-pointer group w-modulesb font-danamedium bg-zinc-100 text-primary-900 h-14 lg:w-20 lg:h-20">
+          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_94_379)">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M27.7781 18.4606C27.3894 16.9439 26.1581 15.7677 24.5544 15.3903C24.0481 15.2796 23.4919 15.2796 22.3856 15.2796H9.66811C8.56186 15.2796 8.00686 15.2796 7.48936 15.3927C5.89686 15.7677 4.66434 16.9439 4.27559 18.4606C4.15186 18.9463 4.15186 19.476 4.15186 20.5296C4.15186 21.0963 4.15186 21.4094 4.22561 21.7082C4.45936 22.6153 5.19934 23.3165 6.14186 23.5344C6.28684 23.5701 6.43434 23.5891 6.60811 23.5998V24.8748C6.60811 25.3677 7.02809 25.7677 7.54559 25.7677C8.06434 25.7677 8.48309 25.3677 8.48309 24.8748V23.6129H23.5719V24.8748C23.5719 25.3677 23.9919 25.7677 24.5094 25.7677C25.0269 25.7677 25.4469 25.3677 25.4469 24.8748V23.5998C25.6181 23.5891 25.7606 23.5725 25.8981 23.5379C26.8556 23.3153 27.5956 22.6141 27.8269 21.7058C27.9019 21.4106 27.9019 21.0975 27.9019 20.5296C27.9019 19.476 27.9019 18.9463 27.7781 18.4606Z"
+                fill="#57525B" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M7.54541 14.0886H24.5091C24.8541 14.0886 25.1341 13.8219 25.1341 13.4934V9.8267C25.1341 9.05408 25.1341 8.62908 24.9854 8.23146C24.7329 7.56242 24.1829 7.04099 23.4829 6.80289C23.0716 6.66003 22.6491 6.66003 21.8091 6.66003H10.2454C9.40416 6.66003 8.98166 6.66003 8.57416 6.8017C7.87041 7.04099 7.32166 7.56242 7.06541 8.23622C6.92041 8.63027 6.92041 9.05408 6.92041 9.8267V13.4934C6.92041 13.8219 7.20041 14.0886 7.54541 14.0886Z"
+                fill="#57525B" />
+            </g>
+            <defs>
+              <clipPath id="clip0_94_379">
+                <rect width="30" height="30" fill="white" transform="translate(0.5 0.5)" />
+              </clipPath>
+            </defs>
+          </svg>
           <span class="relative leading-72px">هتل </span>
         </li>
         <li id="FlightHotel" data-id="item-FlightHotel" onclick="check_searchHistory('flightHotel')"
-          class="relative inline-flex items-center justify-center overflow-hidden text-base leading-10 text-center rounded-full cursor-pointer group w-modulesb font-danamedium bg-zinc-100 text-primary-900 h-14 lg:w-20 lg:h-20">
-          <span
-            class="absolute w-0 h-0 transition-all duration-500 ease-out rounded-full bg-secondary-800 group-hover:w-full group-hover:h-56"></span>
+          class="relative inline-flex flex-col items-center justify-center overflow-hidden text-base leading-10 text-center rounded-full cursor-pointer group w-modulesb font-danamedium bg-zinc-100 text-primary-900 h-14 lg:w-20 lg:h-20">
+          <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M15.1963 17.6453C15.1963 18.1421 14.7763 18.5453 14.2588 18.5453C13.7413 18.5453 13.3213 18.1421 13.3213 17.6453V11.4293C13.3213 10.9325 13.7413 10.5293 14.2588 10.5293C14.7763 10.5293 15.1963 10.9325 15.1963 11.4293V17.6453ZM12.855 6.58134H7.145V3.70134C7.145 3.11934 7.63752 2.64534 8.24377 2.64534H11.755C12.3613 2.64534 12.855 3.11934 12.855 3.70134V6.58134ZM10.9388 17.6453C10.9388 18.1421 10.5188 18.5453 10.0013 18.5453C9.48377 18.5453 9.06377 18.1421 9.06377 17.6453V11.4293C9.06377 10.9325 9.48377 10.5293 10.0013 10.5293C10.5188 10.5293 10.9388 10.9325 10.9388 11.4293V17.6453ZM6.68875 17.6453C6.68875 18.1421 6.26875 18.5453 5.75125 18.5453C5.23375 18.5453 4.81375 18.1421 4.81375 17.6453V11.4293C4.81375 10.9325 5.23375 10.5293 5.75125 10.5293C6.26875 10.5293 6.68875 10.9325 6.68875 11.4293V17.6453ZM14.73 6.61854V3.70134C14.73 2.12574 13.395 0.845337 11.755 0.845337H8.24377C6.60375 0.845337 5.27 2.12574 5.27 3.70134V6.61854C2.4 6.81174 0.625 8.68734 0.625 11.6453V17.2613C0.625 20.0669 2.21 21.9077 4.81125 22.2617V23.3453C4.81125 23.8421 5.23125 24.2453 5.74875 24.2453C6.26625 24.2453 6.68625 23.8421 6.68625 23.3453V22.3373H13.3188V23.3453C13.3188 23.8421 13.7388 24.2453 14.2563 24.2453C14.7738 24.2453 15.1938 23.8421 15.1938 23.3453V22.2617C17.7913 21.9077 19.3725 20.0705 19.3725 17.2721V11.6453C19.3725 8.68614 17.5988 6.81054 14.73 6.61854Z"
+              fill="#57525B" />
+          </svg>
 
           <span class="relative leading-72px">پرواز + هتل </span>
         </li>
         <li id="Tour" data-id="item-Tour" onclick="check_searchHistory('tour')"
-          class="relative inline-flex items-center justify-center overflow-hidden text-base leading-10 text-center rounded-full cursor-pointer group w-modulesb font-danamedium bg-zinc-100 text-primary-900 h-14 lg:w-20 lg:h-20">
-          <span
-            class="absolute w-0 h-0 transition-all duration-500 ease-out rounded-full bg-secondary-800 group-hover:w-full group-hover:h-56"></span>
+          class="relative inline-flex flex-col items-center justify-center overflow-hidden text-base leading-10 text-center rounded-full cursor-pointer group w-modulesb font-danamedium bg-zinc-100 text-primary-900 h-14 lg:w-20 lg:h-20">
+          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.6928 4.92969V6.62547V4.92969ZM26.8174 16.0545H25.1216H26.8174ZM6.26366 16.0545H4.56787H6.26366ZM23.5589 8.18779L22.3598 9.38686L23.5589 8.18779ZM9.02565 9.38745L7.82656 8.18837L9.02565 9.38745Z"
+              fill="#57525B" />
+            <path
+              d="M15.6928 4.92969V6.62547M26.8174 16.0545H25.1216M6.26366 16.0545H4.56787M23.5589 8.18779L22.3598 9.38686M9.02565 9.38745L7.82656 8.18837"
+              stroke="#57525B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M20.8779 16.0556C20.8779 13.192 18.5567 10.8696 15.6919 10.8696C12.8271 10.8696 10.5059 13.192 10.5059 16.0556C10.5011 16.2901 10.5111 16.8296 10.5896 17.1109"
+              stroke="#57525B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16.2708 25.348C11.3821 23.9163 11.1099 25.8219 8.60498 25.8219" stroke="#57525B" stroke-width="3"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M24.8623 25.3481C24.8623 25.3481 23.2681 26.0143 20.895 26.0699" stroke="#57525B" stroke-width="3"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M17.3547 18.0985C16.5411 18.0615 15.6323 17.9165 14.6787 17.5842C12.8074 16.9322 11.1082 17.0011 9.96289 17.1931"
+              stroke="#57525B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4.31885 21.909C4.31885 21.909 6.62956 20.2434 10.7324 20.6739" stroke="#57525B" stroke-width="3"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M18.2437 21.9805C21.3189 22.636 23.6533 21.3401 26.5671 20.9807" stroke="#57525B" stroke-width="3"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
 
           <span class="relative leading-72px">تور </span>
         </li>
@@ -47,29 +94,26 @@
                     <ul class="flex justify-between lg:w-full">
                       <li id="oneway"
                         onclick="document.getElementById('flight-form').action='/Tem3_Oneway_Search.bc';setFlightType('oneway',this);"
-                        class="relative inline-flex items-center justify-center ml-2 gap-2 overflow-hidden text-sm leading-10 text-center bg-white cursor-pointer text-zinc-900 active-flight-type group w-fit px-7 font-danaregular text-primary-900 h-9 rounded-3xl lg:w-1/3 lg:px-0 lg:ml-0">
+                        class="relative inline-flex items-center gap-2 overflow-hidden text-sm leading-10 text-center bg-white cursor-pointer text-zinc-900 active-flight-type group w-fit px-7 font-danaregular h-9 lg:px-0 lg:ml-0">
 
-                        <input type="radio" name="flight-type" id="" class="accent-Primery-600">
+                        <input type="radio" name="flight-type" id="" class="accent-Primery-600" checked>
 
-                        <span for="oneway-radio"
-                          class="relative group-hover:text-Primery-600 lg:w-full lg:block">یکطرفه</span>
+                        <span for="oneway-radio" class="relative group-hover:text-Primery-600 lg:block">یکطرفه</span>
                       </li>
                       <li id="backtoback"
                         onclick="document.getElementById('flight-form').action='/Tem3_Roundtrip_Search.bc';setFlightType('roundtrip',this);"
-                        class="relative inline-flex items-center justify-center gap-2 ml-2 overflow-hidden text-sm leading-10 text-center bg-white cursor-pointer text-zinc-900 group w-fit px-7 font-danaregular text-primary-900 h-9 rounded-3xl lg:w-1/3 lg:px-0 lg:ml-0" >
+                        class="relative inline-flex items-center gap-2 overflow-hidden text-sm leading-10 text-center bg-white cursor-pointer text-zinc-900 group w-fit px-7 font-danaregular h-9 lg:px-0 lg:ml-0">
                         <input type="radio" name="flight-type" id="" class="accent-Primery-600">
 
-                        <span for="roundtrip-radio"
-                          class="relative group-hover:text-Primery-600 lg:w-full lg:block">رفت
+                        <span for="roundtrip-radio" class="relative group-hover:text-Primery-600 lg:block">رفت
                           و
                           برگشت</span>
                       </li>
                       <li id="multiflight" onclick="showMultiCity(this);setFlightType('multicity',this);"
-                        class="relative inline-flex items-center justify-center gap-2 ml-2 overflow-hidden text-sm leading-10 text-center bg-white cursor-pointer text-zinc-900 group w-fit px-7 font-danaregular text-primary-900 h-9 rounded-3xl lg:w-1/3 lg:px-0 lg:ml-0">
+                        class="relative inline-flex items-center gap-2 overflow-hidden text-sm leading-10 text-center bg-white cursor-pointer text-zinc-900 group w-fit px-7 font-danaregular h-9 lg:px-0 lg:ml-0">
                         <input type="radio" name="flight-type" id="" class="w-3 h-3 accent-Primery-600">
 
-                        <span for="multicity-radio"
-                          class="relative group-hover:text-Primery-600 lg:w-full lg:block">چند
+                        <span for="multicity-radio" class="relative group-hover:text-Primery-600 lg:block">چند
                           مسیره</span>
                       </li>
                     </ul>
@@ -79,28 +123,30 @@
                     class="flex justify-between gap-2 mt-5 form-search text-gray lg:flex-col lg:flex-wrap">
                     <input type="hidden" name="persiancurrent" class="persiancurrent" value /><input type="hidden"
                       name="select-age" class="select-age-value" value="0" />
-                    <div class="flex items-center justify-between gap-1 lg:flex-wrap lg:justify-normal lg:w-full lg:flex-col">
+                    <div
+                      class="flex items-center justify-between gap-1 lg:flex-wrap lg:justify-normal lg:w-full lg:flex-col">
                       <div class="relative city rounded-2xl h-[72px] lg:w-full">
-                        <div class="relative flex items-center h-full rounded-lg bg-zinc-100">
+                        <div
+                          class="relative flex items-center h-full border border-solid rounded-lg bg-zinc-100 border-zinc-100">
 
                           <div class="w-12 h-14 block before:content-ariplaneIconDepSB before:align-[-32px] mr-1">
                           </div>
 
                           <div class="h-full w-36 lg:w-full lg:min-w-40 max-xl:w-16">
-                            <label for="" class="absolute px-4 py-3 right-0">مبدا</label>
+                            <label for="" class="absolute right-0 px-4 py-3">مبدا</label>
                             <input id="dep1" type="text" onclick="empty_value(this)" oninput="city_search(this)"
                               data-type="1" required autocomplete="off"
-                              class="absolute top-0 bottom-0 left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 country font-danaregular text-neutralcolor-800 focus:outline-none text-ellipsis FCD1 text-value departure "
+                              class="absolute bottom-0 left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer placeholder:text-zinc-600 top-3 country font-danaregular text-neutralcolor-800 focus:outline-none text-ellipsis FCD1 text-value departure "
                               value="" placeholder="مبدا خود را انتخاب کنید" /><input class="co-id FCDid1 from" value=""
                               type="hidden" name="from" />
                             <span class="absolute top-0 hidden mini-loading left-5"><i
                                 class="fas fa-spinner"></i></span>
                           </div>
-                         
+
 
                         </div>
                         <div
-                          class="absolute z-20 hidden float-right overflow-hidden text-sm shadow-md search-list searchList unvisible-city bg-secondary-200 rounded-xl w-80 max-h-72 h-72 max-sm:w-full">
+                          class="absolute z-20 hidden float-right overflow-hidden text-sm bg-white shadow-md search-list searchList unvisible-city rounded-xl w-80 max-h-72 h-72 max-sm:w-full">
                           <div
                             class="py-1 mx-auto text-xl text-center text-white center-txt bg-secondary-800 font-danaregular">
                             مسیرها
@@ -190,8 +236,8 @@
                         </div>
                       </div>
 
-    
-                        <!-- <svg width="49" height="49" viewBox="0 0 49 49" fill="none"
+
+                      <!-- <svg width="49" height="49" viewBox="0 0 49 49" fill="none"
                                                       xmlns="http://www.w3.org/2000/svg">
                                                       <rect x="1.75" y="1.5" width="46" height="46" rx="23"
                                                           stroke="#B99E6D" class="group-hover:stroke-primary-900"
@@ -208,23 +254,24 @@
                                                           stroke-linejoin="round" />
                                                   </svg> -->
 
-                                                  <img src="[##cms.cms.cdn##]/images/changeIcon.svg" alt="changeIcon" width="48" height="48" loading="lazy"
-                                                  class="exchange-icon absolute top-[13%] left-[8%] lg:top-[39%] z-10" />
+                      <img src="[##cms.cms.cdn##]/images/changeIcon.svg" alt="changeIcon" width="48" height="48"
+                        loading="lazy" class="exchange-icon absolute left-[8%] lg:top-[39%] z-10" />
 
-                      
+
                       <div class="relative city rounded-2xl h-[72px] lg:w-full">
-                        <div class="relative flex items-center h-full rounded-lg bg-zinc-100">
+                        <div
+                          class="relative flex items-center h-full border border-solid rounded-lg bg-zinc-100 border-zinc-100">
                           <div class="w-36 lg:w-full lg:min-w-40 max-xl:w-16">
-                            <label class="absolute px-4 py-3 right-0">مقصد</label>
+                            <label class="absolute top-0 right-0 px-4 py-3">مقصد</label>
                             <input id="des1" type="text"
-                              class="absolute top-0 bottom-0 left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 font-danaregular text-neutralcolor-800 focus:outline-none FCD2 text-value country destination text-ellipsis "
+                              class="absolute bottom-0 left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer placeholder:text-zinc-600 top-3 placeholder-neutral-800 font-danaregular text-neutralcolor-800 focus:outline-none FCD2 text-value country destination text-ellipsis "
                               value="" onclick="empty_value(this)" oninput="city_search(this)" data-type="1" required
                               autocomplete="off" placeholder="مقصد خود را انتخاب کنید" /><input class="co-id FCDid2 to"
                               type="hidden" name="to" value="" />
                             <span class="absolute top-0 hidden mini-loading left-5"><i
                                 class="fas fa-spinner"></i></span>
                           </div>
-                    
+
                         </div>
                         <div
                           class="absolute z-20 hidden float-right overflow-hidden text-sm shadow-md search-list searchList unvisible-city bg-secondary-200 rounded-xl w-80 max-h-72 h-72 max-sm:w-full">
@@ -318,62 +365,65 @@
                       </div>
                     </div>
                     <div
-                      class="flex items-center justify-between w-2/5 gap-2 text-base placeholder-neutral-800 font-danaregular Basis_Date_Box lg:w-full lg:flex-nowrap">
+                      class="flex items-center justify-between w-2/5 gap-2 text-base font-danaregular Basis_Date_Box lg:w-full lg:flex-nowrap">
                       <div
-                        class="relative flex items-center justify-between w-1/2 gap-1 rounded-lg bg-zinc-100 lg:w-full h-[72px]">
+                        class="relative flex items-center justify-between w-1/2 gap-1 rounded-lg bg-zinc-100 lg:w-full h-[72px] border border-solid border-zinc-100">
 
                         <div class="w-full rounded-2xl">
-                          <label for="" class="px-4 py-3 absolute top-0 right-0">تاریخ رفت</label>
+                          <label for="" class="absolute top-0 right-0 px-4 py-3">تاریخ رفت</label>
                           <input type="text"
-                            class="absolute top-0 bottom-0 left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 font-danaregular Basis_Date start_date focus:outline-none text-ellipsis "
+                            class="absolute bottom-0 left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer placeholder:text-zinc-600 top-3 placeholder-neutral-800 font-danaregular Basis_Date start_date focus:outline-none text-ellipsis "
                             value onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-lang="fa" data-active="0"
                             data-cache="0" readonly required name="fdate" placeholder="1403/5/5" />
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-0">
+                          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-3">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                               d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
                               fill="#18181B" />
                           </svg>
-                          </div>
-                        <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
                         </div>
+
                       </div>
                       <div
-                        class="relative flex items-center justify-between w-1/2 gap-1 rounded-lg bg-zinc-100 lg:w-full h-[72px] opc-50">
-                    
-                        <div class="w-full rounded-2xl ">
-                          <label for="" class="px-4 py-3 absolute top-0 right-0">تاریخ برگشت</label>
+                        class="relative flex items-center justify-between w-1/2 gap-1 rounded-lg bg-zinc-100 lg:w-full h-[72px]  border border-solid border-zinc-100">
+
+                        <div class="w-full rounded-2xl Noactive-date">
+                          <label for="" class="absolute top-0 right-0 px-4 py-3">تاریخ برگشت</label>
                           <input type="text"
-                            class="absolute top-0 bottom-0 left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer Noactive-date placeholder-neutral-800 font-danaregular Basis_Date end_date focus:outline-none text-ellipsis"
+                            class="absolute bottom-0 left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer placeholder:text-zinc-600 top-3 font-danaregular Basis_Date end_date focus:outline-none text-ellipsis"
                             value onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-lang="fa" data-active="0"
                             data-cache="0" readonly name="tdate" placeholder="1403/5/5" disabled />
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-0">
+                          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-3">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                               d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
                               fill="#18181B" />
                           </svg>
-                          </div>
+                        </div>
                         <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
                         </div>
                       </div>
                     </div>
                     <div
-                      class="relative flex items-center justify-between w-3/12 rounded-lg lg:w-full bg-zinc-100 ">
-                      <div
-                        class="w-8 h-14 border-neutral-300 block before:content-userIconSB before:align-[-32px] mr-1">
-                      </div>
+                      class="relative flex items-center justify-between w-3/12 rounded-lg h-[72px] lg:w-full bg-zinc-100 ">
+                      <span class="absolute top-0 right-0 px-4 py-3 font-medium">مسافران/کلاس پرواز</span>
+
                       <div class="w-full h-full">
                         <div
-                          class="cursor-pointer passenger_section bg-transparent z-[1] w-full h-full absolute top-0 right-0 left-0 bottom-0 pl-6 pr-12 flex items-center"
-                          onclick="show_passengers(this)"><span
-                            class="pl-3 pr-1 text-base text-black count-passengers font-danaregular max-xl:text-sm lg:text-base"><span
-                              class="ml-2 count font-danaregular">1 </span><span class="ml-2">مسافر</span></span><span
-                            class="pl-1 text-base text-black class-select font-danaregular max-xl:text-sm lg:text-base">اکونومی</span>
+                          class="cursor-pointer passenger_section top-3 bg-transparent z-[1] w-full h-full absolute right-0 left-0 bottom-0 px-4 py-3 flex items-center"
+                          onclick="show_passengers(this)">
+                          <span
+                            class="text-base text-zinc-600 count-passengers font-danaregular max-xl:text-sm lg:text-base"><span
+                              class=" count font-danaregular">1 </span><span class="ml-2">مسافر</span></span><span
+                            class="pl-1 text-base text-zinc-600 class-select font-danaregular max-xl:text-sm lg:text-base">اکونومی</span>
                         </div>
                       </div>
-                      <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
-                      </div>
+                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-3">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                          fill="#18181B" />
+                      </svg>
                       <div
                         class="absolute inset-x-0 z-20 hidden my-auto overflow-auto text-xs shadow-md CountPassenger font-danamedium max-md:w-full max-h-64 bg-secondary-200 top-14 rounded-xl ">
                         <div
@@ -471,7 +521,8 @@
                       class="relative inline-flex items-center justify-center overflow-hidden text-sm border h-14 rounded-xl border-primary-900 min-w-24 group lg:w-full">
                       <span
                         class="absolute w-0 h-0 transition-all duration-500 ease-out rounded-full bg-secondary-800 group-hover:w-full group-hover:h-56"></span>
-                      <button type="submit" aria-label="search" class="relative w-full h-full text-white bg-Primery-700 rounded-xl hover:scale-105">جستجو
+                      <button type="submit" aria-label="search"
+                        class="relative w-full h-full text-white bg-Primery-700 rounded-xl hover:scale-105">جستجو
                       </button>
                     </div>
                   </form>
@@ -1024,7 +1075,7 @@
                               </div>
                             </div>
                           </div>
-                          <div
+                          <d iv
                             class="flex items-center justify-between w-2/5 gap-1 text-base placeholder-neutral-800 font-danaregular Basis_Date_Box lg:flex-wrap lg:w-full ">
                             <div
                               class="relative flex items-center justify-between w-full h-full gap-1 rounded-lg bg-zinc-100 lg:h-14">
@@ -1044,15 +1095,14 @@
                                 disabled onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-active="0"
                                 data-cache="0" readonly name="tdate" data-lang="fa" placeholder="تاریخ برگشت" />
                             </div>
-                          </div>
+                          </d>
                         </div>
                       </div>
                     </div>
                     <div class="clr"></div>
                     <div class="flex justify-between lg:flex-wrap">
                       <div class="flex justify-between w-8/12 passenger-section-mc lg:w-full">
-                        <div
-                          class="w-full ml-2 rounded-lg passengers-part lg:w-full contentRooms bg-zinc-100 lg:ml-0">
+                        <div class="w-full ml-2 rounded-lg passengers-part lg:w-full contentRooms bg-zinc-100 lg:ml-0">
                           <div class="relative flex justify-between w-full">
                             <div
                               class="w-8 h-14 border-neutral-300 block before:content-userIconSB before:align-[-32px] mr-1">
@@ -1304,131 +1354,153 @@
                     </div>
                   </div>
                   <div
-                    class="flex items-center justify-between w-2/5 gap-2 text-base placeholder-neutral-800 font-danaregular Basis_Date_Box lg:w-full lg:flex-wrap">
-                    <div
-                      class="relative flex items-center justify-between h-full gap-1 rounded-lg w-49per bg-zinc-100 lg:h-14 lg:w-full">
-                      <div class="w-8 h-14 block before:content-calendarIconSB before:align-[-32px] mr-1">
-                      </div>
-                      <div class="w-48 h-full rounded-2xl"><input type="text"
-                          class="absolute top-0 left-0 right-0 block w-full h-full pl-6 pr-12 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 font-danaregular Basis_Date start_date focus:outline-none text-ellipsis "
-                          value onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-lang="fa" data-active="0"
-                          data-cache="0" readonly required name="fdate" placeholder="تاریخ رفت" /></div>
-                      <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
-                      </div>
+                  class="flex items-center justify-between w-2/5 gap-2 text-base font-danaregular Basis_Date_Box lg:w-full lg:flex-nowrap">
+                  <div
+                    class="relative flex items-center justify-between gap-1 rounded-lg w-49per bg-zinc-100 h-[72px] lg:w-full">
+                    <div class="w-8 h-14 block before:content-calendarIconSB before:align-[-32px] mr-1">
                     </div>
-                    <div
-                      class="relative flex items-center justify-between h-full gap-1 rounded-lg w-49per bg-zinc-100 lg:h-14 lg:w-full">
-                      <div class="w-8 h-14 block before:content-calendarIconSB before:align-[-32px] mr-1">
-                      </div>
-                      <div class="w-48 h-full rounded-2xl "><input type="text"
-                          class="absolute top-0 left-0 right-0 block w-full h-full pl-6 pr-12 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 font-danaregular Basis_Date end_date focus:outline-none text-ellipsis"
-                          value onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-lang="fa" data-active="0"
-                          data-cache="0" readonly name="tdate" placeholder="تاریخ برگشت" /></div>
-                      <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
-                      </div>
+                    <div class="w-48 h-full rounded-2xl">
+                      <label for="" class="absolute top-0 right-0 px-4 py-3 font-medium">تاریخ شروع</label>
+                      <input type="text"
+                        class="absolute left-0 right-0 block w-full h-full px-4 pt-3 overflow-hidden text-base bg-transparent cursor-pointer top-3 placeholder-neutral-800 font-danaregular Basis_Date start_date focus:outline-none text-ellipsis "
+                        value onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-lang="fa" data-active="0"
+                        data-cache="0" readonly required name="fdate" placeholder="1405/5/5" />
+                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-3">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                          fill="#18181B" />
+                      </svg>
                     </div>
+
                   </div>
-                  <div class="relative flex items-center justify-between w-4/12 rounded-lg bg-zinc-100 lg:w-full">
-                    <div class="w-8 h-14 border-neutral-300 block before:content-userIconSB before:align-[-32px] mr-1">
+                  <div
+                    class="relative flex items-center justify-between gap-1 rounded-lg w-49per bg-zinc-100 h-[72px] lg:w-full">
+                    <div class="w-8 h-14 block before:content-calendarIconSB before:align-[-32px] mr-1">
                     </div>
-                    <div class="w-full h-full">
-                      <div
-                        class="cursor-pointer passenger_section bg-transparent z-[1] w-full h-full absolute top-0 right-0 left-0 bottom-0 pr-12 flex items-center pl-6"
-                        onclick="show_passengers(this)"><span
-                          class="w-full text-base text-black count-passengers lg:border-solid font-danaregular"><span
-                            class="ml-2 count">2 </span><span class="ml-2">مسافر</span>-
-                          <span class="ml-2 count-room">1 </span><span class="ml-2">اتاق</span></span></div>
+                    <div class="w-48 h-full rounded-2xl ">
+                      <label for="" class="absolute top-0 right-0 px-4 py-3 font-medium">تاریخ پایان</label>
+                      <input type="text"
+                        class="absolute left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer top-3 placeholder-neutral-800 font-danaregular Basis_Date end_date focus:outline-none text-ellipsis"
+                        value onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-lang="fa" data-active="0"
+                        data-cache="0" readonly name="tdate" placeholder="1403/5/5" />
+                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-3">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                          fill="#18181B" />
+                      </svg>
                     </div>
                     <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
                     </div>
+                  </div>
+                </div>
+                <div class="relative flex items-center justify-between w-3/12 rounded-lg h-[72px] bg-zinc-100">
+                  <label for="" class="absolute top-0 right-0 px-4 py-3 font-medium">مسافران /اتاق</label>
+                  
+                  <div class="w-full h-full">
                     <div
-                      class="absolute inset-x-0 z-20 hidden my-auto overflow-auto text-xs shadow-md CountPassenger font-danamedium max-md:w-full max-h-64 bg-secondary-200 top-14 rounded-xl has-room">
-                      <div
-                        class="flex items-center justify-start py-1 mx-auto mb-4 text-xl leading-3 text-center text-white bg-secondary-800 font-danaregular max-xl:text-sm h-9">
-                        <span class="block w-full text-center">
-                          مسافر / اتاق
-                        </span>
-                      </div>
-                      <div class="mx-auto item-Count Passenger-content contentRooms w-95per">
-                        <div class="mb-4 item-CountPassenger">
-                          <div
-                            class="block w-full pb-2 mt-3 border-b-2 border-white border-dashed first-part-CountPassenger ">
-                            تعداد اتاق
-                          </div>
-                          <div class="flex items-center justify-between w-full second-part-CountPassenger">
-                            <div class="flex items-center justify-center w-12 h-12 passenger-button plus-minus-room">
-                              <span
-                                class="inline-block w-6 h-6 text-4xl text-center text-white cursor-pointer plus-btn leading-btnclick bg-primary-900 group-hover:bg-secondary-600 rounded-4px font-danaregular ">+</span>
-                            </div>
-                            <div class="text-base passenger-button"><input type="text"
-                                class="h-12 text-center bg-transparent border-none outline-none room w-14" readonly
-                                value="1"></div>
-                            <div class="flex items-center justify-center w-12 h-12 passenger-button plus-minus-room">
-                              <span
-                                class="inline-block w-6 h-6 text-4xl text-center text-white cursor-pointer minus-btn leading-btnclick bg-primary-900 group-hover:bg-secondary-600 rounded-4px font-danaregular">-</span>
-                            </div>
-                          </div>
-                          <div class="clr"></div>
+                      class="cursor-pointer passenger_section bg-transparent z-[1] w-full h-full absolute top-3 right-0 left-0 bottom-0 px-4 py-3 flex items-center"
+                      onclick="show_passengers(this)"><span
+                        class="inline-block text-base text-black count-passengers font-danaregular"><span
+                          class=" count">2 </span><span class="ml-2">مسافر</span>-
+                        <span class=" count-room">1 </span><span class="ml-2">اتاق</span></span></div>
+                  </div>
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-3">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                    fill="#18181B" />
+                </svg>
+                  <div
+                    class="absolute inset-x-0 z-20 hidden my-auto overflow-auto text-xs shadow-md CountPassenger font-danamedium max-md:w-full max-h-64 bg-secondary-200 top-14 rounded-xl has-room">
+
+                    <div
+                      class="flex items-center justify-start py-1 mx-auto mb-4 text-xl leading-3 text-center text-white bg-secondary-800 font-danaregular max-xl:text-sm h-9">
+                      <span class="block w-full text-center">
+                        مسافر / اتاق
+                      </span>
+                    </div>
+                    <div class="mx-auto item-Count Passenger-content contentRooms w-95per">
+                      <div class="mb-4 item-CountPassenger">
+                        <div
+                          class="block w-full pb-2 mt-3 border-b-2 border-white border-dashed first-part-CountPassenger ">
+                          تعداد اتاق
                         </div>
-                        <div class="ShowRow">
-                          <div class="contentRoom">
-                            <div class="mb-3 RoomRow">اتاق 1</div>
-                            <div class="mb-4 item-CountPassenger">
+                        <div class="flex items-center justify-between w-full second-part-CountPassenger">
+                          <div class="flex items-center justify-center w-12 h-12 passenger-button plus-minus-room">
+                            <span
+                              class="inline-block w-6 h-6 text-4xl text-center text-white cursor-pointer plus-btn leading-btnclick bg-primary-900 group-hover:bg-secondary-600 rounded-4px font-danaregular ">+</span>
+                          </div>
+                          <div class="text-base passenger-button"><input type="text" name=""
+                              class="h-12 text-center bg-transparent border-none outline-none room w-14" readonly
+                              value="1"></div>
+                          <div class="flex items-center justify-center w-12 h-12 passenger-button plus-minus-room">
+                            <span
+                              class="inline-block w-6 h-6 text-4xl text-center text-white cursor-pointer minus-btn leading-btnclick bg-primary-900 group-hover:bg-secondary-600 rounded-4px font-danaregular">-</span>
+                          </div>
+                        </div>
+                        <div class="clr"></div>
+                      </div>
+                      <div class="ShowRow">
+                        <div class="contentRoom">
+                          <div class="mb-3 RoomRow">اتاق 1</div>
+                          <div class="mb-4 item-CountPassenger">
+                            <div
+                              class="block w-full pb-2 mt-3 border-b-2 border-white border-dashed first-part-CountPassenger ">
+                              بزرگسال<span class="mr-1">(+12)</span></div>
+                            <div class="flex items-center justify-between w-full second-part-CountPassenger">
+                              <div class="flex items-center justify-center w-12 h-12 passenger-button plus-minus">
+                                <span
+                                  class="inline-block w-6 h-6 text-4xl text-center text-white cursor-pointer plus-btn leading-btnclick bg-primary-900 group-hover:bg-secondary-600 rounded-4px font-danaregular ">+</span>
+                              </div>
+                              <div class="text-base passenger-button"><input type="text"
+                                  name="_root.rooms__1.adultcount"
+                                  class="h-12 text-center bg-transparent border-none outline-none adult adult-count w-14"
+                                  readonly value="2"></div>
+                              <div class="flex items-center justify-center w-12 h-12 passenger-button plus-minus">
+                                <span
+                                  class="inline-block w-6 h-6 text-4xl text-center text-white cursor-pointer minus-btn leading-btnclick bg-primary-900 group-hover:bg-secondary-600 rounded-4px font-danaregular">-</span>
+                              </div>
+                            </div>
+                            <div class="clr"></div>
+                          </div>
+                          <div class="mb-4 item-CountPassenger">
+                            <div class="">
                               <div
                                 class="block w-full pb-2 mt-3 border-b-2 border-white border-dashed first-part-CountPassenger ">
-                                بزرگسال<span class="mr-1">(+12)</span></div>
+                                کودک<span class="mr-1">(-11)</span></div>
                               <div class="flex items-center justify-between w-full second-part-CountPassenger">
-                                <div class="flex items-center justify-center w-12 h-12 passenger-button plus-minus">
+                                <div
+                                  class="flex items-center justify-center w-12 h-12 passenger-button plus-minus-ch">
                                   <span
                                     class="inline-block w-6 h-6 text-4xl text-center text-white cursor-pointer plus-btn leading-btnclick bg-primary-900 group-hover:bg-secondary-600 rounded-4px font-danaregular ">+</span>
                                 </div>
                                 <div class="text-base passenger-button"><input type="text"
-                                    name="_root.rooms__1.adultcount"
-                                    class="h-12 text-center bg-transparent border-none outline-none adult adult-count w-14"
-                                    readonly value="2"></div>
-                                <div class="flex items-center justify-center w-12 h-12 passenger-button plus-minus">
+                                    class="h-12 text-center bg-transparent border-none outline-none child-count w-14"
+                                    readonly value="0"></div>
+                                <div
+                                  class="flex items-center justify-center w-12 h-12 passenger-button plus-minus-ch">
                                   <span
                                     class="inline-block w-6 h-6 text-4xl text-center text-white cursor-pointer minus-btn leading-btnclick bg-primary-900 group-hover:bg-secondary-600 rounded-4px font-danaregular">-</span>
                                 </div>
                               </div>
-                              <div class="clr"></div>
+                            </div><input type="hidden" value="0" class="childcountandage"
+                              name="_root.rooms__1.childcountandage">
+                            <div class="clr"></div>
+                            <div
+                              class="flex-col w-full leading-6 divide-y divide-white section-select-age divide-dashed justify-items-stretch">
                             </div>
-                            <div class="mb-4 item-CountPassenger">
-                              <div class="">
-                                <div
-                                  class="block w-full pb-2 mt-3 border-b-2 border-white border-dashed first-part-CountPassenger ">
-                                  کودک<span class="mr-1">(-11)</span></div>
-                                <div class="flex items-center justify-between w-full second-part-CountPassenger">
-                                  <div
-                                    class="flex items-center justify-center w-12 h-12 passenger-button plus-minus-ch">
-                                    <span
-                                      class="inline-block w-6 h-6 text-4xl text-center text-white cursor-pointer plus-btn leading-btnclick bg-primary-900 group-hover:bg-secondary-600 rounded-4px font-danaregular ">+</span>
-                                  </div>
-                                  <div class="text-base passenger-button"><input type="text"
-                                      class="h-12 text-center bg-transparent border-none outline-none child-count w-14"
-                                      readonly value="0"></div>
-                                  <div
-                                    class="flex items-center justify-center w-12 h-12 passenger-button plus-minus-ch">
-                                    <span
-                                      class="inline-block w-6 h-6 text-4xl text-center text-white cursor-pointer minus-btn leading-btnclick bg-primary-900 group-hover:bg-secondary-600 rounded-4px font-danaregular">-</span>
-                                  </div>
-                                </div>
-                              </div><input type="hidden" value="0" class="childcountandage"
-                                name="_root.rooms__1.childcountandage">
-                              <div class="clr"></div>
-                              <div
-                                class="flex-col w-full leading-6 divide-y divide-white section-select-age divide-dashed justify-items-stretch">
-                              </div>
-                              <div class="clr"></div>
-                            </div>
+                            <div class="clr"></div>
                           </div>
                         </div>
-                        <button type="button"
-                          class="w-full py-2 mb-2 text-sm text-center text-white cursor-pointer confirm bg-primary-900 hover:bg-secondary-600 h-14 rounded-xl">تایید
-                        </button>
                       </div>
+                      <button type="button"
+                        class="w-full py-2 mb-2 text-sm text-center text-white cursor-pointer confirm bg-primary-900 hover:bg-secondary-600 h-14 rounded-xl">تایید
+                      </button>
                     </div>
                   </div>
+                </div>
                   <div
                     class="relative inline-flex items-center justify-center overflow-hidden text-sm border h-14 rounded-xl border-primary-900 min-w-24 group lg:w-full">
                     <span
@@ -1447,14 +1519,16 @@
 
                   <div class="flex justify-between gap-2 mt-5 lg:flex-wrap" id="flight-hotel-boxes">
                     <div class="flex items-center justify-between gap-1 lg:flex-wrap lg:w-full">
-                      <div class="relative h-full city rounded-2xl lg:h-14 lg:w-full">
+                      <div class="relative city rounded-2xl h-[72px] lg:w-full">
                         <div class="flex items-center h-full rounded-lg bg-zinc-100">
                           <div class="w-12 h-14 block before:content-ariplaneIconDepSB before:align-[-32px] mr-1">
                           </div>
-                          <div class="w-32 lg:w-full max-xl:w-16"><input type="text" onclick="empty_value(this)"
-                              oninput="city_search(this)" data-type="1" required autocomplete="off"
-                              class="absolute top-0 bottom-0 left-0 right-0 block w-full h-full pl-6 pr-12 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 font-danaregular text-neutralcolor-800 focus:outline-none text-ellipsis FCD1 text-value country departure"
-                              value="" placeholder="انتخاب مبدا" /><input class="co-id FCDid1 from" value=""
+                          <div class="w-32 lg:w-full max-xl:w-16">
+                            <label for="" class="absolute top-0 right-0 px-4 py-3">مبدا</label>
+                            <input type="text" onclick="empty_value(this)" oninput="city_search(this)" data-type="1"
+                              required autocomplete="off"
+                              class="absolute bottom-0 left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer placeholder:text-zinc-600 top-3 placeholder-neutral-800 font-danaregular text-neutralcolor-800 focus:outline-none text-ellipsis FCD1 text-value country departure"
+                              value="" placeholder="مبدا خود را انتخاب کنید" /><input class="co-id FCDid1 from" value=""
                               type="hidden" name="from" />
                             <span class="absolute top-0 hidden mini-loading left-5"><i
                                 class="fas fa-spinner"></i></span>
@@ -1552,9 +1626,8 @@
                           <div class="clr"></div>
                         </div>
 
-                      </div><span
-                        class="relative z-10 flex items-center justify-center w-12 h-12 border-2 rounded-full cursor-pointer exchange-icon leading-56 group border-secondary-600 lg:w-full hover:border-primary-900">
-                        <!-- <svg
+                      </div>
+                      <!-- <svg
                                                       width="49" height="49" viewBox="0 0 49 49" fill="none"
                                                       xmlns="http://www.w3.org/2000/svg">
                                                       <rect x="1.75" y="1.5" width="46" height="46" rx="23"
@@ -1572,22 +1645,19 @@
                                                           stroke-linejoin="round" />
                                                   </svg> -->
 
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path class="group-hover:stroke-primary-900" d="M7 7H17M17 7L13 3M17 7L13 11" stroke="#B99E6D"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          <path class="group-hover:stroke-primary-900" d="M17 18L7 18M7 18L11 22M7 18L11 14"
-                            stroke="#B99E6D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                      <img src="[##cms.cms.cdn##]/images/changeIcon.svg" alt="changeIcon" width="48" height="48"
+                        loading="lazy" class="exchange-icon absolute left-[8%] lg:top-[39%] z-10" />
 
-                      </span>
-                      <div class="relative h-full city rounded-2xl lg:h-14 lg:w-full">
+
+                      <div class="relative city rounded-2xl h-[72px] lg:w-full">
                         <div class="flex items-center h-full rounded-lg bg-zinc-100">
-                          <div class="w-12 h-14 block before:content-ariplaneIconDesSB before:align-[-32px] mr-1">
-                          </div>
-                          <div class="w-32 lg:w-full max-xl:w-16"><input type="text"
-                              class="absolute top-0 bottom-0 left-0 right-0 block w-full h-full pl-6 pr-12 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 font-danaregular text-neutralcolor-800 FCD2 text-value country destination focus:outline-none text-ellipsis"
+
+                          <div class="w-32 lg:w-full max-xl:w-16">
+                            <label for="" class="absolute top-0 right-0 px-4 py-3">مقصد</label>
+                            <input type="text"
+                              class="absolute bottom-0 left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer placeholder:text-zinc-600 top-3 placeholder-neutral-800 font-danaregular text-neutralcolor-800 FCD2 text-value country destination focus:outline-none text-ellipsis"
                               value="" onclick="empty_value(this)" oninput="city_search(this)" data-type="1" required
-                              autocomplete="off" placeholder="انتخاب مقصد" /><input class="co-id FCDid2 to"
+                              autocomplete="off" placeholder="مقصد خود را انتخاب کنید" /><input class="co-id FCDid2 to"
                               type="hidden" name="to" value="" />
                             <span class="absolute top-0 hidden mini-loading left-5"><i
                                 class="fas fa-spinner"></i></span>
@@ -1689,46 +1759,68 @@
                       </div>
                     </div>
                     <div
-                      class="flex items-center justify-between w-4/12 gap-2 text-base placeholder-neutral-800 font-danaregular Basis_Date_Box lg:w-full lg:flex-wrap">
+                      class="flex items-center justify-between w-2/5 gap-2 text-base font-danaregular Basis_Date_Box lg:w-full lg:flex-nowrap">
                       <div
-                        class="relative flex items-center justify-between h-full gap-1 rounded-lg w-49per bg-zinc-100 lg:h-14 lg:w-full">
+                        class="relative flex items-center justify-between gap-1 rounded-lg w-49per bg-zinc-100 h-[72px] lg:w-full">
                         <div class="w-8 h-14 block before:content-calendarIconSB before:align-[-32px] mr-1">
                         </div>
-                        <div class="w-48 h-full rounded-2xl"><input type="text"
-                            class="absolute top-0 left-0 right-0 block w-full h-full pl-6 pr-12 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 font-danaregular Basis_Date start_date focus:outline-none text-ellipsis "
+                        <div class="w-48 h-full rounded-2xl">
+                          <label for="" class="absolute top-0 right-0 px-4 py-3">تاریخ رفت</label>
+                          <input type="text"
+                            class="absolute left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer top-3 placeholder:text-zinc-600 placeholder-neutral-800 font-danaregular Basis_Date start_date focus:outline-none text-ellipsis "
                             value onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-lang="fa" data-active="0"
-                            data-cache="0" readonly required name="fdate" placeholder="تاریخ رفت" /></div>
+                            data-cache="0" readonly required name="fdate" placeholder="1403/5/5" />
+                          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-3">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                              fill="#18181B" />
+                          </svg>
+                        </div>
                         <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
                         </div>
                       </div>
                       <div
-                        class="relative flex items-center justify-between h-full gap-1 rounded-lg w-49per bg-zinc-100 lg:h-14 lg:w-full">
+                        class="relative flex items-center justify-between gap-1 rounded-lg w-49per bg-zinc-100 h-[72px] lg:w-full">
                         <div class="w-8 h-14 block before:content-calendarIconSB before:align-[-32px] mr-1">
                         </div>
-                        <div class="w-48 h-full rounded-2xl "><input type="text"
-                            class="absolute top-0 left-0 right-0 block w-full h-full pl-6 pr-12 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 font-danaregular Basis_Date end_date focus:outline-none text-ellipsis"
+                        <div class="w-48 h-full rounded-2xl ">
+                          <label for="" class="absolute top-0 right-0 px-4 py-3">تاریخ برگشت</label>
+                          <input type="text"
+                            class="absolute left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer placeholder:text-zinc-600 top-3 placeholder-neutral-800 font-danaregular Basis_Date end_date focus:outline-none text-ellipsis"
                             value onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-lang="fa" data-active="0"
-                            data-cache="0" readonly name="tdate" placeholder="تاریخ برگشت" /></div>
-                        <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
+                            data-cache="0" readonly name="tdate" placeholder="1403/5/5" />
+                          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-3">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                              fill="#18181B" />
+                          </svg>
                         </div>
+
                       </div>
                     </div>
-                    <div class="relative flex items-center justify-between w-3/12 rounded-lg lg:w-full bg-zinc-100">
-                      <div
-                        class="w-8 h-14 border-neutral-300 block before:content-userIconSB before:align-[-32px] mr-1">
-                      </div>
+                    <div
+                      class="relative flex items-center h-[72px] justify-between w-3/12 rounded-lg lg:w-full bg-zinc-100">
+                      <label for="" class="absolute top-0 right-0 px-4 py-3 font-medium">مسافران/اتاق</label>
+
                       <div class="w-full h-full">
                         <div
-                          class="cursor-pointer passenger_section bg-transparent z-[1] w-full h-full absolute top-0 right-0 left-0 bottom-0 pr-12 flex items-center pl-6"
-                          onclick="show_passengers(this)"><span
-                            class="inline-block w-full text-base text-black bg-transparent count-passengers font-danaregular lg:border-solid h-51px"><span
-                              class="ml-1 text-xs count">2 </span><span class="ml-0 text-xs">مسافر</span>- <span
-                              class="ml-1 text-xs count-room">1 </span><span class="ml-1 text-xs">اتاق</span>- <span
-                              class="inline-block pl-0 text-xs text-black class-select lg:border-solid lg:text-xs">اکونومی</span></span>
+                          class="cursor-pointer passenger_section bg-transparent z-[1] w-full h-full absolute top-3 right-0 left-0 bottom-0 px-4 py-3 flex items-center"
+                          onclick="show_passengers(this)">
+                          <span
+                            class="inline-block w-full text-base bg-transparent text-zinc-600 count-passengers font-danaregular lg:border-solid h-51px"><span
+                              class=" count">2 </span><span class="ml-0 ">مسافر</span>- <span
+                              class=" count-room">1 </span><span class="ml-1">اتاق</span>- <span
+                              class="inline-block pl-0 text-xs text-zinc-600 class-select lg:border-solid lg:text-xs">اکونومی</span></span>
                         </div>
                       </div>
-                      <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
-                      </div>
+                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-3">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                          fill="#18181B" />
+                      </svg>
                       <div
                         class="absolute inset-x-0 z-20 hidden my-auto overflow-auto text-xs shadow-md CountPassenger font-danamedium max-md:w-full max-h-64 bg-secondary-200 top-14 rounded-xl has-room">
                         <div
@@ -1906,21 +1998,23 @@
                     name="persiancurrent" class="persiancurrent" value /><input type="hidden" name="select-age"
                     class="select-age-value" value="0" />
                   <div class="w-3/12 h-full lg:w-full">
-                    <div class="relative h-full city rounded-2xl lg:h-14">
+                    <div class="relative city rounded-2xl h-[72px]">
                       <div class="flex items-center h-full rounded-lg bg-zinc-100">
                         <div class="w-12 h-14 block before:content-ariplaneIconDesSB before:align-[-32px] mr-1">
                         </div>
-                        <div class="w-full h-full "><input type="text" required onclick="city_search(this)"
+                        <div class="w-full h-full ">
+                          <label for="" class="absolute top-0 right-0 px-4 py-3 font-medium">مقصد</label>
+                          <input type="text" required onclick="city_search(this)"
                             data-type="4" data-active="0" name="tour-search-text"
-                            class=" placeholder-neutral-800 font-danaregular pr-12 text-base text-neutralcolor-800 takeOff form-search-input 
-                                                      tour-search-text text-value country departure block focus:outline-none w-full cursor-pointer h-full bg-transparent pl-6
-                                                       absolute z-[1] top-0 left-0 right-0 overflow-hidden text-ellipsis" value="" readonly=""
-                            placeholder="انتخاب مقصد" /><input class="co-id" type="hidden" name="tourname" />
+                            class=" placeholder:text-zinc-600 font-danaregular px-4 py-3 text-base text-neutralcolor-800 takeOff form-search-input 
+                                                      tour-search-text text-value country departure block focus:outline-none w-full cursor-pointer h-full bg-transparent 
+                                                       absolute z-[1] top-3 left-0 right-0 overflow-hidden text-ellipsis" value="" readonly=""
+                            placeholder="مقصد خود را انتخاب کنید" />
+                            <input class="co-id" type="hidden" name="tourname" />
                           <span class="absolute hidden mini-loading top-3 left-2" aria-label="spinner"><i
                               class="not-italic fas fa-spinner fa-spin"></i></span>
                         </div>
-                        <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
-                        </div>
+
 
                       </div>
                       <div
@@ -1929,43 +2023,64 @@
                     </div>
                   </div>
                   <div
-                    class="flex items-center justify-between w-2/5 gap-2 text-base placeholder-neutral-800 font-danaregular Basis_Date_Box lg:w-full lg:flex-wrap">
+                    class="flex items-center justify-between w-2/5 gap-2 text-base font-danaregular Basis_Date_Box lg:w-full lg:flex-nowrap">
                     <div
-                      class="relative flex items-center justify-between h-full gap-1 rounded-lg w-49per bg-zinc-100 lg:h-14 lg:w-full">
+                      class="relative flex items-center justify-between gap-1 rounded-lg w-49per bg-zinc-100 h-[72px] lg:w-full">
                       <div class="w-8 h-14 block before:content-calendarIconSB before:align-[-32px] mr-1">
                       </div>
-                      <div class="w-48 h-full rounded-2xl"><input type="text"
-                          class="absolute top-0 left-0 right-0 block w-full h-full pl-6 pr-12 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 font-danaregular Basis_Date start_date focus:outline-none text-ellipsis "
+                      <div class="w-48 h-full rounded-2xl">
+                        <label for="" class="absolute top-0 right-0 px-4 py-3 font-medium">تاریخ شروع</label>
+                        <input type="text"
+                          class="absolute left-0 right-0 block w-full h-full px-4 pt-3 overflow-hidden text-base bg-transparent cursor-pointer top-3 placeholder-neutral-800 font-danaregular Basis_Date start_date focus:outline-none text-ellipsis "
                           value onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-lang="fa" data-active="0"
-                          data-cache="0" readonly required name="fdate" placeholder="تاریخ شروع" /></div>
-                      <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
+                          data-cache="0" readonly required name="fdate" placeholder="1405/5/5" />
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                          class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-3">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                            fill="#18181B" />
+                        </svg>
                       </div>
+
                     </div>
                     <div
-                      class="relative flex items-center justify-between h-full gap-1 rounded-lg w-49per bg-zinc-100 lg:h-14 lg:w-full">
+                      class="relative flex items-center justify-between gap-1 rounded-lg w-49per bg-zinc-100 h-[72px] lg:w-full">
                       <div class="w-8 h-14 block before:content-calendarIconSB before:align-[-32px] mr-1">
                       </div>
-                      <div class="w-48 h-full rounded-2xl "><input type="text"
-                          class="absolute top-0 left-0 right-0 block w-full h-full pl-6 pr-12 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 font-danaregular Basis_Date end_date focus:outline-none text-ellipsis"
+                      <div class="w-48 h-full rounded-2xl ">
+                        <label for="" class="absolute top-0 right-0 px-4 py-3 font-medium">تاریخ پایان</label>
+                        <input type="text"
+                          class="absolute left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer top-3 placeholder-neutral-800 font-danaregular Basis_Date end_date focus:outline-none text-ellipsis"
                           value onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-lang="fa" data-active="0"
-                          data-cache="0" readonly name="tdate" placeholder="تاریخ پایان" /></div>
+                          data-cache="0" readonly name="tdate" placeholder="1403/5/5" />
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                          class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-3">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                            fill="#18181B" />
+                        </svg>
+                      </div>
                       <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
                       </div>
                     </div>
                   </div>
-                  <div class="relative flex items-center justify-between w-3/12 rounded-lg lg:w-full bg-zinc-100">
-                    <div class="w-8 h-14 border-neutral-300 block before:content-userIconSB before:align-[-32px] mr-1">
-                    </div>
+                  <div class="relative flex items-center justify-between w-3/12 rounded-lg h-[72px] bg-zinc-100">
+                    <label for="" class="absolute top-0 right-0 px-4 py-3 font-medium">مسافران /اتاق</label>
+                    
                     <div class="w-full h-full">
                       <div
-                        class="cursor-pointer passenger_section bg-transparent z-[1] w-full h-full absolute top-0 right-0 left-0 bottom-0 pr-12 flex items-center pl-6"
+                        class="cursor-pointer passenger_section bg-transparent z-[1] w-full h-full absolute top-3 right-0 left-0 bottom-0 px-4 py-3 flex items-center"
                         onclick="show_passengers(this)"><span
                           class="inline-block text-base text-black count-passengers font-danaregular"><span
-                            class="ml-2 count">2 </span><span class="ml-2">مسافر</span>-
-                          <span class="ml-2 count-room">1 </span><span class="ml-2">اتاق</span></span></div>
+                            class=" count">2 </span><span class="ml-2">مسافر</span>-
+                          <span class=" count-room">1 </span><span class="ml-2">اتاق</span></span></div>
                     </div>
-                    <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
-                    </div>
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-3">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                      fill="#18181B" />
+                  </svg>
                     <div
                       class="absolute inset-x-0 z-20 hidden my-auto overflow-auto text-xs shadow-md CountPassenger font-danamedium max-md:w-full max-h-64 bg-secondary-200 top-14 rounded-xl has-room">
 

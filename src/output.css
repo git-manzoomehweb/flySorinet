@@ -1841,6 +1841,10 @@ video {
   color: var(--zinc-950);
 }
 
+.accent-Primery-600 {
+  accent-color: #EA2124;
+}
+
 .opacity-0 {
   opacity: 0;
 }

@@ -51,19 +51,9 @@ $(document).ready(function () {
     LoadTour();
   });
 
-  $("#Insurance").click(function () {
-    $("#flight-type-items").hide();
-    $(".nav-module").each(function () {
-      var checknav = $(this).attr("data-nav");
-      if (checknav == "insurance") {
-        $(this).addClass("nav-module-selected");
-      } else {
-        $(this).removeClass("nav-module-selected");
-      }
-    });
-    LoadInsurane();
-  });
+
 });
+
 
 function LoadHotel() {
   $("#flight-type-items").hide();
@@ -71,8 +61,7 @@ function LoadHotel() {
   $("#Hotel").siblings("li").removeClass("active-module");
   $("#item-Hotel").show();
   $("#item-Flight,#item-Tour,#item-FlightHotel,#item-Insurance").hide();
-  $(".bg-background-banner").children().addClass("hidden");
-  $(".bg-background-banner").find("#hotel-title").removeClass("hidden");
+  changeParentBackground('hotel-image-min.webp')
   if ($(".engine-content").hasClass("max-lg:hidden")) {
     $(".engine-content").removeClass("max-lg:hidden");
   }
@@ -83,8 +72,7 @@ function LoadFlight() {
   $("#Flight").siblings("li").removeClass("active-module");
   $("#item-Flight").show();
   $("#item-Hotel,#item-Tour,#item-FlightHotel,#item-Insurance").hide();
-  $(".bg-background-banner").children().addClass("hidden");
-  $(".bg-background-banner").find("#flight-title").removeClass("hidden");
+  changeParentBackground('fly-image-min.webp')
   if ($(".engine-content").hasClass("max-lg:hidden")) {
     $(".engine-content").removeClass("max-lg:hidden");
   }
@@ -96,8 +84,7 @@ function LoadFlightHotel() {
   $("#FlightHotel").siblings("li").removeClass("active-module");
   $("#item-FlightHotel").show();
   $("#item-Flight,#item-Hotel,#item-Tour,#item-Insurance").hide();
-  $(".bg-background-banner").children().addClass("hidden");
-  $(".bg-background-banner").find("#flighthotel-title").removeClass("hidden");
+  changeParentBackground('fly-image-min.webp')
   if ($(".engine-content").hasClass("max-lg:hidden")) {
     $(".engine-content").removeClass("max-lg:hidden");
   }
@@ -109,25 +96,12 @@ function LoadTour() {
   $("#Tour").siblings("li").removeClass("active-module");
   $("#item-Tour").show();
   $("#item-Flight,#item-Hotel,#item-FlightHotel,#item-Insurance").hide();
-  $(".bg-background-banner").children().addClass("hidden");
-  $(".bg-background-banner").find("#tour-title").removeClass("hidden");
+  changeParentBackground('fly-image-min.webp')
   if ($(".engine-content").hasClass("max-lg:hidden")) {
     $(".engine-content").removeClass("max-lg:hidden");
   }
 }
 
-function LoadInsurane() {
-  $("#flight-type-items").hide();
-  $("#Insurance").addClass("active-module");
-  $("#Insurance").siblings("li").removeClass("active-module");
-  $("#item-Insurance").show();
-  $("#item-Flight,#item-Hotel,#item-Tour,#item-FlightHotel").hide();
-  $(".bg-background-banner").children().addClass("hidden");
-  $(".bg-background-banner").find("#insurance-title").removeClass("hidden");
-  if ($(".engine-content").hasClass("max-lg:hidden")) {
-    $(".engine-content").removeClass("max-lg:hidden");
-  }
-}
 
 if ($(".checkparent_page").val() == "true") {
   $("#Flight").addClass("inactive");
@@ -456,19 +430,19 @@ $(".country").each(function () {
     if ($(this).closest(".city").find(".countryFlight").text().length > 0) {
       if (0 == hoverelse) {
         var t = $(this)
-            .closest(".city")
-            .find(".countryFlight")
-            .children(".selectCountry:first")
-            .find(".txtcountry")
-            .text(),
+          .closest(".city")
+          .find(".countryFlight")
+          .children(".selectCountry:first")
+          .find(".txtcountry")
+          .text(),
           e =
             (t.split(" "),
-            $(this)
-              .closest(".city")
-              .find(".countryFlight")
-              .children(".selectCountry:first")
-              .find(".countryid")
-              .val());
+              $(this)
+                .closest(".city")
+                .find(".countryFlight")
+                .children(".selectCountry:first")
+                .find(".countryid")
+                .val());
         $(this).closest(".city").find(".country").val(t);
         var i = t.split("(");
         $(this).closest(".city").find(".split-text").text(i[0]),
@@ -725,8 +699,8 @@ $(".plus-minus").on("click", function () {
       button.text().indexOf("+") > -1
         ? oldVal + 1
         : oldVal > 0
-        ? oldVal - 1
-        : 0;
+          ? oldVal - 1
+          : 0;
     if (newVal >= 2) {
       button
         .closest(".item-CountPassenger")
@@ -765,8 +739,8 @@ $(".plus-minus-ch").on("click", function () {
       button.text().indexOf("+") > -1
         ? oldVal + 1
         : oldVal > 0
-        ? oldVal - 1
-        : 0;
+          ? oldVal - 1
+          : 0;
     if (newVal >= 1) {
       button
         .closest(".item-CountPassenger")
@@ -891,8 +865,8 @@ $(".plus-minus-ins").on("click", function () {
         .find(".Wrapper-BirthdatePassenger")
         .append(
           '<div class="BirthdatePassenger my-4"><label class="label w-full border-b-2 border-white border-dashed block pb-2 mt-3">تاریخ تولد مسافر ' +
-            i +
-            '</label><input class="datepicker BithdatePassenger passenger-bithdate w-full block h-10 leading-10 mt-2 bg-transparent" placeholder="تاریخ میلادی" type="text" autocomplete="off" readonly required><div class="clr"></div></div>'
+          i +
+          '</label><input class="datepicker BithdatePassenger passenger-bithdate w-full block h-10 leading-10 mt-2 bg-transparent" placeholder="تاریخ میلادی" type="text" autocomplete="off" readonly required><div class="clr"></div></div>'
         );
     }
   } else if (oldVal > newVal) {
@@ -932,9 +906,9 @@ $("#Insurance-form").submit(function (i) {
     .each(function () {
       $(this).val().length < 1 &&
         ($(this).css("border-color", "red"),
-        $(".NotEnteringBirthadate").show(),
-        $(this).closest("form").find(".CountPassenger").slideDown(),
-        i.preventDefault());
+          $(".NotEnteringBirthadate").show(),
+          $(this).closest("form").find(".CountPassenger").slideDown(),
+          i.preventDefault());
     });
   var t = "";
   $(this)
@@ -1130,9 +1104,9 @@ function createChildDropdown(index) {
   return `<select name="child_age_${index}" class="child-age w-8/12 bg-transparent">
       <option value="">سن کودک ${index}</option>
       ${Array.from(
-        { length: 12 },
-        (_, i) => `<option value="${i + 1}">${i + 1}</option>`
-      ).join("")}
+    { length: 12 },
+    (_, i) => `<option value="${i + 1}">${i + 1}</option>`
+  ).join("")}
     </select>`;
 }
 // Hotel and Hotel+Flight room-passengers last-update
@@ -1277,9 +1251,9 @@ function addMulticityRoute(element) {
     }
     child.querySelector(".multi-route-tlt").innerText =
       destination_nth_txt[
-        document
-          .querySelector(".route-container")
-          .querySelectorAll(".route-content").length
+      document
+        .querySelector(".route-container")
+        .querySelectorAll(".route-content").length
       ];
 
     child.querySelectorAll("input").forEach((e) => {
@@ -1313,8 +1287,8 @@ function addMulticityRoute(element) {
     child
       .querySelector(".fromcity_container")
       .querySelector(".fromcity").value = child.previousElementSibling
-      .querySelector(".tocity_container")
-      .querySelector(".tocity").value;
+        .querySelector(".tocity_container")
+        .querySelector(".tocity").value;
     child.querySelector(".tocity_container").querySelector(".FCD2").value = "";
     child.querySelector(".tocity_container").querySelector(".tocity").value =
       "";
@@ -1391,27 +1365,27 @@ function formMulticity_search_isSubmited(element, event) {
     ) {
       element
         .getElementsByClassName("route-content")
-        [i].querySelector(".fromcity")
+      [i].querySelector(".fromcity")
         .setAttribute("name", `_root.route__${i}.fromcity`);
       element
         .getElementsByClassName("route-content")
-        [i].querySelector(".tocity")
+      [i].querySelector(".tocity")
         .setAttribute("name", `_root.route__${i}.tocity`);
       element
         .getElementsByClassName("route-content")
-        [i].querySelector(".start_date")
+      [i].querySelector(".start_date")
         .setAttribute("name", `_root.route__${i}.departuredate`);
       element
         .getElementsByClassName("route-content")
-        [i].querySelector(".fromcity-text")
+      [i].querySelector(".fromcity-text")
         .setAttribute("name", `_root.route__${i}.fromcityName`);
       element
         .getElementsByClassName("route-content")
-        [i].querySelector(".tocity-text")
+      [i].querySelector(".tocity-text")
         .setAttribute("name", `_root.route__${i}.tocityName`);
       element
         .getElementsByClassName("route-content")
-        [i].querySelector(".multi-route-tlt")
+      [i].querySelector(".multi-route-tlt")
         .insertAdjacentHTML(
           "beforeend",
           `<input type="hidden" value="${destination_nth_txt[i]}" name="_root.route__${i}.index"/>`
@@ -1432,3 +1406,14 @@ function exchangeDepDes(element) {
     $(element).closest(".route-content").find(".FCDid2").val(depid);
 }
 ////////<!----- JS  MULTICITY ---->////////
+
+
+function changeParentBackground(bg) {
+  const targetImage = document.querySelector("#banner-sb").querySelector("img");
+  const currentSrc = targetImage.src;
+  const updatedSrc = currentSrc.replace(/[^/]+$/, `${bg}`);
+  targetImage.src = updatedSrc;
+}
+
+
+
