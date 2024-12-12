@@ -47,7 +47,7 @@
                     <ul class="flex justify-between lg:w-full">
                       <li id="oneway"
                         onclick="document.getElementById('flight-form').action='/Tem3_Oneway_Search.bc';setFlightType('oneway',this);"
-                        class="relative inline-flex items-center justify-center ml-2 overflow-hidden text-sm leading-10 text-center bg-white cursor-pointer text-zinc-900 active-flight-type group w-fit px-7 font-danaregular text-primary-900 h-9 rounded-3xl lg:w-1/3 lg:px-0 lg:ml-0">
+                        class="relative inline-flex items-center justify-center ml-2 gap-2 overflow-hidden text-sm leading-10 text-center bg-white cursor-pointer text-zinc-900 active-flight-type group w-fit px-7 font-danaregular text-primary-900 h-9 rounded-3xl lg:w-1/3 lg:px-0 lg:ml-0">
 
                         <input type="radio" name="flight-type" id="" class="accent-Primery-600">
 
@@ -56,7 +56,7 @@
                       </li>
                       <li id="backtoback"
                         onclick="document.getElementById('flight-form').action='/Tem3_Roundtrip_Search.bc';setFlightType('roundtrip',this);"
-                        class="relative inline-flex items-center justify-center ml-2 overflow-hidden text-sm leading-10 text-center bg-white cursor-pointer text-zinc-900 group w-fit px-7 font-danaregular text-primary-900 h-9 rounded-3xl lg:w-1/3 lg:px-0 lg:ml-0" >
+                        class="relative inline-flex items-center justify-center gap-2 ml-2 overflow-hidden text-sm leading-10 text-center bg-white cursor-pointer text-zinc-900 group w-fit px-7 font-danaregular text-primary-900 h-9 rounded-3xl lg:w-1/3 lg:px-0 lg:ml-0" >
                         <input type="radio" name="flight-type" id="" class="accent-Primery-600">
 
                         <span for="roundtrip-radio"
@@ -80,23 +80,23 @@
                     <input type="hidden" name="persiancurrent" class="persiancurrent" value /><input type="hidden"
                       name="select-age" class="select-age-value" value="0" />
                     <div class="flex items-center justify-between gap-1 lg:flex-wrap lg:justify-normal lg:w-full lg:flex-col">
-                      <div class="relative h-full city rounded-2xl lg:h-14 lg:w-full">
+                      <div class="relative city rounded-2xl h-[72px] lg:w-full">
                         <div class="relative flex items-center h-full rounded-lg bg-zinc-100">
 
                           <div class="w-12 h-14 block before:content-ariplaneIconDepSB before:align-[-32px] mr-1">
                           </div>
 
                           <div class="h-full w-36 lg:w-full lg:min-w-40 max-xl:w-16">
+                            <label for="" class="absolute px-4 py-3 right-0">مبدا</label>
                             <input id="dep1" type="text" onclick="empty_value(this)" oninput="city_search(this)"
                               data-type="1" required autocomplete="off"
-                              class="absolute top-0 bottom-0 left-0 right-0 block w-full h-full pl-6 pr-12 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 country font-danaregular text-neutralcolor-800 focus:outline-none text-ellipsis FCD1 text-value departure "
-                              value="" placeholder="انتخاب مبدا" /><input class="co-id FCDid1 from" value=""
+                              class="absolute top-0 bottom-0 left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 country font-danaregular text-neutralcolor-800 focus:outline-none text-ellipsis FCD1 text-value departure "
+                              value="" placeholder="مبدا خود را انتخاب کنید" /><input class="co-id FCDid1 from" value=""
                               type="hidden" name="from" />
                             <span class="absolute top-0 hidden mini-loading left-5"><i
                                 class="fas fa-spinner"></i></span>
                           </div>
-                          <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
-                          </div>
+                         
 
                         </div>
                         <div
@@ -190,8 +190,7 @@
                         </div>
                       </div>
 
-                      <span
-                        class="relative z-10 flex items-center justify-center w-12 h-12 border-2 rounded-full cursor-pointer exchange-icon leading-56 group border-secondary-600 lg:w-full hover:border-primary-900">
+    
                         <!-- <svg width="49" height="49" viewBox="0 0 49 49" fill="none"
                                                       xmlns="http://www.w3.org/2000/svg">
                                                       <rect x="1.75" y="1.5" width="46" height="46" rx="23"
@@ -209,28 +208,23 @@
                                                           stroke-linejoin="round" />
                                                   </svg> -->
 
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path class="group-hover:stroke-primary-900" d="M7 7H17M17 7L13 3M17 7L13 11" stroke="#B99E6D"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          <path class="group-hover:stroke-primary-900" d="M17 18L7 18M7 18L11 22M7 18L11 14"
-                            stroke="#B99E6D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                                                  <img src="[##cms.cms.cdn##]/images/changeIcon.svg" alt="changeIcon" width="48" height="48" loading="lazy"
+                                                  class="exchange-icon absolute top-[13%] left-[8%] lg:top-[39%] z-10" />
 
-                      </span>
-                      <div class="relative h-full city rounded-2xl lg:h-14 lg:w-full">
+                      
+                      <div class="relative city rounded-2xl h-[72px] lg:w-full">
                         <div class="relative flex items-center h-full rounded-lg bg-zinc-100">
-                          <div class="w-12 h-14 block before:content-ariplaneIconDesSB before:align-[-32px] mr-1">
-                          </div>
-                          <div class="w-36 lg:w-full lg:min-w-40 max-xl:w-16"><input id="des1" type="text"
-                              class="absolute top-0 bottom-0 left-0 right-0 block w-full h-full pl-6 pr-12 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 font-danaregular text-neutralcolor-800 focus:outline-none FCD2 text-value country destination text-ellipsis "
+                          <div class="w-36 lg:w-full lg:min-w-40 max-xl:w-16">
+                            <label class="absolute px-4 py-3 right-0">مقصد</label>
+                            <input id="des1" type="text"
+                              class="absolute top-0 bottom-0 left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 font-danaregular text-neutralcolor-800 focus:outline-none FCD2 text-value country destination text-ellipsis "
                               value="" onclick="empty_value(this)" oninput="city_search(this)" data-type="1" required
-                              autocomplete="off" placeholder="انتخاب مقصد" /><input class="co-id FCDid2 to"
+                              autocomplete="off" placeholder="مقصد خود را انتخاب کنید" /><input class="co-id FCDid2 to"
                               type="hidden" name="to" value="" />
                             <span class="absolute top-0 hidden mini-loading left-5"><i
                                 class="fas fa-spinner"></i></span>
                           </div>
-                          <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
-                          </div>
+                    
                         </div>
                         <div
                           class="absolute z-20 hidden float-right overflow-hidden text-sm shadow-md search-list searchList unvisible-city bg-secondary-200 rounded-xl w-80 max-h-72 h-72 max-sm:w-full">
@@ -326,24 +320,40 @@
                     <div
                       class="flex items-center justify-between w-2/5 gap-2 text-base placeholder-neutral-800 font-danaregular Basis_Date_Box lg:w-full lg:flex-nowrap">
                       <div
-                        class="relative flex items-center justify-between w-1/2 h-full gap-1 rounded-lg bg-zinc-100 lg:w-full lg:h-14">
-                        <div class="w-8 h-14 block before:content-calendarIconSB before:align-[-32px] mr-1">
-                        </div>
-                        <div class="w-full rounded-2xl"><input type="text"
-                            class="absolute top-0 bottom-0 left-0 right-0 block w-full h-full pl-6 pr-12 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 font-danaregular Basis_Date start_date focus:outline-none text-ellipsis "
+                        class="relative flex items-center justify-between w-1/2 gap-1 rounded-lg bg-zinc-100 lg:w-full h-[72px]">
+
+                        <div class="w-full rounded-2xl">
+                          <label for="" class="px-4 py-3 absolute top-0 right-0">تاریخ رفت</label>
+                          <input type="text"
+                            class="absolute top-0 bottom-0 left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer placeholder-neutral-800 font-danaregular Basis_Date start_date focus:outline-none text-ellipsis "
                             value onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-lang="fa" data-active="0"
-                            data-cache="0" readonly required name="fdate" placeholder="تاریخ رفت" /></div>
+                            data-cache="0" readonly required name="fdate" placeholder="1403/5/5" />
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-0">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                              fill="#18181B" />
+                          </svg>
+                          </div>
                         <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
                         </div>
                       </div>
                       <div
-                        class="relative flex items-center justify-between w-1/2 h-full gap-1 rounded-lg bg-zinc-100 lg:w-full lg:h-14 opc-50">
-                        <div class="w-8 h-14 block before:content-calendarIconSB before:align-[-32px] mr-1">
-                        </div>
-                        <div class="w-full rounded-2xl "><input type="text"
-                            class="absolute top-0 bottom-0 left-0 right-0 block w-full h-full pl-6 pr-12 overflow-hidden text-base bg-transparent cursor-pointer Noactive-date placeholder-neutral-800 font-danaregular Basis_Date end_date focus:outline-none text-ellipsis"
+                        class="relative flex items-center justify-between w-1/2 gap-1 rounded-lg bg-zinc-100 lg:w-full h-[72px] opc-50">
+                    
+                        <div class="w-full rounded-2xl ">
+                          <label for="" class="px-4 py-3 absolute top-0 right-0">تاریخ برگشت</label>
+                          <input type="text"
+                            class="absolute top-0 bottom-0 left-0 right-0 block w-full h-full px-4 py-3 overflow-hidden text-base bg-transparent cursor-pointer Noactive-date placeholder-neutral-800 font-danaregular Basis_Date end_date focus:outline-none text-ellipsis"
                             value onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-lang="fa" data-active="0"
-                            data-cache="0" readonly name="tdate" placeholder="تاریخ برگشت" disabled /></div>
+                            data-cache="0" readonly name="tdate" placeholder="1403/5/5" disabled />
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="lg:shrink-0 lg:absolute lg:top-[18%] lg:left-0">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M24.2499 28.914L15.8359 20.5L17.2499 19.086L24.2499 26.086L31.2499 19.086L32.6639 20.5L24.2499 28.914Z"
+                              fill="#18181B" />
+                          </svg>
+                          </div>
                         <div class="w-6 h-14 block before:content-ArrowBottom before:align-[-37px] ml-1">
                         </div>
                       </div>
