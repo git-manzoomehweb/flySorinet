@@ -45,7 +45,7 @@
 
 <body class="px-2 bg-zinc-50">
     <!-- header -->
-    <basis core="call" file="header.inc" />
+    <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
     <!-- header end -->
 
     <main class="relative">
@@ -56,7 +56,7 @@
             <div class="absolute text-white">
                 <h1 class="text-2xl font-bold">ویزا</h1>
                 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center gap-1">
-                    <li class="inline-block text-2xl font-normal text-white" itemprop="itemListElement" itemscope
+                    <li class="inline-block font-normal text-white" itemprop="itemListElement" itemscope
                         itemtype="https://schema.org/ListItem">
                         <a class="text-white hover:text-Primery-600" itemprop="item" href="/" aria-label="home"><span
                                 itemprop="name">صفحه اصلی</span>
@@ -142,7 +142,7 @@
             </basis>
 
 
-            <ul class="flex gap-3 cd-pagination no-space dir-lt2" id="wibpaging">
+            <ul class="flex gap-3 justify-center mt-4 cd-pagination no-space dir-lt2" id="wibpaging">
                 <basis core="print" datamembername="db.paging">
                     <face filter="(@sta='pre')">
                         <li class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600">
@@ -191,7 +191,7 @@
     </main>
 
     <!-- footer -->
-    <basis core="call" file="footer.inc" />
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
     <!-- footer end -->
 </body>
 

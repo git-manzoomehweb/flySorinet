@@ -34,17 +34,23 @@ document.addEventListener("DOMContentLoaded", function () {
       // بستن سایر منوها
       menuItems.forEach((otherItem) => {
         if (otherItem !== item) {
-          otherItem
-            .querySelector(".submenu")
-            ?.classList.add("invisible", "opacity-0");
+          const otherSubmenu = otherItem.querySelector(".submenu");
+          otherSubmenu.classList.add("max-h-0", "opacity-0"); // بستن سایر منوها
+          otherSubmenu.classList.remove("max-h-72");
           otherItem.querySelector(".chevron")?.classList.remove("rotate-180");
         }
       });
 
       // تغییر وضعیت منوی کلیک شده
-      submenu.classList.toggle("invisible");
-      submenu.classList.toggle("opacity-0");
-      chevron.classList.toggle("rotate-180");
+      if (submenu.classList.contains("max-h-0")) {
+        submenu.classList.remove("max-h-0", "opacity-0"); // باز کردن منو
+        submenu.classList.add("max-h-72", "transition-all", "duration-300");
+        chevron.classList.add("rotate-180");
+      } else {
+        submenu.classList.add("max-h-0", "opacity-0"); // بستن منو
+        submenu.classList.remove("max-h-72");
+        chevron.classList.remove("rotate-180");
+      }
     });
   });
 
@@ -62,16 +68,23 @@ document.addEventListener("DOMContentLoaded", function () {
       // بستن سایر زیرمنوها
       submenuItems.forEach((otherItem) => {
         if (otherItem !== item) {
-          otherItem.querySelector(".nested-menu")?.classList.remove("max-h-40");
-          otherItem.querySelector(".nested-menu")?.classList.add("max-h-0");
+          const otherNestedMenu = otherItem.querySelector(".nested-menu");
+          otherNestedMenu.classList.add("max-h-0", "opacity-0"); // بستن سایر زیرمنوها
+          otherNestedMenu.classList.remove("max-h-72");
           otherItem.querySelector(".chevron")?.classList.remove("rotate-180");
         }
       });
 
       // تغییر وضعیت زیرمنوی کلیک شده
-      nestedMenu.classList.toggle("max-h-0");
-      nestedMenu.classList.toggle("max-h-40");
-      chevron.classList.toggle("rotate-180");
+      if (nestedMenu.classList.contains("max-h-0")) {
+        nestedMenu.classList.remove("max-h-0", "opacity-0"); // باز کردن زیرمنو
+        nestedMenu.classList.add("max-h-72", "transition-all", "duration-300");
+        chevron.classList.add("rotate-180");
+      } else {
+        nestedMenu.classList.add("max-h-0", "opacity-0"); // بستن زیرمنو
+        nestedMenu.classList.remove("max-h-72");
+        chevron.classList.remove("rotate-180");
+      }
     });
   });
 });
@@ -111,7 +124,7 @@ async function loadSearchEngine(url, sectionload) {
   } catch (error) {}
 }
 
-// search engine
+
 
 // کد مشاهده بیشتر/کمتر - برای صفحه article-list-mobile.html
 if (document.querySelector('input[name="search"]')) {

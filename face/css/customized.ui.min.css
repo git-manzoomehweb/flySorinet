@@ -563,6 +563,25 @@ video {
   display: none;
 }
 
+.max-h-60 {
+  max-height: 18rem;
+}
+
+.border-Primery-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(244 149 147 / var(--tw-border-opacity, 1));
+}
+
+.top-\[12\%\] {
+  top: 12%;
+}
+.h-px {
+  height: 1px;
+}
+.w-2\/5 {
+  width: 40%;
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -686,6 +705,10 @@ video {
 
 .w-9\/12 {
   width: 75%;
+}
+
+.w-4\/5 {
+  width: 80%;
 }
 
 .w-\[90\%\] {
@@ -1256,4 +1279,31 @@ footer [data-bc-answer-container] input[type="text"]::placeholder {
 
 .bg-footer-gradient {
   background-image: linear-gradient(277.8deg, #1d0202 0.86%, #121212 99.53%);
+}
+
+.btnstyle svg{
+  background-color: rgb(216 17 31 / var(--tw-bg-opacity, 1)) !important;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  padding: 0.2rem;
+}
+.btnstyle:hover{
+  transform: scale(1.05);
+}
+
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+.flex-1 {
+  flex: 1 1 0%;
+}
+.border-b {
+  border-bottom-width: 1px;
+}
+.border-dashed {
+  border-style: dashed;
 }

@@ -61,7 +61,7 @@ function LoadHotel() {
   $("#Hotel").siblings("li").removeClass("active-module");
   $("#item-Hotel").show();
   $("#item-Flight,#item-Tour,#item-FlightHotel,#item-Insurance").hide();
-  changeParentBackground('hotel-image-min.webp')
+  changeParentBackground('hotel-background-merge.png')
   if ($(".engine-content").hasClass("max-lg:hidden")) {
     $(".engine-content").removeClass("max-lg:hidden");
   }
@@ -72,7 +72,7 @@ function LoadFlight() {
   $("#Flight").siblings("li").removeClass("active-module");
   $("#item-Flight").show();
   $("#item-Hotel,#item-Tour,#item-FlightHotel,#item-Insurance").hide();
-  changeParentBackground('fly-image-min.webp')
+  changeParentBackground('flight-background-merge.png')
   if ($(".engine-content").hasClass("max-lg:hidden")) {
     $(".engine-content").removeClass("max-lg:hidden");
   }
@@ -84,7 +84,7 @@ function LoadFlightHotel() {
   $("#FlightHotel").siblings("li").removeClass("active-module");
   $("#item-FlightHotel").show();
   $("#item-Flight,#item-Hotel,#item-Tour,#item-Insurance").hide();
-  changeParentBackground('fly-image-min.webp')
+  changeParentBackground('hotelFlight-background-merge.png')
   if ($(".engine-content").hasClass("max-lg:hidden")) {
     $(".engine-content").removeClass("max-lg:hidden");
   }
@@ -96,7 +96,7 @@ function LoadTour() {
   $("#Tour").siblings("li").removeClass("active-module");
   $("#item-Tour").show();
   $("#item-Flight,#item-Hotel,#item-FlightHotel,#item-Insurance").hide();
-  changeParentBackground('fly-image-min.webp')
+  changeParentBackground('tour-background-merge.png')
   if ($(".engine-content").hasClass("max-lg:hidden")) {
     $(".engine-content").removeClass("max-lg:hidden");
   }
@@ -192,7 +192,7 @@ nextButton.forEach((element) => {
 function setFlightType(ele, element) {
   var flighttype = ele;
   document.getElementById("sliderSelect").selectedIndex = 0;
-
+  $(element).find("input[type='radio']").prop("checked", true);
   if (flighttype == "oneway") {
     $("#item-Flight").find("form").attr("data-flightType", "1");
     $(element).addClass("active-flight-type");
@@ -219,7 +219,7 @@ function setFlightType(ele, element) {
       .prop("disabled", true);
     $("#item-Flight")
       .find("#flight-form")
-      .find(".end_date")
+      .find(".end_date").closest("div")
       .addClass("Noactive-date");
     $("#item-Flight")
       .find("#flight-form")
@@ -256,7 +256,7 @@ function setFlightType(ele, element) {
       .prop("disabled", false);
     $("#item-Flight")
       .find("#flight-form")
-      .find(".end_date")
+      .find(".end_date").closest("div")
       .removeClass("Noactive-date");
     $("#item-Flight")
       .find("#flight-form")
@@ -287,7 +287,7 @@ function setFlightType(ele, element) {
       .closest("div")
       .find(".date-value")
       .prop("disabled", true);
-    $("#item-Flight").find(".end_date").addClass("Noactive-date");
+    $("#item-Flight").find(".end_date").closest("div").addClass("Noactive-date");
     $("#item-Flight").find(".end_date").closest(".bg-white").addClass("opc-50");
     if ($(window).width() <= 1024) {
       $("#multi-flight-form").attr("action", "/M_Multicity_Search.bc");
@@ -319,7 +319,7 @@ function setFlightType(ele, element) {
       .prop("disabled", true);
     $("#item-Flight")
       .find("#flight-form")
-      .find(".end_date")
+      .find(".end_date").closest("div")
       .addClass("Noactive-date");
     $("#item-Flight")
       .find("#flight-form")
@@ -696,7 +696,7 @@ $(".plus-minus").on("click", function () {
       button.closest(".item-CountPassenger").find("input").val()
     );
     var newVal =
-      button.text().indexOf("+") > -1
+    button.find("span").hasClass("plus-btn")
         ? oldVal + 1
         : oldVal > 0
           ? oldVal - 1
@@ -736,7 +736,7 @@ $(".plus-minus-ch").on("click", function () {
       button.closest(".item-CountPassenger").find("input").val()
     );
     var newVal =
-      button.text().indexOf("+") > -1
+      button.find("span").hasClass("plus-btn")
         ? oldVal + 1
         : oldVal > 0
           ? oldVal - 1
@@ -837,7 +837,7 @@ $(".plus-minus-ins").on("click", function () {
     button.closest(".item-CountPassenger").find("input").val()
   );
   var newVal =
-    button.text().indexOf("+") > -1 ? oldVal + 1 : oldVal > 0 ? oldVal - 1 : 0;
+  button.find("span").hasClass("plus-btn") ? oldVal + 1 : oldVal > 0 ? oldVal - 1 : 0;
   if (newVal >= 1) {
     button
       .closest(".item-CountPassenger")
@@ -932,7 +932,7 @@ $(document)
     var form = button.closest("form");
     var oldVal =
       parseInt(button.closest(".item-CountPassenger").find("input").val()) || 0;
-    var newVal = button.text().indexOf("+") > -1 ? oldVal + 1 : oldVal - 1;
+    var newVal = button.find("span").hasClass("plus-btn") ? oldVal + 1 : oldVal - 1;
 
     if (newVal >= 2) {
       button
@@ -951,7 +951,7 @@ $(document)
     button.closest(".item-CountPassenger").find("input").val(newVal);
     form.find(".count-passengers .count-room").text(newVal);
 
-    if (button.text().indexOf("+") > -1) {
+    if (button.find("span").hasClass("plus-btn")) {
       addRoom(form, newVal);
     } else {
       form.find(".ShowRow .contentRoom").last().remove();
@@ -962,38 +962,64 @@ $(document)
 function addRoom(form, roomNumber) {
   var newRoomHtml = `
       <div class="contentRoom">
-        <div class="RoomRow mb-3">اتاق ${roomNumber}</div>
-        <div class="item-CountPassenger mb-4">
-          <div class="first-part-CountPassenger w-full border-b-2 border-white border-dashed block pb-2 mt-3">بزرگسال (+12)</div>
-          <div class="second-part-CountPassenger flex justify-between">
-            <div class="passenger-button plus-minus w-12 h-12 flex justify-center items-center">
-              <span class="plus-btn w-6 h-6 leading-btnclick bg-primary-900 text-white rounded-4px text-center cursor-pointer inline-block text-4xl font-danaregular">+</span>
-            </div>
-            <div class="passenger-button text-base">
-              <input type="text" name="_root.rooms__${roomNumber}.adultcount" class="adult adult-count text-center w-14 h-12 bg-transparent outline-none border-none" readonly value="2">
-            </div>
-            <div class="passenger-button plus-minus w-12 h-12 flex justify-center items-center">
-              <span class="minus-btn w-6 h-6 leading-btnclick bg-primary-900 text-white rounded-4px text-center cursor-pointer inline-block text-4xl font-danaregular">-</span>
-            </div>
-          </div>
-        </div>
-        <div class="item-CountPassenger mb-4">
-          <div class="first-part-CountPassenger w-full border-b-2 border-white border-dashed block pb-2 mt-3">کودک (-12)</div>
-          <div class="second-part-CountPassenger flex justify-between">
-            <div class="passenger-button plus-minus-ch w-12 h-12 flex justify-center items-center">
-              <span class="plus-btn w-6 h-6 leading-btnclick bg-primary-900 text-white rounded-4px text-center cursor-pointer inline-block text-4xl font-danaregular">+</span>
-            </div>
-            <div class="passenger-button text-base">
-              <input type="text" class="child-count text-center w-14 h-12 bg-transparent outline-none border-none" readonly value="0">
-              <input type="hidden" value="0" class="childcountandage" name="_root.rooms__${roomNumber}.childcountandage">
-            </div>
-            <div class="passenger-button plus-minus-ch w-12 h-12 flex justify-center items-center">
-              <span class="minus-btn w-6 h-6 leading-btnclick bg-primary-900 text-white rounded-4px text-center cursor-pointer inline-block text-4xl font-danaregular">-</span>
-            </div>
-          </div>
-          <div class="section-select-age leading-38px divide-y divide-white divide-dashed w-full flex-col justify-items-stretch"></div>
-        </div>
-      </div>`;
+  <div class="RoomRow mb-3">اتاق ${roomNumber}</div>
+  <div class="item-CountPassenger mb-4">
+    <div
+      class="first-part-CountPassenger w-full border-b-2 border-white border-dashed block pb-2 mt-3">بزرگسال
+      (+12)</div>
+    <div
+      class="flex items-center justify-between w-full second-part-CountPassenger">
+      <div
+        class="flex items-center justify-center w-12 h-12 passenger-button plus-minus">
+        <span
+          class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600 cursor-pointer plus-btn leading-btnclick group-hover:bg-secondary-600 hover:scale-105 ">
+          <img
+            src="http://cdn.basiscore.net/d108h111.undertest.ir/images/plusIcon.svg"
+            alt="plusIcon" width="24" height="24" loading="lazy"></span>
+      </div>
+      <div class="text-base passenger-button w-full"><input type="text"
+          name="_root.rooms__${roomNumber}.adultcount"
+          class="p-3 font-medium text-center border border-solid bg-zinc-50 rounded-xl border-zinc-100 w-full outline-none adult adult-count"
+          readonly value="2"></div>
+      <div
+        class="flex items-center justify-center w-12 h-12 passenger-button plus-minus">
+        <span
+          class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600 cursor-pointer minus-btn leading-btnclick group-hover:bg-secondary-600 hover:scale-105"><img
+            src="http://cdn.basiscore.net/d108h111.undertest.ir/images/minusIcon.svg"
+            alt="minusIcon" width="24" height="24" loading="lazy"></span>
+      </div>
+    </div>
+
+  </div>
+  <div class="item-CountPassenger mb-4">
+    <div
+      class="first-part-CountPassenger w-full border-b-2 border-white border-dashed block pb-2 mt-3">کودک
+      (-12)</div>
+    <div
+      class="flex items-center justify-between w-full second-part-CountPassenger">
+      <div
+        class="flex items-center justify-center w-12 h-12 passenger-button plus-minus-ch">
+        <span
+          class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600 cursor-pointer plus-btn leading-btnclick group-hover:bg-secondary-600 hover:scale-105">
+          <img
+            src="http://cdn.basiscore.net/d108h111.undertest.ir/images/plusIcon.svg"
+            alt="plusIcon" width="24" height="24" loading="lazy"></span>
+      </div>
+      <div class="text-base passenger-button w-full"><input type="text"
+          class="p-3 font-medium text-center border border-solid bg-zinc-50 rounded-xl border-zinc-100 w-full outline-none child-count"
+          readonly value="0"><input type="hidden" value="0" class="childcountandage" name="_root.rooms__${roomNumber}.childcountandage"/></div>
+      <div
+        class="flex items-center justify-center w-12 h-12 passenger-button plus-minus-ch">
+        <span
+          class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600 cursor-pointer minus-btn leading-btnclick group-hover:bg-secondary-600 hover:scale-105"><img
+            src="http://cdn.basiscore.net/d108h111.undertest.ir/images/minusIcon.svg"
+            alt="minusIcon" width="24" height="24" loading="lazy"></span>
+      </div>
+    </div>
+    <div
+      class="section-select-age leading-38px divide-y divide-white divide-dashed w-full flex-col justify-items-stretch"></div>
+  </div>
+</div>`;
 
   form.find(".ShowRow").append(newRoomHtml);
 }
@@ -1414,6 +1440,7 @@ function changeParentBackground(bg) {
   const updatedSrc = currentSrc.replace(/[^/]+$/, `${bg}`);
   targetImage.src = updatedSrc;
 }
+
 
 
 

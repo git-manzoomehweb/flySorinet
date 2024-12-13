@@ -114,7 +114,7 @@
             <h2 id="@valueID" class="text-xl font-medium">@text</h2>
           </face>
           <face filter="prpID in(7249)">
-            <span class="text-sm">@prp_7249</span>
+            <span class="text-sm">@text</span>
           </face>
         </basis>
 
@@ -136,7 +136,7 @@
             </div>
           </layout>
           <face filter="TypeID in(150 , 250)">
-            <a href="#@valueID" class="flex items-center gap-2">
+            <a href="#@valueID" class="flex items-center gap-2 hover:text-Primery-600">
               <img src="[##cms.cms.cdn##]/images/starFillIcon.svg" alt="starFillIcon" loading="lazy"/>
               @text
             </a>
@@ -187,14 +187,15 @@
 
       <!-- articles -->
       <section class="mt-4 desktopContainer">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="font-medium">مقاله ها</h2>
-          <span class="text-sm text-Primery-700">مشاهده همه</span>
-        </div>
+       
 
         <basis core="list" datamembername="db.related-article">
           <layout>
             <section class="mt-20 desktopContainer">
+              <div class="flex items-center justify-between mb-4">
+                <h2 class="font-medium">مقاله ها</h2>
+                <span class="text-sm text-Primery-700 hover:scale-105">مشاهده همه</span>
+              </div>
               <div
                 class="flex flex-col gap-2 lg:flex-row lg:gap-0 lg:justify-between"
               >
@@ -295,7 +296,7 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">
+            <div class="swiper-slide flex items-center">
               <img
                 src="[##cms.cms.cdn##]/images/sunExpress.png"
                 alt="sunExpress"
@@ -304,7 +305,7 @@
               />
             </div>
 
-            <div class="swiper-slide">
+            <div class="swiper-slide flex items-center">
               <img
                 src="[##cms.cms.cdn##]/images/SalamAir.png"
                 alt="SalamAir"
@@ -313,7 +314,7 @@
               />
             </div>
 
-            <div class="swiper-slide">
+            <div class="swiper-slide flex items-center">
               <img
                 src="[##cms.cms.cdn##]/images/turkishAirlines.png"
                 alt="turkishAirlines"
@@ -322,7 +323,7 @@
               />
             </div>
 
-            <div class="swiper-slide">
+            <div class="swiper-slide flex items-center">
               <img
                 src="[##cms.cms.cdn##]/images/Qatar.png"
                 alt="Qatar"
@@ -331,7 +332,7 @@
               />
             </div>
 
-            <div class="swiper-slide">
+            <div class="swiper-slide flex items-center">
               <img
                 src="[##cms.cms.cdn##]/images/IranAir.png"
                 alt="IranAir"

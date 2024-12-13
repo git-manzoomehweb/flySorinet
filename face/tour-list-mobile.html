@@ -12,7 +12,7 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
     <member name="tour-list" type="list" link="tour.bc" propertyid="8077,8181,10000504,8076" perpage="6"
         pageno="[##cms.query.pagenum|(1)##]" size="412x295" order="ord" />
-    <member name="paging" type="list" request="paging" count="1" parentname="tour-list" />
+    <member name="paging" type="list" request="paging" count="2" parentname="tour-list" />
 </basis>
 
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.cid##]">
@@ -64,7 +64,7 @@
                 <div class="relative z-10 text-center">
                     <basis core="print" datamembername="db.scalar">
                         <face>
-                          <h1 class="mb-4 text-lg font-medium">@column1</h1>
+                          <h1 class="mb-4 text-lg font-medium text-white">@column1</h1>
                         </face>
                       </basis>
                     <ul
@@ -230,7 +230,7 @@
         <section class="mt-28 desktopContainer">
             <div class="flex items-center justify-between mb-4">
                 <h2 class="font-medium">مقاله ها</h2>
-                <a href="/article-list.bc?catid=210488" class="text-sm text-Primery-700">مشاهده همه</a>
+                <a href="/article-list.bc?catid=210488" class="text-sm text-Primery-700 hover:scale-105">مشاهده همه</a>
             </div>
 
             <basis core="list" datamembername="db.article-list">
@@ -302,27 +302,27 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex justify-center">
                         <img src="[##cms.cms.cdn##]/images/sunExpress.png" alt="sunExpress" loading="lazy"
                             class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52" />
                     </div>
 
-                    <div class="swiper-slide"> 
+                    <div class="swiper-slide flex justify-center"> 
                         <img src="[##cms.cms.cdn##]/images/SalamAir.png" alt="SalamAir" loading="lazy"
                             class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52" />
                     </div>
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex justify-center">
                         <img src="[##cms.cms.cdn##]/images/turkishAirlines.png" alt="turkishAirlines" loading="lazy"
                             class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52" />
                     </div>
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex justify-center">
                         <img src="[##cms.cms.cdn##]/images/Qatar.png" alt="Qatar" loading="lazy"
                             class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52" />
                     </div>
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide flex justify-center">
                         <img src="[##cms.cms.cdn##]/images/IranAir.png" alt="IranAir" loading="lazy"
                             class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52" />
                     </div>
