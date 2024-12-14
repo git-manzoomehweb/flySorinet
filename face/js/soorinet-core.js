@@ -124,8 +124,6 @@ async function loadSearchEngine(url, sectionload) {
   } catch (error) {}
 }
 
-
-
 // کد مشاهده بیشتر/کمتر - برای صفحه article-list-mobile.html
 if (document.querySelector('input[name="search"]')) {
   document.addEventListener("DOMContentLoaded", function () {
@@ -167,6 +165,40 @@ if (document.querySelector('input[name="search"]')) {
     });
   });
 }
+
+// paging
+const FetchPageNumPrev = async (dataPageNum) => {
+  const prevValue = dataPageNum + 1
+  const fetchContentArticle = document.querySelector(".fetch-content-article");
+  const cmsQuery = fetchContentArticle.getAttribute("data-catid");
+  const pagingResponse = await fetch(
+    `/article-load-items.bc?${cmsQuery}&pagenum=${prevValue}`
+  );
+  const pagingData = await pagingResponse.text();
+  fetchContentArticle.innerHTML = pagingData;
+};
+
+const FetchPageNumNext = async (dataPageNum) => {
+  const nextValue = dataPageNum + 1
+  const fetchContentArticle = document.querySelector(".fetch-content-article");
+  const cmsQuery = fetchContentArticle.getAttribute("data-catid");
+  const pagingResponse = await fetch(
+    `/article-load-items.bc?${cmsQuery}&pagenum=${nextValue}`
+  );
+  const pagingData = await pagingResponse.text();
+  fetchContentArticle.innerHTML = pagingData;
+};
+
+const FetchWithPageNum = async (dataPageNum) => {
+  const fetchContentArticle = document.querySelector(".fetch-content-article");
+  const cmsQuery = fetchContentArticle.getAttribute("data-catid");
+  const pagingResponse = await fetch(
+    `/article-load-items.bc?${cmsQuery}&pagenum=${dataPageNum}`
+  );
+  const pagingData = await pagingResponse.text();
+  fetchContentArticle.innerHTML = pagingData;
+};
+
 
 // کد fetch مقالات - برای صفحه article-list.html
 if (document.querySelector('input[name="search"]')) {

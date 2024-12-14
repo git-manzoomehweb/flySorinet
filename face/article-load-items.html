@@ -1,7 +1,7 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
-    <member name="article-list" type="list" link="article.bc" propertyid="7244" perpage="8"
+    <member name="article-list" type="list" link="article.bc" propertyid="7244" perpage="4"
         pageno="[##cms.query.pagenum|(1)##]" size="412x295" order="ord" />
-    <member name="paging" type="list" request="paging" count="3" parentname="article-list" />
+    <member name="paging" type="list" request="paging" count="2" parentname="article-list" />
 </basis>
 
 
@@ -67,47 +67,37 @@
 </basis>
 
 
-<div class="flex items-center justify-center gap-2 mt-16">
+<div id="paging" class="flex items-center justify-center gap-2 mt-16">
     <ul class="flex gap-3 cd-pagination no-space dir-lt2" id="wibpaging">
-        <basis core="print" datamembername="db.paging">
-            <face filter="(@sta='pre')">
-                <li class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600">
-                    <a class="text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-left"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M16.5725 12C16.5725 12.2926 16.4605 12.5851 16.2377 12.808L9.38076 19.6649C8.93392 20.1117 8.21166 20.1117 7.76482 19.6649C7.31798 19.218 7.31798 18.4958 7.76482 18.0489L13.8137 12L7.76482 5.9511C7.31798 5.5042 7.31798 4.782 7.76482 4.3351C8.21166 3.8883 8.93392 3.8883 9.38076 4.3351L16.2377 11.192C16.4605 11.4149 16.5725 11.7074 16.5725 12Z"
-                                fill="white" />
-                        </svg></a>
-                </li>
-            </face>
-        </basis>
-
-        <basis core="print" datamembername="db.paging">
-            <face filter="(@page=[##cms.query.pagenum|(1)##])">
-                <li class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300">
-                    <a class="current font-color-1 text-zinc-900"
-                        href="/[##cms.cms.link_page##]&pagenum=@page">@page</a>
-                </li>
-            </face>
-
-            <face filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no')">
-                <li class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-zinc-300">
-                    <a class="text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page">@page</a>
-                </li>
-            </face>
-        </basis>
-
-        <basis core="print" datamembername="db.paging">
-            <face filter="(@sta='nex')">
-                <li class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-Primery-600">
-                    <a class="text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-right"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M7.4275 12C7.4275 11.7074 7.5395 11.4149 7.7623 11.192L14.6192 4.33513C15.0661 3.88829 15.7883 3.88829 16.2352 4.33513C16.682 4.78197 16.682 5.50423 16.2352 5.95107L10.1863 12L16.2352 18.0489C16.682 18.4958 16.682 19.218 16.2352 19.6649C15.7883 20.1117 15.0661 20.1117 14.6192 19.6649L7.7623 12.808C7.5395 12.5851 7.4275 12.2926 7.4275 12Z"
-                                fill="white" />
-                        </svg></a>
-                </li>
-            </face>
-        </basis>
-    </ul>
-</div>
+    <basis core="print" datamembername="db.paging">  
+    <face  filter="(@sta='pre')and('[##cms.cms.pageurl##]'='')">  
+    <li class="flex items-center justify-center w-12 h-12 p-2 page-no prev-page rounded-xl bg-Primery-600 hover:scale-105"><span class="flex items-center justify-center w-full cursor-pointer text-zinc-900" aria-label="angle-left" onclick="FetchPageNumPrev('@page')"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z" fill="#18181B"/></svg></span></li>
+    </face>
+    <face  filter="(@sta='pre')and('[##cms.cms.pageurl##]'<>'')">  
+    <li class="flex items-center justify-center w-12 h-12 p-2 page-no prev-page rounded-xl bg-Primery-600 hover:scale-105"><span class="flex items-center justify-center w-full cursor-pointer text-zinc-900" aria-label="angle-left" onclick="FetchPageNumPrev('@page')"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z" fill="#18181B"/></svg></span></li>
+    </face>
+    </basis>
+    <basis core="print" datamembername="db.paging">   
+    <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'='')">
+    <li class="flex items-center justify-center w-12 h-12 p-2 page-no rounded-xl bg-zinc-300 hover:scale-105"><span class="flex items-center justify-center w-full cursor-pointer page-number text-zinc-900" class="current font-color-1" data-pagenum="@page" onclick="FetchWithPageNum('@page')">@page</span></li>
+    </face>   
+    <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'<>'')">
+    <li class="flex items-center justify-center w-12 h-12 p-2 page-no rounded-xl bg-zinc-300 hover:scale-105"><span class="flex items-center justify-center w-full cursor-pointer page-number text-zinc-900" class="current font-color-1" data-pagenum="@page" onclick="FetchWithPageNum('@page')">@page</span></li>
+    </face>    
+    <face filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'='') ">
+    <li class="flex items-center justify-center w-12 h-12 p-2 page-no rounded-xl bg-zinc-300 hover:scale-105"><span class="flex items-center justify-center w-full cursor-pointer page-number text-zinc-900" data-pagenum="@page" onclick="FetchWithPageNum('@page')">@page</span></li>
+    </face> 
+    <face filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'<>'') ">
+    <li class="flex items-center justify-center w-12 h-12 p-2 page-no rounded-xl bg-zinc-300 hover:scale-105"><span class="flex items-center justify-center w-full cursor-pointer page-number text-zinc-900" data-pagenum="@page" onclick="FetchWithPageNum('@page')">@page</span></li>
+    </face>   
+    </basis>
+    <basis core="print" datamembername="db.paging">  
+    <face  filter="(@sta='nex') and ('[##cms.cms.pageurl##]'='')">  
+    <li class="flex items-center justify-center w-12 h-12 p-2 page-no next-page rounded-xl bg-Primery-600 hover:scale-105"><span class="flex items-center justify-center w-full cursor-pointer text-zinc-900" aria-label="angle-right" onclick="FetchPageNumNext('@page')"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z" fill="#18181B"/></svg></span></li>
+    </face>
+    <face  filter="(@sta='nex') and ('[##cms.cms.pageurl##]'<>'')">  
+    <li class="flex items-center justify-center w-12 h-12 p-2 page-no next-page rounded-xl bg-Primery-600 hover:scale-105"><span class="flex items-center justify-center w-full cursor-pointer text-zinc-900" aria-label="angle-right" onclick="FetchPageNumNext('@page')"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z" fill="#18181B"/></svg></span></li>
+    </face>
+    </basis>
+ </ul>
+  </div>

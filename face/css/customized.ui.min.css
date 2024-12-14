@@ -551,10 +551,11 @@ object {
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
 
-img,
-video {
-  max-width: 100%;
+.h-auto {
   height: auto;
+}
+.max-w-full {
+  max-width: 100%;
 }
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
@@ -1192,6 +1193,9 @@ footer [data-bc-answer-container] input[type="text"] {
   border: none !important;
   font-weight: 500;
   font-size: 16px;
+}
+footer [data-bc-schema-direction="rtl"] [data-bc-part-container]{
+   width: 100%;
 }
 
 footer [data-bc-answer-container] input[type="text"]::placeholder {

@@ -30,12 +30,29 @@
   <!-- header end -->
 
   <main>
-    <div class="relative">
+    <basis core="print" datamembername="db.info">
+      <layout>
+        <div class="relative">@child</div>
+      </layout>
+      <face filter="prpID=91462"
+        ><iframe
+          defer
+          title="لوکیشن سورینت"
+          class="h-[25rem] w-full object-cover -z-10 relative"
+          height="134"
+          loading="lazy"
+          target="_blank"
+          allowfullscreen
+          src="https://maps.google.com/maps?q=@largetext,@text&z=14&output=embed"
+        ></iframe
+      ></face>
+    </basis>
+    <!-- <div class="relative">
       <img src="[##cms.cms.cdn##]/images/map-image-min.png" alt="map" class="h-[25rem] w-full object-cover -z-10 relative"
         loading="lazy" />
       <img src="[##cms.cms.cdn##]/images/hereIcon.svg" alt="hereIcon" class="absolute top-24 right-[30%]"
         loading="lazy" />
-    </div>
+    </div> -->
     <section class="relative px-4 py-4 mt-24 rounded-xl w-[calc(100%-20px)] mx-auto">
       <div class="flex flex-col">
         <!-- right content of about us -->
