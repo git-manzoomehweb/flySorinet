@@ -16,7 +16,7 @@
 
 
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="tourism-magazine">
-  <member name="cat" type="tree" request="cat" parentid="212276" order="ord"></member>
+  <member name="cat" type="tree" request="cat" parentid="[##cms.query.catid##]" order="ord"></member>
 </basis>
 
 <!DOCTYPE html>
@@ -132,13 +132,13 @@
               </div>
             </layout>
             <face level="end" filter="link is null">
-              <li class="flex items-center gap-2 hover:text-Primery-600 cursor-pointer">
+              <li class="flex items-center gap-2 cursor-pointer hover:text-Primery-600">
                 <input type="radio" name="radio" value="@catid" id="" class="size-4 accent-Primery-600" aria-label="radio-btn" />
                 @title
               </li>
             </face>
             <face level="end">
-              <li class="flex items-center gap-2 hover:text-Primery-600 cursor-pointer">
+              <li class="flex items-center gap-2 cursor-pointer hover:text-Primery-600">
                 <input type="radio" name="radio" value="@catid" id="" class="size-4 accent-Primery-600" aria-label="radio-btn" />
                 @title
               </li>

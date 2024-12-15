@@ -504,3 +504,7 @@ i[class^="flaticon-"]:before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.fa-exchange-alt:before {
+  content: "\f362";
+}

@@ -200,35 +200,35 @@
       <!-- tour list end -->
 
       <div id="paging" class="flex items-center justify-center gap-2 mt-16">
-        <ul class="flex gap-3 cd-pagination no-space dir-lt2" id="wibpaging">
+        <ul class="flex gap-3 cd-pagination no-space dir-ltr" id="wibpaging">
         <basis core="print" datamembername="db.paging">  
         <face  filter="(@sta='pre')and('[##cms.cms.pageurl##]'='')">  
-        <li class="flex items-center justify-center w-12 h-12 p-2 page-no prev-page rounded-xl bg-Primery-600 hover:scale-105"><a class="flex items-center justify-center w-full text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-left"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z" fill="#18181B"/></svg></a></li>
+        <li class="flex items-center justify-center w-12 h-12 page-no prev-page rounded-xl bg-Primery-600 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-left"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z" fill="#fff"/></svg></a></li>
         </face>
         <face  filter="(@sta='pre')and('[##cms.cms.pageurl##]'<>'')">  
-        <li class="flex items-center justify-center w-12 h-12 p-2 page-no prev-page rounded-xl bg-Primery-600 hover:scale-105"><a class="flex items-center justify-center w-full text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page" aria-label="angle-left"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z" fill="#18181B"/></svg></a></li>
+        <li class="flex items-center justify-center w-12 h-12 page-no prev-page rounded-xl bg-Primery-600 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page" aria-label="angle-left"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z" fill="#fff"/></svg></a></li>
         </face>
         </basis>
         <basis core="print" datamembername="db.paging">   
         <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'='')">
-        <li class="flex items-center justify-center w-12 h-12 p-2 page-no rounded-xl bg-zinc-300 hover:scale-105"><a class="flex items-center justify-center w-full text-zinc-900" class="current font-color-1" href="/[##cms.cms.link_page##]&pagenum=@page">@page</a></li>
+        <li class="flex items-center justify-center w-12 h-12 overflow-hidden page-no rounded-xl bg-zinc-300 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-white bg-Primery-600"  href="/[##cms.cms.link_page##]&pagenum=@page">@page</a></li>
         </face>   
         <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'<>'')">
-        <li class="flex items-center justify-center w-12 h-12 p-2 page-no rounded-xl bg-zinc-300 hover:scale-105"><a class="flex items-center justify-center w-full text-zinc-900" class="current font-color-1" href="/[##cms.cms.pageurl##]?pagenum=@page">@page</a></li>
+        <li class="flex items-center justify-center w-12 h-12 overflow-hidden page-no rounded-xl bg-zinc-300 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-white bg-Primery-600"  href="/[##cms.cms.pageurl##]?pagenum=@page">@page</a></li>
         </face>    
         <face filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'='') ">
-        <li class="flex items-center justify-center w-12 h-12 p-2 page-no rounded-xl bg-zinc-300 hover:scale-105"><a class="flex items-center justify-center w-full text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page">@page</a></li>
+        <li class="flex items-center justify-center w-12 h-12 page-no rounded-xl bg-zinc-300 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page">@page</a></li>
         </face> 
         <face filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'<>'') ">
-        <li class="flex items-center justify-center w-12 h-12 p-2 page-no rounded-xl bg-zinc-300 hover:scale-105"><a class="flex items-center justify-center w-full text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page">@page</a></li>
+        <li class="flex items-center justify-center w-12 h-12 page-no rounded-xl bg-zinc-300 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page">@page</a></li>
         </face>   
         </basis>
         <basis core="print" datamembername="db.paging">  
         <face  filter="(@sta='nex') and ('[##cms.cms.pageurl##]'='')">  
-        <li class="flex items-center justify-center w-12 h-12 p-2 page-no next-page rounded-xl bg-Primery-600 hover:scale-105"><a class="flex items-center justify-center w-full text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-right"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z" fill="#18181B"/></svg></a></li>
+        <li class="flex items-center justify-center w-12 h-12 page-no next-page rounded-xl bg-Primery-600 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-right"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z" fill="#fff"/></svg></a></li>
         </face>
         <face  filter="(@sta='nex') and ('[##cms.cms.pageurl##]'<>'')">  
-        <li class="flex items-center justify-center w-12 h-12 p-2 page-no next-page rounded-xl bg-Primery-600 hover:scale-105"><a class="flex items-center justify-center w-full text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page" aria-label="angle-right"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z" fill="#18181B"/></svg></a></li>
+        <li class="flex items-center justify-center w-12 h-12 page-no next-page rounded-xl bg-Primery-600 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page" aria-label="angle-right"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z" fill="#fff"/></svg></a></li>
         </face>
         </basis>
      </ul>

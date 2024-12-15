@@ -298,7 +298,7 @@ table {
   /* 1 */
   border-color: inherit;
   /* 2 */
-  border-collapse: collapse;
+
   /* 3 */
 }
 
@@ -561,7 +561,9 @@ video {
   display: none;
 }
 
-
+.dir-ltr{
+  direction: ltr;
+}
 .invisible {
   visibility: hidden;
  }
@@ -1722,11 +1724,7 @@ video {
   content: var(--tw-content);
   vertical-align: -37px;
 }
-.hover\:scale-105:hover {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2532,9 +2530,7 @@ video {
   width: 65%;
 }
 
-.w-\[70\%\] {
-  width: 70%;
-}
+
 
 .w-\[90\%\] {
   width: 90%;
@@ -2814,10 +2810,7 @@ video {
   background-color: rgb(234 33 36 / var(--tw-bg-opacity, 1));
 }
 
-.bg-Primery-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(216 17 31 / var(--tw-bg-opacity, 1));
-}
+
 
 .bg-black {
   --tw-bg-opacity: 1;
@@ -3242,10 +3235,7 @@ body {
     scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:text-Primery-600:hover {
-  --tw-text-opacity: 1;
-  color: rgb(234 33 36 / var(--tw-text-opacity, 1));
-}
+
 
 .group\/levelthree:hover .group-hover\/levelthree\:visible {
   visibility: visible;
@@ -3964,10 +3954,7 @@ body {
   font-family: "DanaFaNum" !important;
 }
 
-.hover\:bg-Primery-600:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(234 33 36 / var(--tw-bg-opacity, 1));
-}
+
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -3976,7 +3963,10 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
-
+.hover\:bg-Primery-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 33 36 / var(--tw-bg-opacity, 1));
+}
 .createChildDropdown{
   flex-direction: column;
   margin-top: 0.75rem;
@@ -4044,7 +4034,10 @@ body {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-
+.fa-plane::before{content:"\f072";color:var(--primary);}
+.fa-map-marker::before{content:"\f041";color:var(--primary);}
+.fa-arrow-left::before{content:"\f060";color:var(--primary);}
+.fa-arrow-right::before{content:"\f061";color:var(--primary);}
 
 
 

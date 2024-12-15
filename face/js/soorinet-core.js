@@ -168,22 +168,20 @@ if (document.querySelector('input[name="search"]')) {
 
 // paging
 const FetchPageNumPrev = async (dataPageNum) => {
-  const prevValue = dataPageNum + 1
   const fetchContentArticle = document.querySelector(".fetch-content-article");
   const cmsQuery = fetchContentArticle.getAttribute("data-catid");
   const pagingResponse = await fetch(
-    `/article-load-items.bc?${cmsQuery}&pagenum=${prevValue}`
+    `/article-load-items.bc?${cmsQuery}&pagenum=${dataPageNum}`
   );
   const pagingData = await pagingResponse.text();
   fetchContentArticle.innerHTML = pagingData;
 };
 
 const FetchPageNumNext = async (dataPageNum) => {
-  const nextValue = dataPageNum + 1
   const fetchContentArticle = document.querySelector(".fetch-content-article");
   const cmsQuery = fetchContentArticle.getAttribute("data-catid");
   const pagingResponse = await fetch(
-    `/article-load-items.bc?${cmsQuery}&pagenum=${nextValue}`
+    `/article-load-items.bc?${cmsQuery}&pagenum=${dataPageNum}`
   );
   const pagingData = await pagingResponse.text();
   fetchContentArticle.innerHTML = pagingData;
