@@ -687,11 +687,16 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 .h-4 {
   height: 1rem;
 }
-
+.h-9 {
+  height: 2.25rem;
+}
 .h-full {
   height: 100%;
 }
 
+.w-9 {
+  width: 2.25rem;
+}
 .w-16 {
   width: 4rem;
 }
@@ -1079,7 +1084,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
   font-style: normal;
 
-  font-weight: normal;
+  font-weight: 500;
 
   src: url("../_fonts/DanaFaNum-Medium.woff") format("truetype");
 }
@@ -1091,7 +1096,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
   font-style: normal;
 
-  font-weight: normal;
+  font-weight: 700;
 
   src: url("../_fonts/DanaFaNum-Bold.woff") format("truetype");
 }

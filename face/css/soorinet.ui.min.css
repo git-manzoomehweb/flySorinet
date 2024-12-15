@@ -2317,6 +2317,13 @@ video {
   height: 1.5rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+.w-7 {
+  width: 1.75rem;
+}
+
 .h-12 {
   height: 3rem;
 }
@@ -4042,3 +4049,8 @@ body {
 
 
 
+.article-background::before{
+  content: url("../images/tourListRec.svg");
+  position: absolute;
+  bottom: 0;
+}
