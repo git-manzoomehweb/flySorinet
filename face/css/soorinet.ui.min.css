@@ -784,6 +784,40 @@ video {
  .max-w-7xl {
   max-width: 80rem;
  }
+
+@media (min-width: 1024px) {
+  .lg\:absolute {
+    position: absolute;
+  }
+  .lg\:-left-16 {
+    left: -4rem;
+  }
+  .lg\:-top-44 {
+    top: -11rem;
+  }
+  .lg\:-z-10 {
+    z-index: -10;
+  }
+  .lg\:h-\[62rem\] {
+    height: 62rem;
+  }
+  .lg\:w-\[52rem\] {
+    width: 52rem;
+  }
+  .lg\:object-contain {
+    object-fit: contain;
+  }
+}
+@media (min-width: 1280px) {
+  .xl\:w-\[56rem\] {
+    width: 56rem;
+  }
+}
+@media (min-width: 1536px) {
+  .\32xl\:w-\[60rem\] {
+    width: 60rem;
+  }
+}
  .grow {
   flex-grow: 1;
  }
@@ -4047,10 +4081,27 @@ body {
 .fa-arrow-right::before{content:"\f061";color:var(--primary);}
 
 
+.calendar-switch{
+  font-family: 'DanaFaNum' !important;
+}
+.calendar-today{
+  font-family: 'DanaFaNum' !important;
+}
+.calendar-apply-date{
+  font-family: 'DanaFaNum' !important;
+}
+.calendar-footer input, .calendar-footer ::placeholder {
+    font-family: 'DanaFaNum' !important;
+}
 
-
-.article-background::before{
-  content: url("../images/tourListRec.svg");
-  position: absolute;
-  bottom: 0;
+.btnstyle svg{background-color: rgb(216 17 31 / var(--tw-bg-opacity, 1)) !important;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  padding: 0.2rem;
+}
+.btnstyle:hover{
+  transform: scale(1.05);
 }

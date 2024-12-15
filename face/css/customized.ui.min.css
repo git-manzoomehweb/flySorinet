@@ -765,7 +765,11 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 .gap-10 {
   gap: 2.5rem;
 }
-
+@media (min-width: 1024px) {
+  .lg\:gap-40 {
+    gap: 10rem;
+  }
+}
 .gap-2 {
   gap: 0.5rem;
 }

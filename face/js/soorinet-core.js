@@ -97,8 +97,9 @@ function loadContentHomePage() {
 async function loadSearchEngine(url, sectionload) {
   try {
     var xhrobj = new XMLHttpRequest();
-    xhrobj.open("GET", url);
+    xhrobj.open('GET', url);
     xhrobj.send();
+
     xhrobj.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         var container = document.getElementById(sectionload);
@@ -115,28 +116,115 @@ async function loadSearchEngine(url, sectionload) {
             scriptTag.text = scripts[i].textContent;
           }
 
-          document.head
-            .appendChild(scriptTag)
-            .parentNode.removeChild(scriptTag);
+          document.head.appendChild(scriptTag).parentNode.removeChild(scriptTag);
+        }
+
+        const pathnamehome = window.location.pathname;
+        if (pathnamehome) {
+          if (pathnamehome == '/hotel') {
+            sessionStorage.setItem('pageName', 'hotel');
+            $("#Hotel").click(function () {
+              $("#flight-type-items").hide();
+              $(".nav-module").each(function () {
+                var checknav = $(this).attr("data-nav");
+                if (checknav == "hotel") {
+                  $(this).addClass("nav-module-selected");
+                } else {
+                  $(this).removeClass("nav-module-selected");
+                }
+              });
+              LoadHotel();
+            })
+
+          } else if (pathnamehome == '/flight') {
+            sessionStorage.setItem('pageName', 'flight');
+            $("#Flight").click(function () {
+              $("#flight-type-items").show();
+              $(".nav-module").each(function () {
+                var checknav = $(this).attr("data-nav");
+                if (checknav == "flight") {
+                  $(this).addClass("nav-module-selected");
+                } else {
+                  $(this).removeClass("nav-module-selected");
+                }
+              });
+              LoadFlight();
+            });
+          }
+          } else if (pathnamehome == '/tour') {
+            sessionStorage.setItem('pageName', 'tour');
+            $("#Tour").click(function () {
+              $("#flight-type-items").hide();
+              $(".nav-module").each(function () {
+                var checknav = $(this).attr("data-nav");
+                if (checknav == "tour") {
+                  $(this).addClass("nav-module-selected");
+                } else {
+                  $(this).removeClass("nav-module-selected");
+                }
+              });
+              LoadTour();
+            });
+          } 
+
         }
       }
-    };
-  } catch (error) {}
+    
+  } catch (error) {
+  }
+
 }
+// async function loadSearchEngine(url, sectionload) {
+//   try {
+//     var xhrobj = new XMLHttpRequest();
+//     xhrobj.open("GET", url);
+//     xhrobj.send();
+//     xhrobj.onreadystatechange = function () {
+//       if (this.readyState == 4 && this.status == 200) {
+//         var container = document.getElementById(sectionload);
+//         container.innerHTML = xhrobj.responseText;
+
+//         var scripts = container.getElementsByTagName("script");
+//         for (var i = 0; i < scripts.length; i++) {
+//           var scriptTag = document.createElement("script");
+
+//           if (scripts[i].src) {
+//             scriptTag.src = scripts[i].src;
+//             scriptTag.async = false;
+//           } else {
+//             scriptTag.text = scripts[i].textContent;
+//           }
+
+//           document.head
+//             .appendChild(scriptTag)
+//             .parentNode.removeChild(scriptTag);
+//         }
+//       }
+//     };
+//   } catch (error) {}
+// }
 
 // کد مشاهده بیشتر/کمتر - برای صفحه article-list-mobile.html
 if (document.querySelector('input[name="search"]')) {
   document.addEventListener("DOMContentLoaded", function () {
     const loadMoreBtn = document.querySelector(".load-more-btn");
     const newsContainer = document.querySelector(".news-container");
+    const newsItems = newsContainer.querySelectorAll(".news-item"); // فرض بر این است که هر آیتم دارای کلاس "news-item" است
     let isExpanded = false;
+
+    // تنظیم maxHeight به 222px
+    const initialHeight = 222; // ارتفاع ثابت برای دو آیتم
+    newsContainer.style.maxHeight = initialHeight + "px";
+    newsContainer.style.overflow = "hidden"; // جلوگیری از نمایش آیتم‌های اضافی
 
     loadMoreBtn?.addEventListener("click", function () {
       if (!isExpanded) {
+        // افزایش maxHeight به اندازه کل آیتم‌ها
         newsContainer.style.maxHeight = newsContainer.scrollHeight + "px";
         loadMoreBtn.textContent = "مشاهده کمتر";
       } else {
-        newsContainer.style.maxHeight = "250px";
+        // بازگشت به maxHeight اولیه
+        newsContainer.style.maxHeight = initialHeight + "px";
         loadMoreBtn.textContent = "مشاهده بیشتر";
       }
       isExpanded = !isExpanded;
@@ -366,6 +454,15 @@ async function RenderFormFooter() {
   inputElementVisa7.setAttribute("placeholder", "ایمیل");
 }
 
+
+
+
+
+
+
+
+
+
 //  swiper
 if (document.querySelector(".articles-swiper-default")) {
   var articlesSwiperDefault = new Swiper(".articles-swiper-default", {
@@ -440,6 +537,7 @@ if (document.querySelector(".hotels-swiper")) {
     },
   });
 }
+
 
 if (document.querySelector(".slider-default-mobile")) {
   var sliderDefaultMobile = new Swiper(".slider-default-mobile", {
