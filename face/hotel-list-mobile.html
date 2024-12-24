@@ -10,10 +10,9 @@
 </basis>
 
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
-    <member name="visa-list" type="list" link="article.bc" propertyid="7244" perpage="9"
-        pageno="[##cms.query.pagenum|(1)##]" order="ord" />
-    <member name="paging" type="list" request="paging" count="3" parentname="visa-list" />
-</basis>
+    <member name="hotel-list" type="list" link="article.bc" perpage="9" order="ord"  pageno="[##cms.query.pagenum|(1)##]" size="412x295" propertyid="3087406,3087407,3087414,3087415" />
+    <member name="paging" type="list" request="paging" count="3" parentname="hotel-list" />
+  </basis>
 
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
@@ -56,8 +55,6 @@
             <div class="absolute text-white">
                 <basis core="print" datamembername="db.scalar">
                     <face>
-                        
-                        
                         <h1 class="text-2xl font-bold">@column1</h1>
                     </face>
                 </basis>
@@ -107,43 +104,125 @@
 
 
         <section class="mt-24 desktopContainer">
-            <basis core="list" datamembername="db.visa-list">
+            <basis core="list" datamembername="db.hotel-list">
                 <layout>
                     <div class="grid gap-2">
                         @child
                     </div>
                 </layout>
                 <face filter="link is null">
-                    <a href="/article.bc?id=@id" class="relative overflow-hidden border border-solid hover:scale-105 h-fit pb-7 border-zinc-300 rounded-xl">
-                        <div class="relative">
-                            <div class="absolute w-full h-full bg-shadow-gradient"></div>
-                            <img src="@image" alt="@title" loading="lazy"
-                                class="object-cover w-full h-full" />
+                    <div
+                    class="relative pb-2 overflow-hidden border border-solid swiper-slide border-zinc-300 rounded-xl"
+                  >
+                    <div class="relative">
+                      <div class="absolute w-full h-full bg-light-gradient"></div>
+                      <img
+                        src="@00412X00295prp"
+                        alt="@title"
+                        loading="lazy"
+                        class="object-cover w-full h-64"
+                      />
+                      <div
+                        class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
+                      >
+                        <img
+                          src="[##cms.cms.cdn##]/images/locationIcon.svg"
+                          width="24"
+                          height="24"
+                          alt="location"
+                          loading="lazy"
+                        />
+                        <span class="text-sm text-Primery-700 hover:scale-105">@prp_3087414</span>
+                      </div>
+                      <a
+                        href="/article.bc?id=@id"
+                        class="absolute flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
+                      >
+                        مشاهده
+                      </a>
+                    </div>
+                    <div class="px-4 mt-12">
+                      <h3 class="mb-2 text-xl font-medium">@title</h3>
+                      <div class="flex items-start gap-4">
+                        <span class="flex items-center gap-1">
+                          <img
+                            src="[##cms.cms.cdn##]/images/cafeIcon.svg"
+                            width="24"
+                            height="24"
+                            alt="cafeIcon"
+                            loading="lazy"
+                          />
+                          <span class="pt-1 text-sm">@prp_3087415</span>
+                        </span>
+                        <span class="w-px h-6 bg-zinc-300"></span>
+                        <div class="flex items-center gap-1">
+                          <img
+                            src="./_images/Panel-@prp_3087407star.png"
+                            alt="star"
+                            loading="lazy"
+                          />
+                          <span class="pt-1 text-sm">@prp_3087407 ستاره</span>
                         </div>
-                        <div class="flex flex-col gap-2 px-4 mt-2">
-                            <h3 class="font-bold">@title</h3>
-                            <span class="flex items-center text-sm text-zinc-900">
-                                <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="calenderIcon" width="24" height="24" loading="lazy"/>
-                                @cdate
-                            </span>
-                        </div>
-                    </a>
+                      </div>
+                    </div>
+                  </div>
                 </face>
                 <face>
-                    <a href="@link" class="relative overflow-hidden border border-solid hover:scale-105 h-fit pb-7 border-zinc-300 rounded-xl">
-                        <div class="relative">
-                            <div class="absolute w-full h-full bg-shadow-gradient"></div>
-                            <img src="@image" alt="@title" loading="lazy"
-                                class="object-cover w-full h-full" />
+                    <div
+                    class="relative pb-2 overflow-hidden border border-solid swiper-slide border-zinc-300 rounded-xl"
+                  >
+                    <div class="relative">
+                      <div class="absolute w-full h-full bg-light-gradient"></div>
+                      <img
+                        src="@00412X00295prp"
+                        alt="@title"
+                        loading="lazy"
+                        class="object-cover w-full h-64"
+                      />
+                      <div
+                        class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
+                      >
+                        <img
+                          src="[##cms.cms.cdn##]/images/locationIcon.svg"
+                          width="24"
+                          height="24"
+                          alt="location"
+                          loading="lazy"
+                        />
+                        <span class="text-sm text-Primery-700 hover:scale-105">@prp_3087414</span>
+                      </div>
+                      <a
+                        href="@link"
+                        class="absolute flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
+                      >
+                        مشاهده
+                      </a>
+                    </div>
+                    <div class="px-4 mt-12">
+                      <h3 class="mb-2 text-xl font-medium">@title</h3>
+                      <div class="flex items-start gap-4">
+                        <span class="flex items-center gap-1">
+                          <img
+                            src="[##cms.cms.cdn##]/images/cafeIcon.svg"
+                            width="24"
+                            height="24"
+                            alt="cafeIcon"
+                            loading="lazy"
+                          />
+                          <span class="pt-1 text-sm">@prp_3087415</span>
+                        </span>
+                        <span class="w-px h-6 bg-zinc-300"></span>
+                        <div class="flex items-center gap-1">
+                          <img
+                            src="./_images/Panel-@prp_3087407star.png"
+                            alt="star"
+                            loading="lazy"
+                          />
+                          <span class="pt-1 text-sm">@prp_3087407 ستاره</span>
                         </div>
-                        <div class="flex flex-col gap-2 px-4 mt-2">
-                            <h3 class="font-bold">@title</h3>
-                            <span class="flex items-center text-sm text-zinc-900">
-                                <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" width="24" height="24" alt="calenderIcon" loading="lazy"/>
-                                @cdate
-                            </span>
-                        </div>
-                    </a>
+                      </div>
+                    </div>
+                  </div>
                 </face>
             </basis>
 

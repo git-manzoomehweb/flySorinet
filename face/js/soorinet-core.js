@@ -259,7 +259,7 @@ const FetchPageNumPrev = async (dataPageNum) => {
   const fetchContentArticle = document.querySelector(".fetch-content-article");
   const cmsQuery = fetchContentArticle.getAttribute("data-catid");
   const pagingResponse = await fetch(
-    `/article-load-items.bc?${cmsQuery}&pagenum=${dataPageNum}`
+    `/article-load-items.bc?catid=${cmsQuery}&pagenum=${dataPageNum}`
   );
   const pagingData = await pagingResponse.text();
   fetchContentArticle.innerHTML = pagingData;
@@ -269,7 +269,7 @@ const FetchPageNumNext = async (dataPageNum) => {
   const fetchContentArticle = document.querySelector(".fetch-content-article");
   const cmsQuery = fetchContentArticle.getAttribute("data-catid");
   const pagingResponse = await fetch(
-    `/article-load-items.bc?${cmsQuery}&pagenum=${dataPageNum}`
+    `/article-load-items.bc?catid=${cmsQuery}&pagenum=${dataPageNum}`
   );
   const pagingData = await pagingResponse.text();
   fetchContentArticle.innerHTML = pagingData;
@@ -279,7 +279,7 @@ const FetchWithPageNum = async (dataPageNum) => {
   const fetchContentArticle = document.querySelector(".fetch-content-article");
   const cmsQuery = fetchContentArticle.getAttribute("data-catid");
   const pagingResponse = await fetch(
-    `/article-load-items.bc?${cmsQuery}&pagenum=${dataPageNum}`
+    `/article-load-items.bc?catid=${cmsQuery}&pagenum=${dataPageNum}`
   );
   const pagingData = await pagingResponse.text();
   fetchContentArticle.innerHTML = pagingData;
@@ -300,7 +300,7 @@ if (document.querySelector('input[name="search"]')) {
       const cmsQuery = fetchContentArticle.getAttribute("data-catid");
 
       async function firstContent() {
-        const firstResponse = await fetch(`/article-load-items.bc?${cmsQuery}`);
+        const firstResponse = await fetch(`/article-load-items.bc?catid=${cmsQuery}`);
         const firstData = await firstResponse.text();
         fetchContentArticle.innerHTML = firstData;
       }

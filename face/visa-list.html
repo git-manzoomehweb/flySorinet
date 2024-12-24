@@ -54,7 +54,12 @@
             <img src="[##cms.cms.cdn##]/images/article-list-background.jpg" loading="lazy" alt="article-list-background"
                 class="object-cover -z-10 2xl:h-[44rem] lg:h-[30rem] object-bottom border-b-8 border-solid border-Primery-600 w-full rounded-3xl" />
             <div class="absolute text-white">
-                <h1 class="text-2xl font-bold text-center">ویزا</h1>
+                <basis core="print" datamembername="db.scalar">
+                    <face>
+                        <h1 class="text-2xl font-bold text-center">@column1</h1>
+                        
+                    </face>
+                </basis>
                 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center gap-1">
                     <li class="inline-block font-normal text-white" itemprop="itemListElement" itemscope
                         itemtype="https://schema.org/ListItem">
