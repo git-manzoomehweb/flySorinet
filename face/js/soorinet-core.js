@@ -97,7 +97,7 @@ function loadContentHomePage() {
 async function loadSearchEngine(url, sectionload) {
   try {
     var xhrobj = new XMLHttpRequest();
-    xhrobj.open('GET', url);
+    xhrobj.open("GET", url);
     xhrobj.send();
 
     xhrobj.onreadystatechange = function () {
@@ -116,13 +116,15 @@ async function loadSearchEngine(url, sectionload) {
             scriptTag.text = scripts[i].textContent;
           }
 
-          document.head.appendChild(scriptTag).parentNode.removeChild(scriptTag);
+          document.head
+            .appendChild(scriptTag)
+            .parentNode.removeChild(scriptTag);
         }
 
         const pathnamehome = window.location.pathname;
         if (pathnamehome) {
-          if (pathnamehome == '/hotel') {
-            sessionStorage.setItem('pageName', 'hotel');
+          if (pathnamehome == "/hotel") {
+            sessionStorage.setItem("pageName", "hotel");
             $("#Hotel").click(function () {
               $("#flight-type-items").hide();
               $(".nav-module").each(function () {
@@ -134,10 +136,9 @@ async function loadSearchEngine(url, sectionload) {
                 }
               });
               LoadHotel();
-            })
-
-          } else if (pathnamehome == '/flight') {
-            sessionStorage.setItem('pageName', 'flight');
+            });
+          } else if (pathnamehome == "/flight") {
+            sessionStorage.setItem("pageName", "flight");
             $("#Flight").click(function () {
               $("#flight-type-items").show();
               $(".nav-module").each(function () {
@@ -151,28 +152,24 @@ async function loadSearchEngine(url, sectionload) {
               LoadFlight();
             });
           }
-          } else if (pathnamehome == '/tour') {
-            sessionStorage.setItem('pageName', 'tour');
-            $("#Tour").click(function () {
-              $("#flight-type-items").hide();
-              $(".nav-module").each(function () {
-                var checknav = $(this).attr("data-nav");
-                if (checknav == "tour") {
-                  $(this).addClass("nav-module-selected");
-                } else {
-                  $(this).removeClass("nav-module-selected");
-                }
-              });
-              LoadTour();
+        } else if (pathnamehome == "/tour") {
+          sessionStorage.setItem("pageName", "tour");
+          $("#Tour").click(function () {
+            $("#flight-type-items").hide();
+            $(".nav-module").each(function () {
+              var checknav = $(this).attr("data-nav");
+              if (checknav == "tour") {
+                $(this).addClass("nav-module-selected");
+              } else {
+                $(this).removeClass("nav-module-selected");
+              }
             });
-          } 
-
+            LoadTour();
+          });
         }
       }
-    
-  } catch (error) {
-  }
-
+    };
+  } catch (error) {}
 }
 // async function loadSearchEngine(url, sectionload) {
 //   try {
@@ -285,7 +282,6 @@ const FetchWithPageNum = async (dataPageNum) => {
   fetchContentArticle.innerHTML = pagingData;
 };
 
-
 // کد fetch مقالات - برای صفحه article-list.html
 if (document.querySelector('input[name="search"]')) {
   document.addEventListener("DOMContentLoaded", function () {
@@ -300,7 +296,9 @@ if (document.querySelector('input[name="search"]')) {
       const cmsQuery = fetchContentArticle.getAttribute("data-catid");
 
       async function firstContent() {
-        const firstResponse = await fetch(`/article-load-items.bc?catid=${cmsQuery}`);
+        const firstResponse = await fetch(
+          `/article-load-items.bc?catid=${cmsQuery}`
+        );
         const firstData = await firstResponse.text();
         fetchContentArticle.innerHTML = firstData;
       }
@@ -454,16 +452,50 @@ async function RenderFormFooter() {
   inputElementVisa7.setAttribute("placeholder", "ایمیل");
 }
 
-
-
-
-
-
-
-
-
-
 //  swiper
+
+if (document.querySelector(".ailines-swiper-desktop")) {
+  var articlesSwiperDefault = new Swiper(".ailines-swiper-desktop", {
+    slidesPerView: 1,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 30,
+    grabCursor: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-custom",
+      prevEl: ".swiper-button-prev-custom",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+  const slides = document.querySelectorAll(
+    ".ailines-swiper-desktop .swiper-slide"
+  );
+  slides.forEach((slide) => {
+    slide.style.height = "87.72px";
+  });
+}
 if (document.querySelector(".articles-swiper-default")) {
   var articlesSwiperDefault = new Swiper(".articles-swiper-default", {
     slidesPerView: 1,
@@ -494,8 +526,8 @@ if (document.querySelector(".articles-swiper-default")) {
         spaceBetween: 40,
       },
       1024: {
-        slidesPerView: 3,
-        spaceBetween: 50,
+        slidesPerView: 4,
+        spaceBetween: 30,
       },
     },
   });
@@ -503,7 +535,7 @@ if (document.querySelector(".articles-swiper-default")) {
 
 if (document.querySelector(".hotels-swiper")) {
   var hotelsSwiper = new Swiper(".hotels-swiper", {
-    slidesPerView: 1,
+    slidesPerView: 4,
     speed: 400,
     centeredSlides: false,
     spaceBetween: 30,
@@ -521,23 +553,12 @@ if (document.querySelector(".hotels-swiper")) {
       nextEl: ".swiper-button-next-custom",
       prevEl: ".swiper-button-prev-custom",
     },
-    breakpoints: {
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 50,
-      },
-    },
+  });
+  const slide = document.querySelectorAll(".hotels-swiper .swiper-slide");
+  slide.forEach((slide) => {
+    slide.style.height = "438px";
   });
 }
-
 
 if (document.querySelector(".slider-default-mobile")) {
   var sliderDefaultMobile = new Swiper(".slider-default-mobile", {
@@ -606,8 +627,8 @@ if (document.querySelector(".articles-swiper-tour-list")) {
         spaceBetween: 40,
       },
       1024: {
-        slidesPerView: 3,
-        spaceBetween: 50,
+        slidesPerView: 4,
+        spaceBetween: 30,
       },
     },
   });

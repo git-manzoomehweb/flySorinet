@@ -7,6 +7,16 @@
     order="ord"
   ></member>
 </basis>
+
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="nowrouz">
+  <member
+    name="cat"
+    type="tree"
+    request="cat"
+    parentid="213498"
+    order="ord"
+  ></member>
+</basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="visa">
   <member
     name="cat"
@@ -20,11 +30,11 @@
 <header>
   <section class="hidden py-6 lg:desktopContainer lg:block">
     <div class="flex justify-between">
-      <nav class="relative flex items-center">
+      <nav class="relative flex items-center" style="font-weight: 500;">
         <ul class="flex items-center justify-between gap-10">
           <li class="flex items-center hover:text-Primery-600">
             <a href="/" aria-label="headerIcons"
-              ><img src="[##cms.cms.cdn##]/images/headerIcons.svg" width="71" height="29" alt="headerIcons"
+              ><img src="[##cms.cms.cdn##]/images/headerIcons.svg" width="110" height="29" alt="headerIcons" style="margin-left: 35px;"
             /></a>
             <a href="/"> صفحه اصلی </a>
           </li>
@@ -43,8 +53,8 @@
                     src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
                     alt="chevronDownIcon"
                     loading="lazy"
-                    width="24"
-                    height="24"
+                    width="16"
+                    height="16"
                     class="transition-all duration-200 group-hover:rotate-90"
                   />
                 </span>
@@ -64,8 +74,8 @@
                     src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
                     alt="chevronDownIcon"
                     loading="lazy"
-                    width="24"
-                    height="24"
+                    width="16"
+                    height="16"
                     class="transition-all duration-200 group-hover/leveltwo:rotate-90"
                   />
                 </div>
@@ -84,8 +94,8 @@
                     src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
                     alt="chevronDownIcon"
                     loading="lazy"
-                    width="24"
-                    height="24"
+                    width="16"
+                    height="16"
                     class="transition-all duration-200 group-hover/leveltwo:rotate-90"
                   />
                 </div>
@@ -105,6 +115,122 @@
             <!-- submenu end -->
           </basis>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <basis
+            core="tree"
+            datamembername="nowrouz.cat"
+            idcol="catid"
+            parentidcol="parentid"
+            nullvalue="213498"
+          >
+            <layout>
+              <li class="group ">
+                <span class="flex items-center gap-2 cursor-pointer group hover:text-Primery-600">
+                 تورهای نوروزی
+                  <img
+                    src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
+                    alt="chevronDownIcon"
+                    loading="lazy"
+                    width="16"
+                    height="16"
+                    class="transition-all duration-200 group-hover:rotate-90"
+                  />
+                </span>
+                <!-- submenu -->
+                <ul
+                  class="absolute z-50 flex flex-col invisible w-64   font-medium transition-all duration-200 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100"
+                >
+                  @child
+                </ul>
+              </li>
+            </layout>
+            <face level="1" filter="link is null">
+              <li class="relative p-4 group/leveltwo">
+                <div class="flex justify-between cursor-pointer">
+                  <a href="/tour-list.bc?catid=@catid" class="hover:text-Primery-600">@title</a>
+                  <img
+                    src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
+                    alt="chevronDownIcon"
+                    loading="lazy"
+                    width="16"
+                    height="16"
+                    class="transition-all duration-200 group-hover/leveltwo:rotate-90"
+                  />
+                </div>
+                <ul
+                  class="absolute top-0 z-50 flex flex-col invisible w-64  font-medium transition-all duration-200 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100"
+                >
+                  @child
+                </ul>
+              </li>
+            </face>
+            <face level="1">
+              <li class="relative p-4 group/leveltwo">
+                <div class="flex justify-between cursor-pointer">
+                  <a href="@link" class="hover:text-Primery-600">@title</a>
+                  <img
+                    src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
+                    alt="chevronDownIcon"
+                    loading="lazy"
+                    width="16"
+                    height="16"
+                    class="transition-all duration-200 group-hover/leveltwo:rotate-90"
+                  />
+                </div>
+                <ul
+                  class="absolute top-0 flex flex-col invisible w-64  font-medium transition-all duration-200 bg-white shadow-sm opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100"
+                >
+                  @child
+                </ul>
+              </li>
+            </face>
+            <face level="end" filter="link is null">
+              <li class="p-4"><a href="/tour-list.bc?catid=@catid" class="hover:text-Primery-600">@title</a></li>
+            </face>
+            <face level="end">
+              <li class="p-4"><a href="@link" class="hover:text-Primery-600">@title</a></li>
+            </face>
+            <!-- submenu end -->
+          </basis>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <basis
             core="tree"
             datamembername="visa.cat"
@@ -120,8 +246,8 @@
                     src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
                     alt="chevronDownIcon"
                     loading="lazy"
-                    width="24"
-                    height="24"
+                    width="16"
+                    height="16"
                     class="transition-all duration-200 group-hover:rotate-90"
                   />
                 </a>
@@ -141,8 +267,8 @@
               <li ><a href="@link" class="hover:text-Primery-600">@title</a></li>
             </face>
           </basis>
-          <li class="hover:text-Primery-600"><a href="/Tourism-magazine">مقالات</a></li>
-          <li class="hover:text-Primery-600"><a href="/article-list.bc?catid=212221">گردشگری</a></li>
+          
+          <li class="hover:text-Primery-600"><a href="/article-list.bc?catid=212221">اخبار گردشگری</a></li>
           <li class="hover:text-Primery-600"><a href="/درباره-ما">تماس با ما</a></li>
         </ul>
       </nav>
@@ -153,3 +279,4 @@
   </section>
   <!-- header menu desktop end -->
 </header>
+

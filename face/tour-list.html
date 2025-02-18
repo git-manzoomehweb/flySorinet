@@ -43,8 +43,7 @@
   <basis core="call" file="pwa.inc" />
   <basis core="call" file="style.inc" />
   <!-- swiper -->
-  <link rel="stylesheet" href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css">
-
+  <link rel="stylesheet" href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css" />
 </head>
 
 <body class="px-2">
@@ -68,7 +67,6 @@
     <!-- header background end-->
 
     <section class="mt-[30rem] desktopContainer">
-
       <div class="mb-6">
         <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center gap-1">
           <li class="inline-block text-sm font-normal text-zinc-500" itemprop="itemListElement" itemscope
@@ -78,7 +76,7 @@
               <meta itemprop="position" content="1" />
             </a>
           </li>
-          <span class="text-zinc-500"> &gt; </span>
+          <span class="text-zinc-500"> > </span>
           <basis core="print" datamembername="db.navigation">
             <face filter="RowNumber=max(RowNumber) and parentcatid<>210441">
               <li class="inline-block text-sm font-normal text-zinc-900" itemprop="itemListElement" itemscope
@@ -94,7 +92,7 @@
                   aria-label="@title"><span itemprop="name">@title</span>
                   <meta itemprop="position" content="@rownumber" />
                 </a>
-                <span class="text-zinc-500"> &gt; </span>
+                <span class="text-zinc-500"> > </span>
               </li>
             </face>
             <face filter="parentcatid<>210441">
@@ -104,7 +102,7 @@
                     class="text-zinc-900" itemprop="name">@title</span>
                   <meta itemprop="position" content="@rownumber" />
                 </a>
-                <span class="text-zinc-500"> &gt; </span>
+                <span class="text-zinc-500"> > </span>
               </li>
             </face>
           </basis>
@@ -125,7 +123,7 @@
 
         <face filter="link is null">
           <div
-            class="relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]">
+            class="relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(25%-8px)]">
             <div class="relative h-64">
               <div class="absolute w-full h-full bg-shadow-gradient"></div>
               <img src="@00412X00295prp" alt="@title" loading="lazy" class="object-cover w-full h-full" />
@@ -138,7 +136,7 @@
               </div>
             </div>
             <a href="/tour.bc?id=@id"
-              class="absolute flex items-center hover:scale-105 justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700">
+              class="absolute flex items-center hover:scale-105 justify-center w-36 h-12 px-4 py-2 text-lg text-white top-[56%] left-5 rounded-xl bg-Primery-700">
               مشاهده
             </a>
             <div class="flex flex-col gap-2 px-4 mt-9">
@@ -151,17 +149,20 @@
                 <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="mapIcon" width="24" height="24" loading="lazy" />
                 ایرلاین: @prp_10000504
               </span>
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="coinIcon" width="24" height="24" loading="lazy" />
-                شروع قیمت:
-              </span>
-              <span class="font-medium text-zinc-900">@prp_8181</span>
+              <div class="w-full flex justify-between">
+                <span class="flex items-center text-sm text-zinc-900">
+                  <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="coinIcon" width="24" height="24"
+                    loading="lazy" />
+                  شروع قیمت از:
+                </span>
+                <span class="font-medium text-zinc-900">@prp_8181</span>
+              </div>
             </div>
           </div>
         </face>
         <face>
           <div
-            class="relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]">
+            class="relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(25%-8px)]">
             <div class="relative h-64">
               <div class="absolute w-full h-full bg-shadow-gradient"></div>
               <img src="@00412X00295prp" alt="@title" loading="lazy" class="object-cover w-full h-full" />
@@ -175,7 +176,7 @@
               </div>
             </div>
             <a href="@link"
-              class="absolute flex items-center hover:scale-105 justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700">
+              class="absolute flex items-center hover:scale-105 justify-center w-36 h-12 px-4 py-2 text-lg text-white top-[56%] left-5 rounded-xl bg-Primery-700">
               مشاهده
             </a>
             <div class="flex flex-col gap-2 px-4 mt-9">
@@ -188,11 +189,14 @@
                 <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="mapIcon" width="24" height="24" loading="lazy" />
                 ایرلاین: @prp_10000504
               </span>
-              <span class="flex items-center text-sm text-zinc-900">
-                <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="coinIcon" width="24" height="24" loading="lazy" />
-                شروع قیمت:
-              </span>
-              <span class="font-medium text-zinc-900">@prp_8181</span>
+              <div class="w-full flex justify-between">
+                <span class="flex items-center text-sm text-zinc-900">
+                  <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="coinIcon" width="24" height="24"
+                    loading="lazy" />
+                  شروع قیمت از:
+                </span>
+                <span class="font-medium text-zinc-900">@prp_8181</span>
+              </div>
             </div>
           </div>
         </face>
@@ -201,40 +205,94 @@
 
       <div id="paging" class="flex items-center justify-center gap-2 mt-16">
         <ul class="flex gap-3 cd-pagination no-space dir-ltr" id="wibpaging">
-        <basis core="print" datamembername="db.paging">  
-        <face  filter="(@sta='pre')and('[##cms.cms.pageurl##]'='')">  
-        <li class="flex items-center justify-center w-12 h-12 page-no prev-page rounded-xl bg-Primery-600 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-left"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z" fill="#fff"/></svg></a></li>
-        </face>
-        <face  filter="(@sta='pre')and('[##cms.cms.pageurl##]'<>'')">  
-        <li class="flex items-center justify-center w-12 h-12 page-no prev-page rounded-xl bg-Primery-600 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page" aria-label="angle-left"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z" fill="#fff"/></svg></a></li>
-        </face>
-        </basis>
-        <basis core="print" datamembername="db.paging">   
-        <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'='')">
-        <li class="flex items-center justify-center w-12 h-12 overflow-hidden page-no rounded-xl bg-zinc-300 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-white bg-Primery-600"  href="/[##cms.cms.link_page##]&pagenum=@page">@page</a></li>
-        </face>   
-        <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'<>'')">
-        <li class="flex items-center justify-center w-12 h-12 overflow-hidden page-no rounded-xl bg-zinc-300 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-white bg-Primery-600"  href="/[##cms.cms.pageurl##]?pagenum=@page">@page</a></li>
-        </face>    
-        <face filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'='') ">
-        <li class="flex items-center justify-center w-12 h-12 page-no rounded-xl bg-zinc-300 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page">@page</a></li>
-        </face> 
-        <face filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'<>'') ">
-        <li class="flex items-center justify-center w-12 h-12 page-no rounded-xl bg-zinc-300 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page">@page</a></li>
-        </face>   
-        </basis>
-        <basis core="print" datamembername="db.paging">  
-        <face  filter="(@sta='nex') and ('[##cms.cms.pageurl##]'='')">  
-        <li class="flex items-center justify-center w-12 h-12 page-no next-page rounded-xl bg-Primery-600 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-right"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z" fill="#fff"/></svg></a></li>
-        </face>
-        <face  filter="(@sta='nex') and ('[##cms.cms.pageurl##]'<>'')">  
-        <li class="flex items-center justify-center w-12 h-12 page-no next-page rounded-xl bg-Primery-600 hover:scale-105"><a class="flex items-center justify-center w-full h-full text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page" aria-label="angle-right"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z" fill="#fff"/></svg></a></li>
-        </face>
-        </basis>
-     </ul>
+          <basis core="print" datamembername="db.paging">
+            <face filter="(@sta='pre')and('[##cms.cms.pageurl##]'='')">
+              <li
+                class="flex items-center justify-center w-12 h-12 page-no prev-page rounded-xl bg-Primery-600 hover:scale-105">
+                <a class="flex items-center justify-center w-full h-full text-zinc-900"
+                  href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-left"><svg width="11" height="17"
+                    class="inline-block align-middle" viewBox="0 0 11 17" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z"
+                      fill="#fff" />
+                  </svg></a>
+              </li>
+            </face>
+            <face filter="(@sta='pre')and('[##cms.cms.pageurl##]'<>'')">
+              <li
+                class="flex items-center justify-center w-12 h-12 page-no prev-page rounded-xl bg-Primery-600 hover:scale-105">
+                <a class="flex items-center justify-center w-full h-full text-zinc-900"
+                  href="/[##cms.cms.pageurl##]?pagenum=@page" aria-label="angle-left"><svg width="11" height="17"
+                    class="inline-block align-middle" viewBox="0 0 11 17" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z"
+                      fill="#fff" />
+                  </svg></a>
+              </li>
+            </face>
+          </basis>
+          <basis core="print" datamembername="db.paging">
+            <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'='')">
+              <li
+                class="flex items-center justify-center w-12 h-12 overflow-hidden page-no rounded-xl bg-zinc-300 hover:scale-105">
+                <a class="flex items-center justify-center w-full h-full text-white bg-Primery-600"
+                  href="/[##cms.cms.link_page##]&pagenum=@page">@page</a>
+              </li>
+            </face>
+            <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'<>'')">
+              <li
+                class="flex items-center justify-center w-12 h-12 overflow-hidden page-no rounded-xl bg-zinc-300 hover:scale-105">
+                <a class="flex items-center justify-center w-full h-full text-white bg-Primery-600"
+                  href="/[##cms.cms.pageurl##]?pagenum=@page">@page</a>
+              </li>
+            </face>
+            <face
+              filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'='') ">
+              <li class="flex items-center justify-center w-12 h-12 page-no rounded-xl bg-zinc-300 hover:scale-105">
+                <a class="flex items-center justify-center w-full h-full text-zinc-900"
+                  href="/[##cms.cms.link_page##]&pagenum=@page">@page</a>
+              </li>
+            </face>
+            <face
+              filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'<>'') ">
+              <li class="flex items-center justify-center w-12 h-12 page-no rounded-xl bg-zinc-300 hover:scale-105">
+                <a class="flex items-center justify-center w-full h-full text-zinc-900"
+                  href="/[##cms.cms.pageurl##]?pagenum=@page">@page</a>
+              </li>
+            </face>
+          </basis>
+          <basis core="print" datamembername="db.paging">
+            <face filter="(@sta='nex') and ('[##cms.cms.pageurl##]'='')">
+              <li
+                class="flex items-center justify-center w-12 h-12 page-no next-page rounded-xl bg-Primery-600 hover:scale-105">
+                <a class="flex items-center justify-center w-full h-full text-zinc-900"
+                  href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-right"><svg width="11" height="17"
+                    class="inline-block align-middle" viewBox="0 0 11 17" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z"
+                      fill="#fff" />
+                  </svg></a>
+              </li>
+            </face>
+            <face filter="(@sta='nex') and ('[##cms.cms.pageurl##]'<>'')">
+              <li
+                class="flex items-center justify-center w-12 h-12 page-no next-page rounded-xl bg-Primery-600 hover:scale-105">
+                <a class="flex items-center justify-center w-full h-full text-zinc-900"
+                  href="/[##cms.cms.pageurl##]?pagenum=@page" aria-label="angle-right"><svg width="11" height="17"
+                    class="inline-block align-middle" viewBox="0 0 11 17" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z"
+                      fill="#fff" />
+                  </svg></a>
+              </li>
+            </face>
+          </basis>
+        </ul>
       </div>
-      
-     
     </section>
 
     <!-- articles -->
@@ -251,7 +309,8 @@
             <div class="absolute top-0 left-0 flex justify-between w-full">
               <div class="flex items-center gap-8">
                 <h2 class="text-2xl font-bold">مقاله ها</h2>
-                <a href="/article-list.bc?catid=212047" class="text-xl font-medium text-Primery-700 hover:scale-105">مشاهده همه</a>
+                <a href="/article-list.bc?catid=212047"
+                  class="text-xl font-medium text-Primery-700 hover:scale-105">مشاهده همه</a>
               </div>
               <div class="flex">
                 <div class="swiper-button-next-custom hover:scale-105">
@@ -329,16 +388,46 @@
     <!-- articles end -->
 
     <section class="flex flex-wrap justify-between gap-4 mx-auto mt-10 desktopContainer">
-      <img src="[##cms.cms.cdn##]/images/sunExpress.png" alt="sunExpress" loading="lazy"
-        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" />
-      <img src="[##cms.cms.cdn##]/images/SalamAir.png" alt="SalamAir" loading="lazy"
-        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" />
-      <img src="[##cms.cms.cdn##]/images/turkishAirlines.png" alt="turkishAirlines" loading="lazy"
-        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" />
-      <img src="[##cms.cms.cdn##]/images/Qatar.png" alt="Qatar" loading="lazy"
-        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" />
-      <img src="[##cms.cms.cdn##]/images/IranAir.png" alt="IranAir" loading="lazy"
-        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" />
+      <div
+        class="pt-20 swiper ailines-swiper-desktop swiper-initialized swiper-horizontal swiper-rtl swiper-backface-hidden">
+        <div class="flex flex-col gap-2 swiper-wrapper lg:flex-row lg:gap-0 lg:justify-between">
+          <div class="swiper-slide border border-dashed px-5 py-3 border-zinc-300 rounded-xl">
+            <a target="_blank" href="https://www.sunexpress.com/en-GB" class="w-full"><img
+                src="[##cms.cms.cdn##]/images/sunExpress.png" alt="sunExpress" loading="lazy"
+                class="h-full w-full grayscale hover:grayscale-0" /></a>
+          </div>
+          <div class="swiper-slide object-cover border border-dashed px-5 py-3 border-zinc-300 rounded-xl">
+            <a target="_blank" href="https://www.salamair.com/en/" class="w-full">
+              <img src="[##cms.cms.cdn##]/images/SalamAir.png" alt="SalamAir" loading="lazy"
+                class="h-full object-cover w-full grayscale hover:grayscale-0" />
+            </a>
+          </div>
+          <div class="swiper-slide border border-dashed px-5 py-3 border-zinc-300 rounded-xl">
+            <a target="_blank" href="https://www.turkishairlines.com/" class="w-full">
+              <img src="[##cms.cms.cdn##]/images/turkishAirlines.png" alt="turkishAirlines" loading="lazy"
+                class="h-full object-cover w-full grayscale hover:grayscale-0" />
+            </a>
+          </div>
+          <div class="swiper-slide border border-dashed px-5 py-3 border-zinc-300 rounded-xl">
+            <a target="_blank" href="https://www.qatarairways.com/en/homepage.html" class="w-full">
+              <img src="[##cms.cms.cdn##]/images/Qatar.png" alt="Qatar" loading="lazy"
+                class="h-full object-cover w-full grayscale hover:grayscale-0" />
+            </a>
+          </div>
+          <div class="swiper-slide border border-dashed px-5 py-3 border-zinc-300 rounded-xl">
+            <a target="_blank" href="https://www.iranair.com/" class="w-full">
+              <img src="[##cms.cms.cdn##]/images/IranAir.png" alt="IranAir" loading="lazy"
+                class="h-full object-cover w-full grayscale hover:grayscale-0" />
+            </a>
+          </div>
+          <div class="swiper-slide border border-dashed px-5 py-3 border-zinc-300 rounded-xl">
+            <a target="_blank" href="https://www.qeshm-air.com/web2/" class="w-full">
+              <img src="[##cms.cms.cdn##]/images/gheshmair.png" alt="gheshmair" loading="lazy"
+                class="h-full object-cover w-full grayscale hover:grayscale-0" />
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -346,7 +435,6 @@
   <!-- footer -->
   <basis core="call" file="footer.inc" />
   <!-- footer end -->
-
 </body>
 
 </html>

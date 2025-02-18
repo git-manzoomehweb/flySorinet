@@ -963,3 +963,6 @@ button.relative.bg-primary.text-white.text-sm.rounded-md.w-32.h-10.border.border
   font-family: "fontawesome";
   font-weight: 900;
 }
+.user-icon svg {
+    stroke: white !important;
+}

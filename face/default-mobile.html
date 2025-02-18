@@ -1,628 +1,399 @@
-<basis
-  core="dbsource"
-  source="basiscore"
-  lid="1"
-  mid="20"
-  name="db"
-  catid="212050"
->
-  <member
-    name="tour-list"
-    type="list"
-    link="tour.bc"
-    order="ord"
-    size="412x295"
-    perpage="6"
-    propertyid="8076,8181,10000504,8077"
-  />
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="212050">
+  <member name="tour-list" type="list" link="tour.bc" order="ord" size="412x295" perpage="6"
+    propertyid="8076,8181,10000504,8077" />
 </basis>
-<basis
-  core="dbsource"
-  source="basiscore"
-  lid="1"
-  mid="1"
-  name="db"
-  catid="212047"
->
-  <member
-    name="hotel"
-    type="list"
-    link="article.bc"
-    order="ord"
-    size="412x295"
-    propertyid="3087406,3087407,3087414,3087415"
-  />
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="210485">
+  <member name="tours" type="list" link="tour.bc" order="ord" size="412x295"
+  propertyid="8077,8181,10000504,8076" />
 </basis>
-<basis
-  core="dbsource"
-  source="basiscore"
-  lid="1"
-  mid="1"
-  name="db"
-  catid="210488"
->
-  <member
-    name="articles"
-    type="list"
-    link="article.bc"
-    order="ord"
-    size="412x295"
-    propertyid="7244"
-  />
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="210488">
+  <member name="articles" type="list" link="article.bc" order="ord" size="412x295" propertyid="7244" />
 </basis>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover"
-    />
-    <!-- Title & Description -->
-    <title>سورینت پرواز</title>
-    <meta name="description" content="سورینت پرواز" />
-    <!-- canonical for Homepage -->
-    <link
-      rel="canonical"
-      href="[##cms.request.:scheme##]://[##cms.request.full-url##]"
-    />
-    <!-- fill items with Agancy Info -->
-    <meta name="og:locale" content="fa_IR" />
-    <meta property="og:title" content="آژانس گردشگری سورینت پرواز" />
-    <meta
-      property="og:url"
-      content="[##cms.request.:scheme##]://[##cms.request.full-url##]"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="سورینت پرواز" />
-    <meta property="og:image" content="[##cms.cms.cdn##]/images/logo.png" />
-    <meta property="og:image:alt" content="لوگو شرکت سورینت پرواز" />
-    <meta
-      property="og:description"
-      content=".شرکت سورینت پرواز با تمرکز بر ارائه خدمات به روز و اختصاصی به متقاضیان جهت تسهیل و تسریع و افزایش کیفیت تمامی خدمات مسافرتی و کسب رضایت مشتریان خود به صورت تمام وقت با همراهی نیروهای مجرب و متخصص در سریع ترین زمان ممکن خدمات درخواستی را ارائه می نماید"
-    />
-    <meta property="og:image:height" content="512" />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:type" content="image/png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content=" " />
-    <meta name="twitter:creator" content="sorinet Group" />
-    <meta name="twitter:image" content="[##cms.cms.cdn##]/images/logo.png" />
-    <meta name="twitter:title" content=" " />
-    <meta name="twitter:description" content=" " />
-    <meta property="seo:robots" content="index, follow" />
-    <!-- samandehi-enamad optional -->
-    <meta name="enamad" content="" />
-    <meta name="samandehi" content="" />
-    <!-- pwa metatags -->
-    <basis core="call" file="pwa.inc" />
-    <!-- define -->
-    <link
-      rel="preload"
-      as="image"
-      imagesrcset="image address"
-      fetchpriority="high"
-    />
-    <!-- swiper -->
-    <link
-      rel="stylesheet"
-      defer
-      href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css"
-    />
 
-    <!-- common styles for all page -->
-   
-    <basis core="call" file="style.inc" />
-    <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css" rel="stylesheet" />
-    <script
-      src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js"
-      type="text/javascript"
-    ></script>
-  </head>
-  <body class="px-2" onload="loadContentHomePage()">
-    <!-- header -->
-    <basis
-      core="call"
-      file="header.inc"
-      pageindex="[##cms.cms.pageindex##]"
-    ></basis>
-    <!-- header end -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover" />
+  <!-- Title & Description -->
+  <title>سورینت پرواز</title>
+  <meta name="description" content="سورینت پرواز" />
+  <!-- canonical for Homepage -->
+  <link rel="canonical" href="[##cms.request.:scheme##]://[##cms.request.full-url##]" />
+  <!-- fill items with Agancy Info -->
+  <meta name="og:locale" content="fa_IR" />
+  <meta property="og:title" content="آژانس گردشگری سورینت پرواز" />
+  <meta property="og:url" content="[##cms.request.:scheme##]://[##cms.request.full-url##]" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="سورینت پرواز" />
+  <meta property="og:image" content="[##cms.cms.cdn##]/images/logo.png" />
+  <meta property="og:image:alt" content="لوگو شرکت سورینت پرواز" />
+  <meta property="og:description"
+    content=".شرکت سورینت پرواز با تمرکز بر ارائه خدمات به روز و اختصاصی به متقاضیان جهت تسهیل و تسریع و افزایش کیفیت تمامی خدمات مسافرتی و کسب رضایت مشتریان خود به صورت تمام وقت با همراهی نیروهای مجرب و متخصص در سریع ترین زمان ممکن خدمات درخواستی را ارائه می نماید" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:type" content="image/png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content=" " />
+  <meta name="twitter:creator" content="sorinet Group" />
+  <meta name="twitter:image" content="[##cms.cms.cdn##]/images/logo.png" />
+  <meta name="twitter:title" content=" " />
+  <meta name="twitter:description" content=" " />
+  <meta property="seo:robots" content="index, follow" />
+  <!-- samandehi-enamad optional -->
+  <meta name="enamad" content="" />
+  <meta name="samandehi" content="" />
+  <!-- pwa metatags -->
+  <basis core="call" file="pwa.inc" />
+  <!-- define -->
+  <link rel="preload" as="image" imagesrcset="image address" fetchpriority="high" />
+  <!-- swiper -->
+  <link rel="stylesheet" defer href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css" />
 
-    <!-- main start -->
-    <main>
-      <!-- selected category  -->
-      <section class="mt-4 desktopContainer">
-        <!-- searchbox -->
-        <section id="searchbox" class="mx-auto -mt-16 max-w-7xl">
+  <!-- common styles for all page -->
+
+  <basis core="call" file="style.inc" />
+  <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css"
+    rel="stylesheet" />
+  <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
+</head>
+
+<body class="px-2" onload="loadContentHomePage()">
+  <!-- header -->
+  <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"></basis>
+  <!-- header end -->
+
+  <!-- main start -->
+  <main>
+    <!-- selected category  -->
+    <section class="mt-4 desktopContainer">
+      <!-- searchbox -->
+      <section id="searchbox" class="mx-auto -mt-16 max-w-7xl">
+        <div class="relative z-10 flex justify-center w-full mt-24 mb-24 text-center loading">
+          <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-primary"
+            viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+              fill="currentColor"></path>
+            <path
+              d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+              fill="currentFill"></path>
+          </svg>
+        </div>
+      </section>
+      <!-- searchbox -->
+    </section>
+
+    <!-- تور های لحظه اخری -->
+    <section class="mt-14 desktopContainer">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="font-medium">تور های لحظه آخری</h2>
+        <a href="/tour-list.bc?catid=212050" class="text-sm text-Primery-700 hover:scale-105">مشاهده همه</a>
+      </div>
+
+      <basis core="list" datamembername="db.tour-list">
+        <layout>
+          <div class="flex flex-col gap-2 lg:flex-row lg:flex-wrap lg:gap-0 lg:justify-between lg:gap-y-4">
+            <!-- نمونه تور لحظه اخری -->
+            @child
+            <!-- نمونه  -->
+          </div>
+        </layout>
+        <face filter="link is null">
+          <div class="relative overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl">
+            <div class="relative h-64">
+              <div class="absolute w-full h-full bg-shadow-gradient"></div>
+              <img src="@00412X00295prp" alt="@title" class="object-cover w-full h-full" />
+              <div class="absolute bottom-8 right-4">
+                <h3 class="mb-2 text-xl text-white">@title</h3>
+                <div class="flex items-center gap-2">
+                  <img src="[##cms.cms.cdn##]/images/clockIcon.svg" width="24" height="24" alt="clockIcon"
+                    loading="lazy" />
+                  <span class="text-sm text-white">@prp_8076</span>
+                </div>
+              </div>
+            </div>
+            <a href="/tour.bc?id=@id"
+              class="absolute flex items-center hover:scale-105 justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700">
+              مشاهده
+            </a>
+            <div class="flex flex-col gap-2 px-4 mt-9">
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" width="24" height="24" alt="calenderIcon"
+                  loading="lazy" />
+                تاریخ رفت : @prp_8077
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="[##cms.cms.cdn##]/images/mapIcon.svg" width="24" height="24" alt="mapIcon" loading="lazy" />
+                ایرلاین: @prp_10000504
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="[##cms.cms.cdn##]/images/coinIcon.svg" width="24" height="24" alt="coinIcon" loading="lazy" />
+                شروع قیمت:
+              </span>
+              <span class="font-medium text-zinc-900">@prp_8181</span>
+            </div>
+          </div>
+        </face>
+
+        <face>
+          <div class="relative overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl">
+            <div class="relative h-64">
+              <div class="absolute w-full h-full bg-shadow-gradient"></div>
+              <img src="@00412X00295prp" alt="@title" loading="lazy" class="object-cover w-full h-full" />
+              <div class="absolute bottom-8 right-4">
+                <h3 class="mb-2 text-xl text-white">@title</h3>
+                <div class="flex items-center gap-2">
+                  <img src="[##cms.cms.cdn##]/images/clockIcon.svg" width="24" height="24" alt="clockIcon"
+                    loading="lazy" />
+                  <span class="text-sm text-white">@prp_8076</span>
+                </div>
+              </div>
+            </div>
+            <a href="@link"
+              class="absolute flex items-center hover:scale-105 justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700">
+              مشاهده
+            </a>
+            <div class="flex flex-col gap-2 px-4 mt-9">
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="calenderIcon" width="24" height="24"
+                  loading="lazy" />
+                تاریخ رفت : @prp_8077
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="mapIcon" width="24" height="24" loading="lazy" />
+                ایرلاین: @prp_10000504
+              </span>
+              <span class="flex items-center text-sm text-zinc-900">
+                <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="coinIcon" width="24" height="24" loading="lazy" />
+                شروع قیمت:
+              </span>
+              <span class="font-medium text-zinc-900">@prp_8181</span>
+            </div>
+          </div>
+        </face>
+      </basis>
+    </section>
+    <!-- تور لحظه اخری  -->
+
+    <!-- تور ها -->
+    <section class="mt-12 desktopContainer">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="font-medium">تور ها</h2>
+        <a href="/tour-list.bc?catid=210485" class="text-sm text-Primery-700 hover:scale-105">مشاهده همه</a>
+      </div>
+      <basis core="list" datamembername="db.tours">
+        <layout>
+          <div class="flex flex-col gap-2">
+            <!-- نمونه تور ها -->
+            @child
+            <!-- نمونه تور ها -->
+          </div>
+        </layout>
+        <face filter="link is null">
           <div
-            class="relative z-10 flex justify-center w-full mt-24 mb-24 text-center loading"
-          >
-            <svg
-              aria-hidden="true"
-              class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-primary"
-              viewBox="0 0 100 101"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-                fill="currentColor"
-              ></path>
-              <path
-                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-                fill="currentFill"
-              ></path>
-            </svg>
+              class="relative overflow-hidden border border-solid lg:w-[calc(50%-8px)] pb-7 border-zinc-300 rounded-xl">
+              <div class="relative h-64">
+                  <div class="absolute w-full h-full bg-shadow-gradient"></div>
+                  <img src="@00412X00295prp" alt="@title" class="object-cover w-full h-full" loading="lazy" />
+                  <div class="absolute bottom-8 right-4">
+                      <h3 class="mb-2 text-xl text-white">@title</h3>
+                      <div class="flex items-center gap-2">
+                          <img src="[##cms.cms.cdn##]/images/clockIcon.svg" alt="clockIcon" width="24" height="24"
+                              loading="lazy" />
+                          <span class="text-sm text-white">@prp_8076</span>
+                      </div>
+                  </div>
+              </div>
+              <a href="/tour.bc?id=@id"
+                  class="absolute flex items-center hover:scale-105 justify-center w-36 h-12px-4 py-2 text-lg text-white top-[56%] left-5 rounded-xl bg-Primery-700">
+                  مشاهده
+              </a>
+              <div class="flex flex-col gap-2 px-4 mt-9">
+                  <span class="flex items-center text-sm text-zinc-900">
+                      <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="calenderIcon" width="24"
+                          height="24" loading="lazy" />
+                      تاریخ رفت : @prp_8077
+                  </span>
+                  <span class="flex items-center text-sm text-zinc-900">
+                      <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="calenderIcon" width="24" height="24"
+                          loading="lazy" />
+                      ایرلاین: @prp_10000504
+                  </span>
+                  <div class="w-full flex justify-between">
+                      <span class="flex items-center text-sm text-zinc-900">
+                          <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="calenderIcon" width="24"
+                              height="24" loading="lazy" />
+                          شروع قیمت از:
+                      </span>
+                      <span class="font-medium text-zinc-900">@prp_8181</span>
+                  </div>
+              </div>
           </div>
-        </section>
-        <!-- searchbox -->
-      </section>
+      </face>
 
-      <!-- تور های لحظه اخری -->
-      <section class="mt-14 desktopContainer">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="font-medium">تور های لحظه آخری</h2>
-          <a href="/tour-list.bc?catid=212050" class="text-sm text-Primery-700 hover:scale-105"
-            >مشاهده همه</a
-          >
-        </div>
-
-        <basis core="list" datamembername="db.tour-list">
-          <layout>
-            <div
-              class="flex flex-col gap-2 lg:flex-row lg:flex-wrap lg:gap-0 lg:justify-between lg:gap-y-4"
-            >
-              <!-- نمونه تور لحظه اخری -->
-              @child
-              <!-- نمونه  -->
-            </div>
-          </layout>
-          <face filter="link is null">
-            <div
-              class="relative overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
-            >
+      <face>
+          <div
+              class="relative overflow-hidden border border-solid lg:w-[calc(50%-8px)] pb-7 border-zinc-300 rounded-xl">
               <div class="relative h-64">
-                <div class="absolute w-full h-full bg-shadow-gradient"></div>
-                <img
-                  src="@00412X00295prp"
-                  alt="@title"
-                  class="object-cover w-full h-full"
-                />
-                <div class="absolute bottom-8 right-4">
-                  <h3 class="mb-2 text-xl text-white">@title</h3>
-                  <div class="flex items-center gap-2">
-                    <img
-                      src="[##cms.cms.cdn##]/images/clockIcon.svg"
-                      width="24"
-                      height="24"
-                      alt="clockIcon"
-                      loading="lazy"
-                    />
-                    <span class="text-sm text-white">@prp_8076</span>
+                  <div class="absolute w-full h-full bg-shadow-gradient"></div>
+                  <img src="@00412X00295prp" alt="@title" class="object-cover w-full h-full" loading="lazy" />
+                  <div class="absolute bottom-8 right-4">
+                      <h3 class="mb-2 text-xl text-white">@title</h3>
+                      <div class="flex items-center gap-2">
+                          <img src="[##cms.cms.cdn##]/images/clockIcon.svg" alt="clockIcon" width="24" height="24"
+                              loading="lazy" />
+                          <span class="text-sm text-white">@prp_8076</span>
+                      </div>
                   </div>
-                </div>
               </div>
-              <a
-                href="/tour.bc?id=@id"
-                class="absolute flex items-center hover:scale-105 justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
-              >
-                مشاهده
+              <a href="@link"
+                  class="absolute flex items-center hover:scale-105 justify-center w-36 h-12px-4 py-2 text-lg text-white top-[56%] left-5 rounded-xl bg-Primery-700">
+                  مشاهده
               </a>
               <div class="flex flex-col gap-2 px-4 mt-9">
-                <span class="flex items-center text-sm text-zinc-900">
-                  <img
-                    src="[##cms.cms.cdn##]/images/calenderIcon.svg"
-                    width="24"
-                    height="24"
-                    alt="calenderIcon"
-                    loading="lazy"
-                  />
-                  تاریخ رفت : @prp_8077
-                </span>
-                <span class="flex items-center text-sm text-zinc-900">
-                  <img
-                    src="[##cms.cms.cdn##]/images/mapIcon.svg"
-                    width="24"
-                    height="24"
-                    alt="mapIcon"
-                    loading="lazy"
-                  />
-                  ایرلاین: @prp_10000504
-                </span>
-                <span class="flex items-center text-sm text-zinc-900">
-                  <img
-                    src="[##cms.cms.cdn##]/images/coinIcon.svg"
-                    width="24"
-                    height="24"
-                    alt="coinIcon"
-                    loading="lazy"
-                  />
-                  شروع قیمت:
-                </span>
-                <span class="font-medium text-zinc-900">@prp_8181</span>
-              </div>
-            </div>
-          </face>
-
-          <face>
-            <div
-              class="relative overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl"
-            >
-              <div class="relative h-64">
-                <div class="absolute w-full h-full bg-shadow-gradient"></div>
-                <img
-                  src="@00412X00295prp"
-                  alt="@title"
-                  loading="lazy"
-                  class="object-cover w-full h-full"
-                />
-                <div class="absolute bottom-8 right-4">
-                  <h3 class="mb-2 text-xl text-white">@title</h3>
-                  <div class="flex items-center gap-2">
-                    <img
-                      src="[##cms.cms.cdn##]/images/clockIcon.svg"
-                      width="24"
-                      height="24"
-                      alt="clockIcon"
-                      loading="lazy"
-                    />
-                    <span class="text-sm text-white">@prp_8076</span>
+                  <span class="flex items-center text-sm text-zinc-900">
+                      <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="calenderIcon" width="24"
+                          height="24" loading="lazy" />
+                      تاریخ رفت : @prp_8077
+                  </span>
+                  <span class="flex items-center text-sm text-zinc-900">
+                      <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="mapIcon" width="24" height="24"
+                          loading="lazy" />
+                      ایرلاین: @prp_10000504
+                  </span>
+                  <div class="w-full flex justify-between">
+                      <span class="flex items-center text-sm text-zinc-900">
+                          <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="calenderIcon" width="24"
+                              height="24" loading="lazy" />
+                          شروع قیمت از:
+                      </span>
+                      <span class="font-medium text-zinc-900">@prp_8181</span>
                   </div>
-                </div>
               </div>
-              <a
-                href="@link"
-                class="absolute flex items-center hover:scale-105 justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700"
-              >
-                مشاهده
-              </a>
-              <div class="flex flex-col gap-2 px-4 mt-9">
-                <span class="flex items-center text-sm text-zinc-900">
-                  <img
-                    src="[##cms.cms.cdn##]/images/calenderIcon.svg"
-                    alt="calenderIcon"
-                    width="24"
-                    height="24"
-                    loading="lazy"
-                  />
-                  تاریخ رفت : @prp_8077
-                </span>
-                <span class="flex items-center text-sm text-zinc-900">
-                  <img
-                    src="[##cms.cms.cdn##]/images/mapIcon.svg"
-                    alt="mapIcon"
-                    width="24"
-                    height="24"
-                    loading="lazy"
-                  />
-                  ایرلاین: @prp_10000504
-                </span>
-                <span class="flex items-center text-sm text-zinc-900">
-                  <img
-                    src="[##cms.cms.cdn##]/images/coinIcon.svg"
-                    alt="coinIcon"
-                    width="24"
-                    height="24"
-                    loading="lazy"
-                  />
-                  شروع قیمت:
-                </span>
-                <span class="font-medium text-zinc-900">@prp_8181</span>
-              </div>
-            </div>
-          </face>
-        </basis>
-      </section>
-      <!-- تور لحظه اخری  -->
+          </div>
+      </face>
+      </basis>
+    </section>
+    <!-- تور ها -->
 
-      <!-- هتل ها -->
-      <section class="mt-12 desktopContainer">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="font-medium">هتل ها</h2>
-          <a
-            href="/hotel-list.bc?catid=212047"
-            class="text-sm text-Primery-700 hover:scale-105"
-            >مشاهده همه</a
-          >
-        </div>
-        <basis core="list" datamembername="db.hotel">
-          <layout>
-            <div class="flex flex-col gap-2">
-              <!-- نمونه هتل ها -->
-              @child
-              <!-- نمونه هتل ها -->
-            </div>
-          </layout>
-          <face filter="link is null">
-            <div
-              class="relative pb-2 overflow-hidden border border-solid swiper-slide border-zinc-300 rounded-xl"
-            >
-              <div class="relative">
-                <div class="absolute w-full h-full bg-light-gradient"></div>
-                <img
-                  src="@00412X00295prp"
-                  alt="@title"
-                  loading="lazy"
-                  class="object-cover w-full h-64"
-                />
-                <div
-                  class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
-                >
-                  <img
-                    src="[##cms.cms.cdn##]/images/locationIcon.svg"
-                    width="24"
-                    height="24"
-                    alt="location"
-                    loading="lazy"
-                  />
-                  <span class="text-sm text-Primery-700 hover:scale-105">@prp_3087414</span>
+    <!-- articles -->
+    <section class="mt-28 desktopContainer">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="font-medium">مقاله ها</h2>
+        <a href="/article-list.bc?catid=210488" class="text-sm text-Primery-700 hover:scale-105">مشاهده همه</a>
+      </div>
+
+      <basis core="list" datamembername="db.articles">
+        <layout>
+          <div class="flex flex-col gap-2 lg:flex-row lg:gap-0 lg:justify-between">
+            <!-- simple of articles -->
+            @child
+            <!-- simple of articles -->
+          </div>
+        </layout>
+        <face filter="link is null">
+          <article class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden h-96 rounded-xl">
+            <img src="@00412X00295prp" alt="@title" loading="lazy"
+              class="absolute bottom-0 right-0 object-cover w-full h-full" />
+            <div class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"></div>
+            <div class="relative z-10">
+              <div>
+                <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
+                <div class="text-sm text-justify text-white line-clamp-3">
+                  @prp_7244
                 </div>
-                <a
-                  href="/article.bc?id=@id"
-                  class="absolute flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
-                >
+              </div>
+              <div class="flex justify-between mt-2">
+                <span class="flex items-center gap-1 text-white">
+                  <img src="[##cms.cms.cdn##]/images/calenderIconWhite.svg" alt="calenderIconWhite" width="24"
+                    height="24" loading="lazy" />
+                  @cdate
+                </span>
+                <a href="/article.bc?id=@id"
+                  class="flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 rounded-xl bg-Primery-700">
                   مشاهده
                 </a>
               </div>
-              <div class="px-4 mt-12">
-                <h3 class="mb-2 text-xl font-medium">@title</h3>
-                <div class="flex items-start gap-4">
-                  <span class="flex items-center gap-1">
-                    <img
-                      src="[##cms.cms.cdn##]/images/cafeIcon.svg"
-                      width="24"
-                      height="24"
-                      alt="cafeIcon"
-                      loading="lazy"
-                    />
-                    <span class="pt-1 text-sm">@prp_3087415</span>
-                  </span>
-                  <span class="w-px h-6 bg-zinc-300"></span>
-                  <div class="flex items-center gap-1">
-                    <img
-                      src="./_images/Panel-@prp_3087407star.png"
-                      alt="star"
-                      loading="lazy"
-                    />
-                    <span class="pt-1 text-sm">@prp_3087407 ستاره</span>
-                  </div>
+            </div>
+          </article>
+        </face>
+        <face>
+          <article class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden h-96 rounded-xl">
+            <img src="@00412X00295prp" alt="@title" loading="lazy"
+              class="absolute bottom-0 right-0 object-cover w-full h-full" />
+            <div class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"></div>
+            <div class="relative z-10">
+              <div>
+                <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
+                <div class="text-sm text-justify text-white line-clamp-3">
+                  @prp_7244
                 </div>
               </div>
-            </div>
-          </face>
-          <face>
-            <div
-              class="relative pb-2 overflow-hidden border border-solid swiper-slide border-zinc-300 rounded-xl"
-            >
-              <div class="relative">
-                <div class="absolute w-full h-full bg-light-gradient"></div>
-                <img
-                  src="@00412X00295prp"
-                  alt="@title"
-                  loading="lazy"
-                  class="object-cover w-full h-64"
-                />
-                <div
-                  class="absolute flex items-center gap-2 p-2 bg-white top-5 right-2 rounded-3xl"
-                >
-                  <img
-                    src="[##cms.cms.cdn##]/images/locationIcon.svg"
-                    width="24"
-                    height="24"
-                    alt="location"
-                    loading="lazy"
-                  />
-                  <span class="text-sm text-Primery-700 hover:scale-105">@prp_3087414</span>
-                </div>
-                <a
-                  href="@link"
-                  class="absolute flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 -bottom-7 left-5 rounded-xl bg-Primery-700"
-                >
+              <div class="flex justify-between mt-2">
+                <span class="flex items-center gap-1 text-white">
+                  <img src="[##cms.cms.cdn##]/images/calenderIconWhite.svg" alt="calenderIconWhite" width="24"
+                    height="24" loading="lazy" />
+                  @cdate
+                </span>
+                <a href="@link"
+                  class="flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 rounded-xl bg-Primery-700">
                   مشاهده
                 </a>
               </div>
-              <div class="px-4 mt-12">
-                <h3 class="mb-2 text-xl font-medium">@title</h3>
-                <div class="flex items-start gap-4">
-                  <span class="flex items-center gap-1">
-                    <img
-                      src="[##cms.cms.cdn##]/images/cafeIcon.svg"
-                      width="24"
-                      height="24"
-                      alt="cafeIcon"
-                      loading="lazy"
-                    />
-                    <span class="pt-1 text-sm">@prp_3087415</span>
-                  </span>
-                  <span class="w-px h-6 bg-zinc-300"></span>
-                  <div class="flex items-center gap-1">
-                    <img
-                      src="./_images/Panel-@prp_3087407star.png"
-                      alt="star"
-                      loading="lazy"
-                    />
-                    <span class="pt-1 text-sm">@prp_3087407 ستاره</span>
-                  </div>
-                </div>
-              </div>
             </div>
-          </face>
-        </basis>
-      </section>
-      <!-- هتل ها -->
+          </article>
+        </face>
+      </basis>
+    </section>
+    <!-- articles -->
 
-      <!-- articles -->
-      <section class="mt-28 desktopContainer">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="font-medium">مقاله ها</h2>
-          <a
-            href="/article-list.bc?catid=210488"
-            class="text-sm text-Primery-700 hover:scale-105"
-            >مشاهده همه</a
-          >
-        </div>
+    <!-- swiper -->
+    <section class="mt-16">
+      <!-- Slider main container -->
+      <div class="slider-default-mobile">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="flex justify-center swiper-slide">
+            <img src="[##cms.cms.cdn##]/images/sunExpress.png" alt="sunExpress" loading="lazy"
+              class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" />
+          </div>
 
-        <basis core="list" datamembername="db.articles">
-          <layout>
-            <div
-              class="flex flex-col gap-2 lg:flex-row lg:gap-0 lg:justify-between"
-            >
-              <!-- simple of articles -->
-              @child
-              <!-- simple of articles -->
-            </div>
-          </layout>
-          <face filter="link is null">
-            <article
-              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden h-96 rounded-xl"
-            >
-              <img
-                src="@00412X00295prp"
-                alt="@title"
-                loading="lazy"
-                class="absolute bottom-0 right-0 object-cover w-full h-full"
-              />
-              <div
-                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-              ></div>
-              <div class="relative z-10">
-                <div>
-                  <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
-                  <div class="text-sm text-justify text-white line-clamp-3">
-                    @prp_7244
-                  </div>
-                </div>
-                <div class="flex justify-between mt-2">
-                  <span class="flex items-center gap-1 text-white">
-                    <img
-                      src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
-                      alt="calenderIconWhite"
-                      width="24"
-                      height="24"
-                      loading="lazy"
-                    />
-                    @cdate
-                  </span>
-                  <a
-                    href="/article.bc?id=@id"
-                    class="flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 rounded-xl bg-Primery-700"
-                  >
-                    مشاهده
-                  </a>
-                </div>
-              </div>
-            </article>
-          </face>
-          <face>
-            <article
-              class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden h-96 rounded-xl"
-            >
-              <img
-                src="@00412X00295prp"
-                alt="@title"
-                loading="lazy"
-                class="absolute bottom-0 right-0 object-cover w-full h-full"
-              />
-              <div
-                class="absolute bottom-0 right-0 w-full h-full bg-shadow-gradient-full"
-              ></div>
-              <div class="relative z-10">
-                <div>
-                  <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
-                  <div class="text-sm text-justify text-white line-clamp-3">
-                    @prp_7244
-                  </div>
-                </div>
-                <div class="flex justify-between mt-2">
-                  <span class="flex items-center gap-1 text-white">
-                    <img
-                      src="[##cms.cms.cdn##]/images/calenderIconWhite.svg"
-                      alt="calenderIconWhite"
-                      width="24"
-                      height="24"
-                      loading="lazy"
-                    />
-                    @cdate
-                  </span>
-                  <a
-                    href="@link"
-                    class="flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 rounded-xl bg-Primery-700"
-                  >
-                    مشاهده
-                  </a>
-                </div>
-              </div>
-            </article>
-          </face>
-        </basis>
-      </section>
-      <!-- articles -->
+          <div class="flex justify-center swiper-slide">
+            <img src="[##cms.cms.cdn##]/images/SalamAir.png" alt="SalamAir" loading="lazy"
+              class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" />
+          </div>
+          <div class="flex justify-center swiper-slide">
+            <img src="[##cms.cms.cdn##]/images/gheshmair.png" alt="gheshmair" loading="lazy"
+              class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" />
+          </div>
 
-      <!-- swiper -->
-      <section class="mt-16">
-        <!-- Slider main container -->
-        <div class="slider-default-mobile">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="flex justify-center swiper-slide">
-              <img
-                src="[##cms.cms.cdn##]/images/sunExpress.png"
-                alt="sunExpress"
-                loading="lazy"
-                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0"
-              />
-            </div>
-            
-            <div class="flex justify-center swiper-slide">
-              <img
-                src="[##cms.cms.cdn##]/images/SalamAir.png"
-                alt="SalamAir"
-                loading="lazy"
-                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0"
-              />
-            </div>
+          <div class="flex justify-center swiper-slide">
+            <img src="[##cms.cms.cdn##]/images/turkishAirlines.png" alt="turkishAirlines" loading="lazy"
+              class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" />
+          </div>
 
-            <div class="flex justify-center swiper-slide">
-              <img
-                src="[##cms.cms.cdn##]/images/turkishAirlines.png"
-                alt="turkishAirlines"
-                loading="lazy"
-                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0"
-              />
-            </div>
+          <div class="flex justify-center swiper-slide">
+            <img src="[##cms.cms.cdn##]/images/Qatar.png" alt="Qatar" loading="lazy"
+              class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" />
+          </div>
 
-            <div class="flex justify-center swiper-slide">
-              <img
-                src="[##cms.cms.cdn##]/images/Qatar.png"
-                alt="Qatar"
-                loading="lazy"
-                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0"
-              />
-            </div>
-
-            <div class="flex justify-center swiper-slide">
-              <img
-                src="[##cms.cms.cdn##]/images/IranAir.png"
-                alt="IranAir"
-                loading="lazy"
-                class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0"
-              />
-            </div>
+          <div class="flex justify-center swiper-slide">
+            <img src="[##cms.cms.cdn##]/images/IranAir.png" alt="IranAir" loading="lazy"
+              class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" />
           </div>
         </div>
-      </section>
-    </main>
-    <!-- main end -->
+      </div>
+    </section>
+  </main>
+  <!-- main end -->
 
-    <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
-    <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <!-- footer -->
-    <basis
-      core="call"
-      file="footer.inc"
-      pageindex="[##cms.cms.pageindex##]"
-    ></basis>
-    <!-- footer end -->
-  </body>
+  <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
+  <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.7.1.min.js" type="text/javascript"></script>
+  <!-- footer -->
+  <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"></basis>
+  <!-- footer end -->
+</body>
+
 </html>

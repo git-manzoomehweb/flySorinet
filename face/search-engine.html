@@ -1,3 +1,6 @@
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" usedforid="2374500">
+  <member name="introduction" type="view" propertyid="7244" perpage="" typeid="159" order="ord" />
+</basis>
 <div class="search-box search-box-container">
    <!-- header background -->
   
@@ -6,10 +9,10 @@
       class="lg:object-contain lg:w-[52rem] lg:h-[62rem] lg:absolute lg:-top-44 lg:-z-10 lg:-left-16 xl:w-[56rem] 2xl:w-[60rem]" />
   </div>
   <!-- header background end  -->
-  <div class="p-5 mt-12 my-3 bg-white rounded-xl min-h-44 max-w-7xl lg:h-auto lg:p-3 lg:w-2/5 xl:w-2/5 2xl:w-2/5">
-    <div class="flex gap-2 mb-16 text-3xl font-bold">
+  <div class="p-5 mt-12 my-3 mbvfh bg-white rounded-xl min-h-44 max-w-7xl lg:h-auto lg:p-3 lg:w-2/5 xl:w-2/5 2xl:w-2/5">
+    <!-- <div class="flex gap-2 mb-16 text-3xl font-bold">
       <span class="text-Primery-700">پرواز</span> رو با <h1>سورینت</h1> تجربه کن
-    </div>
+    </div> -->
     <nav class="mb-6 search-nav ">
       <ul class="flex justify-between w-full text-right dir-rtl gap-x-2 lg:h-full lg:gap-y-2 lg:flex-wrap">
         <li id="Flight" data-id="item-Flight" onclick="check_searchHistory('flight')"
@@ -123,7 +126,12 @@
                   </nav>
                   <form id="flight-form" method="get" action="/Tem3_Oneway_Search.bc" data-form="flight"
                     onsubmit="form_search_isSubmited(this,event)" data-flightType="1" autocomplete="off"
-                    class="flex justify-between gap-2 mt-5 form-search text-gray lg:flex-col lg:flex-wrap">
+                    class="relative flex justify-between gap-2 mt-5 form-search text-gray lg:flex-col lg:flex-wrap">
+                    <basis core="print" datamembername="db.introduction">
+                        <face filter="valueID=4116713">
+                           <div class="text-3xl pos-bv font-bold"> @largetext</div>
+                        </face>
+                    </basis>
                     <input type="hidden" name="persiancurrent" class="persiancurrent" value /><input type="hidden"
                       name="select-age" class="select-age-value" value="0" />
                     <div
@@ -527,7 +535,14 @@
                   </form>
                   <form id="multi-flight-form" method="post" action="/Tem3_Multicity_Search.bc" data-form="multiflight"
                     autocomplete="off" onsubmit="formMulticity_search_isSubmited(this,event)"
-                    class="form-search text-gray pb-2.5 "><input type="hidden" name="persiancurrent"
+                    class="form-search relative text-gray pb-2.5 ">
+                    <basis core="print" datamembername="db.introduction">
+                        <face filter="valueID=4116713">
+                           <div class="text-3xl pos-bv font-bold"> @largetext</div>
+                        </face>
+                    </basis>
+                    
+                    <input type="hidden" name="persiancurrent"
                       class="persiancurrent" value /><input type="hidden" name="select-age" class="select-age-value"
                       value="0" />
                     <div class="w-full mx-auto route-container ">
@@ -1245,7 +1260,13 @@
               <div class="Hotel-engine">
                 <form id="hotel-form" method="post" action="/Tem3_Hotel_Search.bc" data-form="hotel" autocomplete="off"
                   onsubmit="form_search_isSubmited(this,event)"
-                  class="flex justify-between gap-2 form-search text-gray lg:flex-wrap"><input type="hidden"
+                  class="flex relative justify-between gap-2 form-search text-gray lg:flex-wrap">
+                  <basis core="print" datamembername="db.introduction">
+                        <face filter="valueID=4116714">
+                           <div class="text-3xl pos-bv2 font-bold"> @largetext</div>
+                        </face>
+                    </basis>
+                  <input type="hidden"
                     name="persiancurrent" class="persiancurrent" value /><input type="hidden" name="select-age"
                     class="select-age-value" value="0" />
                   <div class="w-4/12 h-full lg:w-full">
@@ -1524,7 +1545,12 @@
             <div id="item-FlightHotel" class="hidden">
               <div class="FlightHotel-engine">
                 <form id="flightHotel-form" method="post" action="/Tem3_FlightHotel_Search.bc" data-form="flightHotel"
-                  autocomplete="off" onsubmit="form_search_isSubmited(this,event)" class="form-search text-gray">
+                  autocomplete="off" onsubmit="form_search_isSubmited(this,event)" class="relative form-search text-gray">
+                  <basis core="print" datamembername="db.introduction">
+                        <face filter="valueID=4116715">
+                           <div class="text-3xl pos-bv2 font-bold"> @largetext</div>
+                        </face>
+                    </basis>
                   <input type="hidden" name="persiancurrent" class="persiancurrent" value />
 
                   <div class="flex justify-between gap-2 mt-5 lg:flex-wrap" id="flight-hotel-boxes">
@@ -2010,8 +2036,14 @@
               <div class="Tour-engine">
                 <form id="Tour-form" method="post" action="/Tem3_Tour_Search.bc" data-form="tour" autocomplete="off"
                   onsubmit="form_search_isSubmited(this,event)"
-                  class="flex justify-between gap-2 form-search text-gray lg:flex-wrap"><input type="hidden"
-                    name="persiancurrent" class="persiancurrent" value /><input type="hidden" name="select-age"
+                  class="flex relative justify-between gap-2 form-search text-gray lg:flex-wrap"><input type="hidden"
+                    name="persiancurrent" class="persiancurrent" value />
+                    <basis core="print" datamembername="db.introduction">
+                        <face filter="valueID=4116716">
+                           <div class="text-3xl pos-bv2 font-bold"> @largetext</div>
+                        </face>
+                    </basis>
+                    <input type="hidden" name="select-age"
                     class="select-age-value" value="0" />
                   <div class="w-3/12 h-full lg:w-full">
                     <div class="relative city rounded-2xl h-[72px]">

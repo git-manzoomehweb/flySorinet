@@ -1,189 +1,214 @@
 <basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
-    <member name="info" type="view" />
-  </basis>
-  <footer class="relative px-4 py-4 mt-24 rounded-xl bg-footer-gradient">
-    <img src="[##cms.cms.cdn##]/images/footerBackIcon.svg" alt="footerBackIcon" loading="lazy"
-      class="hidden h-auto max-w-full lg:absolute lg:-top-3 lg:-right-2 lg:-z-10 2xl:-top-6 2xl:-right-3 lg:block" />
-    <img src="[##cms.cms.cdn##]/images/footerBackIcon.svg" alt="footerBackIcon" loading="lazy" class="absolute -top-3 -right-px -z-10 lg:hidden" />
-    <div class="flex flex-col items-center justify-center h-auto max-w-full gap-2 mb-6">
-      <img src="[##cms.cms.cdn##]/images/headerIcons.svg" alt="headerIcons" loading="lazy"/>
-      <h2 class="text-sm font-normal text-white">
-        شرکت خدمات مسافرت هوایی سورینت پرواز
-      </h2>
-     
-    </div>
-  
-    <!-- content of footer -->
-    <div class="desktopContainer">
-      <div class="lg:flex lg:justify-between">
-        <div class="mb-6 lg:flex lg:w-1/2 lg:flex-row-reverse lg:order-2">
-          <!-- membrship -->
-          <section class="lg:w-[70%]">
-            <h3 class="mb-4 font-medium text-white lg:text-2xl">
-              عضویت در خبرنامه
-            </h3>
-            <div class="flex flex-col" id="contact-form-resize">
-  
-              <basis core="schema" run="atclient"
-                schemaurl="/schema/domainform/E59D9A1D-E489-40B0-A552-57BD798159DF/96749EB4-1A60-4FC1-BF7C-38FF1C0265AD/fa/عضویت-در-خبرنامه"
-                displaymode="new" button="[data-btn-uploadfooter]" resultsourceid="upload.datafooter"
-                OnRendered="RenderFormFooter"></basis>
-              <basis core="api" if="{##cms.uploadFooter.run|(false)##}" run="atclient"
-                url="/schema/domainform/E59D9A1D-E489-40B0-A552-57BD798159DF/fa/editobject" method="post"
-                body="object_edit={##cms.uploadFooter.value##}&captcha={##cms.uploadFooter.captcha##}&captchaid={##cms.uploadFooter.captchaid##}"
-                content-type="application/x-www-form-urlencoded" triggers='cms.uploadFooter'
-                OnProcessed="OnProcessedEditObjectFooter"></basis>
-                <basis core="callback" run="atclient" method="uploadDocumentFooter" triggers="upload.datafooter">
+  <member name="info" type="view" />
+</basis>
+<footer class="relative px-4 py-4 mt-24 rounded-xl bg-footer-gradient">
+  <img src="[##cms.cms.cdn##]/images/footerBackIcon.svg" alt="footerBackIcon" loading="lazy"
+    class="hidden h-auto max-w-full lg:absolute lg:-top-3 lg:-right-2 lg:-z-10 2xl:-top-6 2xl:-right-3 lg:block" />
+  <img src="[##cms.cms.cdn##]/images/footerBackIcon.svg" alt="footerBackIcon" loading="lazy"
+    class="absolute -top-3 -right-px -z-10 lg:hidden" />
+  <div class="flex flex-col items-center justify-center h-auto max-w-full gap-2 mb-6">
+    <img src="[##cms.cms.cdn##]/images/headerIcons.svg" alt="headerIcons" loading="lazy" />
+    <h2 class="text-sm font-normal text-white">
+      شرکت خدمات مسافرت هوایی سورینت پرواز
+    </h2>
+  </div>
+
+  <!-- content of footer -->
+  <div class="desktopContainer">
+    <div class="lg:flex lg:justify-between">
+      <div class="mb-6 lg:flex lg:w-1/2 lg:flex-row-reverse lg:order-2">
+        <!-- membrship -->
+        <section class="lg:w-[70%]">
+          <h3 class="mb-4 font-medium text-white lg:text-2xl">
+            عضویت در خبرنامه
+          </h3>
+          <div class="flex flex-col" id="contact-form-resize">
+            <basis core="schema" run="atclient"
+              schemaurl="/schema/domainform/E59D9A1D-E489-40B0-A552-57BD798159DF/96749EB4-1A60-4FC1-BF7C-38FF1C0265AD/fa/عضویت-در-خبرنامه"
+              displaymode="new" button="[data-btn-uploadfooter]" resultsourceid="upload.datafooter"
+              OnRendered="RenderFormFooter"></basis>
+            <basis core="api" if="{##cms.uploadFooter.run|(false)##}" run="atclient"
+              url="/schema/domainform/E59D9A1D-E489-40B0-A552-57BD798159DF/fa/editobject" method="post"
+              body="object_edit={##cms.uploadFooter.value##}&captcha={##cms.uploadFooter.captcha##}&captchaid={##cms.uploadFooter.captchaid##}"
+              content-type="application/x-www-form-urlencoded" triggers="cms.uploadFooter"
+              OnProcessed="OnProcessedEditObjectFooter"></basis>
+            <basis core="callback" run="atclient" method="uploadDocumentFooter" triggers="upload.datafooter">
+            </basis>
+
+            <div class="captcha-button">
+              <div id="captchaContainer"
+                class="captchaContainerclass captcha-sefaresh ml-2.5 max-xl:ml-0 max-xl:mb-[20px]"
+                data-bc-answer-container data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
+                data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
+                <basis core="dbsource" source="trust_login" name="captcha" run="atclient"
+                  triggers="captcha.refreshFooter">
+                  <member name="code" type="scalar" request="captcha"></member>
                 </basis>
-  
-              <div class="captcha-button">
-                <div id="captchaContainer"
-                  class="captchaContainerclass captcha-sefaresh ml-2.5 max-xl:ml-0 max-xl:mb-[20px]"
-                  data-bc-answer-container data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
-                  data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
-                  <basis core="dbsource" source="trust_login" name="captcha" run="atclient"
-                    triggers="captcha.refreshFooter">
-                    <member name="code" type="scalar" request="captcha"></member>
-                  </basis>
-                  <basis datamembername="captcha.code" core="print" run="atclient">
-                    <face>
-                      <script type="text/template"><div class="d-inline-block"><div class="flex gap-2">
-            
-                                <div class="float-right w-full"><input type="text" class="contactUsInput codeinputm" name="captcha" maxlength="4" placeholder="کد امنیتی"/><input type="hidden" name="captchaid" value="@captcha@" /></div>
-                                <div class="flex items-center w-[70%] gap-4">
-                                    <img src="/@captcha@" loading="lazy" width="120" height="60" alt="captcha" class="w-16"/>
-                                    <svg class="inline-block align-middle cursor-pointer" onclick="refreshCaptchaFooter()" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1247 8.56165H18.1238C18.0007 8.56175 17.8788 8.5861 17.7651 8.63331C17.6514 8.68052 17.5481 8.74967 17.4611 8.8368C17.3741 8.92393 17.3052 9.02734 17.2581 9.14113C17.2111 9.25492 17.187 9.37685 17.1871 9.49997C17.1859 10.8143 16.8245 12.1032 16.1421 13.2265C15.4597 14.3498 14.4824 15.2646 13.3166 15.8714C12.1507 16.4782 10.8408 16.7538 9.52921 16.6683C8.21765 16.5827 6.95463 16.1393 5.87744 15.3862C2.63134 13.1132 1.83959 8.62309 4.11255 5.37696C6.38552 2.13083 10.8757 1.33899 14.1218 3.61204C14.6129 3.95501 15.0592 4.358 15.4504 4.81165H12.8121C12.5635 4.81165 12.325 4.91042 12.1492 5.08623C11.9734 5.26205 11.8746 5.5005 11.8746 5.74915C11.8746 5.99779 11.9734 6.23624 12.1492 6.41206C12.325 6.58787 12.5635 6.68665 12.8121 6.68665H17.1871C17.4358 6.68665 17.6742 6.58787 17.85 6.41206C18.0259 6.23624 18.1246 5.99779 18.1246 5.74915V1.37415C18.1246 1.12551 18.0259 0.887048 17.85 0.711233C17.6742 0.535418 17.4358 0.436646 17.1871 0.436646C16.9385 0.436646 16.7 0.535418 16.5242 0.711233C16.3484 0.887048 16.2496 1.12551 16.2496 1.37415V2.93536C15.9206 2.62321 15.5689 2.33596 15.1973 2.07598C14.2225 1.39342 13.1228 0.909542 11.9609 0.651979C10.7991 0.394417 9.59797 0.368213 8.42603 0.574863C7.25409 0.781513 6.13433 1.21697 5.13067 1.85637C4.12702 2.49578 3.25914 3.3266 2.57658 4.30141C1.19808 6.27013 0.658111 8.70582 1.07546 11.0727C1.49281 13.4395 2.83329 15.5436 4.80201 16.9221C6.31776 17.9898 8.12639 18.563 9.98041 18.5633C10.5144 18.5631 11.0474 18.5162 11.5732 18.4233C13.6714 18.0531 15.5722 16.9556 16.9417 15.3235C18.3112 13.6914 19.062 11.6289 19.0621 9.49833C19.0619 9.24983 18.963 9.01159 18.7873 8.83596C18.6115 8.66032 18.3732 8.56166 18.1247 8.56165Z" fill="#71717A"/></svg>
-                                </div>
-                                
-                            </div></div></script>
-                    </face>
-                  </basis>
-                </div>
-                <button class="w-full px-4 py-2 mt-3 text-white data-body-btn h-14 bg-Primery-700 rounded-xl"
-                  type="button" data-btn-uploadfooter><span class="">ارسال</span></button>
-                <div
-                  class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
-                  <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
-                    <div id="ballsWaveG_1" class="ballsWaveG"></div>
-                    <div id="ballsWaveG_2" class="ballsWaveG"></div>
-                    <div id="ballsWaveG_3" class="ballsWaveG"></div>
-                    <div id="ballsWaveG_4" class="ballsWaveG"></div>
-                    <div id="ballsWaveG_5" class="ballsWaveG"></div>
-                    <div id="ballsWaveG_6" class="ballsWaveG"></div>
-                    <div id="ballsWaveG_7" class="ballsWaveG"></div>
-                    <div id="ballsWaveG_8" class="ballsWaveG"></div>
-                  </div>
+                <basis datamembername="captcha.code" core="print" run="atclient">
+                  <face>
+                    <script type="text/template">
+                      <div class="d-inline-block"><div class="flex gap-2">
+
+                                                      <div class="float-right w-full"><input type="text" class="contactUsInput codeinputm" name="captcha" maxlength="4" placeholder="کد امنیتی"/><input type="hidden" name="captchaid" value="@captcha@" /></div>
+                                                      <div class="flex items-center w-[70%] gap-4">
+                                                          <img src="/@captcha@" loading="lazy" width="120" height="60" alt="captcha" class="w-16"/>
+                                                          <svg class="inline-block align-middle cursor-pointer" onclick="refreshCaptchaFooter()" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1247 8.56165H18.1238C18.0007 8.56175 17.8788 8.5861 17.7651 8.63331C17.6514 8.68052 17.5481 8.74967 17.4611 8.8368C17.3741 8.92393 17.3052 9.02734 17.2581 9.14113C17.2111 9.25492 17.187 9.37685 17.1871 9.49997C17.1859 10.8143 16.8245 12.1032 16.1421 13.2265C15.4597 14.3498 14.4824 15.2646 13.3166 15.8714C12.1507 16.4782 10.8408 16.7538 9.52921 16.6683C8.21765 16.5827 6.95463 16.1393 5.87744 15.3862C2.63134 13.1132 1.83959 8.62309 4.11255 5.37696C6.38552 2.13083 10.8757 1.33899 14.1218 3.61204C14.6129 3.95501 15.0592 4.358 15.4504 4.81165H12.8121C12.5635 4.81165 12.325 4.91042 12.1492 5.08623C11.9734 5.26205 11.8746 5.5005 11.8746 5.74915C11.8746 5.99779 11.9734 6.23624 12.1492 6.41206C12.325 6.58787 12.5635 6.68665 12.8121 6.68665H17.1871C17.4358 6.68665 17.6742 6.58787 17.85 6.41206C18.0259 6.23624 18.1246 5.99779 18.1246 5.74915V1.37415C18.1246 1.12551 18.0259 0.887048 17.85 0.711233C17.6742 0.535418 17.4358 0.436646 17.1871 0.436646C16.9385 0.436646 16.7 0.535418 16.5242 0.711233C16.3484 0.887048 16.2496 1.12551 16.2496 1.37415V2.93536C15.9206 2.62321 15.5689 2.33596 15.1973 2.07598C14.2225 1.39342 13.1228 0.909542 11.9609 0.651979C10.7991 0.394417 9.59797 0.368213 8.42603 0.574863C7.25409 0.781513 6.13433 1.21697 5.13067 1.85637C4.12702 2.49578 3.25914 3.3266 2.57658 4.30141C1.19808 6.27013 0.658111 8.70582 1.07546 11.0727C1.49281 13.4395 2.83329 15.5436 4.80201 16.9221C6.31776 17.9898 8.12639 18.563 9.98041 18.5633C10.5144 18.5631 11.0474 18.5162 11.5732 18.4233C13.6714 18.0531 15.5722 16.9556 16.9417 15.3235C18.3112 13.6914 19.062 11.6289 19.0621 9.49833C19.0619 9.24983 18.963 9.01159 18.7873 8.83596C18.6115 8.66032 18.3732 8.56166 18.1247 8.56165Z" fill="#71717A"/></svg>
+                                                      </div>
+
+                                                  </div></div>
+                    </script>
+                  </face>
+                </basis>
+              </div>
+              <button class="w-full px-4 py-2 mt-3 text-white data-body-btn h-14 bg-Primery-700 rounded-xl"
+                type="button" data-btn-uploadfooter>
+                <span class="">ارسال</span>
+              </button>
+              <div
+                class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
+                <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
+                  <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_8" class="ballsWaveG"></div>
                 </div>
               </div>
-              <div class="mt-4 text-center text-white message-api"></div>
             </div>
-  
-            <div class="flex items-center justify-between mt-8">
-              <span class="text-white">ما رو اینجا دنبال کنید</span>
-              <basis core="print" datamembername="db.info">
-                <layout>
-                  <div class="flex gap-2">
-                   @child
-                  </div>
-                </layout>
-                <face filter="text in('تلگرام')">
-                  <a href="@Answer" aria-label="telegram" class="hover:scale-105"><img src="[##cms.cms.cdn##]/images/telegramIcon.svg" alt="telegramIcon" loading="lazy"/></a>
-                </face>
-                <face filter="text in('اینستاگرام')">
-                  <a href="@Answer" aria-label="instagram" class="hover:scale-105"><img src="[##cms.cms.cdn##]/images/instagramIcon.svg" alt="instagramIcon" loading="lazy"/></a>
-                </face>
-              </basis>
-             
-            </div>
-          </section>
-          <!-- membership -->
-  
-          <!-- category -->
-          <section class="lg:w-1/4">
-            <div class="flex flex-col gap-2 mb-4 text-white">
-              <h2 class="text-2xl font-bold text-Primery-600">دسته بندی</h2>
-              <a href="/flight" class="hover:text-Primery-600">پرواز</a>
-              <a href="/hotel" class="hover:text-Primery-600">هتل</a>
-              <a href="/tour" rel="nofollow" class="hover:text-Primery-600">تورها</a>
-              <a href="/visa" rel="nofollow" class="hover:text-Primery-600">ویزا</a>
-            </div>
-  
-            <div class="flex flex-col gap-2 text-white">
-              <h2 class="text-2xl font-bold text-Primery-600">میانبر</h2>
-              <a href="/Tourism-magazine" rel="nofollow" class="hover:text-Primery-600">مقالات</a>
-              <a href="#" class="hover:text-Primery-600">بیمه مسافرتی</a>
-              <a href="#" class="hover:text-Primery-600">اقامت ها</a>
-              <a href="#" class="hover:text-Primery-600">سفر</a>
-            </div>
-          </section>
-          <!-- category -->
-        </div>
-  
-        <!-- about us -->
-        <section class="order-1 lg:w-1/2">
-          <div>
-            <h2 class="mt-16 mb-4 font-medium text-white lg:text-2xl lg:mt-0">درباره ی ما</h2>
-            <basis core="print" datamembername="db.info">
-              <face filter="TypeID in(144) and valueID in(4039705)">
-                <div class="text-sm text-justify text-white">@largetext</div>
-              </face>
-            </basis>
+            <div class="mt-4 text-center text-white message-api"></div>
           </div>
-  
-          <!-- address -->
-          <div class="flex flex-col gap-2 mt-3">
-            <basis core="print" datamembername="db.info">
-              <face filter="TypeID in(244) and valueID in(4039706)">
-                <div class="flex items-center gap-2 text-sm text-white">
-                  <img src="[##cms.cms.cdn##]/images/addressIcon.svg" alt="addressIcon" loading="lazy"/>
-                  @Answer
-                </div>
-              </face>
-            </basis>
-  
-            <basis core="print" datamembername="db.info">
-              <face filter="TypeID in(240) and valueID in(4039707)">
-                <div class="flex items-center gap-2 text-sm text-white">
-                  <img src="[##cms.cms.cdn##]/images/phoneIcon.svg" alt="phoneIcon" loading="lazy"/>
-                  تلفن تماس و پشتیبانی :@Answer
-                </div>
-              </face>
-            </basis>
-          </div>
-          <!-- address -->
-  
-          <div class="flex flex-wrap justify-between mt-3 gap-y-2 lg:justify-normal lg:gap-4">
-            <!-- <a href="" class="flex items-center w-16 h-16 p-1 overflow-hidden bg-white rounded-xl" rel="noopener">
-              <img src="[##cms.cms.cdn##]/images/eNamad.jpg" alt="eNamad" loading="lazy" decoding="async"/>
-            </a> -->
-            <a referrerpolicy='origin' class="flex items-center w-16 h-16 p-1 overflow-hidden bg-white rounded-xl" rel="noopener" target='_blank' href='https://trustseal.enamad.ir/?id=563916&Code=YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=563916&Code=YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN' alt="eNamad" loading="lazy" decoding="async" style='cursor:pointer' code='YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN'></a>
-            <a href="https://www.iata.org/" class="flex items-center w-16 h-16 p-1 bg-white rounded-xl hover:scale-105" rel="noopener">
-              <img src="[##cms.cms.cdn##]/images/lata.jpg" alt="lata" loading="lazy" class="h-auto max-w-full"/>
-            </a>
-            <a href="https://www.cao.ir/paxrights" class="flex items-center w-16 h-16 p-1 bg-white rounded-xl hover:scale-105" rel="noopener">
-              <img src="[##cms.cms.cdn##]/images/pax.png" alt="pax" loading="lazy" class="h-auto max-w-full"/>
-            </a>
-            <a href="https://www.cao.ir/" class="flex items-center w-16 h-16 p-1 bg-white rounded-xl hover:scale-105" rel="noopener">
-              <img src="[##cms.cms.cdn##]/images/airplaneComponey.jpg" alt="airplaneComponey" loading="lazy" class="h-auto max-w-full"/>
-            </a>
-            <img decoding="async" loading="lazy" class="w-16 h-16 bg-white hover:scale-105 rounded-xl" referrerpolicy='origin' id = 'rgvjjzpergvjesgtjzpefukz' style = 'cursor:pointer' onclick = 'window.open("https://logo.samandehi.ir/Verify.aspx?id=373076&p=xlaojyoexlaoobpdjyoegvka", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt = 'logo-samandehi' src = 'https://logo.samandehi.ir/logo.aspx?id=373076&p=qftiyndtqftilymayndtwlbq' />
 
+          <div class="flex items-center justify-between mt-8">
+            <span class="text-white">ما رو اینجا دنبال کنید</span>
+            <basis core="print" datamembername="db.info">
+              <layout>
+                <div class="flex gap-2">@child</div>
+              </layout>
+              <face filter="TypeID in('245') and text in('تلگرام')">
+                <a href="@largetext" aria-label="telegram" class="hover:scale-105"><img
+                    src="[##cms.cms.cdn##]/images/telegramIcon.svg" alt="telegramIcon" loading="lazy" /></a>
+              </face>
+              <face filter="TypeID in('245') and text in('اینستاگرام')">
+                <a href="@largetext" aria-label="instagram" class="hover:scale-105"><img
+                    src="[##cms.cms.cdn##]/images/instagramIcon.svg" alt="instagramIcon" loading="lazy" /></a>
+              </face>
+              <face filter="TypeID in('245') and text in('واتس اپ')">
+                <a href="@largetext" aria-label="whatsapp" class="hover:scale-105"><img
+                    src="[##cms.cms.cdn##]/images/whatsappIcon.png" class="w-12 h-12 rounded-lg" alt=""
+                    loading="lazy" /></a>
+              </face>
+            </basis>
           </div>
         </section>
-        <!-- about us end -->
+        <!-- membership -->
+
+        <!-- category -->
+        <section class="lg:w-1/4">
+          <div class="flex flex-col gap-2 mb-4 text-white">
+            <h2 class="text-2xl font-bold text-Primery-600">دسته بندی</h2>
+            <a href="/flight" class="hover:text-Primery-600">پرواز</a>
+            <a href="/hotel" class="hover:text-Primery-600">هتل</a>
+            <a href="/tour" rel="nofollow" class="hover:text-Primery-600">تورها</a>
+            <a href="/visa" rel="nofollow" class="hover:text-Primery-600">ویزا</a>
+          </div>
+
+          <div class="flex flex-col gap-2 text-white">
+            <h2 class="text-2xl font-bold text-Primery-600">میانبر</h2>
+            <a href="/Tourism-magazine" rel="nofollow" class="hover:text-Primery-600">مقالات</a>
+            <a href="#" class="hover:text-Primery-600">بیمه مسافرتی</a>
+            <a href="#" class="hover:text-Primery-600">اقامت ها</a>
+            <a href="#" class="hover:text-Primery-600">سفر</a>
+          </div>
+        </section>
+        <!-- category -->
       </div>
-  
-      <div class="mt-6 lg:flex lg:items-center lg:justify-center lg:gap-8">
-        <h3 class="text-sm font-medium text-center text-white">
-          طراحی سایت آژانس مسافرتی و <a href="https://www.basisfly.com/" target="_blank">رزرواسیون آنلاین توسط بیسیس فلای</a>
-        </h3>
-        <div class="flex justify-between mt-3 lg:mt-0">
-          <img src="[##cms.cms.cdn##]/images/basisFly.png" alt="basisFly" class="h-4 w-17" loading="lazy"/>
-          <img src="[##cms.cms.cdn##]/images/trust-login.png" alt="trust-login" loading="lazy"/>
+
+      <!-- about us -->
+      <section class="order-1 lg:w-1/2">
+        <div>
+          <h2 class="mt-16 mb-4 font-medium text-white lg:text-2xl lg:mt-0">
+            درباره ی ما
+          </h2>
+          <basis core="print" datamembername="db.info">
+            <face filter="TypeID in(144) and valueID in(4039705)">
+              <div class="text-sm text-justify text-white">@largetext</div>
+            </face>
+          </basis>
         </div>
+
+        <!-- address -->
+        <div class="flex flex-col gap-2 mt-3">
+          <basis core="print" datamembername="db.info">
+            <face filter="TypeID in(244) and valueID in(4039706)">
+              <div class="flex items-center gap-2 text-sm text-white">
+                <img src="[##cms.cms.cdn##]/images/addressIcon.svg" alt="addressIcon" loading="lazy" />
+                @Answer
+              </div>
+            </face>
+          </basis>
+
+          <basis core="print" datamembername="db.info">
+            <face filter="TypeID in(240) and valueID in(4039707)">
+              <div class="flex items-center gap-2 text-sm text-white">
+                <img src="[##cms.cms.cdn##]/images/phoneIcon.svg" alt="phoneIcon" loading="lazy" />
+                تلفن تماس و پشتیبانی :<a href="tel:+9821٤٧٦٤0" style="
+                    font-weight: bold;
+                    font-size: 25px;
+                    letter-spacing: 4px;
+                  ">@Answer</a>
+              </div>
+            </face>
+          </basis>
+        </div>
+        <!-- address -->
+
+        <div class="flex flex-wrap justify-between mt-3 gap-y-2 lg:justify-normal lg:gap-4">
+          <!-- <a href="" class="flex items-center w-16 h-16 p-1 overflow-hidden bg-white rounded-xl" rel="noopener">
+              <img src="[##cms.cms.cdn##]/images/eNamad.jpg" alt="eNamad" loading="lazy" decoding="async"/>
+            </a> -->
+          <a referrerpolicy="origin" class="flex items-center w-16 h-16 p-1 overflow-hidden bg-white rounded-xl"
+            rel="noopener" target="_blank"
+            href="https://trustseal.enamad.ir/?id=563916&Code=YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN"><img
+              referrerpolicy="origin"
+              src="https://trustseal.enamad.ir/logo.aspx?id=563916&Code=YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN" alt="eNamad"
+              loading="lazy" decoding="async" style="cursor: pointer" code="YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN" /></a>
+          <a href="https://www.iata.org/" class="flex items-center w-16 h-16 p-1 bg-white rounded-xl hover:scale-105"
+            rel="noopener">
+            <img src="[##cms.cms.cdn##]/images/lata.jpg" alt="lata" loading="lazy" class="h-auto max-w-full" />
+          </a>
+          <a href="https://www.cao.ir/paxrights"
+            class="flex items-center w-16 h-16 p-1 bg-white rounded-xl hover:scale-105" rel="noopener">
+            <img src="[##cms.cms.cdn##]/images/pax.png" alt="pax" loading="lazy" class="h-auto max-w-full" />
+          </a>
+          <a href="https://www.cao.ir/" class="flex items-center w-16 h-16 p-1 bg-white rounded-xl hover:scale-105"
+            rel="noopener">
+            <img src="[##cms.cms.cdn##]/images/airplaneComponey.jpg" alt="airplaneComponey" loading="lazy"
+              class="h-auto max-w-full" />
+          </a>
+          <img decoding="async" loading="lazy" class="w-16 h-16 bg-white hover:scale-105 rounded-xl"
+            referrerpolicy="origin" id="rgvjjzpergvjesgtjzpefukz" style="cursor: pointer"
+            onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=373076&p=xlaojyoexlaoobpdjyoegvka", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")'
+            alt="logo-samandehi" src="https://logo.samandehi.ir/logo.aspx?id=373076&p=qftiyndtqftilymayndtwlbq" />
+        </div>
+      </section>
+      <!-- about us end -->
+    </div>
+
+    <div class="mt-6 lg:flex lg:items-center lg:justify-center lg:gap-8">
+      <h3 class="text-sm font-medium text-center text-white">
+        طراحی سایت آژانس مسافرتی و
+        <a href="https://www.basisfly.com/" target="_blank">رزرواسیون آنلاین توسط بیسیس فلای</a>
+      </h3>
+      <div class="flex justify-between mt-3 lg:mt-0">
+        <img src="[##cms.cms.cdn##]/images/basisFly.png" alt="basisFly" class="h-4 w-17" loading="lazy" />
+        <img src="[##cms.cms.cdn##]/images/trust-login.png" alt="trust-login" loading="lazy" />
       </div>
     </div>
-    <!-- content of footer end -->
-  </footer>
-  <basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]"></basis>
-  <!-- footer end -->
+  </div>
+  <!-- content of footer end -->
+</footer>
+<basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]"></basis>
+<!-- footer end -->
