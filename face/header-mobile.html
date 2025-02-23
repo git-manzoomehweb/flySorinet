@@ -7,16 +7,6 @@
     order="ord"
   ></member>
 </basis>
-<basis core="dbsource" source="basiscore" lid="1" mid="1" name="visa">
-  <member
-    name="cat"
-    type="tree"
-    request="cat"
-    parentid="212044"
-    order="ord"
-  ></member>
-</basis>
-
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="nowrouz">
   <member
     name="cat"
@@ -92,6 +82,24 @@
                   </li>
                 </layout>
 
+                <face level="end" filter="link is null">
+                  <li class="border-b">
+                    <a
+                      href="/tour-list.bc?catid=@catid"
+                      class="block p-4 hover:text-Primery-600"
+                      >@title</a
+                    >
+                  </li>
+                </face>
+
+                <face level="end">
+                  <li class="border-b">
+                    <a href="@link" class="block p-4 hover:text-Primery-600"
+                      >@title</a
+                    >
+                  </li>
+                </face>
+
                 <face level="1" filter="link is null">
                   <li class="submenu-item border-b">
                     <div
@@ -138,23 +146,52 @@
                   </li>
                 </face>
 
-                <face level="end" filter="link is null">
-                  <li class="border-b">
-                    <a
-                      href="/tour-list.bc?catid=@catid"
-                      class="block p-4 hover:text-Primery-600"
-                      >@title</a
+                <face level="2" filter="link is null">
+                  <li class="submenu-item border-b">
+                    <div
+                      class="flex items-center justify-between p-4 cursor-pointer submenu-trigger"
                     >
+                      <span class="hover:text-Primery-600">@title</span>
+                      <img
+                        src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
+                        alt="chevronDownIcon"
+                        loading="lazy"
+                        width="24"
+                        height="24"
+                        class="transition duration-200 ease-in-out chevron"
+                      />
+                    </div>
+                    <ul
+                      class="nested-menu max-h-0 overflow-hidden bg-gray-100 transition-all duration-300"
+                    >
+                      @child
+                    </ul>
                   </li>
                 </face>
 
-                <face level="end">
-                  <li class="border-b">
-                    <a href="@link" class="block p-4 hover:text-Primery-600"
-                      >@title</a
+                <face level="2">
+                  <li class="submenu-item border-b">
+                    <div
+                      class="flex items-center justify-between p-4 cursor-pointer submenu-trigger"
                     >
+                      <span class="hover:text-Primery-600">@title</span>
+                      <img
+                        src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
+                        alt="chevronDownIcon"
+                        loading="lazy"
+                        width="24"
+                        height="24"
+                        class="transition duration-200 ease-in-out chevron"
+                      />
+                    </div>
+                    <ul
+                      class="nested-menu max-h-0 overflow-hidden bg-gray-100 transition-all duration-300"
+                    >
+                      @child
+                    </ul>
                   </li>
                 </face>
+
               </basis>
 
               <!-- --منوی تورهای نوروزی-- -->
@@ -193,6 +230,25 @@
                   </li>
                 </layout>
 
+                
+                <face level="end" filter="link is null">
+                  <li class="border-b">
+                    <a
+                      href="/tour-list.bc?catid=@catid"
+                      class="block p-4 hover:text-Primery-600"
+                      >@title</a
+                    >
+                  </li>
+                </face>
+
+                <face level="end">
+                  <li class="border-b">
+                    <a href="@link" class="block p-4 hover:text-Primery-600"
+                      >@title</a
+                    >
+                  </li>
+                </face>
+                
                 <face level="1" filter="link is null">
                   <li class="submenu-item border-b">
                     <div
@@ -239,77 +295,58 @@
                   </li>
                 </face>
 
-                <face level="end" filter="link is null">
-                  <li class="border-b">
-                    <a
-                      href="/tour-list.bc?catid=@catid"
-                      class="block p-4 hover:text-Primery-600"
-                      >@title</a
-                    >
-                  </li>
-                </face>
-
-                <face level="end">
-                  <li class="border-b">
-                    <a href="@link" class="block p-4 hover:text-Primery-600"
-                      >@title</a
-                    >
-                  </li>
-                </face>
-              </basis>
-              <!-- منوی ویزا -->
-              <basis
-                core="tree"
-                datamembername="visa.cat"
-                idcol="catid"
-                parentidcol="parentid"
-                nullvalue="212044"
-              >
-                <layout>
-                  <li class="menu-item border-b">
+                <face level="2" filter="link is null">
+                  <li class="submenu-item border-b">
                     <div
-                      class="flex items-center justify-between p-4 cursor-pointer menu-trigger"
+                      class="flex items-center justify-between p-4 cursor-pointer submenu-trigger"
                     >
-                      <span
-                        class="flex items-center gap-2 hover:text-Primery-600"
-                      >
-                        ویزا
-                        <img
-                          src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
-                          width="24"
-                          height="24"
-                          alt="chevronDownIcon"
-                          loading="lazy"
-                          class="transition duration-200 ease-in-out chevron"
-                        />
-                      </span>
+                      <span class="hover:text-Primery-600">@title</span>
+                      <img
+                        src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
+                        alt="chevronDownIcon"
+                        loading="lazy"
+                        width="24"
+                        height="24"
+                        class="transition duration-200 ease-in-out chevron"
+                      />
                     </div>
                     <ul
-                      class="submenu max-h-0 overflow-hidden bg-gray-50 flex flex-col transition-all duration-300"
+                      class="nested-menu max-h-0 overflow-hidden bg-gray-100 transition-all duration-300"
                     >
                       @child
                     </ul>
                   </li>
-                </layout>
+                </face>
 
-                <face level="end" filter="link is null">
-                  <li class="border-b">
-                    <a
-                      href="/visa-list.bc?catid=@catid"
-                      class="block p-4 hover:text-Primery-600"
-                      >@title</a
+                <face level="2">
+                  <li class="submenu-item border-b">
+                    <div
+                      class="flex items-center justify-between p-4 cursor-pointer submenu-trigger"
                     >
+                      <span class="hover:text-Primery-600">@title</span>
+                      <img
+                        src="[##cms.cms.cdn##]/images/chevronDownIcon.svg"
+                        alt="chevronDownIcon"
+                        loading="lazy"
+                        width="24"
+                        height="24"
+                        class="transition duration-200 ease-in-out chevron"
+                      />
+                    </div>
+                    <ul
+                      class="nested-menu max-h-0 overflow-hidden bg-gray-100 transition-all duration-300"
+                    >
+                      @child
+                    </ul>
                   </li>
                 </face>
 
-                <face level="end">
-                  <li class="border-b">
-                    <a href="@link" class="block p-4 hover:text-Primery-600"
-                      >@title</a
-                    >
-                  </li>
-                </face>
               </basis>
+              <li class="border-b hover:text-Primery-600">
+                <a href="/visa-list.bc?catid=213603" class="block p-4"
+                  >ویزا</a
+                >
+              </li>
 
               <li class="border-b hover:text-Primery-600"></li>
               <li class="border-b hover:text-Primery-600">

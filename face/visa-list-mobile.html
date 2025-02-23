@@ -5,11 +5,11 @@
     <member name="scalar" type="scalar" typeid="150" />
 </basis>
 
-<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
     <member name="navigation" type="tree" request="navcatid" parentid="[##cms.query.catid##]" />
 </basis>
 
-<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
     <member name="visa-list" type="list" link="article.bc" propertyid="7244" perpage="9"
         pageno="[##cms.query.pagenum|(1)##]" order="ord" />
     <member name="paging" type="list" request="paging" count="3" parentname="visa-list" />
@@ -69,7 +69,7 @@
                             <meta itemprop="position" content="1" />
                         </a>
                     </li>
-                    <span class="text-white"> &gt; </span>
+                    <span class="text-white"> > </span>
                     <basis core="print" datamembername="db.navigation">
                         <face filter="RowNumber=max(RowNumber) and parentcatid<>210442">
                             <li class="inline-block font-normal text-white" itemprop="itemListElement" itemscope
@@ -86,7 +86,7 @@
                                         itemprop="name">@title</span>
                                     <meta itemprop="position" content="@rownumber" />
                                 </a>
-                                <span class="text-white"> &gt; </span>
+                                <span class="text-white"> > </span>
                             </li>
                         </face>
                         <face filter="parentcatid<>210442">
@@ -96,7 +96,7 @@
                                     aria-label="@title"><span class="text-white" itemprop="name">@title</span>
                                     <meta itemprop="position" content="@rownumber" />
                                 </a>
-                                <span class="text-white"> &gt; </span>
+                                <span class="text-white"> > </span>
                             </li>
                         </face>
                     </basis>

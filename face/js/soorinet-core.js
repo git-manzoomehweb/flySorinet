@@ -29,64 +29,68 @@ document.addEventListener("DOMContentLoaded", function () {
     const trigger = item.querySelector(".menu-trigger");
     const submenu = item.querySelector(".submenu");
     const chevron = trigger.querySelector(".chevron");
-
+  
     trigger?.addEventListener("click", () => {
       // بستن سایر منوها
       menuItems.forEach((otherItem) => {
         if (otherItem !== item) {
           const otherSubmenu = otherItem.querySelector(".submenu");
-          otherSubmenu.classList.add("max-h-0", "opacity-0"); // بستن سایر منوها
-          otherSubmenu.classList.remove("max-h-72");
+          otherSubmenu.style.maxHeight = "0"; // بستن سایر منوها
+          otherSubmenu.style.opacity = "0";
           otherItem.querySelector(".chevron")?.classList.remove("rotate-180");
         }
       });
-
-      // تغییر وضعیت منوی کلیک شده
-      if (submenu.classList.contains("max-h-0")) {
-        submenu.classList.remove("max-h-0", "opacity-0"); // باز کردن منو
-        submenu.classList.add("max-h-72", "transition-all", "duration-300");
-        chevron.classList.add("rotate-180");
-      } else {
-        submenu.classList.add("max-h-0", "opacity-0"); // بستن منو
-        submenu.classList.remove("max-h-72");
-        chevron.classList.remove("rotate-180");
-      }
+  
+      // بررسی تعداد زیرمنوها
+      const submenus = item.querySelectorAll(".submenu"); // پیدا کردن همه زیرمنوها در این منو
+      submenus.forEach((submenu) => {
+        if (submenu.style.maxHeight === "0px" || !submenu.style.maxHeight) {
+          // باز کردن زیرمنو
+          submenu.style.maxHeight = `${submenu.scrollHeight}px`; // تنظیم ارتفاع داینامیک
+          submenu.style.opacity = "1";
+          submenu.classList.add("transition-all", "duration-300");
+          chevron.classList.add("rotate-180");
+        } else {
+          // بستن زیرمنو
+          submenu.style.maxHeight = "0"; // بستن زیرمنو
+          submenu.style.opacity = "0";
+          chevron.classList.remove("rotate-180");
+        }
+      });
     });
   });
-
-  // مدیریت زیرمنوها
+  
+  // مدیریت زیرمنوهای تودرتو
   const submenuItems = document.querySelectorAll(".submenu-item");
-
+  
   submenuItems.forEach((item) => {
     const trigger = item.querySelector(".submenu-trigger");
     const nestedMenu = item.querySelector(".nested-menu");
     const chevron = trigger.querySelector(".chevron");
-
+  
     trigger?.addEventListener("click", (e) => {
       e.stopPropagation();
-
-      // بستن سایر زیرمنوها
-      submenuItems.forEach((otherItem) => {
-        if (otherItem !== item) {
-          const otherNestedMenu = otherItem.querySelector(".nested-menu");
-          otherNestedMenu.classList.add("max-h-0", "opacity-0"); // بستن سایر زیرمنوها
-          otherNestedMenu.classList.remove("max-h-72");
-          otherItem.querySelector(".chevron")?.classList.remove("rotate-180");
+  
+      // بررسی تعداد زیرمنوهای تودرتو
+      const nestedMenus = item.querySelectorAll(".nested-menu"); // پیدا کردن همه زیرمنوهای تودرتو
+      nestedMenus.forEach((nestedMenu) => {
+        if (nestedMenu.style.maxHeight === "0px" || !nestedMenu.style.maxHeight) {
+          // باز کردن زیرمنو تودرتو
+          nestedMenu.style.maxHeight = `${nestedMenu.scrollHeight}px`; // تنظیم ارتفاع داینامیک
+          nestedMenu.style.opacity = "1";
+          nestedMenu.classList.add("transition-all", "duration-300");
+          chevron.classList.add("rotate-180");
+        } else {
+          // بستن زیرمنو تودرتو
+          nestedMenu.style.maxHeight = "0"; // بستن زیرمنو
+          nestedMenu.style.opacity = "0";
+          chevron.classList.remove("rotate-180");
         }
       });
-
-      // تغییر وضعیت زیرمنوی کلیک شده
-      if (nestedMenu.classList.contains("max-h-0")) {
-        nestedMenu.classList.remove("max-h-0", "opacity-0"); // باز کردن زیرمنو
-        nestedMenu.classList.add("max-h-72", "transition-all", "duration-300");
-        chevron.classList.add("rotate-180");
-      } else {
-        nestedMenu.classList.add("max-h-0", "opacity-0"); // بستن زیرمنو
-        nestedMenu.classList.remove("max-h-72");
-        chevron.classList.remove("rotate-180");
-      }
     });
   });
+  
+  
 });
 
 // search engine
@@ -554,10 +558,10 @@ if (document.querySelector(".hotels-swiper")) {
       prevEl: ".swiper-button-prev-custom",
     },
   });
-  const slide = document.querySelectorAll(".hotels-swiper .swiper-slide");
-  slide.forEach((slide) => {
-    slide.style.height = "438px";
-  });
+  // const slide = document.querySelectorAll(".hotels-swiper .swiper-slide");
+  // slide.forEach((slide) => {
+  //   slide.style.height = "438px";
+  // });
 }
 
 if (document.querySelector(".slider-default-mobile")) {

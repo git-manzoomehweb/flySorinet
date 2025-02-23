@@ -121,11 +121,11 @@
         <basis core="print" datamembername="db.view">
           <layout> @child </layout>
           <face filter="TypeID in(129)">
-            <div class="mt-6 mb-6 text-sm text-justify">@largetext</div>
+            <div class="mt-6 mb-6 text-sm text-justify article__largetext__container">@largetext</div>
           </face>
           <face filter="TypeID in(250)">
             <h1 id="@valueID" class="mt-10 mb-4 text-xl font-medium">@text</h1>
-            <div class="mb-6 text-sm text-justify">@largetext</div>
+            <div class="mb-6 text-sm text-justify article__largetext__container">@largetext</div>
           </face>
         </basis>
 
@@ -155,7 +155,7 @@
             </div>
           </layout>
           <face filter="link is null">
-            <a href="/article.bc?id=@id" class=" flex items-center gap-4 hover:scale-105">
+            <a href="/article.bc?id=@id" class="flex items-center gap-4  hover:scale-105">
               <img
                 src="@00090X00090prp"
                 alt="@title"
@@ -169,7 +169,7 @@
             </a>
           </face>
           <face>
-            <a href="@link" class=" flex items-center gap-4 hover:scale-105">
+            <a href="@link" class="flex items-center gap-4  hover:scale-105">
               <img
                 src="@00090X00090prp"
                 alt="@title"
