@@ -23,75 +23,101 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // مدیریت منوهای اصلی (تور و ویزا)
-  const menuItems = document.querySelectorAll(".menu-item");
+  // const menuItems = document.querySelectorAll(".menu-item");
 
-  menuItems.forEach((item) => {
-    const trigger = item.querySelector(".menu-trigger");
-    const submenu = item.querySelector(".submenu");
-    const chevron = trigger.querySelector(".chevron");
+  // menuItems.forEach((item) => {
+  //   const trigger = item.querySelector(".menu-trigger");
+  //   const submenu = item.querySelector(".submenu");
+  //   const chevron = trigger.querySelector(".chevron");
   
-    trigger?.addEventListener("click", () => {
-      // بستن سایر منوها
-      menuItems.forEach((otherItem) => {
-        if (otherItem !== item) {
-          const otherSubmenu = otherItem.querySelector(".submenu");
-          otherSubmenu.style.maxHeight = "0"; // بستن سایر منوها
-          otherSubmenu.style.opacity = "0";
-          otherItem.querySelector(".chevron")?.classList.remove("rotate-180");
-        }
-      });
+  //   trigger?.addEventListener("click", () => {
+
+  //     menuItems.forEach((otherItem) => {
+  //       if (otherItem !== item) {
+  //         const otherSubmenu = otherItem.querySelector(".submenu");
+  //         otherSubmenu.style.maxHeight = "0"; 
+  //         otherSubmenu.style.opacity = "0";
+  //         otherItem.querySelector(".chevron")?.classList.remove("rotate-180");
+  //       }
+  //     });
   
-      // بررسی تعداد زیرمنوها
-      const submenus = item.querySelectorAll(".submenu"); // پیدا کردن همه زیرمنوها در این منو
-      submenus.forEach((submenu) => {
-        if (submenu.style.maxHeight === "0px" || !submenu.style.maxHeight) {
-          // باز کردن زیرمنو
-          submenu.style.maxHeight = `${submenu.scrollHeight}px`; // تنظیم ارتفاع داینامیک
-          submenu.style.opacity = "1";
-          submenu.classList.add("transition-all", "duration-300");
-          chevron.classList.add("rotate-180");
-        } else {
-          // بستن زیرمنو
-          submenu.style.maxHeight = "0"; // بستن زیرمنو
-          submenu.style.opacity = "0";
-          chevron.classList.remove("rotate-180");
-        }
-      });
-    });
-  });
+ 
+  //     const submenus = item.querySelectorAll(".submenu"); 
+  //     submenus.forEach((submenu) => {
+  //       if (submenu.style.maxHeight === "0px" || !submenu.style.maxHeight) {
+     
+  //         submenu.style.maxHeight = `${submenu.scrollHeight}px`; 
+  //         submenu.style.opacity = "1";
+  //         submenu.classList.add("transition-all", "duration-300");
+  //         chevron.classList.add("rotate-180");
+  //       } else {
+         
+  //         submenu.style.maxHeight = "0"; 
+  //         submenu.style.opacity = "0";
+  //         chevron.classList.remove("rotate-180");
+  //       }
+  //     });
+  //   });
+  // });
   
-  // مدیریت زیرمنوهای تودرتو
-  const submenuItems = document.querySelectorAll(".submenu-item");
+
+  // const submenuItems = document.querySelectorAll(".submenu-item");
   
-  submenuItems.forEach((item) => {
-    const trigger = item.querySelector(".submenu-trigger");
-    const nestedMenu = item.querySelector(".nested-menu");
-    const chevron = trigger.querySelector(".chevron");
+  // submenuItems.forEach((item) => {
+  //   const trigger = item.querySelector(".submenu-trigger");
+  //   const nestedMenu = item.querySelector(".nested-menu");
+  //   const chevron = trigger.querySelector(".chevron");
   
-    trigger?.addEventListener("click", (e) => {
-      e.stopPropagation();
+  //   trigger?.addEventListener("click", (e) => {
+  //     e.stopPropagation();
   
-      // بررسی تعداد زیرمنوهای تودرتو
-      const nestedMenus = item.querySelectorAll(".nested-menu"); // پیدا کردن همه زیرمنوهای تودرتو
-      nestedMenus.forEach((nestedMenu) => {
-        if (nestedMenu.style.maxHeight === "0px" || !nestedMenu.style.maxHeight) {
-          // باز کردن زیرمنو تودرتو
-          nestedMenu.style.maxHeight = `${nestedMenu.scrollHeight}px`; // تنظیم ارتفاع داینامیک
-          nestedMenu.style.opacity = "1";
-          nestedMenu.classList.add("transition-all", "duration-300");
-          chevron.classList.add("rotate-180");
-        } else {
-          // بستن زیرمنو تودرتو
-          nestedMenu.style.maxHeight = "0"; // بستن زیرمنو
-          nestedMenu.style.opacity = "0";
-          chevron.classList.remove("rotate-180");
-        }
-      });
-    });
-  });
+  //     // بررسی تعداد زیرمنوهای تودرتو
+  //     const nestedMenus = item.querySelectorAll(".nested-menu"); // پیدا کردن همه زیرمنوهای تودرتو
+  //     nestedMenus.forEach((nestedMenu) => {
+  //       if (nestedMenu.style.maxHeight === "0px" || !nestedMenu.style.maxHeight) {
+  //         // باز کردن زیرمنو تودرتو
+  //         nestedMenu.style.maxHeight = `${nestedMenu.scrollHeight}px`; // تنظیم ارتفاع داینامیک
+  //         nestedMenu.style.opacity = "1";
+  //         nestedMenu.classList.add("transition-all", "duration-300");
+  //         chevron.classList.add("rotate-180");
+  //       } else {
+  //         // بستن زیرمنو تودرتو
+  //         nestedMenu.style.maxHeight = "0"; // بستن زیرمنو
+  //         nestedMenu.style.opacity = "0";
+  //         chevron.classList.remove("rotate-180");
+  //       }
+  //     });
+  //   });
+  // });
   
   
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleDropdowns = document.querySelectorAll(".toggle-dropdown");
+  const dropdownIcons = document.querySelectorAll(".dropdown-icon");
+
+  toggleDropdowns.forEach((toggle, index) => {
+    const submenu = toggle.nextElementSibling;
+    const dropdownIcon = dropdownIcons[index];
+
+    toggle.addEventListener("click", function () {
+      // چرخاندن آیکون
+      dropdownIcon.classList.toggle("rotate-180");
+
+      // بررسی اینکه آیا منو قبلاً باز است یا نه
+      if (submenu.style.maxHeight) {
+        submenu.style.maxHeight = null;
+        submenu.style.opacity = "0";
+      } else {
+        // محاسبه دوباره scrollHeight برای منو
+        submenu.style.maxHeight = (submenu.scrollHeight*10) + "px";  // استفاده از scrollHeight برای محاسبه ارتفاع داینامیک
+        submenu.style.opacity = "1";
+      }
+    });
+  });
+});
+
 
 // search engine
 
