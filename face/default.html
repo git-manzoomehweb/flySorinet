@@ -7,7 +7,7 @@
   propertyid="8077,8181,10000504,8076" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="210488">
-  <member name="articles" type="list" link="article.bc" order="ord" size="412x295" propertyid="7244" />
+  <member name="articles" type="list" link="article.bc" order="ord" size="412x295" propertyid="7244,7249" />
 </basis>
 
 <!DOCTYPE html>
@@ -116,7 +116,7 @@
         </section>
       </layout>
       <face filter="link is null">
-        <div
+        <a href="/tour.bc?id=@id"
           class="relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]">
           <div class="relative h-64">
             <div class="absolute w-full h-full bg-shadow-gradient"></div>
@@ -129,10 +129,10 @@
               </div>
             </div>
           </div>
-          <a href="/tour.bc?id=@id"
+          <span
             class="absolute flex items-center hover:scale-105 justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700">
             مشاهده
-          </a>
+          </span>
           <div class="flex flex-col gap-2 px-4 mt-9">
             <span class="flex items-center text-sm text-zinc-900">
               <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" width="24" height="24" alt="calenderIcon"
@@ -149,10 +149,10 @@
             </span>
             <span class="font-medium text-zinc-900">@prp_8181</span>
           </div>
-        </div>
+        </a>
       </face>
       <face>
-        <div
+        <a href="@link"
           class="relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl lg:w-[calc(33.33%-8px)]">
           <div class="relative h-64">
             <div class="absolute w-full h-full bg-shadow-gradient"></div>
@@ -166,10 +166,10 @@
               </div>
             </div>
           </div>
-          <a href="@link"
+          <span
             class="absolute flex items-center hover:scale-105 justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700">
             مشاهده
-          </a>
+          </span>
           <div class="flex flex-col gap-2 px-4 mt-9">
             <span class="flex items-center text-sm text-zinc-900">
               <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="calenderIcon" width="24" height="24"
@@ -186,7 +186,7 @@
             </span>
             <span class="font-medium text-zinc-900">@prp_8181</span>
           </div>
-        </div>
+        </a>
       </face>
     </basis>
     <!-- تور لحظه اخری  -->
@@ -227,8 +227,8 @@
         </section>
       </layout>
       <face filter="link is null">
-        <div
-          class="swiper-slide relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl">
+        <a href="/tour.bc?id=@id"
+          class="relative overflow-hidden bg-white border border-solid swiper-slide pb-7 border-zinc-300 rounded-xl">
           <div class="relative h-64">
             <div class="absolute w-full h-full bg-shadow-gradient"></div>
             <img src="@00412X00295prp" alt="@title" loading="lazy" class="object-cover w-full h-full" />
@@ -240,10 +240,10 @@
               </div>
             </div>
           </div>
-          <a href="/tour.bc?id=@id"
+          <span
             class="absolute flex items-center hover:scale-105 justify-center w-36 h-12 px-4 py-2 text-lg text-white top-[56%] left-5 rounded-xl bg-Primery-700">
             مشاهده
-          </a>
+          </span>
           <div class="flex flex-col gap-2 px-4 mt-9">
             <span class="flex items-center text-sm text-zinc-900">
               <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="calenderIcon" width="24" height="24"
@@ -254,7 +254,7 @@
               <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="mapIcon" width="24" height="24" loading="lazy" />
               ایرلاین: @prp_10000504
             </span>
-            <div class="w-full flex justify-between">
+            <div class="flex justify-between w-full">
               <span class="flex items-center text-sm text-zinc-900">
                 <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="coinIcon" width="24" height="24"
                   loading="lazy" />
@@ -263,11 +263,11 @@
               <span class="font-medium text-zinc-900">@prp_8181</span>
             </div>
           </div>
-        </div>
+        </a>
       </face>
       <face>
-        <div
-          class="swiper-slide relative bg-white overflow-hidden border border-solid pb-7 border-zinc-300 rounded-xl">
+        <a href="@link"
+          class="relative overflow-hidden bg-white border border-solid swiper-slide pb-7 border-zinc-300 rounded-xl">
           <div class="relative h-64">
             <div class="absolute w-full h-full bg-shadow-gradient"></div>
             <img src="@00412X00295prp" alt="@title" loading="lazy" class="object-cover w-full h-full" />
@@ -280,10 +280,10 @@
               </div>
             </div>
           </div>
-          <a href="@link"
+          <span
             class="absolute flex items-center hover:scale-105 justify-center w-36 h-12 px-4 py-2 text-lg text-white top-[56%] left-5 rounded-xl bg-Primery-700">
             مشاهده
-          </a>
+          </span>
           <div class="flex flex-col gap-2 px-4 mt-9">
             <span class="flex items-center text-sm text-zinc-900">
               <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="calenderIcon" width="24" height="24"
@@ -294,7 +294,7 @@
               <img src="[##cms.cms.cdn##]/images/mapIcon.svg" alt="mapIcon" width="24" height="24" loading="lazy" />
               ایرلاین: @prp_10000504
             </span>
-            <div class="w-full flex justify-between">
+            <div class="flex justify-between w-full">
               <span class="flex items-center text-sm text-zinc-900">
                 <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="coinIcon" width="24" height="24"
                   loading="lazy" />
@@ -303,7 +303,7 @@
               <span class="font-medium text-zinc-900">@prp_8181</span>
             </div>
           </div>
-        </div>
+        </a>
       </face>
     </basis>
 
@@ -342,7 +342,7 @@
       </layout>
       <face filter="link in null">
         <div class="swiper-slide">
-          <article
+          <a aria-label="@title" href="/article.bc?id=@id"
             class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl">
             <img src="@00412X00295prp" alt="@title" loading="lazy"
               class="absolute bottom-0 right-0 object-cover w-full h-full" />
@@ -350,7 +350,7 @@
             <div class="relative z-10">
               <div>
                 <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
-                <div class="text-sm text-justify text-white line-clamp-3">
+                <div class="text-sm text-justify text-white line-clamp-2">
                   @prp_7244
                 </div>
               </div>
@@ -358,20 +358,20 @@
                 <span class="flex items-center gap-1 text-white">
                   <img src="[##cms.cms.cdn##]/images/calenderIconWhite.svg" alt="calenderIcon" width="24" height="24"
                     loading="lazy" />
-                  @cdate
+                  @prp_7249
                 </span>
-                <a aria-label="@title" href="/article.bc?id=@id"
+                <span
                   class="flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 rounded-xl bg-Primery-700">
                   مشاهده
-                </a>
+                </span>
               </div>
             </div>
-          </article>
+          </a>
         </div>
       </face>
       <face>
         <div class="swiper-slide">
-          <article
+          <a href="@link" aria-label="@title"
             class="relative flex flex-col justify-end px-4 pb-8 overflow-hidden bg-center bg-no-repeat bg-cover h-96 rounded-xl">
             <img src="@00412X00295prp" alt="@title" loading="lazy"
               class="absolute bottom-0 right-0 object-cover w-full h-full" />
@@ -379,7 +379,7 @@
             <div class="relative z-10">
               <div>
                 <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
-                <p class="text-sm text-justify text-white line-clamp-3">
+                <p class="text-sm text-justify text-white line-clamp-2">
                   @prp_7244
                 </p>
               </div>
@@ -387,15 +387,15 @@
                 <span class="flex items-center gap-1 text-white">
                   <img src="[##cms.cms.cdn##]/images/calenderIconWhite.svg" alt="calenderIconWhite" width="24"
                     height="24" loading="lazy" />
-                  @cdate
+                    @prp_7249
                 </span>
-                <a href="@link" aria-label="@title"
+                <span
                   class="flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 rounded-xl bg-Primery-700">
                   مشاهده
-                </a>
+                </span>
               </div>
             </div>
-          </article>
+          </a>
         </div>
       </face>
     </basis>
@@ -405,39 +405,39 @@
       <div
         class="pt-20 swiper ailines-swiper-desktop swiper-initialized swiper-horizontal swiper-rtl swiper-backface-hidden">
         <div class="flex flex-col gap-2 swiper-wrapper lg:flex-row lg:gap-0 lg:justify-between">
-          <div class="swiper-slide border border-dashed px-5 py-3 border-zinc-300 rounded-xl">
+          <div class="px-5 py-3 border border-dashed swiper-slide border-zinc-300 rounded-xl">
             <a target="_blank" href="https://www.sunexpress.com/en-GB" class="w-full"><img
                 src="[##cms.cms.cdn##]/images/sunExpress.png" alt="sunExpress" loading="lazy"
-                class="h-full w-full grayscale hover:grayscale-0" /></a>
+                class="w-full h-full grayscale hover:grayscale-0" /></a>
           </div>
-          <div class="swiper-slide object-cover border border-dashed px-5 py-3 border-zinc-300 rounded-xl">
+          <div class="object-cover px-5 py-3 border border-dashed swiper-slide border-zinc-300 rounded-xl">
             <a target="_blank" href="https://www.salamair.com/en/" class="w-full">
               <img src="[##cms.cms.cdn##]/images/SalamAir.png" alt="SalamAir" loading="lazy"
-                class="h-full object-cover w-full grayscale hover:grayscale-0" />
+                class="object-cover w-full h-full grayscale hover:grayscale-0" />
             </a>
           </div>
-          <div class="swiper-slide border border-dashed px-5 py-3 border-zinc-300 rounded-xl">
+          <div class="px-5 py-3 border border-dashed swiper-slide border-zinc-300 rounded-xl">
             <a target="_blank" href="https://www.turkishairlines.com/" class="w-full">
               <img src="[##cms.cms.cdn##]/images/turkishAirlines.png" alt="turkishAirlines" loading="lazy"
-                class="h-full object-cover w-full grayscale hover:grayscale-0" />
+                class="object-cover w-full h-full grayscale hover:grayscale-0" />
             </a>
           </div>
-          <div class="swiper-slide border border-dashed px-5 py-3 border-zinc-300 rounded-xl">
+          <div class="px-5 py-3 border border-dashed swiper-slide border-zinc-300 rounded-xl">
             <a target="_blank" href="https://www.qatarairways.com/en/homepage.html" class="w-full">
               <img src="[##cms.cms.cdn##]/images/Qatar.png" alt="Qatar" loading="lazy"
-                class="h-full object-cover w-full grayscale hover:grayscale-0" />
+                class="object-cover w-full h-full grayscale hover:grayscale-0" />
             </a>
           </div>
-          <div class="swiper-slide border border-dashed px-5 py-3 border-zinc-300 rounded-xl">
+          <div class="px-5 py-3 border border-dashed swiper-slide border-zinc-300 rounded-xl">
             <a target="_blank" href="https://www.iranair.com/" class="w-full">
               <img src="[##cms.cms.cdn##]/images/IranAir.png" alt="IranAir" loading="lazy"
-                class="h-full object-cover w-full grayscale hover:grayscale-0" />
+                class="object-cover w-full h-full grayscale hover:grayscale-0" />
             </a>
           </div>
-          <div class="swiper-slide border border-dashed px-5 py-3 border-zinc-300 rounded-xl">
+          <div class="px-5 py-3 border border-dashed swiper-slide border-zinc-300 rounded-xl">
             <a target="_blank" href="https://www.qeshm-air.com/web2/" class="w-full">
               <img src="[##cms.cms.cdn##]/images/gheshmair.png" alt="gheshmair" loading="lazy"
-                class="h-full object-cover w-full grayscale hover:grayscale-0" />
+                class="object-cover w-full h-full grayscale hover:grayscale-0" />
             </a>
           </div>
         </div>
