@@ -2,15 +2,22 @@
   <member name="info" type="view" />
 </basis>
 <footer class="relative px-4 py-4 mt-24 rounded-xl bg-footer-gradient">
-  <img src="[##cms.cms.cdn##]/images/footerBackIcon.svg" alt="footerBackIcon" loading="lazy"
+  <img src="[##cms.cms.cdn##]/images/footerBackIcon.svg" alt="footerBackIcon" width="1879" height="638" loading="lazy"
     class="hidden h-auto max-w-full lg:absolute lg:-top-3 lg:-right-2 lg:-z-10 2xl:-top-6 2xl:-right-3 lg:block" />
-  <img src="[##cms.cms.cdn##]/images/footerBackIcon.svg" alt="footerBackIcon" loading="lazy"
-    class="absolute -top-3 -right-px -z-10 lg:hidden" />
+  <img src="[##cms.cms.cdn##]/images/footerBackIcon.svg" alt="footerBackIcon" width="1879" height="638" loading="lazy"
+    class="absolute h-auto max-w-full -top-3 -right-px -z-10 lg:hidden" />
   <div class="flex flex-col items-center justify-center h-auto max-w-full gap-2 mb-6">
-    <img src="[##cms.cms.cdn##]/images/headerIcons.svg" alt="headerIcons" loading="lazy" />
-    <h2 class="text-sm font-normal text-white">
-      شرکت خدمات مسافرت هوایی سورینت پرواز
-    </h2>
+    <img src="[##cms.cms.cdn##]/images/footer-sorinet-logo.png" alt="headerIcons" width="100" height="45"
+      loading="lazy" />
+    <div class="flex items-center">
+      <div class="flex-1 mr-2 border-b border-black border-dashed"></div>
+      <h2 class="text-sm font-normal text-white">
+        شرکت خدمات مسافرت هوایی و جهانگردی و زیارتی
+      </h2>
+      <div class="absolute w-2/5 left-0 top-[12%] h-px border-dashed border border-Primery-200"></div>
+      <div class="absolute w-2/5 right-0 top-[12%] h-px border-dashed border border-Primery-200"></div>
+      <div class="flex-1 mr-2 border-b border-black border-dashed"></div>
+    </div>
   </div>
 
   <!-- content of footer -->
@@ -60,8 +67,8 @@
                   </face>
                 </basis>
               </div>
-              <button class="w-full px-4 py-2 mt-3 text-white data-body-btn h-14 bg-Primery-700 rounded-xl"
-                type="button" data-btn-uploadfooter>
+              <button class="w-full mt-3 text-white data-body-btn h-14 bg-Primery-700 rounded-xl" type="button"
+                data-btn-uploadfooter>
                 <span class="">ارسال</span>
               </button>
               <div
@@ -82,23 +89,25 @@
           </div>
 
           <div class="flex items-center justify-between mt-8">
-            <span class="text-white">ما رو اینجا دنبال کنید</span>
+            <span class="text-white">ما را در شبکه های اجتماعی دنبال کنید</span>
             <basis core="print" datamembername="db.info">
               <layout>
                 <div class="flex gap-2">@child</div>
               </layout>
               <face filter="TypeID in('245') and text in('تلگرام')">
                 <a href="@largetext" aria-label="telegram" class="hover:scale-105"><img
-                    src="[##cms.cms.cdn##]/images/telegramIcon.svg" alt="telegramIcon" loading="lazy" /></a>
+                    src="[##cms.cms.cdn##]/images/telegramIcon.svg" width="48" height="49" alt="telegramIcon"
+                    loading="lazy" /></a>
               </face>
               <face filter="TypeID in('245') and text in('اینستاگرام')">
                 <a href="@largetext" aria-label="instagram" class="hover:scale-105"><img
-                    src="[##cms.cms.cdn##]/images/instagramIcon.svg" alt="instagramIcon" loading="lazy" /></a>
+                    src="[##cms.cms.cdn##]/images/instagramIcon.svg" width="48" height="49" alt="instagramIcon"
+                    loading="lazy" /></a>
               </face>
               <face filter="TypeID in('245') and text in('واتس اپ')">
                 <a href="@largetext" aria-label="whatsapp" class="hover:scale-105"><img
-                    src="[##cms.cms.cdn##]/images/whatsappIcon.png" class="w-12 h-12 rounded-lg" alt=""
-                    loading="lazy" /></a>
+                    src="[##cms.cms.cdn##]/images/whatsappIcon.png" width="48" height="49" class="w-12 h-12 rounded-lg"
+                    alt="whatsappIcon" loading="lazy" /></a>
               </face>
             </basis>
           </div>
@@ -144,7 +153,8 @@
           <basis core="print" datamembername="db.info">
             <face filter="TypeID in(244) and valueID in(4039706)">
               <div class="flex items-center gap-2 text-sm text-white">
-                <img src="[##cms.cms.cdn##]/images/addressIcon.svg" alt="addressIcon" loading="lazy" />
+                <img src="[##cms.cms.cdn##]/images/addressIcon.svg" alt="addressIcon" width="43" height="44"
+                  loading="lazy" />
                 @Answer
               </div>
             </face>
@@ -153,7 +163,8 @@
           <basis core="print" datamembername="db.info">
             <face filter="TypeID in(240) and valueID in(4039707)">
               <div class="flex items-center gap-2 text-sm text-white">
-                <img src="[##cms.cms.cdn##]/images/phoneIcon.svg" alt="phoneIcon" loading="lazy" />
+                <img src="[##cms.cms.cdn##]/images/phoneIcon.svg" alt="phoneIcon" width="43" height="44"
+                  loading="lazy" />
                 تلفن تماس و پشتیبانی :<a href="tel:+9821٤٧٦٤0" style="
                     font-weight: bold;
                     font-size: 25px;
@@ -174,7 +185,8 @@
             href="https://trustseal.enamad.ir/?id=563916&Code=YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN"><img
               referrerpolicy="origin"
               src="https://trustseal.enamad.ir/logo.aspx?id=563916&Code=YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN" alt="eNamad"
-              loading="lazy" decoding="async" style="cursor: pointer" code="YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN" /></a>
+              loading="lazy" decoding="async" class="h-auto max-w-full" style="cursor: pointer"
+              code="YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN" /></a>
           <a href="https://www.iata.org/" class="flex items-center w-16 h-16 p-1 bg-white rounded-xl hover:scale-105"
             rel="noopener">
             <img src="[##cms.cms.cdn##]/images/lata.jpg" alt="lata" loading="lazy" class="h-auto max-w-full" />
@@ -197,13 +209,16 @@
       <!-- about us end -->
     </div>
 
-    <div class="mt-6 lg:flex lg:items-center lg:justify-center lg:gap-8">
-      <h3 class="text-sm font-medium text-center text-white">
-        طراحی سایت آژانس مسافرتی و
-        <a href="https://www.basisfly.com/" target="_blank">رزرواسیون آنلاین توسط بیسیس فلای</a>
-      </h3>
-      <div class="flex justify-between mt-3 lg:mt-0">
+    <div class="mt-6 lg:flex lg:items-center lg:justify-center lg:gap-40">
+      <div class="flex items-center gap-2">
+        <h3 class="text-sm font-medium text-center text-white">
+          طراحی سایت آژانس مسافرتی و
+          <a href="https://www.basisfly.com/" target="_blank" class="hover:text-Primery-600">رزرواسیون آنلاین توسط بیسیس
+            فلای</a>
+        </h3>
         <img src="[##cms.cms.cdn##]/images/basisFly.png" alt="basisFly" class="h-4 w-17" loading="lazy" />
+      </div>
+      <div class="flex justify-between mt-3 lg:mt-0">
         <img src="[##cms.cms.cdn##]/images/trust-login.png" alt="trust-login" loading="lazy" />
       </div>
     </div>

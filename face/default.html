@@ -3,8 +3,10 @@
     propertyid="8076,8181,10000504,8077" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="210485">
-  <member name="tours" type="list" link="tour.bc" order="ord" size="412x295"
-  propertyid="8077,8181,10000504,8076" />
+  <member name="tours" type="list" link="tour.bc" order="ord" size="412x295" propertyid="8077,8181,10000504,8076" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="213978">
+  <member name="busy-flights" type="list" link="article.bc" order="ord" size="" propertyid="3087627,3087628,3087629,3087630" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="210488">
   <member name="articles" type="list" link="article.bc" order="ord" size="412x295" propertyid="7244,7249" />
@@ -191,6 +193,70 @@
     </basis>
     <!-- تور لحظه اخری  -->
 
+    <!-- مسیرهای پرتردد -->
+        <section class="mt-24 desktopContainer hidden">
+          <div class="pt-20 swiper popular-way-swiper">
+            <basis core="list" datamembername="db.busy-flights">
+              <layout>
+                <div class="swiper-wrapper">
+                  @child
+                </div>
+              </layout>
+              <face>
+                <article class="swiper-slide ticket-article border border-solid border-zinc-300 rounded-xl overflow-hidden">
+                  <img src="./images/dubai.jpg" class="h-40 object-cover" alt="@title" width="100%" height="160">
+                  <div class="flex items-center justify-between px-2 py-4">
+                    <h3 class="text-zinc-900 font-bold text-xl dep-text">@prp_3087627</h3>
+                    <span class="hidden dep-id">prp_3087629</span>
+                    <span class="hidden flight-type-article"></span>
+                    <div class="relative">
+                      <svg width="120" height="6" viewBox="0 0 166 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M165.667 2.9971C165.665 1.52434 164.471 0.331733 162.998 0.333333C161.525 0.334933 160.332 1.53014 160.333 3.0029C160.335 4.47566 161.529 5.66827 163.002 5.66667C164.475 5.66507 165.668 4.46986 165.667 2.9971ZM5.66668 3.17093C5.66551 1.69817 4.47065 0.505561 2.99789 0.507162C1.52513 0.508762 0.33217 1.70397 0.333338 3.17673C0.334506 4.64948 1.52936 5.84209 3.00212 5.84049C4.47488 5.83889 5.66785 4.64369 5.66668 3.17093ZM163 2.5L162 2.50109L162 3.50109L163 3.5L163 2.5ZM160 2.50326L158 2.50543L158 3.50543L160 3.50326L160 2.50326ZM156 2.50761L154 2.50978L154 3.50978L156 3.5076L156 2.50761ZM152 2.51195L150 2.51412L150 3.51412L152 3.51195L152 2.51195ZM148 2.5163L146 2.51847L146 3.51847L148 3.5163L148 2.5163ZM144 2.52064L142 2.52281L142 3.52281L144 3.52064L144 2.52064ZM140 2.52499L138 2.52716L138 3.52716L140 3.52499L140 2.52499ZM136 2.52933L134 2.53151L134 3.53151L136 3.52933L136 2.52933ZM132 2.53368L130 2.53585L130 3.53585L132 3.53368L132 2.53368ZM128 2.53802L126 2.5402L126 3.5402L128 3.53802L128 2.53802ZM124 2.54237L122 2.54454L122 3.54454L124 3.54237L124 2.54237ZM120 2.54672L118 2.54889L118 3.54889L120 3.54672L120 2.54672ZM116 2.55106L114 2.55323L114 3.55323L116 3.55106L116 2.55106ZM112 2.55541L110 2.55758L110 3.55758L112 3.55541L112 2.55541ZM108 2.55975L106 2.56193L106 3.56193L108 3.55975L108 2.55975ZM104 2.5641L102 2.56627L102 3.56627L104 3.5641L104 2.5641ZM99.9996 2.56844L97.9996 2.57062L98.0004 3.57062L100 3.56844L99.9996 2.56844ZM95.9996 2.57279L93.9996 2.57496L94.0004 3.57496L96.0004 3.57279L95.9996 2.57279ZM91.9996 2.57714L89.9996 2.57931L90.0004 3.57931L92.0004 3.57714L91.9996 2.57714ZM87.9996 2.58148L85.9996 2.58365L86.0004 3.58365L88.0004 3.58148L87.9996 2.58148ZM83.9996 2.58583L81.9996 2.588L82.0004 3.588L84.0004 3.58583L83.9996 2.58583ZM79.9996 2.59017L77.9996 2.59235L78.0004 3.59235L80.0004 3.59017L79.9996 2.59017ZM75.9996 2.59452L73.9996 2.59669L74.0004 3.59669L76.0004 3.59452L75.9996 2.59452ZM71.9996 2.59886L69.9996 2.60104L70.0004 3.60104L72.0004 3.59886L71.9996 2.59886ZM67.9996 2.60321L65.9996 2.60538L66.0004 3.60538L68.0004 3.60321L67.9996 2.60321ZM63.9996 2.60756L61.9996 2.60973L62.0004 3.60973L64.0004 3.60756L63.9996 2.60756ZM59.9996 2.6119L57.9996 2.61407L58.0004 3.61407L60.0004 3.6119L59.9996 2.6119ZM55.9996 2.61625L53.9997 2.61842L54.0004 3.61842L56.0004 3.61625L55.9996 2.61625ZM51.9997 2.62059L49.9997 2.62277L50.0004 3.62277L52.0004 3.62059L51.9997 2.62059ZM47.9997 2.62494L45.9997 2.62711L46.0004 3.62711L48.0004 3.62494L47.9997 2.62494ZM43.9997 2.62928L41.9997 2.63146L42.0005 3.63146L44.0005 3.62928L43.9997 2.62928ZM39.9997 2.63363L37.9997 2.6358L38.0005 3.6358L40.0005 3.63363L39.9997 2.63363ZM35.9997 2.63798L33.9997 2.64015L34.0005 3.64015L36.0004 3.63798L35.9997 2.63798ZM31.9997 2.64232L29.9997 2.64449L30.0005 3.64449L32.0005 3.64232L31.9997 2.64232ZM27.9997 2.64667L25.9997 2.64884L26.0005 3.64884L28.0005 3.64667L27.9997 2.64667ZM23.9997 2.65101L21.9997 2.65319L22.0005 3.65319L24.0005 3.65101L23.9997 2.65101ZM19.9997 2.65536L17.9997 2.65753L18.0005 3.65753L20.0005 3.65536L19.9997 2.65536ZM15.9997 2.6597L13.9997 2.66188L14.0005 3.66188L16.0005 3.6597L15.9997 2.6597ZM11.9997 2.66405L9.99968 2.66622L10.0005 3.66622L12.0005 3.66405L11.9997 2.66405ZM7.99968 2.6684L5.99969 2.67057L6.00048 3.67057L8.00048 3.6684L7.99968 2.6684ZM3.99969 2.67274L2.99961 2.67383L3.0004 3.67383L4.00048 3.67274L3.99969 2.67274Z" fill="#A1A1AA"/>
+                        </svg>                      
+                      <svg xmlns="http://www.w3.org/2000/svg" class="absolute top-[-10px] left-0 right-0 mx-auto" width="24"
+                        height="25" viewBox="0 0 24 25" fill="none">
+                        <g clip-path="url(#clip0_395_330)">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M22.0507 8.75092L19.9873 8.74951C19.8381 8.75022 19.6981 8.81386 19.6005 8.93265L18.0088 10.8694L15.2532 10.6156L15.2037 4.41706C15.2023 4.2813 15.145 4.15048 15.046 4.05714C14.9463 3.96309 14.8127 3.91431 14.6762 3.92209C14.4641 3.9334 14.2562 3.93905 14.0511 3.94612C13.5286 3.96238 13.035 3.97795 12.5337 4.06492C11.7007 4.20351 11.0431 4.76213 10.5821 5.72379C9.90255 7.11326 9.10776 8.75657 8.35681 10.4154C8.25498 10.6332 8.22105 10.6474 7.99124 10.6396L7.79042 10.6368C6.66046 10.624 5.49374 10.6099 4.33761 10.6686C2.7042 10.7563 0.947742 11.6387 0.952692 13.3733C0.955528 15.1 2.71057 15.9853 4.34328 16.0765C5.58566 16.1366 6.82876 16.1239 7.99832 16.1055C8.22813 16.1006 8.2649 16.1232 8.35823 16.3297C9.09716 17.9638 9.89478 19.61 10.5828 21.0235C11.0537 21.9979 11.6915 22.5409 12.5358 22.6852C13.0428 22.7693 13.5632 22.7849 14.0667 22.8018C14.2682 22.8082 14.4712 22.8146 14.6769 22.8252C14.8134 22.8315 14.9471 22.7828 15.0461 22.6894C15.1387 22.594 15.2016 22.4646 15.203 22.3288C15.2151 20.5066 15.2412 17.3013 15.2518 16.1239L18.0102 15.8573L19.5977 17.8111C19.6932 17.9278 19.8353 17.9949 19.9859 17.9956L22.0485 17.9978C22.1815 17.9978 22.3095 17.9447 22.4028 17.8514C22.4169 17.8372 22.4304 17.8224 22.4431 17.8054C22.5371 17.6845 22.5711 17.5261 22.5343 17.3762L21.5373 13.3768L22.535 9.37247C22.5732 9.22256 22.5393 9.06417 22.4445 8.94396C22.3498 8.82234 22.2041 8.75163 22.0507 8.75092Z"
+                            fill="#808080" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_395_330">
+                            <rect width="24" height="25" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <h3 class="text-zinc-900 font-bold text-xl des-text">@prp_3087628</h3>
+                    <p class="hidden des-id">@prp_3087630</p>
+                  </div>
+                  <button type="button"
+                  class="set-ticket w-full flex items-center justify-center text-white font-medium py-3 rounded-lg transition-all duration-300 bg-Primery-700 hover:bg-black">مشاهده</button>
+                </article>
+              </face>
+            </basis>
+
+
+            <div class="absolute top-0 left-0 flex justify-between w-full">
+              <div class="flex items-center gap-8">
+                <h2 class="text-2xl font-bold">مسیرهای پرتردد</h2>
+                <a href="" class="text-xl font-medium text-Primery-700 hover:scale-105">مشاهده همه</a>
+              </div>
+              <div class="flex">
+                <div class="swiper-button-next-custom hover:scale-105">
+                  <img src="[##cms.cms.cdn##]/images/previousIcon.svg" alt="previousIcon" width="49" height="49"
+                    loading="lazy" />
+                </div>
+                <div class="swiper-button-prev-custom hover:scale-105">
+                  <img src="[##cms.cms.cdn##]/images/nextIcon.svg" alt="nextIcon" width="49" height="49"
+                    loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    <!-- مسیرهای پرتردد -->
+
     <!-- تور ها -->
     <basis core="list" datamembername="db.tours">
       <layout>
@@ -209,8 +275,8 @@
             <div class="absolute top-0 left-0 flex justify-between w-full">
               <div class="flex items-center gap-8">
                 <h2 class="text-2xl font-bold">تور ها</h2>
-                <a href="/tour-list.bc?catid=210485"
-                  class="text-xl font-medium text-Primery-700 hover:scale-105">مشاهده همه</a>
+                <a href="/tour-list.bc?catid=210485" class="text-xl font-medium text-Primery-700 hover:scale-105">مشاهده
+                  همه</a>
               </div>
               <div class="flex">
                 <div class="swiper-button-next-custom hover:scale-105">
@@ -241,7 +307,7 @@
             </div>
           </div>
           <span
-            class="absolute flex items-center hover:scale-105 justify-center w-36 h-12 px-4 py-2 text-lg text-white top-[56%] left-5 rounded-xl bg-Primery-700">
+            class="absolute flex items-center hover:scale-105 justify-center w-28 h-12 px-4 py-2 text-lg text-white top-[56%] left-5 rounded-xl bg-Primery-700">
             مشاهده
           </span>
           <div class="flex flex-col gap-2 px-4 mt-9">
@@ -256,8 +322,7 @@
             </span>
             <div class="flex justify-between w-full">
               <span class="flex items-center text-sm text-zinc-900">
-                <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="coinIcon" width="24" height="24"
-                  loading="lazy" />
+                <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="coinIcon" width="24" height="24" loading="lazy" />
                 شروع قیمت از:
               </span>
               <span class="font-medium text-zinc-900">@prp_8181</span>
@@ -281,7 +346,7 @@
             </div>
           </div>
           <span
-            class="absolute flex items-center hover:scale-105 justify-center w-36 h-12 px-4 py-2 text-lg text-white top-[56%] left-5 rounded-xl bg-Primery-700">
+            class="absolute flex items-center hover:scale-105 justify-center w-28 h-12 px-4 py-2 text-lg text-white top-[56%] left-5 rounded-xl bg-Primery-700">
             مشاهده
           </span>
           <div class="flex flex-col gap-2 px-4 mt-9">
@@ -296,8 +361,7 @@
             </span>
             <div class="flex justify-between w-full">
               <span class="flex items-center text-sm text-zinc-900">
-                <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="coinIcon" width="24" height="24"
-                  loading="lazy" />
+                <img src="[##cms.cms.cdn##]/images/coinIcon.svg" alt="coinIcon" width="24" height="24" loading="lazy" />
                 شروع قیمت از:
               </span>
               <span class="font-medium text-zinc-900">@prp_8181</span>
@@ -322,8 +386,8 @@
 
             <div class="absolute top-0 left-0 flex justify-between w-full">
               <div class="flex items-center gap-8">
-                <h2 class="text-2xl font-bold">مقاله ها</h2>
-                <a href="/article-list.bc?catid=210488"
+                <h2 class="text-2xl font-bold">اخبار گردشگری</h2>
+                <a href="/article-list.bc?catid=212221"
                   class="text-xl font-medium text-Primery-700 hover:scale-105">مشاهده همه</a>
               </div>
               <div class="flex">
@@ -361,7 +425,7 @@
                   @prp_7249
                 </span>
                 <span
-                  class="flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 rounded-xl bg-Primery-700">
+                  class="flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-12 w-28 rounded-xl bg-Primery-700">
                   مشاهده
                 </span>
               </div>
@@ -387,10 +451,10 @@
                 <span class="flex items-center gap-1 text-white">
                   <img src="[##cms.cms.cdn##]/images/calenderIconWhite.svg" alt="calenderIconWhite" width="24"
                     height="24" loading="lazy" />
-                    @prp_7249
+                  @prp_7249
                 </span>
                 <span
-                  class="flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-14 w-36 rounded-xl bg-Primery-700">
+                  class="flex items-center justify-center px-4 py-2 text-lg text-white hover:scale-105 h-12 w-28 rounded-xl bg-Primery-700">
                   مشاهده
                 </span>
               </div>

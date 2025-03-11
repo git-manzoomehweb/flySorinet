@@ -124,6 +124,57 @@ document.addEventListener("DOMContentLoaded", function () {
 function loadContentHomePage() {
   loadSearchEngine("search-engine.bc", "searchbox");
 }
+let i = document.querySelectorAll(".ticket-article");
+i.forEach((e) => {
+  let t = e.querySelector(".flight-type-article").innerText.trim(),
+    r = e.querySelector(".dep-text").innerText.trim(),
+    i = e.querySelector(".dep-id").innerText.trim(),
+    a = e.querySelector(".des-text").innerText.trim(),
+    l = e.querySelector(".des-id").innerText.trim();
+  e.querySelector(".set-ticket").addEventListener("click", () => {
+    if (window.location.href.endsWith("/")) {
+      (document.querySelector("#flight-form #dep1").value = r),
+        (document.querySelector(
+          "#flight-form .co-id.FCDid1.from"
+        ).value = i),
+        (document.querySelector(
+          "#flight-form #des1"
+        ).value = a),
+        (document.querySelector(
+          "#flight-form .co-id.FCDid2.to"
+        ).value = l),
+        t.includes("اکونومی") &&
+          ((document.querySelector("#flight-form .FlightClass-text").innerText =
+            "اکونومی"),
+          (document.querySelector("#flight-form .FlightClass-text").value =
+            "Economy")),
+        t.includes("بیزینس") &&
+          ((document.querySelector("#flight-form .FlightClass-text").innerText =
+            "بیزینس"),
+          (document.querySelector("#flight-form .FlightClass-text").value =
+            "BusinessClass")),
+        t.includes("فرست") &&
+          ((document.querySelector("#flight-form .FlightClass-text").innerText =
+            "فرست"),
+          (document.querySelector("#flight-form .FlightClass-text").value =
+            "FirstClass")),
+        document.querySelector("#flight-form").classList.remove("hidden");
+      let e = document.querySelector(".bg-search");
+      e && window.scrollTo({ top: e.offsetTop, behavior: "smooth" });
+    } else
+      localStorage.setItem(
+        "flightData",
+        JSON.stringify({
+          depId3: i,
+          desId3: l,
+          departureCity2: r,
+          destinationCity2: a,
+          flightType2: t,
+        })
+      ),
+        (window.location.href = "/");
+  });
+});
 async function loadSearchEngine(url, sectionload) {
   try {
     var xhrobj = new XMLHttpRequest();
@@ -149,6 +200,40 @@ async function loadSearchEngine(url, sectionload) {
           document.head
             .appendChild(scriptTag)
             .parentNode.removeChild(scriptTag);
+        }
+        let s = JSON.parse(localStorage.getItem("flightData"));
+        if (s && "/" === window.location.pathname) {
+          localStorage.removeItem("searchHistory_flight");
+          let {
+            depId3: c,
+            desId3: d,
+            departureCity2: u,
+            destinationCity2: p,
+            flightType2: f,
+          } = s;
+          (document.querySelector("#flight-form #dep1").value = u),
+            (document.querySelector(
+              "#flight-form .co-id.FCDid1.from"
+            ).value = c),
+            (document.querySelector(
+              "#flight-form #des1"
+            ).value = p),
+            (document.querySelector(
+              "#flight-form .co-id.FCDid2.to"
+            ).value = d),
+            f.includes("اکونومی") &&
+              ((document.querySelector(".FlightClass-text").innerText =
+                "اکونومی"),
+              (document.querySelector(".FlightClass-text").value = "Economy")),
+            f.includes("بیزینس") &&
+              ((document.querySelector(".FlightClass-text").innerText = "بیزینس"),
+              (document.querySelector(".FlightClass-text").value = "BusinessClass")),
+            f.includes("فرست") &&
+              ((document.querySelector(".FlightClass-text").innerText = "فرست"),
+              (document.querySelector(".FlightClass-text").value = "FirstClass")),
+            document.querySelector("#flight-form").classList.remove("hidden");
+          let h = document.querySelector(".bg-blur-t");
+          h && window.scrollTo({ top: h.offsetTop, behavior: "smooth" });
         }
 
         const pathnamehome = window.location.pathname;
@@ -771,6 +856,30 @@ if (document.querySelector(".slider-article-mobile")) {
         slidesPerView: 4,
         spaceBetween: 50,
       },
+    },
+  });
+}
+
+
+if (document.querySelector(".popular-way-swiper")) {
+  var hotelsSwiper = new Swiper(".popular-way-swiper", {
+    slidesPerView: 5,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 8,
+    grabCursor: true,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-custom",
+      prevEl: ".swiper-button-prev-custom",
     },
   });
 }

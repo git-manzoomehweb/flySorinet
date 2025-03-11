@@ -68,7 +68,7 @@
               <meta itemprop="position" content="1" />
             </a>
           </li>
-          <span class="text-white"> &gt; </span>
+          <span class="text-white"> > </span>
           <basis core="print" datamembername="db.navigation">
             <face filter="RowNumber=max(RowNumber) and parentcatid<>210442">
               <li class="inline-block font-normal text-white" itemprop="itemListElement" itemscope
@@ -84,7 +84,7 @@
                   aria-label="@title"><span itemprop="name">@title</span>
                   <meta itemprop="position" content="@rownumber" />
                 </a>
-                <span class="text-white"> &gt; </span>
+                <span class="text-white"> > </span>
               </li>
             </face>
             <face filter="parentcatid<>210442">
@@ -94,7 +94,7 @@
                     class="text-white" itemprop="name">@title</span>
                   <meta itemprop="position" content="@rownumber" />
                 </a>
-                <span class="text-white"> &gt; </span>
+                <span class="text-white"> > </span>
               </li>
             </face>
           </basis>
@@ -121,7 +121,7 @@
               <img src="[##cms.cms.cdn##]/images/searchIcon.svg" width="25" height="25" alt="searchIcon" class="cursor-pointer" loading="lazy" />
             </div>
             <basis core="tree" datamembername="tourism-magazine.cat" idcol="catid" parentidcol="parentid"
-              nullvalue="212276">
+              nullvalue="[##cms.query.catid##]">
               <layout>
                 <div class="flex flex-col gap-1 mt-4">
                   <h2 class="font-medium">شهر/کشور</h2>
