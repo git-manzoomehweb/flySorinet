@@ -133,16 +133,14 @@ i.forEach((e) => {
     l = e.querySelector(".des-id").innerText.trim();
   e.querySelector(".set-ticket").addEventListener("click", () => {
     if (window.location.href.endsWith("/")) {
-      (document.querySelector("#flight-form #dep1").value = r),
-        (document.querySelector(
-          "#flight-form .co-id.FCDid1.from"
-        ).value = i),
-        (document.querySelector(
-          "#flight-form #des1"
-        ).value = a),
-        (document.querySelector(
-          "#flight-form .co-id.FCDid2.to"
-        ).value = l),
+      document.querySelector("#flight-form #dep1").value = r;
+      document.querySelector("#multi-flight-form .fromcity-text").value = r;
+        (document.querySelector("#flight-form .co-id.FCDid1.from").value = i),
+        (document.querySelector("#multi-flight-form .co-id.FCDid1.from.fromcity").value = i),
+        (document.querySelector("#flight-form #des1").value = a),
+        (document.querySelector("#multi-flight-form .tocity-text").value = a),
+        (document.querySelector("#flight-form .co-id.FCDid2.to").value = l),
+        (document.querySelector("#multi-flight-form .co-id.FCDid2.to.tocity").value = l),
         t.includes("اکونومی") &&
           ((document.querySelector("#flight-form .FlightClass-text").innerText =
             "اکونومی"),
@@ -157,8 +155,8 @@ i.forEach((e) => {
           ((document.querySelector("#flight-form .FlightClass-text").innerText =
             "فرست"),
           (document.querySelector("#flight-form .FlightClass-text").value =
-            "FirstClass")),
-        document.querySelector("#flight-form").classList.remove("hidden");
+            "FirstClass"))
+      //   document.querySelector("#flight-form").classList.remove("hidden");
       let e = document.querySelector(".bg-search");
       e && window.scrollTo({ top: e.offsetTop, behavior: "smooth" });
     } else
@@ -211,16 +209,14 @@ async function loadSearchEngine(url, sectionload) {
             destinationCity2: p,
             flightType2: f,
           } = s;
-          (document.querySelector("#flight-form #dep1").value = u),
-            (document.querySelector(
-              "#flight-form .co-id.FCDid1.from"
-            ).value = c),
-            (document.querySelector(
-              "#flight-form #des1"
-            ).value = p),
-            (document.querySelector(
-              "#flight-form .co-id.FCDid2.to"
-            ).value = d),
+          document.querySelector("#flight-form #dep1").value = u;
+          document.querySelector("#multi-flight-form .fromcity-text").value = u;
+            (document.querySelector("#flight-form .co-id.FCDid1.from").value = c),
+            (document.querySelector("#multi-flight-form .co-id.FCDid1.from.fromcity").value = c),
+            (document.querySelector("#flight-form #des1").value = p),
+            (document.querySelector("#multi-flight-form .tocity-text").value = p),
+            (document.querySelector("#flight-form .co-id.FCDid2.to").value = d),
+            (document.querySelector("#multi-flight-form .co-id.FCDid2.to.tocity").value = d),
             f.includes("اکونومی") &&
               ((document.querySelector(".FlightClass-text").innerText =
                 "اکونومی"),
@@ -862,7 +858,7 @@ if (document.querySelector(".slider-article-mobile")) {
 
 
 if (document.querySelector(".popular-way-swiper")) {
-  var hotelsSwiper = new Swiper(".popular-way-swiper", {
+  var popularWaySwiper = new Swiper(".popular-way-swiper", {
     slidesPerView: 5,
     speed: 400,
     centeredSlides: false,
@@ -870,6 +866,28 @@ if (document.querySelector(".popular-way-swiper")) {
     grabCursor: true,
     autoplay: {
       delay: 4500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-custom",
+      prevEl: ".swiper-button-prev-custom",
+    },
+  });
+}
+if (document.querySelector(".popular-way-swiper-mobile")) {
+  var popularWaySwiperMobile = new Swiper(".popular-way-swiper-mobile", {
+    slidesPerView: 1,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 8,
+    grabCursor: true,
+    autoplay: {
+      delay: 3500,
       disableOnInteraction: false,
     },
     loop: true,
