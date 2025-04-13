@@ -51,6 +51,20 @@ $(document).ready(function () {
     LoadTour();
   });
 
+  $("#Insurance").click(function () {
+    window.parent.postMessage({ action: "select_clicked" }, "*");
+    $("#flight-type-items").hide();
+    $(".nav-module").each(function () {
+        var checknav = $(this).attr("data-nav");
+        if (checknav == "insurance") {
+            $(this).addClass("nav-module-selected");
+        } else {
+            $(this).removeClass("nav-module-selected");
+        }
+    });
+    LoadInsurane();
+  });
+
 
 });
 
@@ -101,6 +115,20 @@ function LoadTour() {
     $(".engine-content").removeClass("max-lg:hidden");
   }
 }
+
+function LoadInsurane() {
+  $("#flight-type-items").hide();
+  $("#Insurance").addClass("active-module");
+  $("#Insurance").siblings("li").removeClass("active-module");
+  $("#item-Insurance").show();
+  $("#item-Flight,#item-Hotel,#item-Tour,#item-FlightHotel").hide();
+  $(".bg-background-banner").children().addClass("hidden");
+  $(".bg-background-banner").find("#insurance-title").removeClass("hidden");
+  if ($(".engine-content").hasClass("max-lg:hidden")) {
+      $(".engine-content").removeClass("max-lg:hidden");
+  }
+}
+
 
 
 if ($(".checkparent_page").val() == "true") {

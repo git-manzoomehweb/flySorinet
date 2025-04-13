@@ -4368,3 +4368,7 @@ body {
 .article__largetext__container img {
   margin: 0 auto;
 }
+
+.ui-widget-content{
+  display: block !important;
+}
