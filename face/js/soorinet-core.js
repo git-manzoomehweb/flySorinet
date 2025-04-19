@@ -124,8 +124,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function loadContentHomePage() {
   loadSearchEngine("search-engine.bc", "searchbox");
 }
-let i = document.querySelectorAll(".ticket-article");
-i.forEach((e) => {
+let ticketArticle = document.querySelectorAll(".ticket-article");
+ticketArticle.forEach((e) => {
   let t = e.querySelector(".flight-type-article").innerText.trim(),
     r = e.querySelector(".dep-text").innerText.trim(),
     i = e.querySelector(".dep-id").innerText.trim(),

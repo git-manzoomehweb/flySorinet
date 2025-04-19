@@ -4234,6 +4234,7 @@ body {
 }
 
 .selectCountry {
+  background-color: white;
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
@@ -4242,6 +4243,9 @@ body {
   color: #ea2124;
 }
 
+.selectCountry .fa,.selectCountry .fas{
+  display: none;
+}
 .top-\[119rem\] {
   top: 119rem;
 }
@@ -4369,6 +4373,9 @@ body {
   margin: 0 auto;
 }
 
-.ui-widget-content{
-  display: block !important;
+.ui-datepicker-year,
+.ui-icon-circle-triangle-w,
+.ui-datepicker-month,
+.ui-icon-circle-triangle-e{
+  font-family: "DanaFaNum" !important;
 }
