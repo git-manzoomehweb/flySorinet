@@ -12,7 +12,7 @@
       <nav class="relative flex items-center" style="font-weight: 500;">
         <ul class="flex items-center justify-between gap-10">
           <li class="flex items-center hover:text-Primery-600">
-            <a href="/" aria-label="headerIcons"><img src="[##cms.cms.cdn##]/images/headerIcons.svg" width="110"
+            <a href="/" aria-label="headerIcons"><img src="[##cms.cms.cdn##]/images/headerIcons.png" width="110"
                 height="29" alt="headerIcons" style="margin-left: 35px;" /></a>
             <a href="/"> صفحه اصلی </a>
           </li>
@@ -20,13 +20,14 @@
             <layout>
               <li class="group ">
                 <span class="flex items-center gap-2 cursor-pointer group hover:text-Primery-600">
-                  تور ها
+                  
+                  <a href="/tours">تور ها</a>
                   <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
                     width="16" height="16" class="transition-all duration-200 group-hover:rotate-90" />
                 </span>
                 <!-- submenu -->
                 <ul
-                  class="absolute z-50 flex flex-col invisible w-64 gap-4 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100">
+                  class="absolute parent-ul z-50 flex flex-col invisible w-64 gap-4 p-4 font-medium transition-all duration-200 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100">
                   @child
                 </ul>
               </li>
@@ -92,7 +93,7 @@
 
             <!-- submenu end -->
           </basis>
-          <basis core="tree" datamembername="nowrouz.cat" idcol="catid" parentidcol="parentid" nullvalue="213498">
+          <!--<basis core="tree" datamembername="nowrouz.cat" idcol="catid" parentidcol="parentid" nullvalue="213498">
             <layout>
               <li class="group ">
                 <span class="flex items-center gap-2 cursor-pointer group hover:text-Primery-600">
@@ -174,13 +175,14 @@
           <li class="hover:text-Primery-600"><a href="/درباره-ما">تماس با ما</a></li>
         </ul>
       </nav>
-      <div class="flex items-center px-4 py-2 text-white Login_Information rounded-xl bg-Primery-700">
+      <div class="flex items-center text-sm px-2 py-1 text-white Login_Information rounded-xl bg-Primery-700">
         <basis core="call" file="authentication/modal"></basis>
       </div>
     </div>
   </section>
   <!-- header menu desktop end -->
 </header>
+ 
 <style>
   .object-cover.object-bottom.w-full.border-b-8.border-solid.border-Primery-600.rounded-3xl {
     max-height: 300px;
@@ -192,3 +194,78 @@
     }
   }
 </style>
+
+
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+  const allLis = document.querySelectorAll(".parent-ul li");
+const parentForAll=document.querySelector(".parent-ul").parentElement
+ parentForAll.addEventListener("mouseenter",()=>{
+    document.querySelectorAll(".parent-ul ul").forEach((item)=>{
+         item.style.display = "none";
+      item.style.opacity = "0";
+      item.style.visibility = "hidden";
+    })
+ })
+
+  allLis.forEach((li) => {
+    const submenu = li.querySelector("ul");
+
+    if (submenu) {
+      submenu.style.display = "none";
+      submenu.style.opacity = "0";
+      submenu.style.visibility = "hidden";
+    }
+
+    li.addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      // فقط زیرمنوهای دیگر liها (نه والد یا فرزند) رو ببند
+      allLis.forEach((otherLi) => {
+        if (otherLi !== li && !li.contains(otherLi) && !otherLi.contains(li)) {
+          const otherSubmenu = otherLi.querySelector("ul");
+          if (otherSubmenu) {
+            otherSubmenu.style.display = "none";
+            otherSubmenu.style.opacity = "0";
+            otherSubmenu.style.visibility = "hidden";
+          }
+        }
+      });
+
+      if (submenu) {
+        const isVisible = submenu.style.display === "flex";
+        if (isVisible) {
+          submenu.style.display = "none";
+          submenu.style.opacity = "0";
+          submenu.style.visibility = "hidden";
+        } else {
+          submenu.style.display = "flex";
+          submenu.style.opacity = "1";
+          submenu.style.visibility = "visible";
+        }
+      }
+    });
+  });
+
+  // کلیک بیرون از منوها -> بستن همه
+  document.addEventListener("click", function () {
+    allLis.forEach((li) => {
+      const submenu = li.querySelector("ul");
+      if (submenu) {
+        submenu.style.display = "none";
+        submenu.style.opacity = "0";
+        submenu.style.visibility = "hidden";
+      }
+    });
+  });
+   parentForAll.addEventListener("mouseleave",()=>{
+    document.querySelectorAll(".parent-ul ul").forEach((item)=>{
+         item.style.display = "none";
+      item.style.opacity = "0";
+      item.style.visibility = "hidden";
+    })
+    
+ })
+});
+</script>

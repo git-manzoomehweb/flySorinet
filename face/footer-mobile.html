@@ -1,238 +1,730 @@
-    <!-- footer -->
-    <basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
-      <member name="info" type="view" />
-    </basis>
-    <footer class="relative px-4 py-4 mt-24 rounded-xl bg-footer-gradient">
-      <img src="[##cms.cms.cdn##]/images/footerBackIcon.svg" alt="footerBackIcon" width="1879" height="638" loading="lazy"
-        class="hidden h-auto max-w-full lg:absolute lg:-top-3 lg:-right-2 lg:-z-10 2xl:-top-6 2xl:-right-3 lg:block" />
-      <img src="[##cms.cms.cdn##]/images/footerBackIcon.svg" alt="footerBackIcon" width="1879" height="638" loading="lazy"
-        class="absolute h-auto max-w-full -top-3 -right-px -z-10 lg:hidden" />
-      <div class="flex flex-col items-center justify-center h-auto max-w-full gap-2 mb-6">
-        <img src="[##cms.cms.cdn##]/images/footer-sorinet-logo.png" alt="headerIcons" width="100" height="45"
-          loading="lazy" />
-        <div class="flex items-center">
-          <div class="flex-1 mr-2 border-b border-black border-dashed"></div>
-          <h2 class="hidden text-sm font-normal text-white">
-            شرکت خدمات مسافرت هوایی و جهانگردی و زیارتی
-          </h2>
-          <div class="absolute w-[46%] left-0 top-[10%] h-px border-dashed border border-Primery-200 hidden lg:block"></div>
-          <div class="absolute w-[46%] right-0 top-[10%] h-px border-dashed border border-Primery-200 hidden lg:block"></div>
-          <div class="flex-1 hidden mr-2 border-b border-black border-dashed lg:block"></div>
-        </div>
-      </div>
-    
-      <!-- content of footer -->
-      <div class="desktopContainer">
-        <div class="">
-          <div class="mb-16">
-            <!-- membrship -->
-            <section class="">
-              <h3 class="mb-4 font-medium text-white lg:text-2xl">
-                عضویت در خبرنامه
-              </h3>
-              <div class="flex flex-col lg:flex-row" id="contact-form-resize">
-                <basis core="schema" run="atclient"
-                  schemaurl="/schema/domainform/E59D9A1D-E489-40B0-A552-57BD798159DF/96749EB4-1A60-4FC1-BF7C-38FF1C0265AD/fa/عضویت-در-خبرنامه"
-                  displaymode="new" button="[data-btn-uploadfooter]" resultsourceid="upload.datafooter"
-                  OnRendered="RenderFormFooter"></basis>
-                <basis core="api" if="{##cms.uploadFooter.run|(false)##}" run="atclient"
-                  url="/schema/domainform/E59D9A1D-E489-40B0-A552-57BD798159DF/fa/editobject" method="post"
-                  body="object_edit={##cms.uploadFooter.value##}&captcha={##cms.uploadFooter.captcha##}&captchaid={##cms.uploadFooter.captchaid##}"
-                  content-type="application/x-www-form-urlencoded" triggers="cms.uploadFooter"
-                  OnProcessed="OnProcessedEditObjectFooter"></basis>
-                <basis core="callback" run="atclient" method="uploadDocumentFooter" triggers="upload.datafooter">
+<!-- footer -->
+<basis
+  core="dbsource"
+  source="basiscore"
+  name="db"
+  mid="5"
+  lid="1"
+  usedforid="[##cms.cms.ownerid##]"
+>
+  <member name="info" type="view" />
+</basis>
+<footer class="relative px-4 py-4 mt-24 rounded-xl bg-footer-gradient">
+  <img
+    src="[##cms.cms.cdn##]/images/footerBackIcon.svg"
+    alt="footerBackIcon"
+    width="1879"
+    height="638"
+    loading="lazy"
+    class="hidden h-auto max-w-full lg:absolute lg:-top-3 lg:-right-2 lg:-z-10 2xl:-top-6 2xl:-right-3 lg:block"
+  />
+  <img
+    src="[##cms.cms.cdn##]/images/footerBackIcon.svg"
+    alt="footerBackIcon"
+    width="1879"
+    height="638"
+    loading="lazy"
+    class="absolute h-auto max-w-full -top-3 -right-px -z-10 lg:hidden"
+  />
+  <div
+    class="flex flex-col items-center justify-center h-auto max-w-full gap-2 mb-6"
+  >
+    <img
+      src="[##cms.cms.cdn##]/images/footer-sorinet-logo.png"
+      alt="headerIcons"
+      width="100"
+      height="45"
+      loading="lazy"
+    />
+    <div class="flex items-center">
+      <div class="flex-1 mr-2 border-b border-black border-dashed"></div>
+      <h2 class="hidden text-sm font-normal text-white">
+        شرکت خدمات مسافرت هوایی و جهانگردی و زیارتی
+      </h2>
+      <div
+        class="absolute w-[46%] left-0 top-[10%] h-px border-dashed border border-Primery-200 hidden lg:block"
+      ></div>
+      <div
+        class="absolute w-[46%] right-0 top-[10%] h-px border-dashed border border-Primery-200 hidden lg:block"
+      ></div>
+      <div
+        class="flex-1 hidden mr-2 border-b border-black border-dashed lg:block"
+      ></div>
+    </div>
+  </div>
+
+  <!-- content of footer -->
+  <div class="desktopContainer">
+    <div class="">
+      <div class="mb-6">
+        <!-- membrship -->
+        <section class="">
+          <h3 class="mb-4 font-medium text-white lg:text-2xl">
+            عضویت در خبرنامه
+          </h3>
+          <div class="flex flex-col lg:flex-row" id="contact-form-resize">
+            <basis
+              core="schema"
+              run="atclient"
+              schemaurl="/schema/domainform/E59D9A1D-E489-40B0-A552-57BD798159DF/96749EB4-1A60-4FC1-BF7C-38FF1C0265AD/fa/عضویت-در-خبرنامه"
+              displaymode="new"
+              button="[data-btn-uploadfooter]"
+              resultsourceid="upload.datafooter"
+              OnRendered="RenderFormFooter"
+            ></basis>
+            <basis
+              core="api"
+              if="{##cms.uploadFooter.run|(false)##}"
+              run="atclient"
+              url="/schema/domainform/E59D9A1D-E489-40B0-A552-57BD798159DF/fa/editobject"
+              method="post"
+              body="object_edit={##cms.uploadFooter.value##}&captcha={##cms.uploadFooter.captcha##}&captchaid={##cms.uploadFooter.captchaid##}"
+              content-type="application/x-www-form-urlencoded"
+              triggers="cms.uploadFooter"
+              OnProcessed="OnProcessedEditObjectFooter"
+            ></basis>
+            <basis
+              core="callback"
+              run="atclient"
+              method="uploadDocumentFooter"
+              triggers="upload.datafooter"
+            >
+            </basis>
+
+            <div
+              class="items-center flex-1 gap-4 captcha-button lg:flex lg:mr-4"
+            >
+              <div
+                id="captchaContainer"
+                class="captchaContainerclass captcha-sefaresh ml-2.5 max-xl:ml-0 max-xl:mb-[20px]"
+                data-bc-answer-container
+                data-bc-schema-info-multi="0"
+                data-bc-schema-info-word="58"
+                data-bc-schema-info-part="1"
+                data-bc-schema-info-part-0-type="text"
+              >
+                <basis
+                  core="dbsource"
+                  source="trust_login"
+                  name="captcha"
+                  run="atclient"
+                  triggers="captcha.refreshFooter"
+                >
+                  <member name="code" type="scalar" request="captcha"></member>
                 </basis>
-    
-                <div class="items-center flex-1 gap-4 captcha-button lg:flex lg:mr-4">
-                  <div id="captchaContainer"
-                    class="captchaContainerclass captcha-sefaresh ml-2.5 max-xl:ml-0 max-xl:mb-[20px]"
-                    data-bc-answer-container data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
-                    data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
-                    <basis core="dbsource" source="trust_login" name="captcha" run="atclient"
-                      triggers="captcha.refreshFooter">
-                      <member name="code" type="scalar" request="captcha"></member>
-                    </basis>
-                    <basis datamembername="captcha.code" core="print" run="atclient">
-                      <face>
-                        <script type="text/template">
-                          <div class="d-inline-block"><div class="flex justify-between gap-4">
-    
-                                                        <div class="float-right w-auto"><input type="text" class="contactUsInput codeinputm" name="captcha" maxlength="4" placeholder="کد امنیتی"/><input type="hidden" name="captchaid" value="@captcha@" /></div>
-                                                        <div class="flex items-center gap-4">
-                                                            <img src="/@captcha@" loading="lazy" width="120" height="60" alt="captcha" class="w-16" />
-                                                            <svg class="inline-block align-middle cursor-pointer w-9 h-9" onclick="refreshCaptchaFooter()" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1247 8.56165H18.1238C18.0007 8.56175 17.8788 8.5861 17.7651 8.63331C17.6514 8.68052 17.5481 8.74967 17.4611 8.8368C17.3741 8.92393 17.3052 9.02734 17.2581 9.14113C17.2111 9.25492 17.187 9.37685 17.1871 9.49997C17.1859 10.8143 16.8245 12.1032 16.1421 13.2265C15.4597 14.3498 14.4824 15.2646 13.3166 15.8714C12.1507 16.4782 10.8408 16.7538 9.52921 16.6683C8.21765 16.5827 6.95463 16.1393 5.87744 15.3862C2.63134 13.1132 1.83959 8.62309 4.11255 5.37696C6.38552 2.13083 10.8757 1.33899 14.1218 3.61204C14.6129 3.95501 15.0592 4.358 15.4504 4.81165H12.8121C12.5635 4.81165 12.325 4.91042 12.1492 5.08623C11.9734 5.26205 11.8746 5.5005 11.8746 5.74915C11.8746 5.99779 11.9734 6.23624 12.1492 6.41206C12.325 6.58787 12.5635 6.68665 12.8121 6.68665H17.1871C17.4358 6.68665 17.6742 6.58787 17.85 6.41206C18.0259 6.23624 18.1246 5.99779 18.1246 5.74915V1.37415C18.1246 1.12551 18.0259 0.887048 17.85 0.711233C17.6742 0.535418 17.4358 0.436646 17.1871 0.436646C16.9385 0.436646 16.7 0.535418 16.5242 0.711233C16.3484 0.887048 16.2496 1.12551 16.2496 1.37415V2.93536C15.9206 2.62321 15.5689 2.33596 15.1973 2.07598C14.2225 1.39342 13.1228 0.909542 11.9609 0.651979C10.7991 0.394417 9.59797 0.368213 8.42603 0.574863C7.25409 0.781513 6.13433 1.21697 5.13067 1.85637C4.12702 2.49578 3.25914 3.3266 2.57658 4.30141C1.19808 6.27013 0.658111 8.70582 1.07546 11.0727C1.49281 13.4395 2.83329 15.5436 4.80201 16.9221C6.31776 17.9898 8.12639 18.563 9.98041 18.5633C10.5144 18.5631 11.0474 18.5162 11.5732 18.4233C13.6714 18.0531 15.5722 16.9556 16.9417 15.3235C18.3112 13.6914 19.062 11.6289 19.0621 9.49833C19.0619 9.24983 18.963 9.01159 18.7873 8.83596C18.6115 8.66032 18.3732 8.56166 18.1247 8.56165Z" fill="#71717A"/></svg>
-                                                        </div>
-    
-                                                    </div></div>
-                        </script>
-                      </face>
-                    </basis>
-                  </div>
-                  <button class="w-full mt-3 text-white lg:w-52 lg:mt-0 data-body-btn h-14 bg-Primery-700 rounded-xl" type="button"
-                    data-btn-uploadfooter>
-                    <span class="">ارسال</span>
-                  </button>
-                  <div
-                    class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
-                    <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
-                      <div id="ballsWaveG_1" class="ballsWaveG"></div>
-                      <div id="ballsWaveG_2" class="ballsWaveG"></div>
-                      <div id="ballsWaveG_3" class="ballsWaveG"></div>
-                      <div id="ballsWaveG_4" class="ballsWaveG"></div>
-                      <div id="ballsWaveG_5" class="ballsWaveG"></div>
-                      <div id="ballsWaveG_6" class="ballsWaveG"></div>
-                      <div id="ballsWaveG_7" class="ballsWaveG"></div>
-                      <div id="ballsWaveG_8" class="ballsWaveG"></div>
-                    </div>
-                  </div>
+                <basis
+                  datamembername="captcha.code"
+                  core="print"
+                  run="atclient"
+                >
+                  <face>
+                    <script type="text/template">
+                      <div class="d-inline-block"><div class="flex justify-between gap-4">
+
+                                                    <div class="float-right w-auto"><input type="text" class="contactUsInput codeinputm" name="captcha" maxlength="4" placeholder="کد امنیتی"/><input type="hidden" name="captchaid" value="@captcha@" /></div>
+                                                    <div class="flex items-center gap-4">
+                                                        <img src="/@captcha@" loading="lazy" width="120" height="60" alt="captcha" class="w-16" />
+                                                        <svg class="inline-block align-middle cursor-pointer w-9 h-9" onclick="refreshCaptchaFooter()" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1247 8.56165H18.1238C18.0007 8.56175 17.8788 8.5861 17.7651 8.63331C17.6514 8.68052 17.5481 8.74967 17.4611 8.8368C17.3741 8.92393 17.3052 9.02734 17.2581 9.14113C17.2111 9.25492 17.187 9.37685 17.1871 9.49997C17.1859 10.8143 16.8245 12.1032 16.1421 13.2265C15.4597 14.3498 14.4824 15.2646 13.3166 15.8714C12.1507 16.4782 10.8408 16.7538 9.52921 16.6683C8.21765 16.5827 6.95463 16.1393 5.87744 15.3862C2.63134 13.1132 1.83959 8.62309 4.11255 5.37696C6.38552 2.13083 10.8757 1.33899 14.1218 3.61204C14.6129 3.95501 15.0592 4.358 15.4504 4.81165H12.8121C12.5635 4.81165 12.325 4.91042 12.1492 5.08623C11.9734 5.26205 11.8746 5.5005 11.8746 5.74915C11.8746 5.99779 11.9734 6.23624 12.1492 6.41206C12.325 6.58787 12.5635 6.68665 12.8121 6.68665H17.1871C17.4358 6.68665 17.6742 6.58787 17.85 6.41206C18.0259 6.23624 18.1246 5.99779 18.1246 5.74915V1.37415C18.1246 1.12551 18.0259 0.887048 17.85 0.711233C17.6742 0.535418 17.4358 0.436646 17.1871 0.436646C16.9385 0.436646 16.7 0.535418 16.5242 0.711233C16.3484 0.887048 16.2496 1.12551 16.2496 1.37415V2.93536C15.9206 2.62321 15.5689 2.33596 15.1973 2.07598C14.2225 1.39342 13.1228 0.909542 11.9609 0.651979C10.7991 0.394417 9.59797 0.368213 8.42603 0.574863C7.25409 0.781513 6.13433 1.21697 5.13067 1.85637C4.12702 2.49578 3.25914 3.3266 2.57658 4.30141C1.19808 6.27013 0.658111 8.70582 1.07546 11.0727C1.49281 13.4395 2.83329 15.5436 4.80201 16.9221C6.31776 17.9898 8.12639 18.563 9.98041 18.5633C10.5144 18.5631 11.0474 18.5162 11.5732 18.4233C13.6714 18.0531 15.5722 16.9556 16.9417 15.3235C18.3112 13.6914 19.062 11.6289 19.0621 9.49833C19.0619 9.24983 18.963 9.01159 18.7873 8.83596C18.6115 8.66032 18.3732 8.56166 18.1247 8.56165Z" fill="#71717A"/></svg>
+                                                    </div>
+
+                                                </div></div>
+                    </script>
+                  </face>
+                </basis>
+              </div>
+              <button
+                class="w-full mt-3 text-white lg:w-52 lg:mt-0 data-body-btn h-14 bg-Primery-700 rounded-xl"
+                type="button"
+                data-btn-uploadfooter
+              >
+                <span class="">ارسال</span>
+              </button>
+              <div
+                class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5"
+              >
+                <div
+                  id="ballsWaveG"
+                  class="text-base font-normal leading-normal ext-zinc-50"
+                >
+                  <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_8" class="ballsWaveG"></div>
                 </div>
-                <div class="mt-4 text-center text-white message-api"></div>
               </div>
-    
-    
-            </section>
-            <!-- membership -->
-    
-            <!-- category -->
-    
-            <!-- category -->
+            </div>
+            <div class="mt-4 text-center text-white message-api"></div>
           </div>
-          <div class="flex flex-col gap-10 lg:flex-row">
-            <section class="flex-1">
-              <div>
-                <h2 class="mb-4 text-2xl font-bold text-Primery-600 lg:mt-0">درباره سوری نت پرواز
-      
-                </h2>
-                <basis core="print" datamembername="db.info">
-                  <face filter="TypeID in(144) and valueID in(4039705)">
-                    <div class="text-sm text-justify text-white">@largetext</div>
-                  </face>
-                </basis>
-              </div>
-            </section>
-            <section class="flex justify-around flex-1">
-              <div class="flex flex-col gap-2 mb-4 text-white">
-                <h2 class="text-2xl font-bold text-Primery-600">دسته بندی ها</h2>
-                <a href="/flight" class="hover:text-Primery-600">پرواز</a>
-                <a href="/hotel" class="hover:text-Primery-600">هتل</a>
-                <a href="/tour" rel="nofollow" class="hover:text-Primery-600">تورها</a>
-                <a href="/visa" rel="nofollow" class="hover:text-Primery-600">ویزا</a>
-              </div>
-      
-              <div class="flex flex-col gap-2 text-white">
-                <h2 class="text-2xl font-bold text-Primery-600">دسترسی سریع</h2>
-                <a href="/article-list.bc?catid=212221" rel="nofollow" class="hover:text-Primery-600">اخبار گردشگری</a>
-                <a href="#" class="hover:text-Primery-600">بیمه مسافرتی</a>
-                <a href="#" class="hover:text-Primery-600">اقامت ها</a>
-                <a href="#" class="hover:text-Primery-600">سفر</a>
-              </div>
-            </section>
-            <div class="flex flex-col flex-1 gap-4">
-              <h2 class="text-2xl font-bold text-Primery-600">ارتباط با ما</h2>
-                        <!-- address -->
-                        <div class="flex flex-col gap-2 mt-3">
-                          <basis core="print" datamembername="db.info">
-                            <face filter="TypeID in(244) and valueID in(4039706)">
-                              <div class="mb-4 text-sm text-white">
-                                <img src="[##cms.cms.cdn##]/images/addressIcon.svg" class="hidden" alt="addressIcon" width="43" height="44"
-                                  loading="lazy" />
-                                @Answer
-                              </div>
-                            </face>
-                          </basis>
-                
-                          <basis core="print" datamembername="db.info">
-                            <face filter="TypeID in(240) and valueID in(4039707)">
-                              <div class="text-sm text-white">
-                                <img src="[##cms.cms.cdn##]/images/phoneIcon.svg" class="hidden" alt="phoneIcon" width="43" height="44"
-                                  loading="lazy" />
-                                تلفن تماس و پشتیبانی :<a href="tel:+9821٤٧٦٤0" style="
-                                    font-weight: bold;
-                                    font-size: 25px;
-                                    letter-spacing: 4px;
-                                  ">@Answer</a>
-                              </div>
-                            </face>
-                          </basis>
-                        </div>
-                        <!-- address -->
-                        <div class="flex items-center justify-between w-full">
-                          <basis core="print" datamembername="db.info">
-                            <layout>
-                    <span class="text-white">شبکه های اجتماعی</span>
-                    <div class="flex gap-2">@child</div>
-                  </layout>
-                  <face filter="TypeID in('245') and text in('تلگرام')">
-                    <a href="@largetext" aria-label="telegram" class="hover:scale-105"><img
-                        src="[##cms.cms.cdn##]/images/telegramIcon.svg" width="48" height="49" alt="telegramIcon"
-                        loading="lazy" /></a>
-                  </face>
-                  <face filter="TypeID in('245') and text in('اینستاگرام')">
-                    <a href="@largetext" aria-label="instagram" class="hover:scale-105"><img
-                        src="[##cms.cms.cdn##]/images/instagramIcon.svg" width="48" height="49" alt="instagramIcon"
-                        loading="lazy" /></a>
-                  </face>
-                  <face filter="TypeID in('245') and text in('واتس اپ')">
-                    <a href="@largetext" aria-label="whatsapp" class="hover:scale-105"><img
-                        src="[##cms.cms.cdn##]/images/whatsappIcon.png" width="48" height="49" class="rounded-lg"
-                        alt="whatsappIcon" loading="lazy" /></a>
-                  </face>
-                </basis>
-                        </div>
-    
-                        <div class="flex flex-wrap justify-between gap-2 p-4 mt-3 bg-footer-900 rounded-xl">
-                          <!-- <a href="" class="flex items-center w-16 h-16 p-1 overflow-hidden bg-white rounded-xl" >
+        </section>
+        <!-- membership -->
+
+        <!-- category -->
+
+        <!-- category -->
+      </div>
+      <div class="flex flex-col gap-4 lg:flex-row">
+        <!-- <section class="flex-1">
+          <div>
+            <h2 class="mb-4 text-2xl font-bold text-Primery-600 lg:mt-0">
+              درباره سوری نت پرواز
+            </h2>
+            <basis core="print" datamembername="db.info">
+              <face filter="TypeID in(144) and valueID in(4039705)">
+                <div class="text-sm text-justify text-white">@largetext</div>
+              </face>
+            </basis>
+          </div>
+        </section> -->
+        <section class="flex justify-around flex-1">
+          <div class="flex flex-col gap-2 mb-4 text-white">
+            <h2 class="font-bold text-Primery-600">دسته بندی ها</h2>
+            <a href="/flight" class="hover:text-Primery-600 text-sm flex items-center"
+              > <span class="double-angle-c"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 16.25C12.9015 16.2505 12.8038 16.2312 12.7128 16.1935C12.6218 16.1557 12.5393 16.1001 12.47 16.03C12.3296 15.8894 12.2507 15.6987 12.2507 15.5C12.2507 15.3012 12.3296 15.1106 12.47 14.97L15.47 11.97L12.47 8.96999C12.3999 8.82472 12.3784 8.6607 12.4089 8.50227C12.4393 8.34385 12.5201 8.19947 12.6391 8.09056C12.7581 7.98165 12.909 7.91402 13.0695 7.89771C13.23 7.88139 13.3915 7.91726 13.53 7.99999L17.03 11.5C17.1705 11.6406 17.2494 11.8312 17.2494 12.03C17.2494 12.2287 17.1705 12.4194 17.03 12.56L13.53 16C13.4633 16.0756 13.3819 16.1367 13.2908 16.1797C13.1997 16.2227 13.1007 16.2466 13 16.25Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M7.5 16.25C7.30706 16.2352 7.12757 16.1455 7 16C6.87702 15.8625 6.80902 15.6845 6.80902 15.5C6.80902 15.3155 6.87702 15.1375 7 15L10 12L7 8.99998C6.93316 8.86003 6.91135 8.70279 6.93758 8.54993C6.96381 8.39707 7.03678 8.2561 7.14645 8.14643C7.25612 8.03676 7.39709 7.96379 7.54995 7.93756C7.70282 7.91133 7.86005 7.93314 8 7.99998L11.5 11.5C11.6405 11.6406 11.7193 11.8312 11.7193 12.03C11.7193 12.2287 11.6405 12.4194 11.5 12.56L8 16C7.87243 16.1455 7.69295 16.2352 7.5 16.25Z"
+                  fill="#000000"
+                /></svg
+            ></span>خرید بلیط پرواز داخلی</a
+            >
+            <a href="/flight" class="hover:text-Primery-600 text-sm flex items-center"
+              >
+              <span class="double-angle-c"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 16.25C12.9015 16.2505 12.8038 16.2312 12.7128 16.1935C12.6218 16.1557 12.5393 16.1001 12.47 16.03C12.3296 15.8894 12.2507 15.6987 12.2507 15.5C12.2507 15.3012 12.3296 15.1106 12.47 14.97L15.47 11.97L12.47 8.96999C12.3999 8.82472 12.3784 8.6607 12.4089 8.50227C12.4393 8.34385 12.5201 8.19947 12.6391 8.09056C12.7581 7.98165 12.909 7.91402 13.0695 7.89771C13.23 7.88139 13.3915 7.91726 13.53 7.99999L17.03 11.5C17.1705 11.6406 17.2494 11.8312 17.2494 12.03C17.2494 12.2287 17.1705 12.4194 17.03 12.56L13.53 16C13.4633 16.0756 13.3819 16.1367 13.2908 16.1797C13.1997 16.2227 13.1007 16.2466 13 16.25Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M7.5 16.25C7.30706 16.2352 7.12757 16.1455 7 16C6.87702 15.8625 6.80902 15.6845 6.80902 15.5C6.80902 15.3155 6.87702 15.1375 7 15L10 12L7 8.99998C6.93316 8.86003 6.91135 8.70279 6.93758 8.54993C6.96381 8.39707 7.03678 8.2561 7.14645 8.14643C7.25612 8.03676 7.39709 7.96379 7.54995 7.93756C7.70282 7.91133 7.86005 7.93314 8 7.99998L11.5 11.5C11.6405 11.6406 11.7193 11.8312 11.7193 12.03C11.7193 12.2287 11.6405 12.4194 11.5 12.56L8 16C7.87243 16.1455 7.69295 16.2352 7.5 16.25Z"
+                  fill="#000000"
+                /></svg
+            ></span>خرید بلیط پرواز خارجی</a
+            >
+            <a href="/hotel" class="hover:text-Primery-600 text-sm flex items-center"
+              >
+              <span class="double-angle-c"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 16.25C12.9015 16.2505 12.8038 16.2312 12.7128 16.1935C12.6218 16.1557 12.5393 16.1001 12.47 16.03C12.3296 15.8894 12.2507 15.6987 12.2507 15.5C12.2507 15.3012 12.3296 15.1106 12.47 14.97L15.47 11.97L12.47 8.96999C12.3999 8.82472 12.3784 8.6607 12.4089 8.50227C12.4393 8.34385 12.5201 8.19947 12.6391 8.09056C12.7581 7.98165 12.909 7.91402 13.0695 7.89771C13.23 7.88139 13.3915 7.91726 13.53 7.99999L17.03 11.5C17.1705 11.6406 17.2494 11.8312 17.2494 12.03C17.2494 12.2287 17.1705 12.4194 17.03 12.56L13.53 16C13.4633 16.0756 13.3819 16.1367 13.2908 16.1797C13.1997 16.2227 13.1007 16.2466 13 16.25Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M7.5 16.25C7.30706 16.2352 7.12757 16.1455 7 16C6.87702 15.8625 6.80902 15.6845 6.80902 15.5C6.80902 15.3155 6.87702 15.1375 7 15L10 12L7 8.99998C6.93316 8.86003 6.91135 8.70279 6.93758 8.54993C6.96381 8.39707 7.03678 8.2561 7.14645 8.14643C7.25612 8.03676 7.39709 7.96379 7.54995 7.93756C7.70282 7.91133 7.86005 7.93314 8 7.99998L11.5 11.5C11.6405 11.6406 11.7193 11.8312 11.7193 12.03C11.7193 12.2287 11.6405 12.4194 11.5 12.56L8 16C7.87243 16.1455 7.69295 16.2352 7.5 16.25Z"
+                  fill="#000000"
+                /></svg
+            ></span>رزرو هتل داخلی</a
+            >
+            <a href="/hotel" class="hover:text-Primery-600 text-sm flex items-center"
+              >
+              <span class="double-angle-c"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 16.25C12.9015 16.2505 12.8038 16.2312 12.7128 16.1935C12.6218 16.1557 12.5393 16.1001 12.47 16.03C12.3296 15.8894 12.2507 15.6987 12.2507 15.5C12.2507 15.3012 12.3296 15.1106 12.47 14.97L15.47 11.97L12.47 8.96999C12.3999 8.82472 12.3784 8.6607 12.4089 8.50227C12.4393 8.34385 12.5201 8.19947 12.6391 8.09056C12.7581 7.98165 12.909 7.91402 13.0695 7.89771C13.23 7.88139 13.3915 7.91726 13.53 7.99999L17.03 11.5C17.1705 11.6406 17.2494 11.8312 17.2494 12.03C17.2494 12.2287 17.1705 12.4194 17.03 12.56L13.53 16C13.4633 16.0756 13.3819 16.1367 13.2908 16.1797C13.1997 16.2227 13.1007 16.2466 13 16.25Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M7.5 16.25C7.30706 16.2352 7.12757 16.1455 7 16C6.87702 15.8625 6.80902 15.6845 6.80902 15.5C6.80902 15.3155 6.87702 15.1375 7 15L10 12L7 8.99998C6.93316 8.86003 6.91135 8.70279 6.93758 8.54993C6.96381 8.39707 7.03678 8.2561 7.14645 8.14643C7.25612 8.03676 7.39709 7.96379 7.54995 7.93756C7.70282 7.91133 7.86005 7.93314 8 7.99998L11.5 11.5C11.6405 11.6406 11.7193 11.8312 11.7193 12.03C11.7193 12.2287 11.6405 12.4194 11.5 12.56L8 16C7.87243 16.1455 7.69295 16.2352 7.5 16.25Z"
+                  fill="#000000"
+                /></svg
+            ></span>رزرو هتل خارجی</a
+            >
+            <a
+              href="/ایرانگردی"
+              rel="nofollow"
+              class="text-sm hover:text-Primery-600 flex items-center"
+              > <span class="double-angle-c"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 16.25C12.9015 16.2505 12.8038 16.2312 12.7128 16.1935C12.6218 16.1557 12.5393 16.1001 12.47 16.03C12.3296 15.8894 12.2507 15.6987 12.2507 15.5C12.2507 15.3012 12.3296 15.1106 12.47 14.97L15.47 11.97L12.47 8.96999C12.3999 8.82472 12.3784 8.6607 12.4089 8.50227C12.4393 8.34385 12.5201 8.19947 12.6391 8.09056C12.7581 7.98165 12.909 7.91402 13.0695 7.89771C13.23 7.88139 13.3915 7.91726 13.53 7.99999L17.03 11.5C17.1705 11.6406 17.2494 11.8312 17.2494 12.03C17.2494 12.2287 17.1705 12.4194 17.03 12.56L13.53 16C13.4633 16.0756 13.3819 16.1367 13.2908 16.1797C13.1997 16.2227 13.1007 16.2466 13 16.25Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M7.5 16.25C7.30706 16.2352 7.12757 16.1455 7 16C6.87702 15.8625 6.80902 15.6845 6.80902 15.5C6.80902 15.3155 6.87702 15.1375 7 15L10 12L7 8.99998C6.93316 8.86003 6.91135 8.70279 6.93758 8.54993C6.96381 8.39707 7.03678 8.2561 7.14645 8.14643C7.25612 8.03676 7.39709 7.96379 7.54995 7.93756C7.70282 7.91133 7.86005 7.93314 8 7.99998L11.5 11.5C11.6405 11.6406 11.7193 11.8312 11.7193 12.03C11.7193 12.2287 11.6405 12.4194 11.5 12.56L8 16C7.87243 16.1455 7.69295 16.2352 7.5 16.25Z"
+                  fill="#000000"
+                /></svg
+            ></span>رزرو تورهای داخلی</a
+            >
+            <a
+              href="/جهانگردی"
+              rel="nofollow"
+              class="text-sm hover:text-Primery-600 flex items-center"
+              >
+              <span class="double-angle-c"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 16.25C12.9015 16.2505 12.8038 16.2312 12.7128 16.1935C12.6218 16.1557 12.5393 16.1001 12.47 16.03C12.3296 15.8894 12.2507 15.6987 12.2507 15.5C12.2507 15.3012 12.3296 15.1106 12.47 14.97L15.47 11.97L12.47 8.96999C12.3999 8.82472 12.3784 8.6607 12.4089 8.50227C12.4393 8.34385 12.5201 8.19947 12.6391 8.09056C12.7581 7.98165 12.909 7.91402 13.0695 7.89771C13.23 7.88139 13.3915 7.91726 13.53 7.99999L17.03 11.5C17.1705 11.6406 17.2494 11.8312 17.2494 12.03C17.2494 12.2287 17.1705 12.4194 17.03 12.56L13.53 16C13.4633 16.0756 13.3819 16.1367 13.2908 16.1797C13.1997 16.2227 13.1007 16.2466 13 16.25Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M7.5 16.25C7.30706 16.2352 7.12757 16.1455 7 16C6.87702 15.8625 6.80902 15.6845 6.80902 15.5C6.80902 15.3155 6.87702 15.1375 7 15L10 12L7 8.99998C6.93316 8.86003 6.91135 8.70279 6.93758 8.54993C6.96381 8.39707 7.03678 8.2561 7.14645 8.14643C7.25612 8.03676 7.39709 7.96379 7.54995 7.93756C7.70282 7.91133 7.86005 7.93314 8 7.99998L11.5 11.5C11.6405 11.6406 11.7193 11.8312 11.7193 12.03C11.7193 12.2287 11.6405 12.4194 11.5 12.56L8 16C7.87243 16.1455 7.69295 16.2352 7.5 16.25Z"
+                  fill="#000000"
+                /></svg
+            ></span>رزرو تورهای خارجی</a
+            >
+            <a
+              href="/visa"
+              rel="nofollow"
+              class="text-sm hover:text-Primery-600 flex items-center"
+              >
+              <span class="double-angle-c"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 16.25C12.9015 16.2505 12.8038 16.2312 12.7128 16.1935C12.6218 16.1557 12.5393 16.1001 12.47 16.03C12.3296 15.8894 12.2507 15.6987 12.2507 15.5C12.2507 15.3012 12.3296 15.1106 12.47 14.97L15.47 11.97L12.47 8.96999C12.3999 8.82472 12.3784 8.6607 12.4089 8.50227C12.4393 8.34385 12.5201 8.19947 12.6391 8.09056C12.7581 7.98165 12.909 7.91402 13.0695 7.89771C13.23 7.88139 13.3915 7.91726 13.53 7.99999L17.03 11.5C17.1705 11.6406 17.2494 11.8312 17.2494 12.03C17.2494 12.2287 17.1705 12.4194 17.03 12.56L13.53 16C13.4633 16.0756 13.3819 16.1367 13.2908 16.1797C13.1997 16.2227 13.1007 16.2466 13 16.25Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M7.5 16.25C7.30706 16.2352 7.12757 16.1455 7 16C6.87702 15.8625 6.80902 15.6845 6.80902 15.5C6.80902 15.3155 6.87702 15.1375 7 15L10 12L7 8.99998C6.93316 8.86003 6.91135 8.70279 6.93758 8.54993C6.96381 8.39707 7.03678 8.2561 7.14645 8.14643C7.25612 8.03676 7.39709 7.96379 7.54995 7.93756C7.70282 7.91133 7.86005 7.93314 8 7.99998L11.5 11.5C11.6405 11.6406 11.7193 11.8312 11.7193 12.03C11.7193 12.2287 11.6405 12.4194 11.5 12.56L8 16C7.87243 16.1455 7.69295 16.2352 7.5 16.25Z"
+                  fill="#000000"
+                /></svg
+            ></span>اخذ ویزا</a
+            >
+          </div>
+
+          <div class="flex flex-col gap-2 text-white">
+            <h2 class="font-bold text-Primery-600">دسترسی سریع</h2>
+            <a href="#" class="hover:text-Primery-600 text-sm flex items-center"> <span class="double-angle-c"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 16.25C12.9015 16.2505 12.8038 16.2312 12.7128 16.1935C12.6218 16.1557 12.5393 16.1001 12.47 16.03C12.3296 15.8894 12.2507 15.6987 12.2507 15.5C12.2507 15.3012 12.3296 15.1106 12.47 14.97L15.47 11.97L12.47 8.96999C12.3999 8.82472 12.3784 8.6607 12.4089 8.50227C12.4393 8.34385 12.5201 8.19947 12.6391 8.09056C12.7581 7.98165 12.909 7.91402 13.0695 7.89771C13.23 7.88139 13.3915 7.91726 13.53 7.99999L17.03 11.5C17.1705 11.6406 17.2494 11.8312 17.2494 12.03C17.2494 12.2287 17.1705 12.4194 17.03 12.56L13.53 16C13.4633 16.0756 13.3819 16.1367 13.2908 16.1797C13.1997 16.2227 13.1007 16.2466 13 16.25Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M7.5 16.25C7.30706 16.2352 7.12757 16.1455 7 16C6.87702 15.8625 6.80902 15.6845 6.80902 15.5C6.80902 15.3155 6.87702 15.1375 7 15L10 12L7 8.99998C6.93316 8.86003 6.91135 8.70279 6.93758 8.54993C6.96381 8.39707 7.03678 8.2561 7.14645 8.14643C7.25612 8.03676 7.39709 7.96379 7.54995 7.93756C7.70282 7.91133 7.86005 7.93314 8 7.99998L11.5 11.5C11.6405 11.6406 11.7193 11.8312 11.7193 12.03C11.7193 12.2287 11.6405 12.4194 11.5 12.56L8 16C7.87243 16.1455 7.69295 16.2352 7.5 16.25Z"
+                  fill="#000000"
+                /></svg
+            ></span>راهنمای خرید</a>
+            <a href="#" class="hover:text-Primery-600 text-sm flex items-center"> <span class="double-angle-c"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 16.25C12.9015 16.2505 12.8038 16.2312 12.7128 16.1935C12.6218 16.1557 12.5393 16.1001 12.47 16.03C12.3296 15.8894 12.2507 15.6987 12.2507 15.5C12.2507 15.3012 12.3296 15.1106 12.47 14.97L15.47 11.97L12.47 8.96999C12.3999 8.82472 12.3784 8.6607 12.4089 8.50227C12.4393 8.34385 12.5201 8.19947 12.6391 8.09056C12.7581 7.98165 12.909 7.91402 13.0695 7.89771C13.23 7.88139 13.3915 7.91726 13.53 7.99999L17.03 11.5C17.1705 11.6406 17.2494 11.8312 17.2494 12.03C17.2494 12.2287 17.1705 12.4194 17.03 12.56L13.53 16C13.4633 16.0756 13.3819 16.1367 13.2908 16.1797C13.1997 16.2227 13.1007 16.2466 13 16.25Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M7.5 16.25C7.30706 16.2352 7.12757 16.1455 7 16C6.87702 15.8625 6.80902 15.6845 6.80902 15.5C6.80902 15.3155 6.87702 15.1375 7 15L10 12L7 8.99998C6.93316 8.86003 6.91135 8.70279 6.93758 8.54993C6.96381 8.39707 7.03678 8.2561 7.14645 8.14643C7.25612 8.03676 7.39709 7.96379 7.54995 7.93756C7.70282 7.91133 7.86005 7.93314 8 7.99998L11.5 11.5C11.6405 11.6406 11.7193 11.8312 11.7193 12.03C11.7193 12.2287 11.6405 12.4194 11.5 12.56L8 16C7.87243 16.1455 7.69295 16.2352 7.5 16.25Z"
+                  fill="#000000"
+                /></svg
+            ></span>سوالات متداول</a>
+            <a href="#" class="hover:text-Primery-600 text-sm flex items-center"
+              > <span class="double-angle-c"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 16.25C12.9015 16.2505 12.8038 16.2312 12.7128 16.1935C12.6218 16.1557 12.5393 16.1001 12.47 16.03C12.3296 15.8894 12.2507 15.6987 12.2507 15.5C12.2507 15.3012 12.3296 15.1106 12.47 14.97L15.47 11.97L12.47 8.96999C12.3999 8.82472 12.3784 8.6607 12.4089 8.50227C12.4393 8.34385 12.5201 8.19947 12.6391 8.09056C12.7581 7.98165 12.909 7.91402 13.0695 7.89771C13.23 7.88139 13.3915 7.91726 13.53 7.99999L17.03 11.5C17.1705 11.6406 17.2494 11.8312 17.2494 12.03C17.2494 12.2287 17.1705 12.4194 17.03 12.56L13.53 16C13.4633 16.0756 13.3819 16.1367 13.2908 16.1797C13.1997 16.2227 13.1007 16.2466 13 16.25Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M7.5 16.25C7.30706 16.2352 7.12757 16.1455 7 16C6.87702 15.8625 6.80902 15.6845 6.80902 15.5C6.80902 15.3155 6.87702 15.1375 7 15L10 12L7 8.99998C6.93316 8.86003 6.91135 8.70279 6.93758 8.54993C6.96381 8.39707 7.03678 8.2561 7.14645 8.14643C7.25612 8.03676 7.39709 7.96379 7.54995 7.93756C7.70282 7.91133 7.86005 7.93314 8 7.99998L11.5 11.5C11.6405 11.6406 11.7193 11.8312 11.7193 12.03C11.7193 12.2287 11.6405 12.4194 11.5 12.56L8 16C7.87243 16.1455 7.69295 16.2352 7.5 16.25Z"
+                  fill="#000000"
+                /></svg
+            ></span>راهنمای استرداد وجه</a
+            >
+            <a href="#" class="hover:text-Primery-600 text-sm flex items-center"
+              > <span class="double-angle-c"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 16.25C12.9015 16.2505 12.8038 16.2312 12.7128 16.1935C12.6218 16.1557 12.5393 16.1001 12.47 16.03C12.3296 15.8894 12.2507 15.6987 12.2507 15.5C12.2507 15.3012 12.3296 15.1106 12.47 14.97L15.47 11.97L12.47 8.96999C12.3999 8.82472 12.3784 8.6607 12.4089 8.50227C12.4393 8.34385 12.5201 8.19947 12.6391 8.09056C12.7581 7.98165 12.909 7.91402 13.0695 7.89771C13.23 7.88139 13.3915 7.91726 13.53 7.99999L17.03 11.5C17.1705 11.6406 17.2494 11.8312 17.2494 12.03C17.2494 12.2287 17.1705 12.4194 17.03 12.56L13.53 16C13.4633 16.0756 13.3819 16.1367 13.2908 16.1797C13.1997 16.2227 13.1007 16.2466 13 16.25Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M7.5 16.25C7.30706 16.2352 7.12757 16.1455 7 16C6.87702 15.8625 6.80902 15.6845 6.80902 15.5C6.80902 15.3155 6.87702 15.1375 7 15L10 12L7 8.99998C6.93316 8.86003 6.91135 8.70279 6.93758 8.54993C6.96381 8.39707 7.03678 8.2561 7.14645 8.14643C7.25612 8.03676 7.39709 7.96379 7.54995 7.93756C7.70282 7.91133 7.86005 7.93314 8 7.99998L11.5 11.5C11.6405 11.6406 11.7193 11.8312 11.7193 12.03C11.7193 12.2287 11.6405 12.4194 11.5 12.56L8 16C7.87243 16.1455 7.69295 16.2352 7.5 16.25Z"
+                  fill="#000000"
+                /></svg
+            ></span>قوانین و مقررات</a
+            >
+            <a
+              href="/article-list.bc?catid=212221"
+              rel="nofollow"
+              class="hover:text-Primery-600 text-sm flex items-center"
+              > <span class="double-angle-c"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 16.25C12.9015 16.2505 12.8038 16.2312 12.7128 16.1935C12.6218 16.1557 12.5393 16.1001 12.47 16.03C12.3296 15.8894 12.2507 15.6987 12.2507 15.5C12.2507 15.3012 12.3296 15.1106 12.47 14.97L15.47 11.97L12.47 8.96999C12.3999 8.82472 12.3784 8.6607 12.4089 8.50227C12.4393 8.34385 12.5201 8.19947 12.6391 8.09056C12.7581 7.98165 12.909 7.91402 13.0695 7.89771C13.23 7.88139 13.3915 7.91726 13.53 7.99999L17.03 11.5C17.1705 11.6406 17.2494 11.8312 17.2494 12.03C17.2494 12.2287 17.1705 12.4194 17.03 12.56L13.53 16C13.4633 16.0756 13.3819 16.1367 13.2908 16.1797C13.1997 16.2227 13.1007 16.2466 13 16.25Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M7.5 16.25C7.30706 16.2352 7.12757 16.1455 7 16C6.87702 15.8625 6.80902 15.6845 6.80902 15.5C6.80902 15.3155 6.87702 15.1375 7 15L10 12L7 8.99998C6.93316 8.86003 6.91135 8.70279 6.93758 8.54993C6.96381 8.39707 7.03678 8.2561 7.14645 8.14643C7.25612 8.03676 7.39709 7.96379 7.54995 7.93756C7.70282 7.91133 7.86005 7.93314 8 7.99998L11.5 11.5C11.6405 11.6406 11.7193 11.8312 11.7193 12.03C11.7193 12.2287 11.6405 12.4194 11.5 12.56L8 16C7.87243 16.1455 7.69295 16.2352 7.5 16.25Z"
+                  fill="#000000"
+                /></svg
+            ></span>اخبار گردشگری</a
+            >
+            <a href="#" class="hover:text-Primery-600 text-sm flex items-center"> <span class="double-angle-c"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 16.25C12.9015 16.2505 12.8038 16.2312 12.7128 16.1935C12.6218 16.1557 12.5393 16.1001 12.47 16.03C12.3296 15.8894 12.2507 15.6987 12.2507 15.5C12.2507 15.3012 12.3296 15.1106 12.47 14.97L15.47 11.97L12.47 8.96999C12.3999 8.82472 12.3784 8.6607 12.4089 8.50227C12.4393 8.34385 12.5201 8.19947 12.6391 8.09056C12.7581 7.98165 12.909 7.91402 13.0695 7.89771C13.23 7.88139 13.3915 7.91726 13.53 7.99999L17.03 11.5C17.1705 11.6406 17.2494 11.8312 17.2494 12.03C17.2494 12.2287 17.1705 12.4194 17.03 12.56L13.53 16C13.4633 16.0756 13.3819 16.1367 13.2908 16.1797C13.1997 16.2227 13.1007 16.2466 13 16.25Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M7.5 16.25C7.30706 16.2352 7.12757 16.1455 7 16C6.87702 15.8625 6.80902 15.6845 6.80902 15.5C6.80902 15.3155 6.87702 15.1375 7 15L10 12L7 8.99998C6.93316 8.86003 6.91135 8.70279 6.93758 8.54993C6.96381 8.39707 7.03678 8.2561 7.14645 8.14643C7.25612 8.03676 7.39709 7.96379 7.54995 7.93756C7.70282 7.91133 7.86005 7.93314 8 7.99998L11.5 11.5C11.6405 11.6406 11.7193 11.8312 11.7193 12.03C11.7193 12.2287 11.6405 12.4194 11.5 12.56L8 16C7.87243 16.1455 7.69295 16.2352 7.5 16.25Z"
+                  fill="#000000"
+                /></svg
+            ></span>فروش سازمانی</a>
+            <a href="#" class="hover:text-Primery-600 text-sm flex items-center"> <span class="double-angle-c"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13 16.25C12.9015 16.2505 12.8038 16.2312 12.7128 16.1935C12.6218 16.1557 12.5393 16.1001 12.47 16.03C12.3296 15.8894 12.2507 15.6987 12.2507 15.5C12.2507 15.3012 12.3296 15.1106 12.47 14.97L15.47 11.97L12.47 8.96999C12.3999 8.82472 12.3784 8.6607 12.4089 8.50227C12.4393 8.34385 12.5201 8.19947 12.6391 8.09056C12.7581 7.98165 12.909 7.91402 13.0695 7.89771C13.23 7.88139 13.3915 7.91726 13.53 7.99999L17.03 11.5C17.1705 11.6406 17.2494 11.8312 17.2494 12.03C17.2494 12.2287 17.1705 12.4194 17.03 12.56L13.53 16C13.4633 16.0756 13.3819 16.1367 13.2908 16.1797C13.1997 16.2227 13.1007 16.2466 13 16.25Z"
+                  fill="#000000"
+                />
+                <path
+                  d="M7.5 16.25C7.30706 16.2352 7.12757 16.1455 7 16C6.87702 15.8625 6.80902 15.6845 6.80902 15.5C6.80902 15.3155 6.87702 15.1375 7 15L10 12L7 8.99998C6.93316 8.86003 6.91135 8.70279 6.93758 8.54993C6.96381 8.39707 7.03678 8.2561 7.14645 8.14643C7.25612 8.03676 7.39709 7.96379 7.54995 7.93756C7.70282 7.91133 7.86005 7.93314 8 7.99998L11.5 11.5C11.6405 11.6406 11.7193 11.8312 11.7193 12.03C11.7193 12.2287 11.6405 12.4194 11.5 12.56L8 16C7.87243 16.1455 7.69295 16.2352 7.5 16.25Z"
+                  fill="#000000"
+                /></svg
+            ></span>فرصت های شغلی</a>
+          </div>
+        </section>
+        <div class="flex flex-col flex-1 gap-4">
+          <h2 class="font-bold text-Primery-600">ارتباط با ما</h2>
+          <!-- address -->
+          <div class="flex flex-col gap-2 mt-3">
+            <basis core="print" datamembername="db.info">
+              <face filter="TypeID in(244) and valueID in(4039706)">
+                <div class="mb-4 text-sm text-white">
+                  <img
+                    src="[##cms.cms.cdn##]/images/addressIcon.svg"
+                    class="hidden"
+                    alt="addressIcon"
+                    width="43"
+                    height="44"
+                    loading="lazy"
+                  />
+                  @Answer
+                </div>
+              </face>
+            </basis>
+
+            <basis core="print" datamembername="db.info">
+              <face filter="TypeID in(240)">
+                <div class="text-sm text-white">
+                  <img
+                    src="[##cms.cms.cdn##]/images/phoneIcon.svg"
+                    class="hidden"
+                    alt="phoneIcon"
+                    width="43"
+                    height="44"
+                    loading="lazy"
+                  />
+                  تلفن تماس و پشتیبانی :<a href="tel:@text" class="">@text</a>
+                </div>
+              </face>
+            </basis>
+          </div>
+          <!-- address -->
+          <div class="flex items-center justify-between w-full">
+            <basis core="print" datamembername="db.info">
+              <layout>
+                <span class="text-white">شبکه های اجتماعی</span>
+                <div class="flex gap-2 social-medias">@child</div>
+              </layout>
+              <face filter="TypeID in('245') and text in('تلگرام')">
+                <a
+                  href="@largetext"
+                  aria-label="telegram"
+                  class="w-[30px] h-[30px] leading-[30px] bg-[#4c5353] text-center rounded hover:scale-105"
+                >
+                  <svg
+                    class="align-middle inline-block"
+                    width="26"
+                    height="27"
+                    viewBox="0 0 26 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.5721 18.7162L11.1759 20.9428C10.8826 21.2163 10.4053 20.9917 10.4323 20.5913C10.5072 19.4598 10.6237 17.7407 10.7017 16.7849C10.7142 16.6341 10.841 16.4656 10.9617 16.3564C13.7603 13.8188 16.5652 11.2875 19.3691 8.75403C19.4731 8.66043 19.5958 8.42955 19.5313 8.30787C19.4585 8.17059 19.1226 8.21219 18.9832 8.29955C15.4223 10.5418 11.8613 12.783 8.30551 15.0325C8.08711 15.1698 7.81983 15.2031 7.57439 15.124C6.10799 14.6529 4.63327 14.2067 3.16375 13.7429C2.82575 13.6358 2.42431 13.5297 2.38583 13.1106C2.34527 12.6727 2.72071 12.4647 3.05975 12.3285C4.42631 11.7773 5.80223 11.25 7.17607 10.7196C12.1182 8.81539 17.0603 6.91219 22.0023 5.00899C22.1677 4.94555 22.3882 4.90603 22.5608 4.87171C23.0787 4.76771 23.5447 5.02771 23.5956 5.55187C23.6341 5.93563 23.5665 6.36307 23.4864 6.74267C22.4568 11.64 21.4137 16.5353 20.3716 21.4316C20.0908 22.7545 19.4107 23.0051 18.3155 22.1971C16.9043 21.155 13.5721 18.7162 13.5721 18.7162Z"
+                      fill="#fff"
+                    />
+                  </svg>
+                </a>
+              </face>
+              <face filter="TypeID in('245') and text in('اینستاگرام')">
+                <a
+                  href="@largetext"
+                  aria-label="instagram"
+                  class="w-[30px] h-[30px] leading-[30px] bg-[#4c5353] text-center rounded hover:scale-105"
+                >
+                  <svg
+                    class="align-middle inline-block"
+                    width="26"
+                    height="27"
+                    viewBox="0 0 26 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.8397 11.2368C11.261 11.2368 9.97656 12.5191 9.97656 14.0968C9.97656 15.6745 11.261 16.9568 12.8397 16.9568C14.4185 16.9568 15.7018 15.6745 15.7018 14.0968C15.7018 12.5191 14.4185 11.2368 12.8397 11.2368Z"
+                      fill="#fff"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M18.0636 10.0208C17.4708 10.0208 16.9872 9.54037 16.9872 8.95069C16.9872 8.35893 17.4708 7.87845 18.0636 7.87845C18.6564 7.87845 19.1389 8.35893 19.1389 8.95069C19.1389 9.54037 18.6564 10.0208 18.0636 10.0208ZM12.8428 18.5187C10.405 18.5187 8.42068 16.5365 8.42068 14.0987C8.42068 11.6609 10.405 9.67869 12.8428 9.67869C15.2816 9.67869 17.2648 11.6609 17.2648 14.0987C17.2648 16.5365 15.2816 18.5187 12.8428 18.5187ZM17.3907 3.87549H8.61828C5.33292 3.87549 3.125 6.18637 3.125 9.62669V17.8843C3.125 21.3236 5.33292 23.6355 8.61828 23.6355H17.3896C20.676 23.6355 22.885 21.3236 22.885 17.8843V9.62669C22.885 6.18637 20.6771 3.87549 17.3907 3.87549Z"
+                      fill="#fff"
+                    />
+                  </svg>
+                </a>
+              </face>
+              <face filter="TypeID in('245') and text in('واتس اپ')">
+                <a
+                  href="@largetext"
+                  aria-label="whatsapp"
+                  class="w-[30px] h-[30px] leading-[30px] bg-[#4c5353] text-center rounded hover:scale-105"
+                >
+                  <svg
+                    class="align-middle inline-block"
+                    version="1.0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <g
+                      fill="#fff"
+                      transform="translate(0,100) scale(0.1,-0.1)"
+                      stroke="none"
+                    >
+                      <path
+                        d="M392 984c-178-47-310-181-357-359-26-103-12-232 36-326l20-40-40-122c-23-67-41-125-41-128 0-4 57 11 126 33l127 40 81-27c189-63 370-22 507 115 154 153 189 364 93 559-101 204-337 313-552 255z m246-84c238-84 347-344 237-566-100-203-333-285-541-190l-53 25-76-24c-41-12-75-20-75-16 0 4 11 39 24 78 23 68 23 70 5 94-11 13-28 53-39 88-61 194 29 399 217 495 79 40 212 47 301 16z"
+                      />
+                      <path
+                        d="M314 735c-32-22-47-69-42-126 6-57 65-153 140-226 51-50 150-101 211-109 77-11 137 32 137 97 0 13-18 28-58 48l-59 30-35-36-36-35-54 34c-55 36-102 85-121 125-8 19-6 28 13 48 23 24 23 28 11 73-23 88-57 112-107 77z"
+                      />
+                    </g>
+                  </svg>
+                </a>
+              </face>
+            </basis>
+          </div>
+
+          <div
+            class="flex flex-wrap justify-between gap-2 p-4 mt-3 bg-footer-900 rounded-xl"
+          >
+            <!-- <a href="" class="flex items-center w-16 h-16 p-1 overflow-hidden bg-white rounded-xl" >
                             <img src="[##cms.cms.cdn##]/images/eNamad.jpg" alt="eNamad" loading="lazy" decoding="async" class="h-auto max-w-full"/>
                           </a> -->
-                          <a referrerpolicy="origin"
-                            class="flex items-center w-16 h-16 p-1 overflow-hidden bg-white rounded-xl hover:scale-105" rel="noopener"
-                            target="_blank" href="https://trustseal.enamad.ir/?id=563916&Code=YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN"><img
-                              referrerpolicy="origin"
-                              src="https://trustseal.enamad.ir/logo.aspx?id=563916&Code=YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN" alt="eNamad"
-                              loading="lazy" decoding="async" class="h-auto max-w-full" style="cursor: pointer"
-                              code="YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN" /></a>
-                          <a href="https://www.iata.org/" class="flex items-center w-16 h-16 p-1 bg-white rounded-xl hover:scale-105"
-                            rel="noopener">
-                            <img src="[##cms.cms.cdn##]/images/lata.jpg" alt="lata" loading="lazy" class="h-auto max-w-full" />
-                          </a>
-                          <a href="https://www.cao.ir/paxrights"
-                            class="flex items-center w-16 h-16 p-1 bg-white rounded-xl hover:scale-105" rel="noopener">
-                            <img src="[##cms.cms.cdn##]/images/pax.png" alt="pax" loading="lazy" class="h-auto max-w-full" />
-                          </a>
-                          <a href="https://www.cao.ir/" class="flex items-center w-16 h-16 p-1 bg-white rounded-xl hover:scale-105"
-                            rel="noopener">
-                            <img src="[##cms.cms.cdn##]/images/airplaneComponey.jpg" alt="airplaneComponey" loading="lazy"
-                              class="h-auto max-w-full" />
-                          </a>
-                          <img decoding="async" loading="lazy" referrerpolicy="origin" id="rgvjjzpergvjesgtjzpefukz"
-                            class="w-16 h-16 bg-white hover:scale-105 rounded-xl" style="cursor: pointer"
-                            onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=373076&p=xlaojyoexlaoobpdjyoegvka", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")'
-                            alt="logo-samandehi" src="https://logo.samandehi.ir/logo.aspx?id=373076&p=qftiyndtqftilymayndtwlbq" />
-                        </div>
-            </div>
-    
-            <!-- about us -->
-    
-            <!-- about us end -->
+            <a
+              referrerpolicy="origin"
+              class="flex items-center w-16 h-16 p-1 overflow-hidden bg-white rounded-xl hover:scale-105"
+              rel="noopener"
+              target="_blank"
+              href="https://trustseal.enamad.ir/?id=563916&Code=YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN"
+              ><img
+                referrerpolicy="origin"
+                src="https://trustseal.enamad.ir/logo.aspx?id=563916&Code=YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN"
+                alt="eNamad"
+                loading="lazy"
+                decoding="async"
+                class="h-auto max-w-full"
+                style="cursor: pointer"
+                code="YPt7xoF7M9QvCXU0z2A1aD5knLQ5uWQN"
+            /></a>
+            <a
+              href="https://www.iata.org/"
+              class="flex items-center w-16 h-16 p-1 bg-white rounded-xl hover:scale-105"
+              rel="noopener"
+            >
+              <img
+                src="[##cms.cms.cdn##]/images/lata.jpg"
+                alt="lata"
+                loading="lazy"
+                class="h-auto max-w-full"
+              />
+            </a>
+            <a
+              href="https://www.cao.ir/paxrights"
+              class="flex items-center w-16 h-16 p-1 bg-white rounded-xl hover:scale-105"
+              rel="noopener"
+            >
+              <img
+                src="[##cms.cms.cdn##]/images/pax.png"
+                alt="pax"
+                loading="lazy"
+                class="h-auto max-w-full"
+              />
+            </a>
+            <a
+              href="https://www.cao.ir/"
+              class="flex items-center w-16 h-16 p-1 bg-white rounded-xl hover:scale-105"
+              rel="noopener"
+            >
+              <img
+                src="[##cms.cms.cdn##]/images/airplaneComponey.jpg"
+                alt="airplaneComponey"
+                loading="lazy"
+                class="h-auto max-w-full"
+              />
+            </a>
+            <img
+              decoding="async"
+              loading="lazy"
+              referrerpolicy="origin"
+              id="rgvjjzpergvjesgtjzpefukz"
+              class="w-16 h-16 bg-white hover:scale-105 rounded-xl"
+              style="cursor: pointer"
+              onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=373076&p=xlaojyoexlaoobpdjyoegvka", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")'
+              alt="logo-samandehi"
+              src="https://logo.samandehi.ir/logo.aspx?id=373076&p=qftiyndtqftilymayndtwlbq"
+            />
           </div>
         </div>
-    
-        <div class="mt-6 lg:flex lg:items-center lg:mt-24 lg:pt-6 lg:border-t lg:border-dashed lg:border-Primery-200 lg:justify-center lg:gap-4">
-          <div class="flex items-center gap-2">
-            <h3 class="text-sm font-medium text-center text-white">
-              <a href="https://www.basisfly.com/" target="_blank" class="hover:text-Primery-600">کلیه ی حقوق این وبسایت محفوظ و متعلق به شرکت خدمات مسافرت هوایی و جهانگردی و زیارتی سوری نت پرواز می باشد. طراحی سایت آژانس مسافرتی و رزرواسیون آنلاین توسط بیسیس فلای</a>
-            </h3>
-            <img src="[##cms.cms.cdn##]/images/basisFly.png" alt="basisFly" class="h-4 w-17" loading="lazy" />
-          </div>
-          <div class="flex justify-between mt-3 lg:mt-0">
-            <img src="[##cms.cms.cdn##]/images/trust-login.png" alt="trust-login" loading="lazy" />
-          </div>
-        </div>
+
+        <!-- about us -->
+
+        <!-- about us end -->
       </div>
-      <!-- content of footer end -->
-    </footer>
-    <basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]"></basis>
-    <script type="text/javascript">
-      !function(){var i="5U94GP",a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/"+i,l=localStorage.getItem("goftino_"+i);g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();
-    </script>
-    <!-- footer end -->
+    </div>
+
+    <div
+      class="mt-6 lg:flex lg:items-center lg:mt-24 lg:pt-6 lg:border-t lg:border-dashed lg:border-Primery-200 lg:justify-center lg:gap-4"
+    >
+      <div class="flex items-center gap-2">
+        <h3 class="text-xxs font-medium flex flex-col gap-3 text-center text-white">
+          <!-- کلیه ی حقوق این وبسایت محفوظ و متعلق به شرکت خدمات مسافرت هوایی و
+            جهانگردی و زیارتی سوری نت پرواز می باشد. -->
+          <a
+            href="https://www.basisfly.com/"
+            target="_blank"
+            class="hover:text-Primery-600 text-xxs"
+            > طراحی سایت آژانس مسافرتی و
+            رزرواسیون آنلاین توسط بیسیس فلای</a
+          >
+        </h3>
+        <img
+          src="[##cms.cms.cdn##]/images/basisFly.png"
+          alt="basisFly"
+          class="h-4 w-17"
+          loading="lazy"
+        />
+      </div>
+      <div class="flex justify-between mt-3 lg:mt-0">
+        <img
+          src="[##cms.cms.cdn##]/images/trust-login.png"
+          alt="trust-login"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+  <!-- content of footer end -->
+</footer>
+<basis
+  core="call"
+  file="script.inc"
+  pageindex="[##cms.cms.pageindex##]"
+></basis>
+
+<script type="text/javascript">
+  !(function () {
+    var i = "5U94GP",
+      a = window,
+      d = document;
+    function g() {
+      var g = d.createElement("script"),
+        s = "https://www.goftino.com/widget/" + i,
+        l = localStorage.getItem("goftino_" + i);
+      (g.async = !0), (g.src = l ? s + "?o=" + l : s);
+      d.getElementsByTagName("head")[0].appendChild(g);
+    }
+    "complete" === d.readyState
+      ? g()
+      : a.attachEvent
+      ? a.attachEvent("onload", g)
+      : a.addEventListener("load", g, !1);
+  })();
+</script>
+<!-- footer end -->

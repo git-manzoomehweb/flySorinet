@@ -29,48 +29,46 @@ document.addEventListener("DOMContentLoaded", function () {
   //   const trigger = item.querySelector(".menu-trigger");
   //   const submenu = item.querySelector(".submenu");
   //   const chevron = trigger.querySelector(".chevron");
-  
+
   //   trigger?.addEventListener("click", () => {
 
   //     menuItems.forEach((otherItem) => {
   //       if (otherItem !== item) {
   //         const otherSubmenu = otherItem.querySelector(".submenu");
-  //         otherSubmenu.style.maxHeight = "0"; 
+  //         otherSubmenu.style.maxHeight = "0";
   //         otherSubmenu.style.opacity = "0";
   //         otherItem.querySelector(".chevron")?.classList.remove("rotate-180");
   //       }
   //     });
-  
- 
-  //     const submenus = item.querySelectorAll(".submenu"); 
+
+  //     const submenus = item.querySelectorAll(".submenu");
   //     submenus.forEach((submenu) => {
   //       if (submenu.style.maxHeight === "0px" || !submenu.style.maxHeight) {
-     
-  //         submenu.style.maxHeight = `${submenu.scrollHeight}px`; 
+
+  //         submenu.style.maxHeight = `${submenu.scrollHeight}px`;
   //         submenu.style.opacity = "1";
   //         submenu.classList.add("transition-all", "duration-300");
   //         chevron.classList.add("rotate-180");
   //       } else {
-         
-  //         submenu.style.maxHeight = "0"; 
+
+  //         submenu.style.maxHeight = "0";
   //         submenu.style.opacity = "0";
   //         chevron.classList.remove("rotate-180");
   //       }
   //     });
   //   });
   // });
-  
 
   // const submenuItems = document.querySelectorAll(".submenu-item");
-  
+
   // submenuItems.forEach((item) => {
   //   const trigger = item.querySelector(".submenu-trigger");
   //   const nestedMenu = item.querySelector(".nested-menu");
   //   const chevron = trigger.querySelector(".chevron");
-  
+
   //   trigger?.addEventListener("click", (e) => {
   //     e.stopPropagation();
-  
+
   //     // بررسی تعداد زیرمنوهای تودرتو
   //     const nestedMenus = item.querySelectorAll(".nested-menu"); // پیدا کردن همه زیرمنوهای تودرتو
   //     nestedMenus.forEach((nestedMenu) => {
@@ -89,8 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //     });
   //   });
   // });
-  
-  
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -111,13 +107,12 @@ document.addEventListener("DOMContentLoaded", function () {
         submenu.style.opacity = "0";
       } else {
         // محاسبه دوباره scrollHeight برای منو
-        submenu.style.maxHeight = (submenu.scrollHeight*10) + "px";  // استفاده از scrollHeight برای محاسبه ارتفاع داینامیک
+        submenu.style.maxHeight = submenu.scrollHeight * 10 + "px"; // استفاده از scrollHeight برای محاسبه ارتفاع داینامیک
         submenu.style.opacity = "1";
       }
     });
   });
 });
-
 
 // search engine
 
@@ -135,12 +130,16 @@ ticketArticle.forEach((e) => {
     if (window.location.href.endsWith("/")) {
       document.querySelector("#flight-form #dep1").value = r;
       document.querySelector("#multi-flight-form .fromcity-text").value = r;
-        (document.querySelector("#flight-form .co-id.FCDid1.from").value = i),
-        (document.querySelector("#multi-flight-form .co-id.FCDid1.from.fromcity").value = i),
+      (document.querySelector("#flight-form .co-id.FCDid1.from").value = i),
+        (document.querySelector(
+          "#multi-flight-form .co-id.FCDid1.from.fromcity"
+        ).value = i),
         (document.querySelector("#flight-form #des1").value = a),
         (document.querySelector("#multi-flight-form .tocity-text").value = a),
         (document.querySelector("#flight-form .co-id.FCDid2.to").value = l),
-        (document.querySelector("#multi-flight-form .co-id.FCDid2.to.tocity").value = l),
+        (document.querySelector(
+          "#multi-flight-form .co-id.FCDid2.to.tocity"
+        ).value = l),
         t.includes("اکونومی") &&
           ((document.querySelector("#flight-form .FlightClass-text").innerText =
             "اکونومی"),
@@ -155,7 +154,7 @@ ticketArticle.forEach((e) => {
           ((document.querySelector("#flight-form .FlightClass-text").innerText =
             "فرست"),
           (document.querySelector("#flight-form .FlightClass-text").value =
-            "FirstClass"))
+            "FirstClass"));
       //   document.querySelector("#flight-form").classList.remove("hidden");
       let e = document.querySelector(".bg-search");
       e && window.scrollTo({ top: e.offsetTop, behavior: "smooth" });
@@ -211,22 +210,30 @@ async function loadSearchEngine(url, sectionload) {
           } = s;
           document.querySelector("#flight-form #dep1").value = u;
           document.querySelector("#multi-flight-form .fromcity-text").value = u;
-            (document.querySelector("#flight-form .co-id.FCDid1.from").value = c),
-            (document.querySelector("#multi-flight-form .co-id.FCDid1.from.fromcity").value = c),
+          (document.querySelector("#flight-form .co-id.FCDid1.from").value = c),
+            (document.querySelector(
+              "#multi-flight-form .co-id.FCDid1.from.fromcity"
+            ).value = c),
             (document.querySelector("#flight-form #des1").value = p),
-            (document.querySelector("#multi-flight-form .tocity-text").value = p),
+            (document.querySelector("#multi-flight-form .tocity-text").value =
+              p),
             (document.querySelector("#flight-form .co-id.FCDid2.to").value = d),
-            (document.querySelector("#multi-flight-form .co-id.FCDid2.to.tocity").value = d),
+            (document.querySelector(
+              "#multi-flight-form .co-id.FCDid2.to.tocity"
+            ).value = d),
             f.includes("اکونومی") &&
               ((document.querySelector(".FlightClass-text").innerText =
                 "اکونومی"),
               (document.querySelector(".FlightClass-text").value = "Economy")),
             f.includes("بیزینس") &&
-              ((document.querySelector(".FlightClass-text").innerText = "بیزینس"),
-              (document.querySelector(".FlightClass-text").value = "BusinessClass")),
+              ((document.querySelector(".FlightClass-text").innerText =
+                "بیزینس"),
+              (document.querySelector(".FlightClass-text").value =
+                "BusinessClass")),
             f.includes("فرست") &&
               ((document.querySelector(".FlightClass-text").innerText = "فرست"),
-              (document.querySelector(".FlightClass-text").value = "FirstClass")),
+              (document.querySelector(".FlightClass-text").value =
+                "FirstClass")),
             document.querySelector("#flight-form").classList.remove("hidden");
           let h = document.querySelector(".bg-blur-t");
           h && window.scrollTo({ top: h.offsetTop, behavior: "smooth" });
@@ -394,49 +401,51 @@ const FetchWithPageNum = async (dataPageNum) => {
 };
 
 // کد fetch مقالات - برای صفحه article-list.html
-if (document.querySelector('input[name="search"]')) {
-  document.addEventListener("DOMContentLoaded", function () {
-    const radioButtons = document.querySelectorAll(
-      'input[type="radio"][name="radio"]'
-    );
-    const fetchContentArticle = document.querySelector(
-      ".fetch-content-article"
-    );
+if (!document.querySelector(".tour-section-fetch")) {
+  if (document.querySelector('input[name="search"]')) {
+    document.addEventListener("DOMContentLoaded", function () {
+      const radioButtons = document.querySelectorAll(
+        'input[type="radio"][name="radio"]'
+      );
+      const fetchContentArticle = document.querySelector(
+        ".fetch-content-article"
+      );
 
-    if (fetchContentArticle) {
-      const cmsQuery = fetchContentArticle.getAttribute("data-catid");
+      if (fetchContentArticle) {
+        const cmsQuery = fetchContentArticle.getAttribute("data-catid");
 
-      async function firstContent() {
-        const firstResponse = await fetch(
-          `/article-load-items.bc?catid=${cmsQuery}`
-        );
-        const firstData = await firstResponse.text();
-        fetchContentArticle.innerHTML = firstData;
-      }
-      firstContent();
+        async function firstContent() {
+          const firstResponse = await fetch(
+            `/article-load-items.bc?catid=${cmsQuery}`
+          );
+          const firstData = await firstResponse.text();
+          fetchContentArticle.innerHTML = firstData;
+        }
+        firstContent();
 
-      radioButtons.forEach((radio) => {
-        radio.addEventListener("change", async function () {
-          if (this.checked) {
-            const selectedCatId = this.value;
-            try {
-              fetchContentArticle.innerHTML =
-                '<div class="text-center flex justify-center items-center">در حال بارگذاری...</div>';
-              const response = await fetch(
-                `/article-load-items.bc?catid=${selectedCatId}`
-              );
-              const data = await response.text();
-              fetchContentArticle.innerHTML = data;
-            } catch (error) {
-              console.error("Error:", error);
-              fetchContentArticle.innerHTML =
-                '<div class="text-red-500">خطا در بارگذاری مقالات</div>';
+        radioButtons.forEach((radio) => {
+          radio.addEventListener("change", async function () {
+            if (this.checked) {
+              const selectedCatId = this.value;
+              try {
+                fetchContentArticle.innerHTML =
+                  '<div class="text-center flex justify-center items-center">در حال بارگذاری...</div>';
+                const response = await fetch(
+                  `/article-load-items.bc?catid=${selectedCatId}`
+                );
+                const data = await response.text();
+                fetchContentArticle.innerHTML = data;
+              } catch (error) {
+                console.error("Error:", error);
+                fetchContentArticle.innerHTML =
+                  '<div class="text-red-500">خطا در بارگذاری مقالات</div>';
+              }
             }
-          }
+          });
         });
-      });
-    }
-  });
+      }
+    });
+  }
 }
 
 function uploadDocumentAbout(args) {
@@ -856,7 +865,6 @@ if (document.querySelector(".slider-article-mobile")) {
   });
 }
 
-
 if (document.querySelector(".popular-way-swiper")) {
   var popularWaySwiper = new Swiper(".popular-way-swiper", {
     slidesPerView: 5,
@@ -901,3 +909,78 @@ if (document.querySelector(".popular-way-swiper-mobile")) {
     },
   });
 }
+
+if (document.querySelector(".tour-section-fetch")) {
+  document.addEventListener("DOMContentLoaded", function () {
+    const radioButtons = document.querySelectorAll(
+      'input[type="radio"][name="radio"]'
+    );
+    const fetchContentArticle = document.querySelector(".fetch-content-tour");
+
+    if (fetchContentArticle) {
+      const cmsQuery = fetchContentArticle.getAttribute("data-catid");
+
+      async function firstContent() {
+        const firstResponse = await fetch(
+          `/tour-load-items.bc?catid=${cmsQuery}`
+        );
+        const firstData = await firstResponse.text();
+        fetchContentArticle.innerHTML = firstData;
+        console.log("data have been fetched");
+      }
+      firstContent();
+
+      radioButtons.forEach((radio) => {
+        radio.addEventListener("change", async function () {
+          if (this.checked) {
+            const selectedCatId = this.value;
+            try {
+              fetchContentArticle.innerHTML =
+                '<div class="text-center flex justify-center items-center">در حال بارگذاری...</div>';
+              const response = await fetch(
+                `/tour-load-items.bc?catid=${selectedCatId}`
+              );
+              const data = await response.text();
+              fetchContentArticle.innerHTML = data;
+            } catch (error) {
+              console.error("Error:", error);
+              fetchContentArticle.innerHTML =
+                '<div class="text-red-500">خطا در بارگذاری مقالات</div>';
+            }
+          }
+        });
+      });
+    }
+  });
+}
+
+// paging
+const FetchPageNumPrev2 = async (dataPageNum) => {
+  const fetchContentArticle = document.querySelector(".fetch-content-tour");
+  const cmsQuery = fetchContentArticle.getAttribute("data-catid");
+  const pagingResponse = await fetch(
+    `/tour-load-items.bc?catid=${cmsQuery}&pagenum=${dataPageNum}`
+  );
+  const pagingData = await pagingResponse.text();
+  fetchContentArticle.innerHTML = pagingData;
+};
+
+const FetchPageNumNext2 = async (dataPageNum) => {
+  const fetchContentArticle = document.querySelector(".fetch-content-tour");
+  const cmsQuery = fetchContentArticle.getAttribute("data-catid");
+  const pagingResponse = await fetch(
+    `/tour-load-items.bc?catid=${cmsQuery}&pagenum=${dataPageNum}`
+  );
+  const pagingData = await pagingResponse.text();
+  fetchContentArticle.innerHTML = pagingData;
+};
+
+const FetchWithPageNum2 = async (dataPageNum) => {
+  const fetchContentArticle = document.querySelector(".fetch-content-tour");
+  const cmsQuery = fetchContentArticle.getAttribute("data-catid");
+  const pagingResponse = await fetch(
+    `/tour-load-items.bc?catid=${cmsQuery}&pagenum=${dataPageNum}`
+  );
+  const pagingData = await pagingResponse.text();
+  fetchContentArticle.innerHTML = pagingData;
+};
