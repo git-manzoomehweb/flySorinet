@@ -11,6 +11,10 @@
   <member name="news-list" type="list" link="article.bc" propertyid="7244" perpage="6" size="90x90" order="ord" />
 </basis>
 
+<basis core="dbsource" source="media" lid="1" name="db" usedforid="[##cms.query.id##]" sourcemid="article">
+  <member type="list" name="gallery" format="4" order="ord"></member>
+</basis>
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
@@ -40,14 +44,17 @@
 
 <body class="px-2 bg-zinc-50">
   <!-- header -->
-  <basis core="call" file="header.inc" />
+  <div class="w-full bg-white">
+    <basis core="call" file="header.inc" />
+  </div>
   <!-- header end -->
 
   <main>
-    <basis core="print" datamembername="db.view">
-      <face filter="TypeID in(159)"><img src="[##cms.cms.cdn##]/@text" alt="article-list-background"
+    <basis core="print" datamembername="db.gallery">
+      <face filter="ord in(1)"><img src="\@largeIMG" alt="@name"
           class="object-cover object-bottom w-full border-b-8 border-solid border-Primery-600 rounded-3xl"
           loading="lazy" /></face>
+
     </basis>
 
     <div class="px-4 pt-4 pb-8 bg-white rounded-xl relative z-10 lg:-mt-60 flex w-[calc(100%-40px)] desktopContainer">
@@ -82,7 +89,7 @@
 
       <!-- right content of main -->
       <aside class="w-[30%]">
-        <div >
+        <div>
           <basis core="view" datamembername="db.view">
             <layout>
               <div class="flex flex-col gap-4 p-3 bg-zinc-100 rounded-xl">
@@ -147,7 +154,8 @@
             <div class="absolute top-0 left-0 flex justify-between w-full">
               <div class="flex items-center gap-8">
                 <h2 class="text-2xl font-bold">مقاله ها</h2>
-                <a href="/hotel-list.bc?catid=212047" class="text-xl font-medium text-Primery-700 hover:scale-105">مشاهده همه</a>
+                <a href="/hotel-list.bc?catid=212047"
+                  class="text-xl font-medium text-Primery-700 hover:scale-105">مشاهده همه</a>
               </div>
               <div class="flex">
                 <div class="swiper-button-next-custom hover:scale-105">
@@ -227,15 +235,20 @@
 
     <section class="flex flex-wrap justify-between gap-4 mx-auto mt-10 desktopContainer">
       <img src="[##cms.cms.cdn##]/images/sunExpress.png" alt="sunExpress"
-        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" loading="lazy" />
+        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0"
+        loading="lazy" />
       <img src="[##cms.cms.cdn##]/images/SalamAir.png" alt="SalamAir"
-        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" loading="lazy" />
+        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0"
+        loading="lazy" />
       <img src="[##cms.cms.cdn##]/images/turkishAirlines.png" alt="turkishAirlines"
-        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" loading="lazy" />
+        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0"
+        loading="lazy" />
       <img src="[##cms.cms.cdn##]/images/Qatar.png" alt="Qatar"
-        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" loading="lazy" />
+        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0"
+        loading="lazy" />
       <img src="[##cms.cms.cdn##]/images/IranAir.png" alt="IranAir"
-        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0" loading="lazy" />
+        class="px-5 py-3 border border-dashed border-zinc-300 rounded-xl w-52 grayscale hover:grayscale-0"
+        loading="lazy" />
     </section>
   </main>
 

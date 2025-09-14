@@ -74,7 +74,7 @@
               <meta itemprop="position" content="1" />
             </a>
           </li>
-          <span class="text-white"> &gt; </span>
+          <span class="text-white"> > </span>
           <basis core="print" datamembername="db.navigation">
             <face filter="RowNumber=max(RowNumber) and parentcatid<>210442">
               <li class="inline-block font-normal text-white" itemprop="itemListElement" itemscope
@@ -90,7 +90,7 @@
                   aria-label="@title"><span itemprop="name">@title</span>
                   <meta itemprop="position" content="@rownumber" />
                 </a>
-                <span class="text-white"> &gt; </span>
+                <span class="text-white"> > </span>
               </li>
             </face>
             <face filter="parentcatid<>210442">
@@ -100,7 +100,7 @@
                     class="text-white" itemprop="name">@title</span>
                   <meta itemprop="position" content="@rownumber" />
                 </a>
-                <span class="text-white"> &gt; </span>
+                <span class="text-white"> > </span>
               </li>
             </face>
           </basis>
@@ -122,7 +122,7 @@
                 loading="lazy" /></span>
           </form>
           <basis core="tree" datamembername="tourism-magazine.cat" idcol="catid" parentidcol="parentid"
-            nullvalue="212276">
+            nullvalue="[##cms.query.catid##]">
             <layout>
               <div class="flex flex-col gap-1 mt-4">
                 <h2 class="font-medium">شهر/کشور</h2>
@@ -133,13 +133,15 @@
             </layout>
             <face level="end" filter="link is null">
               <li class="flex items-center gap-2 cursor-pointer hover:text-Primery-600">
-                <input type="radio" name="radio" value="@catid" id="" class="size-4 accent-Primery-600" aria-label="radio-btn" />
+                <input type="radio" name="radio" value="@catid" id="" class="size-4 accent-Primery-600"
+                  aria-label="radio-btn" />
                 @title
               </li>
             </face>
             <face level="end">
               <li class="flex items-center gap-2 cursor-pointer hover:text-Primery-600">
-                <input type="radio" name="radio" value="@catid" id="" class="size-4 accent-Primery-600" aria-label="radio-btn" />
+                <input type="radio" name="radio" value="@catid" id="" class="size-4 accent-Primery-600"
+                  aria-label="radio-btn" />
                 @title
               </li>
             </face>
@@ -186,9 +188,9 @@
         <!-- right content of main end -->
 
         <!-- left content of main -->
-          <div class="fetch-content-article" data-catid="[##cms.query.catid##]">
-            
-          </div>
+        <div class="fetch-content-article" data-catid="[##cms.query.catid##]">
+
+        </div>
         <!-- left content on main end -->
 
 

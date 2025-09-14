@@ -516,10 +516,6 @@ video {
   margin-top: 1.25rem;
 }
 
-.block {
-  display: block;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -1464,10 +1460,6 @@ video {
   margin-top: 1.25rem;
 }
 
-.block {
-  display: block;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -2142,7 +2134,7 @@ video {
 
 .active-module {
   --tw-bg-opacity: 1;
-  background-color: rgb(216 17 31 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(245 31 43 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
@@ -2560,10 +2552,6 @@ video {
   -webkit-line-clamp: 3;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -2706,11 +2694,6 @@ video {
 .h-px {
   height: 1px;
 }
-
-.max-h-0 {
-  max-height: 0;
-}
-
 .max-h-40 {
   max-height: 10rem;
 }
@@ -2929,10 +2912,6 @@ video {
   justify-content: space-between;
 }
 
-.justify-around {
-  justify-content: space-around;
-}
-
 .gap-1 {
   gap: 0.25rem;
 }
@@ -3043,7 +3022,7 @@ video {
 
 .border-Primery-600 {
   --tw-border-opacity: 1;
-  border-color: rgb(234 33 36 / var(--tw-border-opacity, 1));
+  border-color: rgb(245 31 43 / var(--tw-border-opacity, 1));
 }
 
 .border-Primery-700 {
@@ -3078,7 +3057,7 @@ video {
 
 .bg-Primery-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(234 33 36 / var(--tw-bg-opacity, 1));
+  background-color: rgb(245 31 43 / var(--tw-bg-opacity, 1));
 }
 
 .bg-black {
@@ -3348,11 +3327,6 @@ video {
 
 .font-normal {
   font-weight: 400;
-}
-
-.text-Primery-600 {
-  --tw-text-opacity: 1;
-  color: rgb(234 33 36 / var(--tw-text-opacity, 1));
 }
 
 .text-Primery-700 {
@@ -3839,10 +3813,6 @@ body {
       scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  .lg\:flex-row {
-    flex-direction: row;
-  }
-
   .lg\:flex-row-reverse {
     flex-direction: row-reverse;
   }
@@ -4261,7 +4231,7 @@ body {
 
 .hover\:bg-Primery-600:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(234 33 36 / var(--tw-bg-opacity, 1));
+  background-color: rgb(245 31 43 / var(--tw-bg-opacity, 1));
 }
 
 .createChildDropdown {
@@ -4394,9 +4364,8 @@ body {
 }
 
 .btnstyle svg {
-  background-color: rgb(216 17 31 / var(--tw-bg-opacity, 1)) !important;
+  background-color: inset;
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
   width: 2rem;
   height: 2rem;
   border-radius: 100%;
@@ -4451,3 +4420,4 @@ a span.flex.px-4.py-2.w-28.bg-Primery-700 {
   width: fit-content !important;
   font-size: 14px !important;
 }
+

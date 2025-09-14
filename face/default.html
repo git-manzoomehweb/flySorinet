@@ -10,7 +10,7 @@
     propertyid="3087627,3087628,3087629,3087630" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="210488">
-  <member name="articles" type="list" link="article.bc" order="ord" size="412x295" propertyid="7244,7249" />
+  <member name="articles" type="list" link="article.bc" order="date desc" size="412x295" propertyid="7244,7249" />
 </basis>
 
 <!DOCTYPE html>
@@ -22,6 +22,7 @@
   <!-- Title & Description -->
   <title>سورینت پرواز</title>
   <meta name="description" content="سورینت پرواز" />
+  <meta name="google-site-verification" content="gBPzmEI4rGtCo2XZrF2SdLffY5POFSyPitZvNHt9AfI" />
   <!-- canonical for Homepage -->
   <link rel="canonical" href="[##cms.request.:scheme##]://[##cms.request.full-url##]" />
   <!-- fill items with Agancy Info -->
@@ -59,12 +60,12 @@
   <basis core="call" file="style.inc" />
   <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css"
     rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.basiscore.net/basisfly.com/css/reservation_tem_datepicker.css">
+  <link rel="stylesheet" href="https://cdn.basiscore.net/basisfly.com/css/reservation_tem_datepicker.css" />
   <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
 </head>
 
 <body class="px-2" onload="loadContentHomePage()">
-  <header>
+  <header class="bg-transparent">
     <!-- header menu mobile -->
     <div class="flex justify-between px-4 py-3 lg:hidden">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -134,9 +135,7 @@
             </div>
           </div>
           <span
-            class="absolute flex items-center hover:scale-105 justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700">
-            مشاهده
-          </span>
+            class="absolute flex items-center hover:scale-105 justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700">مشاهده</span>
           <div class="flex flex-col gap-2 px-4 mt-9">
             <span class="flex items-center text-sm text-zinc-900">
               <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" width="24" height="24" alt="calenderIcon"
@@ -171,9 +170,7 @@
             </div>
           </div>
           <span
-            class="absolute flex items-center hover:scale-105 justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700">
-            مشاهده
-          </span>
+            class="absolute flex items-center hover:scale-105 justify-center w-36 h-14 px-4 py-2 text-lg text-white top-[51%] left-5 rounded-xl bg-Primery-700">مشاهده</span>
           <div class="flex flex-col gap-2 px-4 mt-9">
             <span class="flex items-center text-sm text-zinc-900">
               <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="calenderIcon" width="24" height="24"
@@ -200,13 +197,11 @@
       <div class="pt-20 swiper popular-way-swiper">
         <basis core="list" datamembername="db.busy-flights">
           <layout>
-            <div class="swiper-wrapper">
-              @child
-            </div>
+            <div class="swiper-wrapper">@child</div>
           </layout>
           <face>
             <article class="overflow-hidden border border-solid swiper-slide ticket-article border-zinc-300 rounded-xl">
-              <img src="@image" class="object-cover h-40" alt="@title" width="100%" height="160">
+              <img src="@image" class="object-cover h-40" alt="@title" width="100%" height="160" />
               <div class="flex items-center justify-between px-2 py-4">
                 <h3 class="text-xl font-bold text-zinc-900 dep-text">@prp_3087627</h3>
                 <span class="hidden dep-id">@prp_3087629</span>
@@ -235,11 +230,12 @@
                 <p class="hidden des-id">@prp_3087630</p>
               </div>
               <button type="button"
-                class="flex items-center justify-center w-4/5 py-3 mx-auto mb-4 font-medium text-white transition-all duration-300 rounded-lg set-ticket bg-Primery-700 hover:bg-black">مشاهده</button>
+                class="flex items-center justify-center w-4/5 py-3 mx-auto mb-4 font-medium text-white transition-all duration-300 rounded-lg set-ticket bg-Primery-700 hover:bg-black">
+                مشاهده
+              </button>
             </article>
           </face>
         </basis>
-
 
         <div class="absolute top-0 left-0 flex justify-between w-full">
           <div class="flex items-center gap-8">
@@ -310,9 +306,7 @@
             </div>
           </div>
           <span
-            class="absolute flex items-center hover:scale-105 justify-center w-28 h-12 px-4 py-2 text-lg text-white top-[56%] left-5 rounded-xl bg-Primery-700">
-            مشاهده
-          </span>
+            class="absolute flex items-center hover:scale-105 justify-center w-28 h-12 px-4 py-2 text-lg text-white top-[56%] left-5 rounded-xl bg-Primery-700">مشاهده</span>
           <div class="flex flex-col gap-2 px-4 mt-9">
             <span class="flex items-center text-sm text-zinc-900">
               <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="calenderIcon" width="24" height="24"
@@ -349,9 +343,7 @@
             </div>
           </div>
           <span
-            class="absolute flex items-center hover:scale-105 justify-center w-28 h-12 px-4 py-2 text-lg text-white top-[56%] left-5 rounded-xl bg-Primery-700">
-            مشاهده
-          </span>
+            class="absolute flex items-center hover:scale-105 justify-center w-28 h-12 px-4 py-2 text-lg text-white top-[56%] left-5 rounded-xl bg-Primery-700">مشاهده</span>
           <div class="flex flex-col gap-2 px-4 mt-9">
             <span class="flex items-center text-sm text-zinc-900">
               <img src="[##cms.cms.cdn##]/images/calenderIcon.svg" alt="calenderIcon" width="24" height="24"
@@ -375,6 +367,39 @@
     </basis>
 
     <!-- هتل ها -->
+
+    <section class="relative flex items-center justify-center mt-12">
+      <img src="[##cms.cms.cdn##]/images/world-map.jpg" class="w-full h-[490px] object-cover" alt="world-map"
+        width="1920" height="490" loading="lazy">
+      <div class="desktopContainer absolute grid grid-cols-3 gap-8">
+        <div
+          class="bg-white backdrop-blur-md p-6 rounded-2xl shadow-lg flex items-center gap-4 hover:shadow-2xl transition-all duration-300">
+          <img src="[##cms.cms.cdn##]/images/personalized-honeymoons.gif" alt="personalized-honeymoons" width="80"
+            height="80" loading="lazy">
+          <div>
+            <h2 class="font-bold text-lg">سفر با خیال راحت</h2>
+            <p class="text-sm">پشتیبانی واقعی در تمام طول مسیر، از رزرو تا بازگشت</p>
+          </div>
+        </div>
+        <div
+          class="bg-white backdrop-blur-md p-6 rounded-2xl shadow-lg flex items-center gap-4 hover:shadow-2xl transition-all duration-300">
+          <img src="[##cms.cms.cdn##]/images/plane.gif" alt="plane" width="80" height="80" loading="lazy">
+          <div>
+            <h2 class="font-bold text-lg">با شما برای ساختن بهترین‌ها</h2>
+            <p class="text-sm">آغاز راهی تازه با تعهد به کیفیت و رضایت</p>
+          </div>
+        </div>
+        <div
+          class="bg-white backdrop-blur-md p-6 rounded-2xl shadow-lg flex items-center gap-4 hover:shadow-2xl transition-all duration-300">
+          <img src="[##cms.cms.cdn##]/images/solo-traveller.gif" alt="solo-traveller" width="80" height="80"
+            loading="lazy">
+          <div>
+            <h2 class="font-bold text-lg">در مسیر انتخاب شدن</h2>
+            <p class="text-sm">تازه‌نفس، پرتلاش و همراه شما در سفرهای فردا</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- articles -->
     <basis core="list" datamembername="db.articles">
@@ -417,20 +442,16 @@
             <div class="relative z-10">
               <div>
                 <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
-                <div class="text-sm text-justify text-white line-clamp-2">
-                  @prp_7244
-                </div>
+                <div class="text-sm text-justify text-white line-clamp-2">@prp_7244</div>
               </div>
               <div class="flex items-center justify-between mt-2">
                 <span class="flex items-center gap-1 text-white">
                   <img src="[##cms.cms.cdn##]/images/calenderIconWhite.svg" alt="calenderIcon" width="24" height="24"
                     loading="lazy" />
-                  @prp_7249
+                  @date
                 </span>
                 <span
-                  class="flex items-center justify-center h-12 px-4 py-2 text-lg text-white hover:scale-105 w-28 rounded-xl bg-Primery-700">
-                  مشاهده
-                </span>
+                  class="flex items-center justify-center h-12 px-4 py-2 text-lg text-white hover:scale-105 w-28 rounded-xl bg-Primery-700">مشاهده</span>
               </div>
             </div>
           </a>
@@ -446,20 +467,16 @@
             <div class="relative z-10">
               <div>
                 <h3 class="mb-2 text-xl font-medium text-white">@title</h3>
-                <p class="text-sm text-justify text-white line-clamp-2">
-                  @prp_7244
-                </p>
+                <p class="text-sm text-justify text-white line-clamp-2">@prp_7244</p>
               </div>
               <div class="flex items-center justify-between mt-2">
                 <span class="flex items-center gap-1 text-white">
                   <img src="[##cms.cms.cdn##]/images/calenderIconWhite.svg" alt="calenderIconWhite" width="24"
                     height="24" loading="lazy" />
-                  @prp_7249
+                  @date
                 </span>
                 <span
-                  class="flex items-center justify-center h-12 px-4 py-2 text-lg text-white hover:scale-105 w-28 rounded-xl bg-Primery-700">
-                  مشاهده
-                </span>
+                  class="flex items-center justify-center h-12 px-4 py-2 text-lg text-white hover:scale-105 w-28 rounded-xl bg-Primery-700">مشاهده</span>
               </div>
             </div>
           </a>
@@ -473,9 +490,10 @@
         class="pt-20 swiper ailines-swiper-desktop swiper-initialized swiper-horizontal swiper-rtl swiper-backface-hidden">
         <div class="flex flex-col gap-2 swiper-wrapper lg:flex-row lg:gap-0 lg:justify-between">
           <div class="px-5 py-3 border border-dashed swiper-slide border-zinc-300 rounded-xl">
-            <a target="_blank" href="https://www.sunexpress.com/en-GB" class="w-full"><img
-                src="[##cms.cms.cdn##]/images/sunExpress.png" alt="sunExpress" loading="lazy"
-                class="w-full h-full grayscale hover:grayscale-0" /></a>
+            <a target="_blank" href="https://www.sunexpress.com/en-GB" class="w-full">
+              <img src="[##cms.cms.cdn##]/images/sunExpress.png" alt="sunExpress" loading="lazy"
+                class="w-full h-full grayscale hover:grayscale-0" />
+            </a>
           </div>
           <div class="object-cover px-5 py-3 border border-dashed swiper-slide border-zinc-300 rounded-xl">
             <a target="_blank" href="https://www.salamair.com/en/" class="w-full">
@@ -510,8 +528,8 @@
         </div>
       </div>
       <!-- 
-       
-       -->
+         
+         -->
     </section>
   </main>
   <!-- main end -->

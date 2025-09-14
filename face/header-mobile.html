@@ -10,7 +10,7 @@
     <div class="fixed right-0 z-50 w-9/12 h-full bg-white shadow-md mobile-menu translate-x-96">
       <div class="flex flex-col h-full overflow-scroll">
         <!-- header ثابت -->
-        <div class="flex items-center justify-between p-4 border-b">
+        <div class="flex items-center justify-between p-4 border-b border-zinc-200">
           <span class="text-lg font-medium">منو</span>
           <img src="[##cms.cms.cdn##]/images/xIcon.svg" alt="xIcon" width="24" height="24"
             class="w-8 cursor-pointer close-menu" loading="lazy" />
@@ -21,17 +21,17 @@
           <nav>
             <ul class="flex flex-col">
               <!-- منوی اصلی -->
-              <li class="border-b hover:text-Primery-600">
+              <li class="border-b border-zinc-200 hover:text-Primery-600">
                 <a href="/" class="block p-4"> صفحه اصلی </a>
               </li>
 
               <!-- منوی تور -->
               <basis core="tree" datamembername="tour.cat" idcol="catid" parentidcol="parentid" nullvalue="210485">
                 <layout>
-                  <li class="border-b menu-item">
+                  <li class="border-b border-zinc-200 menu-item">
                     <div class="flex items-center justify-between p-4 cursor-pointer toggle-dropdown">
                       <span class="flex items-center gap-2 hover:text-Primery-600">
-                        تور ها
+                        <a href="tours"> تور ها</a>
                         <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
                           width="24" height="24" class="transition duration-200 ease-in-out dropdown-icon" />
                       </span>
@@ -43,19 +43,19 @@
                 </layout>
 
                 <face level="end" filter="link is null">
-                  <li class="border-b">
+                  <li class="border-b border-zinc-200">
                     <a href="/tour-list.bc?catid=@catid" class="block p-4 hover:text-Primery-600">@title</a>
                   </li>
                 </face>
 
                 <face level="end">
-                  <li class="border-b">
+                  <li class="border-b border-zinc-200">
                     <a href="@link" class="block p-4 hover:text-Primery-600">@title</a>
                   </li>
                 </face>
 
                 <face level="1" filter="link is null">
-                  <li class="border-b submenu-item">
+                  <li class="border-b border-zinc-200 submenu-item">
                     <div class="flex items-center justify-between p-4 cursor-pointer toggle-dropdown">
                       <span class="hover:text-Primery-600">@title</span>
                       <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
@@ -68,7 +68,7 @@
                 </face>
 
                 <face level="1">
-                  <li class="border-b submenu-item">
+                  <li class="border-b border-zinc-200 submenu-item">
                     <div class="flex items-center justify-between p-4 cursor-pointer toggle-dropdown">
                       <span class="hover:text-Primery-600">@title</span>
                       <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
@@ -81,7 +81,7 @@
                 </face>
 
                 <face level="2" filter="link is null">
-                  <li class="border-b submenu-item">
+                  <li class="border-b border-zinc-200 submenu-item">
                     <div class="flex items-center justify-between p-4 cursor-pointer toggle-dropdown">
                       <span class="hover:text-Primery-600">@title</span>
                       <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
@@ -94,7 +94,7 @@
                 </face>
 
                 <face level="2">
-                  <li class="border-b submenu-item">
+                  <li class="border-b border-zinc-200 submenu-item">
                     <div class="flex items-center justify-between p-4 cursor-pointer toggle-dropdown">
                       <span class="hover:text-Primery-600">@title</span>
                       <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
@@ -105,14 +105,13 @@
                     </ul>
                   </li>
                 </face>
-
               </basis>
 
               <!-- --منوی تورهای نوروزی-- -->
 
               <basis core="tree" datamembername="nowrouz.cat" idcol="catid" parentidcol="parentid" nullvalue="213498">
                 <layout>
-                  <li class="border-b menu-item">
+                  <li class="border-b border-zinc-200 menu-item">
                     <div class="flex items-center justify-between p-4 cursor-pointer toggle-dropdown">
                       <span class="flex items-center gap-2 hover:text-Primery-600">
                         تور های نوروزی
@@ -126,21 +125,20 @@
                   </li>
                 </layout>
 
-
                 <face level="end" filter="link is null">
-                  <li class="border-b">
+                  <li class="border-b border-zinc-200">
                     <a href="/tour-list.bc?catid=@catid" class="block p-4 hover:text-Primery-600">@title</a>
                   </li>
                 </face>
 
                 <face level="end">
-                  <li class="border-b">
+                  <li class="border-b border-zinc-200">
                     <a href="@link" class="block p-4 hover:text-Primery-600">@title</a>
                   </li>
                 </face>
 
                 <face level="1" filter="link is null">
-                  <li class="border-b submenu-item">
+                  <li class="border-b border-zinc-200 submenu-item">
                     <div class="flex items-center justify-between p-4 cursor-pointer toggle-dropdown">
                       <span class="hover:text-Primery-600">@title</span>
                       <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
@@ -153,7 +151,7 @@
                 </face>
 
                 <face level="1">
-                  <li class="border-b submenu-item">
+                  <li class="border-b border-zinc-200 submenu-item">
                     <div class="flex items-center justify-between p-4 cursor-pointer toggle-dropdown">
                       <span class="hover:text-Primery-600">@title</span>
                       <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
@@ -166,7 +164,7 @@
                 </face>
 
                 <face level="2" filter="link is null">
-                  <li class="border-b submenu-item">
+                  <li class="border-b border-zinc-200 submenu-item">
                     <div class="flex items-center justify-between p-4 cursor-pointer toggle-dropdown">
                       <span class="hover:text-Primery-600">@title</span>
                       <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
@@ -179,7 +177,7 @@
                 </face>
 
                 <face level="2">
-                  <li class="border-b submenu-item">
+                  <li class="border-b border-zinc-200 submenu-item">
                     <div class="flex items-center justify-between p-4 cursor-pointer toggle-dropdown">
                       <span class="hover:text-Primery-600">@title</span>
                       <img src="[##cms.cms.cdn##]/images/chevronDownIcon.svg" alt="chevronDownIcon" loading="lazy"
@@ -190,17 +188,16 @@
                     </ul>
                   </li>
                 </face>
-
               </basis>
-              <li class="border-b hover:text-Primery-600">
+              <li class="border-b border-zinc-200 hover:text-Primery-600">
                 <a href="/visa-list.bc?catid=213603" class="block p-4">ویزا</a>
               </li>
 
-              <li class="border-b hover:text-Primery-600"></li>
-              <li class="border-b hover:text-Primery-600">
+              <li class="border-b border-zinc-200 hover:text-Primery-600"></li>
+              <li class="border-b border-zinc-200 hover:text-Primery-600">
                 <a href="/article-list.bc?catid=212221" class="block p-4">اخبار گردشگری</a>
               </li>
-              <li class="border-b hover:text-Primery-600">
+              <li class="border-b border-zinc-200 hover:text-Primery-600">
                 <a href="/درباره-ما" class="block p-4">تماس با ما</a>
               </li>
             </ul>
